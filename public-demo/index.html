@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CirculaSync — 5-Minute Interactive Demo & Pitch Teleprompter</title>
+  <link rel="stylesheet" href="/assets/design-system.css" />
+  <link rel="stylesheet" href="/assets/design-system-v2.css" />
+  <script src="/assets/shared.js"></script>
+  <style>
+    :root {
+      --theater-header-h: 60px;
+      --theater-footer-h: 70px;
+      --theater-stage-ratio: 1.25;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--color-canvas, #060b10);
+      color: var(--color-ink-900, #f8fafc);
+      font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      user-select: none;
+    }
+
+    /* Suppress duplicate top navigation inside demo theater */
+    .cs-global-header { display: none !important; }
+
+    /* ── HEADER ── */
+    .th-header {
+      height: var(--theater-header-h);
+      background: var(--color-surface, #0d1522);
+      border-bottom: 1px solid var(--color-card-border, rgba(16, 185, 129, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-shrink: 0;
+      gap: 16px;
+      z-index: 100;
+    }
+
+    .th-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .th-logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+    }
+    .th-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .th-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--color-ink-900, #f8fafc);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .th-badge-sih {
+      font-size: 9.5px;
+      font-family: var(--font-mono, monospace);
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 1px 7px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .th-sub {
+      font-size: 11px;
+      color: var(--color-ink-500, #64748b);
+    }
+
+    /* Header Controls */
+    .th-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .th-timer-display {
+      font-family: var(--font-mono, monospace);
+      font-size: 15px;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--color-card-border, rgba(255, 255, 255, 0.1));
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.05em;
+    }
+    html.light .th-timer-display {
+      background: #f1f5f9;
+      color: #047857;
+      border-color: #cbd5e1;
+    }
+
+    .th-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+
+    .th-btn-primary {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    }
+    .th-btn-primary:hover {
+      background: linear-gradient(135deg, #059669, #047857);
+      transform: translateY(-1px);
+    }
+
+    .th-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.14);
+      color: var(--color-ink-900, #f8fafc);
+    }
+    html.light .th-btn-secondary {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+      color: #0f172a;
+    }
+    .th-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #10b981;
+    }
+
+    .th-btn-active {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #10b981 !important;
+    }
+
+    /* ── MAIN WORKSPACE: DUAL PANE ── */
+    .th-workspace {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      min-height: 0;
+      overflow: hidden;
+      background: var(--color-canvas, #060b10);
+    }
+
+    /* ── LEFT PANE: STAGE VIEWPORT ── */
+    .th-stage-pane {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--color-card-border, rgba(16, 185, 129, 0.2));
+      min-height: 0;
+      background: #02060b;
+      position: relative;
+    }
+
+    .th-stage-bar {
+      height: 42px;
+      background: rgba(15, 23, 42, 0.85);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      flex-shrink: 0;
+      font-size: 12px;
+      z-index: 10;
+    }
+    html.light .th-stage-bar {
+      background: #ffffff;
+      border-bottom-color: #e2e8f0;
+    }
+
+    .th-stage-role {
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .th-role-pill {
+      font-family: var(--font-mono, monospace);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #10b981;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-weight: 700;
+    }
+
+    .th-stage-mode {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .th-mode-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      transition: all 0.15s ease;
+    }
+    .th-mode-badge.video-mode {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+    .th-mode-badge.sandbox-mode {
+      background: rgba(56, 189, 248, 0.18);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+
+    .th-stage-frame-wrap {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      background: #000;
+    }
+
+    .th-stage-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: transparent;
+      transition: opacity 0.2s ease;
+    }
+
+    /* Simulated Automated Cursor */
+    .th-cursor {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      pointer-events: none;
+      z-index: 50;
+      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform: translate(-2px, -2px);
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
+    }
+    .th-cursor.clicking {
+      transform: scale(0.85);
+    }
+
+    /* Live Action Toast Overlay */
+    .th-action-toast {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid #10b981;
+      color: #f8fafc;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 40;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      animation: actionFade 0.3s ease;
+      white-space: nowrap;
+    }
+    html.light .th-action-toast {
+      background: rgba(255, 255, 255, 0.95);
+      color: #0f172a;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+    }
+
+    /* ── RIGHT PANE: TELEPROMPTER & RECITAL COACH ── */
+    .th-teleprompter-pane {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      background: var(--color-surface, #0d1522);
+      overflow-y: auto;
+      padding: 20px;
+      gap: 16px;
+    }
+    html.light .th-teleprompter-pane {
+      background: #f8fafc;
+    }
+
+    .th-tele-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--color-card-border, rgba(255, 255, 255, 0.08));
+      padding-bottom: 12px;
+    }
+    .th-pace-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+    .th-font-toggles {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .th-font-btn {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--color-ink-700, #cbd5e1);
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    html.light .th-font-btn {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+      color: #334155;
+    }
+
+    /* Chapter Info Card */
+    .th-chapter-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--color-card-border, rgba(255, 255, 255, 0.08));
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    html.light .th-chapter-card {
+      background: #ffffff;
+      border-color: #e2e8f0;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+    .th-chap-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--color-ink-500, #94a3b8);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .th-chap-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--color-ink-900, #f8fafc);
+      letter-spacing: -0.01em;
+    }
+    .th-chap-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .th-metric-box {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 10.5px;
+    }
+    html.light .th-metric-box {
+      background: #f1f5f9;
+    }
+    .th-metric-label {
+      color: var(--color-ink-500, #64748b);
+      text-transform: uppercase;
+      font-size: 9px;
+      font-family: var(--font-mono, monospace);
+    }
+    .th-metric-val {
+      font-weight: 700;
+      color: var(--color-ink-900, #f8fafc);
+      margin-top: 2px;
+      font-size: 11.5px;
+    }
+
+    /* Recital Speech Prompter Box */
+    .th-speech-box {
+      background: rgba(16, 185, 129, 0.05);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+    }
+    html.light .th-speech-box {
+      background: #ffffff;
+      border-color: rgba(16, 185, 129, 0.35);
+      box-shadow: 0 4px 16px rgba(16, 185, 129, 0.06);
+    }
+
+    .th-speech-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: #10b981;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .th-speech-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      line-height: 1.6;
+      font-size: var(--prompter-font-size, 17px);
+      color: var(--color-ink-700, #cbd5e1);
+      transition: font-size 0.15s ease;
+    }
+    html.light .th-speech-lines {
+      color: #334155;
+    }
+
+    .th-speech-line {
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .th-speech-line.active {
+      background: rgba(16, 185, 129, 0.18);
+      color: #f8fafc;
+      font-weight: 700;
+      border-left: 3px solid #10b981;
+      box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
+    }
+    html.light .th-speech-line.active {
+      background: #ecfdf5;
+      color: #065f46;
+      border-left-color: #059669;
+    }
+    .th-speech-line strong {
+      color: #34d399;
+      text-decoration: underline dotted #10b981;
+    }
+    html.light .th-speech-line strong {
+      color: #047857;
+    }
+
+    /* Jury Keywords Box */
+    .th-keywords-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .th-kw-title {
+      font-size: 10.5px;
+      font-family: var(--font-mono, monospace);
+      text-transform: uppercase;
+      color: var(--color-ink-500, #64748b);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .th-kw-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .th-kw-pill {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--color-ink-900, #f8fafc);
+      font-weight: 600;
+    }
+    html.light .th-kw-pill {
+      background: #f1f5f9;
+      border-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    /* Jury Interruption Defense Card */
+    .th-defense-card {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    html.light .th-defense-card {
+      background: #fffbeb;
+      border-color: #fde68a;
+    }
+    .th-def-tag {
+      font-size: 11px;
+      font-weight: 800;
+      color: #f59e0b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .th-def-q {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-ink-900, #f8fafc);
+      line-height: 1.4;
+    }
+    html.light .th-def-q { color: #92400e; }
+    .th-def-a {
+      font-size: 12px;
+      color: var(--color-ink-700, #cbd5e1);
+      line-height: 1.5;
+    }
+    html.light .th-def-a { color: #451a03; }
+
+    /* ── FOOTER: TIMELINE SCRUBBER & CHAPTER BAR ── */
+    .th-footer {
+      height: var(--theater-footer-h);
+      background: var(--color-surface, #0d1522);
+      border-top: 1px solid var(--color-card-border, rgba(16, 185, 129, 0.2));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 16px;
+      flex-shrink: 0;
+      gap: 8px;
+      z-index: 100;
+    }
+
+    .th-progress-wrap {
+      position: relative;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    html.light .th-progress-wrap { background: #e2e8f0; }
+    .th-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #10b981, #06d6a0);
+      width: 0%;
+      border-radius: 999px;
+      transition: width 0.1s linear;
+    }
+
+    .th-chapters-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .th-chapters-nav::-webkit-scrollbar { display: none; }
+
+    .th-chap-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--color-ink-700, #cbd5e1);
+      cursor: pointer;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    html.light .th-chap-btn {
+      background: #f1f5f9;
+      border-color: #cbd5e1;
+      color: #475569;
+    }
+    .th-chap-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #10b981;
+    }
+    .th-chap-btn.active {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: #10b981;
+      color: #10b981;
+    }
+    html.light .th-chap-btn.active {
+      background: #ecfdf5;
+      color: #047857;
+      border-color: #059669;
+    }
+    .th-chap-duration {
+      font-family: var(--font-mono, monospace);
+      font-size: 9.5px;
+      opacity: 0.75;
+    }
+
+    .th-keyboard-hints {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 10px;
+      color: var(--color-ink-500, #64748b);
+      margin-left: auto;
+    }
+    .th-kbd {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      padding: 1px 4px;
+      font-family: var(--font-mono, monospace);
+      color: var(--color-ink-700, #cbd5e1);
+    }
+    html.light .th-kbd {
+      background: #e2e8f0;
+      border-color: #cbd5e1;
+      color: #334155;
+    }
+
+    @media (max-width: 960px) {
+      .th-workspace {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+      .th-stage-pane { border-right: none; border-bottom: 1px solid var(--color-card-border); }
+      .th-keyboard-hints { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── 1. THEATER HEADER BAR ── -->
+  <header class="th-header">
+    <div class="th-brand">
+      <div class="th-logo">♻️</div>
+      <div class="th-title-wrap">
+        <div class="th-title">
+          CirculaSync <span class="th-badge-sih">SIH 2026</span>
+          <span style="font-size:12px; font-weight:500; opacity:0.75;">· 5-Min Interactive Demo Studio</span>
+        </div>
+        <div class="th-sub">Dual-Pane Synchronized Teleprompter &amp; Live Stage Simulation</div>
+      </div>
+    </div>
+
+    <div class="th-controls">
+      <div class="th-timer-display" id="thTimer">00:00 / 05:00</div>
+
+      <button class="th-btn th-btn-primary" id="btnPlayPause" onclick="togglePlayPause()" title="Spacebar to toggle">
+        <span id="playIcon">▶</span> <span id="playText">Play Demo</span>
+      </button>
+
+      <button class="th-btn th-btn-secondary" onclick="restartDemo()" title="Restart from 0:00">
+        <span>🔄</span> Reset
+      </button>
+
+      <button class="th-btn th-btn-secondary" id="btnVoiceover" onclick="toggleVoiceover()" title="AI Voice Narration Rehearsal Coach">
+        <span>🎙️</span> <span id="voiceText">Voiceover: OFF</span>
+      </button>
+
+      <div style="display:flex; align-items:center; gap:2px;">
+        <button class="th-btn th-btn-secondary" id="btnSpeed" onclick="cycleSpeed()" title="Playback Speed" style="padding:7px 9px;">
+          1x
+        </button>
+        <button class="th-btn th-btn-secondary" onclick="toggleThemeLocal()" title="Toggle Theme" style="padding:7px 9px;">
+          🌓
+        </button>
+      </div>
+
+      <a href="/" class="th-btn th-btn-secondary" title="Exit to Hub">
+        <span>✕</span> Exit
+      </a>
+    </div>
+  </header>
+
+  <!-- ── 2. DUAL-PANE WORKSPACE ── -->
+  <main class="th-workspace">
+
+    <!-- LEFT: STAGE / VIEWPORT -->
+    <section class="th-stage-pane">
+      <div class="th-stage-bar">
+        <div class="th-stage-role">
+          <span id="stageRoleTag">🏛️ Apex System Overview</span>
+          <span class="th-role-pill" id="stageUrlTag">/</span>
+        </div>
+        <div class="th-stage-mode">
+          <div class="th-mode-badge video-mode" id="stageModeBadge" onclick="toggleInteractionMode()" title="Click to toggle Sandbox Hands-on mode">
+            <span id="modeIcon">🎬</span> <span id="modeLabel">Autopilot Video Sim</span>
+          </div>
+          <button class="th-btn th-btn-secondary" onclick="openCurrentPortalExternal()" title="Open this portal in a new tab" style="padding:3px 8px; font-size:11px;">
+            ↗ Open
+          </button>
+        </div>
+      </div>
+
+      <div class="th-stage-frame-wrap" id="stageWrap">
+        <!-- Live Action Toast -->
+        <div class="th-action-toast" id="actionToast" style="display:none;">
+          <span id="actionToastIcon">👉</span> <span id="actionToastText">Action</span>
+        </div>
+
+        <!-- Simulated Pointer Cursor -->
+        <svg class="th-cursor" id="simCursor" viewBox="0 0 24 24" fill="none" style="left:50%; top:50%; display:none;">
+          <path d="M4 3L11 21L14 14L21 11L4 3Z" fill="#10b981" stroke="#ffffff" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+
+        <!-- Live Embedded Iframe -->
+        <iframe class="th-stage-frame" id="stageIframe" src="/" allow="camera; microphone; clipboard-read; clipboard-write;"></iframe>
+      </div>
+    </section>
+
+    <!-- RIGHT: TELEPROMPTER & RECITAL COACH -->
+    <section class="th-teleprompter-pane" id="prompterPane">
+      
+      <div class="th-tele-header">
+        <div class="th-pace-indicator" id="paceBadge">
+          <span>⏱️</span> <span>130 WPM · Optimal Jury Cadence</span>
+        </div>
+        <div class="th-font-toggles">
+          <button class="th-font-btn" onclick="adjustPrompterFont(-1)" title="Smaller font">A-</button>
+          <button class="th-font-btn" onclick="adjustPrompterFont(1)" title="Larger font">A+</button>
+        </div>
+      </div>
+
+      <!-- Active Chapter Header Card -->
+      <div class="th-chapter-card">
+        <div class="th-chap-meta">
+          <span id="chapStepIndicator">Chapter 1 of 7</span>
+          <span id="chapTimeWindow">0:00 — 0:45 (45s)</span>
+        </div>
+        <div class="th-chap-title" id="chapTitle">Problem Statement &amp; Unified Ledger</div>
+        <div class="th-chap-metrics" id="chapMetrics">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Karaoke Verbatim Speech Card -->
+      <div class="th-speech-box">
+        <div class="th-speech-tag">
+          <span>🎙️</span> Verbatim Recital Speech (What You Recite Now)
+        </div>
+        <div class="th-speech-lines" id="speechLinesContainer">
+          <!-- Dynamically populated with active sentence glowing -->
+        </div>
+      </div>
+
+      <!-- Statutory Keywords to Emphasize -->
+      <div class="th-keywords-box">
+        <div class="th-kw-title">💡 Statutory Keywords (Speak Clearly)</div>
+        <div class="th-kw-pills" id="keywordPills">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Anticipated Jury Question & Technical Defense -->
+      <div class="th-defense-card">
+        <div class="th-def-tag">
+          <span>🚨</span> Anticipated Jury Question &amp; Instant Defense
+        </div>
+        <div class="th-def-q" id="defenseQuestion">
+          Why combine E-Waste, Municipal Waste, and Biomedical Waste in one platform?
+        </div>
+        <div class="th-def-a" id="defenseAnswer">
+          Cities and pollution control boards (CPCBs) struggle with fragmented vendors and parallel audit trails. CirculaSync unifies cross-stream logistics, carbon offset calculations, and municipal Swachh Survekshan marks into a single zero-trust compliance architecture without duplicating IT infrastructure.
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ── 3. TIMELINE SCRUBBER & CHAPTER BAR ── -->
+  <footer class="th-footer">
+    <div class="th-progress-wrap" id="progressWrap" onclick="seekByClick(event)">
+      <div class="th-progress-bar" id="progressBar"></div>
+    </div>
+
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px;">
+      <div class="th-chapters-nav" id="chaptersNav">
+        <!-- Dynamically generated chapter buttons -->
+      </div>
+
+      <div class="th-keyboard-hints">
+        <span><span class="th-kbd">Space</span> Play/Pause</span>
+        <span><span class="th-kbd">1-7</span> Jump</span>
+        <span><span class="th-kbd">S</span> Sandbox</span>
+        <span><span class="th-kbd">V</span> Voice</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── 4. THEATER ENGINE SCRIPT ── -->
+  <script>
+    let scriptData = [];
+    let currentTime = 0; // seconds (0 to 300)
+    let isPlaying = false;
+    let playbackSpeed = 1.0;
+    let voiceoverEnabled = false;
+    let isSandboxMode = false;
+    let prompterFontSize = 17;
+    let activeChapterIndex = 0;
+    let activeSpeechLineIndex = 0;
+    let timerInterval = null;
+    let currentSpeechUtterance = null;
+
+    // Load Speech Script Dataset
+    async function initTheater() {
+      try {
+        const res = await fetch("/assets/speech-script.json");
+        scriptData = await res.json();
+      } catch (e) {
+        // Fallback fetch from public-demo
+        const res = await fetch("./speech-script.json");
+        scriptData = await res.json();
+      }
+      renderChapterNavButtons();
+      if (scriptData && scriptData.length > 0) {
+        loadChapter(scriptData[0]);
+      }
+      syncStateToTime(0);
+      setupKeyboardShortcuts();
+    }
+
+    // Toggle Play/Pause
+    function togglePlayPause() {
+      if (isPlaying) {
+        pauseDemo();
+      } else {
+        playDemo();
+      }
+    }
+
+    function playDemo() {
+      if (currentTime >= 300) currentTime = 0;
+      isPlaying = true;
+      document.getElementById("playIcon").textContent = "⏸";
+      document.getElementById("playText").textContent = "Pause";
+      document.getElementById("btnPlayPause").classList.add("th-btn-active");
+      
+      clearInterval(timerInterval);
+      const tickRate = 200; // ms per tick
+      timerInterval = setInterval(() => {
+        currentTime += (tickRate / 1000) * playbackSpeed;
+        if (currentTime >= 300) {
+          currentTime = 300;
+          pauseDemo();
+        }
+        syncStateToTime(currentTime);
+      }, tickRate);
+
+      if (voiceoverEnabled) speakCurrentSentence();
+    }
+
+    function pauseDemo() {
+      isPlaying = false;
+      document.getElementById("playIcon").textContent = "▶";
+      document.getElementById("playText").textContent = "Play Demo";
+      document.getElementById("btnPlayPause").classList.remove("th-btn-active");
+      clearInterval(timerInterval);
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+    }
+
+    function restartDemo() {
+      pauseDemo();
+      currentTime = 0;
+      syncStateToTime(0);
+    }
+
+    // Jump to specific second
+    function seekToTime(secs) {
+      currentTime = Math.max(0, Math.min(300, secs));
+      syncStateToTime(currentTime);
+      if (isPlaying && voiceoverEnabled) speakCurrentSentence();
+    }
+
+    function seekByClick(e) {
+      const rect = document.getElementById("progressWrap").getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const ratio = Math.max(0, Math.min(1, clickX / rect.width));
+      seekToTime(ratio * 300);
+    }
+
+    // Sync UI, Iframe, Teleprompter, Actions to Elapsed Seconds
+    function syncStateToTime(t) {
+      // 1. Update Timer Display & Progress Bar
+      const min = Math.floor(t / 60);
+      const sec = Math.floor(t % 60);
+      document.getElementById("thTimer").textContent = `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")} / 05:00`;
+      document.getElementById("progressBar").style.width = `${(t / 300) * 100}%`;
+
+      // 2. Identify Current Chapter
+      const chapIdx = scriptData.findIndex((c, i) => {
+        const next = scriptData[i + 1];
+        return t >= c.timeStart && (!next || t < next.timeStart);
+      });
+
+      if (chapIdx !== -1 && chapIdx !== activeChapterIndex) {
+        activeChapterIndex = chapIdx;
+        loadChapter(scriptData[chapIdx]);
+      } else if (chapIdx === -1 && scriptData.length > 0) {
+        activeChapterIndex = 0;
+        loadChapter(scriptData[0]);
+      }
+
+      // 3. Highlight Karaoke Speech Sentence
+      const currentChapter = scriptData[activeChapterIndex];
+      if (currentChapter && currentChapter.speech) {
+        let sentenceIdx = 0;
+        for (let i = 0; i < currentChapter.speech.length; i++) {
+          if (t >= currentChapter.speech[i].time) {
+            sentenceIdx = i;
+          }
+        }
+        if (sentenceIdx !== activeSpeechLineIndex) {
+          activeSpeechLineIndex = sentenceIdx;
+          highlightSpeechSentence(sentenceIdx);
+          if (isPlaying && voiceoverEnabled) speakCurrentSentence();
+        }
+      }
+
+      // 4. Trigger Simulated Stage Action
+      if (currentChapter && currentChapter.stageActions) {
+        for (const action of currentChapter.stageActions) {
+          if (Math.abs(t - action.at) < 0.6) {
+            executeStageAction(action);
+            break;
+          }
+        }
+      }
+    }
+
+    // Render Chapter Teleprompter Details
+    function loadChapter(chap) {
+      document.getElementById("chapStepIndicator").textContent = `Chapter ${chap.chapter} of 7`;
+      const sMin = Math.floor(chap.timeStart / 60);
+      const sSec = Math.floor(chap.timeStart % 60);
+      const eMin = Math.floor(chap.timeEnd / 60);
+      const eSec = Math.floor(chap.timeEnd % 60);
+      document.getElementById("chapTimeWindow").textContent = 
+        `${sMin}:${String(sSec).padStart(2, "0")} — ${eMin}:${String(eSec).padStart(2, "0")} (${chap.timeEnd - chap.timeStart}s)`;
+      document.getElementById("chapTitle").textContent = chap.title;
+      document.getElementById("stageRoleTag").textContent = chap.roleTag;
+      document.getElementById("stageUrlTag").textContent = chap.targetUrl;
+
+      // Update Iframe Source if different
+      const iframe = document.getElementById("stageIframe");
+      const currentSrcPath = new URL(iframe.src, window.location.origin).pathname;
+      if (currentSrcPath !== chap.targetUrl && !isSandboxMode) {
+        iframe.src = chap.targetUrl;
+      }
+
+      // Render Key Metrics
+      const metricsContainer = document.getElementById("chapMetrics");
+      metricsContainer.innerHTML = Object.entries(chap.keyMetrics || {})
+        .map(([k, v]) => `
+          <div class="th-metric-box">
+            <div class="th-metric-label">${k}</div>
+            <div class="th-metric-val">${v}</div>
+          </div>
+        `).join("");
+
+      // Render Speech Lines
+      const speechContainer = document.getElementById("speechLinesContainer");
+      speechContainer.innerHTML = chap.speech.map((s, idx) => {
+        let formattedText = s.text;
+        if (s.emphasis) {
+          formattedText = formattedText.replace(s.emphasis, `<strong>${s.emphasis}</strong>`);
+        }
+        return `<div class="th-speech-line ${idx === 0 ? "active" : ""}" id="speechLine-${idx}">${formattedText}</div>`;
+      }).join("");
+
+      // Render Keywords
+      const kwContainer = document.getElementById("keywordPills");
+      kwContainer.innerHTML = (chap.keywords || [])
+        .map(kw => `<span class="th-kw-pill">${kw}</span>`).join("");
+
+      // Render Defense
+      document.getElementById("defenseQuestion").textContent = chap.juryDefense.question;
+      document.getElementById("defenseAnswer").textContent = chap.juryDefense.answer;
+
+      // Update Chapter Buttons
+      document.querySelectorAll(".th-chap-btn").forEach((btn, idx) => {
+        btn.classList.toggle("active", idx === activeChapterIndex);
+      });
+    }
+
+    function highlightSpeechSentence(idx) {
+      document.querySelectorAll(".th-speech-line").forEach((el, i) => {
+        el.classList.toggle("active", i === idx);
+      });
+      const activeEl = document.getElementById(`speechLine-${idx}`);
+      if (activeEl) {
+        activeEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+    }
+
+    // Execute Automated Action on Live Stage
+    function executeStageAction(act) {
+      const toast = document.getElementById("actionToast");
+      const cursor = document.getElementById("simCursor");
+
+      if (act.label) {
+        toast.style.display = "flex";
+        document.getElementById("actionToastText").textContent = act.label;
+        setTimeout(() => { toast.style.display = "none"; }, 2800);
+      }
+
+      // Animate Cursor
+      if (!isSandboxMode) {
+        cursor.style.display = "block";
+        cursor.style.left = `${Math.random() * 40 + 30}%`;
+        cursor.style.top = `${Math.random() * 40 + 30}%`;
+        cursor.classList.add("clicking");
+        setTimeout(() => cursor.classList.remove("clicking"), 300);
+      }
+    }
+
+    // Toggle Voiceover Rehearsal Coach (Web Speech API)
+    function toggleVoiceover() {
+      voiceoverEnabled = !voiceoverEnabled;
+      const btn = document.getElementById("btnVoiceover");
+      const text = document.getElementById("voiceText");
+      if (voiceoverEnabled) {
+        btn.classList.add("th-btn-active");
+        text.textContent = "Voiceover: ON";
+        if (isPlaying) speakCurrentSentence();
+      } else {
+        btn.classList.remove("th-btn-active");
+        text.textContent = "Voiceover: OFF";
+        if (window.speechSynthesis) window.speechSynthesis.cancel();
+      }
+    }
+
+    function speakCurrentSentence() {
+      if (!window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
+      const currentChapter = scriptData[activeChapterIndex];
+      if (!currentChapter || !currentChapter.speech[activeSpeechLineIndex]) return;
+
+      const sentence = currentChapter.speech[activeSpeechLineIndex].text;
+      currentSpeechUtterance = new SpeechSynthesisUtterance(sentence);
+      currentSpeechUtterance.rate = playbackSpeed * 0.95; // Calibrated ~130 wpm
+      currentSpeechUtterance.pitch = 1.0;
+      window.speechSynthesis.speak(currentSpeechUtterance);
+    }
+
+    // Cycle Playback Speed
+    function cycleSpeed() {
+      const speeds = [1.0, 1.25, 1.5, 2.0];
+      const nextIdx = (speeds.indexOf(playbackSpeed) + 1) % speeds.length;
+      playbackSpeed = speeds[nextIdx];
+      document.getElementById("btnSpeed").textContent = `${playbackSpeed}x`;
+      if (voiceoverEnabled && isPlaying) speakCurrentSentence();
+    }
+
+    // Toggle Sandbox vs Autopilot Video Mode
+    function toggleInteractionMode() {
+      isSandboxMode = !isSandboxMode;
+      const badge = document.getElementById("stageModeBadge");
+      const icon = document.getElementById("modeIcon");
+      const label = document.getElementById("modeLabel");
+      const cursor = document.getElementById("simCursor");
+
+      if (isSandboxMode) {
+        badge.className = "th-mode-badge sandbox-mode";
+        icon.textContent = "🕹️";
+        label.textContent = "Interactive Sandbox Mode";
+        cursor.style.display = "none";
+        pauseDemo();
+      } else {
+        badge.className = "th-mode-badge video-mode";
+        icon.textContent = "🎬";
+        label.textContent = "Autopilot Video Sim";
+      }
+    }
+
+    function openCurrentPortalExternal() {
+      const currentChapter = scriptData[activeChapterIndex];
+      if (currentChapter) {
+        window.open(currentChapter.targetUrl, "_blank");
+      }
+    }
+
+    // Prompter Font Size Adjustment
+    function adjustPrompterFont(delta) {
+      prompterFontSize = Math.max(14, Math.min(26, prompterFontSize + delta));
+      document.documentElement.style.setProperty("--prompter-font-size", `${prompterFontSize}px`);
+    }
+
+    // Render Timeline Navigation Chapter Buttons
+    function renderChapterNavButtons() {
+      const container = document.getElementById("chaptersNav");
+      container.innerHTML = scriptData.map((c, idx) => {
+        const sMin = Math.floor(c.timeStart / 60);
+        const sSec = Math.floor(c.timeStart % 60);
+        return `
+          <button class="th-chap-btn ${idx === 0 ? "active" : ""}" onclick="jumpToChapter(${idx})">
+            <span>${idx + 1}. ${c.title.split(":")[0]}</span>
+            <span class="th-chap-duration">${sMin}:${String(sSec).padStart(2, "0")}</span>
+          </button>
+        `;
+      }).join("");
+    }
+
+    function jumpToChapter(idx) {
+      if (scriptData[idx]) {
+        seekToTime(scriptData[idx].timeStart);
+      }
+    }
+
+    // Keyboard Shortcuts
+    function setupKeyboardShortcuts() {
+      window.addEventListener("keydown", (e) => {
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+        if (e.code === "Space") {
+          e.preventDefault();
+          togglePlayPause();
+        } else if (e.code === "KeyS") {
+          e.preventDefault();
+          toggleInteractionMode();
+        } else if (e.code === "KeyV") {
+          e.preventDefault();
+          toggleVoiceover();
+        } else if (e.code >= "Digit1" && e.code <= "Digit7") {
+          const idx = parseInt(e.key, 10) - 1;
+          if (scriptData[idx]) {
+            jumpToChapter(idx);
+          }
+        }
+      });
+    }
+
+    function toggleThemeLocal() {
+      if (window.csToggleTheme) {
+        window.csToggleTheme();
+      } else {
+        const root = document.documentElement;
+        const isLight = root.classList.contains("light");
+        root.classList.toggle("light", !isLight);
+        root.classList.toggle("dark", isLight);
+        root.setAttribute("data-theme", isLight ? "dark" : "light");
+      }
+    }
+
+    // Boot on Load
+    window.addEventListener("DOMContentLoaded", initTheater);
+  </script>
+</body>
+</html>

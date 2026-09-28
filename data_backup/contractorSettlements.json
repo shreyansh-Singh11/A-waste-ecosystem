@@ -1,0 +1,326 @@
+[
+  {
+    "voucherId": "VOUCH-SWM-2026-09-5BB470",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 10,
+      "segregatedPickups": 9,
+      "segregationRatePct": 90,
+      "totalPickupWeightKg": 52,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 300,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 19,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 319
+    },
+    "netPayoutINR": 319,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T10:06:54.990Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-3F4347",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 10,
+      "segregatedPickups": 9,
+      "segregationRatePct": 90,
+      "totalPickupWeightKg": 52,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 300,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 19,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 319
+    },
+    "netPayoutINR": 319,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T10:07:50.264Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-281A96",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 11,
+      "segregatedPickups": 10,
+      "segregationRatePct": 91,
+      "totalPickupWeightKg": 57.5,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 330,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 21,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 351
+    },
+    "netPayoutINR": 351,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T10:10:40.151Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-910FFF",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 12,
+      "segregatedPickups": 11,
+      "segregationRatePct": 92,
+      "totalPickupWeightKg": 63,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 360,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 23,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 383
+    },
+    "netPayoutINR": 383,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T10:43:44.119Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-5DB99E",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 13,
+      "segregatedPickups": 12,
+      "segregationRatePct": 92,
+      "totalPickupWeightKg": 68.5,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 390,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 25,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 415
+    },
+    "netPayoutINR": 415,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T11:02:27.040Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-1ACF29",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 14,
+      "segregatedPickups": 13,
+      "segregationRatePct": 93,
+      "totalPickupWeightKg": 74,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 420,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 28,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 448
+    },
+    "netPayoutINR": 448,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T11:02:57.423Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-D2B1F4",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 15,
+      "segregatedPickups": 14,
+      "segregationRatePct": 93,
+      "totalPickupWeightKg": 79.5,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 450,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 30,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 480
+    },
+    "netPayoutINR": 480,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T11:06:21.961Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-68957E",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 16,
+      "segregatedPickups": 15,
+      "segregationRatePct": 94,
+      "totalPickupWeightKg": 85,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 480,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 32,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 512
+    },
+    "netPayoutINR": 512,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T11:08:39.040Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-46EB26",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 17,
+      "segregatedPickups": 16,
+      "segregationRatePct": 94,
+      "totalPickupWeightKg": 90.5,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 510,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 34,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 544
+    },
+    "netPayoutINR": 544,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T19:22:36.123Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-D1E56B",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 18,
+      "segregatedPickups": 17,
+      "segregationRatePct": 94,
+      "totalPickupWeightKg": 96,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 540,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 36,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 576
+    },
+    "netPayoutINR": 576,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T20:00:45.801Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-BAD455",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 19,
+      "segregatedPickups": 18,
+      "segregationRatePct": 95,
+      "totalPickupWeightKg": 101.5,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 570,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 39,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 609
+    },
+    "netPayoutINR": 609,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T20:07:02.586Z"
+  },
+  {
+    "voucherId": "VOUCH-SWM-2026-09-B3A040",
+    "contractorId": "CONCESSIONAIRE-TEST-CENTRAL",
+    "monthYear": "2026-09",
+    "metrics": {
+      "totalPickups": 20,
+      "segregatedPickups": 19,
+      "segregationRatePct": 95,
+      "totalPickupWeightKg": 107,
+      "totalDeliveredWeightKg": 0,
+      "excessLandfillTons": 0
+    },
+    "financialBreakdown": {
+      "baseRatePerPickup": 30,
+      "baseEarningsINR": 600,
+      "isBonusEligible": true,
+      "bonusPerSegregatedTon": 400,
+      "segregationBonusINR": 41,
+      "penaltyPerExcessLandfillTon": 800,
+      "landfillPenaltyINR": 0,
+      "netPayoutINR": 641
+    },
+    "netPayoutINR": 641,
+    "paymentRef": "NEFT-TEST-998877",
+    "status": "SETTLED",
+    "settledAt": "2026-09-25T20:17:27.249Z"
+  }
+]

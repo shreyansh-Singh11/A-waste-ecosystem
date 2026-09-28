@@ -1,0 +1,128 @@
+[
+  {
+    "entryId": "OFFLINE-TX-DEMO-01",
+    "workerId": "WORKER-MUNICIPAL-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-MP-NAGAR-402",
+      "weightKg": 4.5,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T14:10:00.000Z",
+    "clientHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T14:10:00.000Z",
+    "syncedAt": "2026-09-25T14:35:00.000Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-7C87B4A5",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T19:49:13.381Z",
+    "syncedAt": "2026-09-25T19:49:13.385Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-1F956BCB",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:00:38.983Z",
+    "syncedAt": "2026-09-25T20:00:38.986Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-0032DE8F",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:00:45.696Z",
+    "syncedAt": "2026-09-25T20:00:45.700Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-DB69AE21",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:01:13.910Z",
+    "syncedAt": "2026-09-25T20:01:13.912Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-3B30D2C8",
+    "workerId": "WRK-OFFLINE-TEST",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "test": true
+    },
+    "offlineTimestamp": "2026-09-25T20:02:05.158Z",
+    "clientHash": "25bcf12b14ba1c122e37e1293ad47c78fcc7a49b44c995ebec087169b9291d1c",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:02:05.158Z",
+    "syncedAt": "2026-09-25T20:02:05.159Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-12AE1C62",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:07:02.467Z",
+    "syncedAt": "2026-09-25T20:07:02.469Z"
+  },
+  {
+    "entryId": "OFFLINE-TX-3104628D",
+    "workerId": "WRK-FIELD-OFFLINE-01",
+    "deviceUuid": "DEV-HANDHELD-MP-04",
+    "actionType": "OFFLINE_PICKUP_SCAN",
+    "payload": {
+      "householdId": "HH-SHAH-201",
+      "weightKg": 6.2,
+      "segregated": true
+    },
+    "offlineTimestamp": "2026-09-25T16:00:00.000Z",
+    "clientHash": "e0394cd13306eb9aa5003952cbad166102ecb29b95ab0fd2c14772b478a09fa4",
+    "status": "SYNCHRONIZED_TO_CLOUD",
+    "queuedAt": "2026-09-25T20:17:27.155Z",
+    "syncedAt": "2026-09-25T20:17:27.157Z"
+  }
+]

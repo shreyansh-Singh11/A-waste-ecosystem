@@ -1,0 +1,163 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "♻️ CirculaSync SIH 2026 Multi-Stream Circular Platform" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ♻️
+        - generic [ref=e7]:
+          - generic [ref=e8]:
+            - text: CirculaSync
+            - generic [ref=e9]: SIH 2026
+          - generic [ref=e10]: Multi-Stream Circular Platform
+      - navigation [ref=e11]:
+        - link "🌐 Unified Hub" [ref=e12] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e13]: 🌐
+          - generic [ref=e14]: Unified Hub
+        - link "👤 Citizen" [ref=e15] [cursor=pointer]:
+          - /url: /user
+          - generic [ref=e16]: 👤
+          - generic [ref=e17]: Citizen
+        - link "🏭 Recycler" [ref=e18] [cursor=pointer]:
+          - /url: /collector
+          - generic [ref=e19]: 🏭
+          - generic [ref=e20]: Recycler
+        - link "🚛 Municipal" [ref=e21] [cursor=pointer]:
+          - /url: /municipal
+          - generic [ref=e22]: 🚛
+          - generic [ref=e23]: Municipal
+        - link "🏥 Biomedical" [ref=e24] [cursor=pointer]:
+          - /url: /medical
+          - generic [ref=e25]: 🏥
+          - generic [ref=e26]: Biomedical
+        - link "🏷️ Producer" [ref=e27] [cursor=pointer]:
+          - /url: /producer
+          - generic [ref=e28]: 🏷️
+          - generic [ref=e29]: Producer
+        - link "🏛️ Gov Command" [ref=e30] [cursor=pointer]:
+          - /url: /government
+          - generic [ref=e31]: 🏛️
+          - generic [ref=e32]: Gov Command
+      - generic [ref=e33]:
+        - button "⚡ Speed-Run" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: ⚡
+          - generic [ref=e36]: Speed-Run
+        - button "Toggle Theme" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: 🌙
+          - generic [ref=e39]: Dark
+  - generic [ref=e40]:
+    - navigation [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]: ♻️
+        - generic [ref=e44]:
+          - text: Smart E-Waste
+          - generic [ref=e45]: Citizen Portal
+      - link "🪪 My Eco-Card & Impact" [ref=e46] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e47]: 🪪
+        - text: My Eco-Card & Impact
+      - link "🤖 AI Vision & Register" [ref=e48] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e49]: 🤖
+        - text: AI Vision & Register
+      - link "📦 Request Doorstep Pickup" [ref=e50] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e51]: 📦
+        - text: Request Doorstep Pickup
+      - link "💳 Eco-Wallet & Rewards" [ref=e52] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e53]: 💳
+        - text: Eco-Wallet & Rewards
+      - link "📢 Whistleblower Dump Report" [ref=e54] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic [ref=e55]: 📢
+        - text: Whistleblower Dump Report
+      - link "🏛️ Command & Compliance Hub" [ref=e57] [cursor=pointer]:
+        - /url: /government
+        - generic [ref=e58]: 🏛️
+        - text: Command & Compliance Hub
+      - generic [ref=e59]: Madhya Pradesh · Demo Environment
+    - generic [ref=e60]:
+      - banner [ref=e61]:
+        - generic [ref=e62]:
+          - heading "Citizen Circular Portal" [level=1] [ref=e63]
+          - generic [ref=e64]: AI Device Diagnostics · Doorstep Collection · Swachh Karma Coins
+        - generic [ref=e65]:
+          - button "✨ Quick Demo (rahul123)" [ref=e66] [cursor=pointer]
+          - button "Notifications" [ref=e69]: 🔔
+      - main [ref=e70]:
+        - generic [ref=e71]:
+          - button "🪪 My Eco-Card & Impact" [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]: 🪪
+            - text: My Eco-Card & Impact
+          - button "🤖 AI Vision & Register" [ref=e74] [cursor=pointer]:
+            - generic [ref=e75]: 🤖
+            - text: AI Vision & Register
+          - button "📦 Request Pickup" [ref=e76] [cursor=pointer]:
+            - generic [ref=e77]: 📦
+            - text: Request Pickup
+          - button "💳 Wallet & Whistleblower" [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: 💳
+            - text: Wallet & Whistleblower
+        - generic [ref=e80]: ✓ Loaded demo profile for rahul123
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]: Hello, rahul123
+            - generic [ref=e84]: Enter your Owner ID below to load your E-Waste Card and impact.
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - generic [ref=e87]: Items
+                - generic [ref=e88]: "0"
+              - generic [ref=e89]:
+                - generic [ref=e90]: Credits
+                - generic [ref=e91]: "0"
+              - generic [ref=e92]:
+                - generic [ref=e93]: CO₂ Avoided
+                - generic [ref=e94]: 0 kg
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - heading "My E-Waste Card" [level=2] [ref=e97]
+              - generic [ref=e98]: Your registered items, credits, and environmental impact
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - generic [ref=e101]: Owner ID
+                - textbox "Owner ID" [ref=e102]:
+                  - /placeholder: e.g. rahul123
+                  - text: rahul123
+              - button "View My Card" [ref=e103] [cursor=pointer]
+            - generic [ref=e104]:
+              - generic [ref=e105]:
+                - generic [ref=e106]:
+                  - generic [ref=e107]: "0"
+                  - generic [ref=e108]: Registered
+                - generic [ref=e109]:
+                  - generic [ref=e110]: "0"
+                  - generic [ref=e111]: Recycled
+                - generic [ref=e112]:
+                  - generic [ref=e113]: "0"
+                  - generic [ref=e114]: Pending
+                - generic [ref=e115]:
+                  - generic [ref=e116]: "0"
+                  - generic [ref=e117]: Credits
+              - generic [ref=e119]:
+                - text: "🌍 Your impact:"
+                - strong [ref=e120]: 0 kg
+                - text: CO₂ avoided ·
+                - strong [ref=e121]: 0 kg
+                - text: material recovered (estimated, from 0 recycled item(s))
+              - generic [ref=e123]:
+                - generic [ref=e124]: 💻
+                - generic [ref=e125]: No items yet.
+                - generic [ref=e126]: Register your first device below to get started.
+            - heading "Notifications" [level=3] [ref=e127]
+            - generic [ref=e129]:
+              - generic [ref=e130]: 🔔
+              - generic [ref=e131]: No notifications yet.
+          - generic [ref=e132]:
+            - generic [ref=e133]:
+              - heading "E-Waste Passport" [level=2] [ref=e134]
+              - generic [ref=e135]: Scan an item's QR code, or open its track link, to view its full Digital Passport.
+            - paragraph [ref=e136]:
+              - text: Every registered item gets a QR code (shown after registration) linking to
+              - code [ref=e137]: /track/<token>
+              - text: — its public Digital E-Waste Passport with full journey and environmental impact.

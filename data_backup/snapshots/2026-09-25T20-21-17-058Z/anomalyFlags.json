@@ -1,0 +1,24 @@
+[
+  {
+    "flagId": "bedb7dd0-782d-4322-b206-683685265565",
+    "track": "MEDICAL",
+    "ruleCode": "STALE_MANIFEST",
+    "severity": "HIGH",
+    "entityId": "med-rec-001",
+    "message": "BMW manifest MED-784210 stuck in COLLECTED for 24+ hours — potential unsafe storage",
+    "status": "RESOLVED",
+    "detectedAt": "2026-09-25T09:19:37.500Z",
+    "resolution": "Test resolution verified by officer",
+    "resolvedAt": "2026-09-25T20:17:26.993Z"
+  },
+  {
+    "flagId": "fa7db037-6634-494f-848a-c11fc01d8d23",
+    "track": "MEDICAL",
+    "ruleCode": "STALE_MANIFEST",
+    "severity": "HIGH",
+    "entityId": "med-rec-002",
+    "message": "BMW manifest MED-784211 stuck in COLLECTED for 24+ hours — potential unsafe storage",
+    "status": "OPEN",
+    "detectedAt": "2026-09-25T09:19:37.500Z"
+  }
+]

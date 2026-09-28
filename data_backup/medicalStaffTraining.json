@@ -1,0 +1,192 @@
+[
+  {
+    "id": "str-rec-001",
+    "trainingId": "STR-091421",
+    "staffId": "STF-Dr-Sharma",
+    "hospitalId": "AIIMS-Bhopal-Hosp",
+    "trainingType": "Hepatitis B Vaccination & Sharp Safety Protocol",
+    "completionDate": "2026-06-15",
+    "expiryDate": "2027-06-15",
+    "loggedAt": "2026-06-15T10:00:00.000Z"
+  },
+  {
+    "id": "ceddf1ab-e575-4213-8243-d3b2c65488a0",
+    "trainingId": "STR-212D89",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-24T18:09:09.988Z"
+  },
+  {
+    "id": "2c210340-85ef-418f-8c86-7656a0d50178",
+    "trainingId": "STR-7CFFC7",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-24T18:09:25.324Z"
+  },
+  {
+    "id": "35fdbb5b-34d4-4112-9ed4-b657084292e1",
+    "trainingId": "STR-B6224C",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-24T18:40:39.612Z"
+  },
+  {
+    "id": "9b4fbc8a-2909-4c37-af7a-d35eb53acfe4",
+    "trainingId": "STR-5D3BCB",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T04:34:15.415Z"
+  },
+  {
+    "id": "8a28fd3a-a5bb-4fb3-ab36-05ea8c0c7edc",
+    "trainingId": "STR-D49950",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T04:38:28.671Z"
+  },
+  {
+    "id": "9e06dc24-3be6-4ceb-92c0-dfbfcad133df",
+    "trainingId": "STR-E30CDD",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T09:24:24.797Z"
+  },
+  {
+    "id": "2df0df05-e9b6-4bd9-be43-334795745f4b",
+    "trainingId": "STR-CB6F82",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T09:47:57.859Z"
+  },
+  {
+    "id": "59a80879-7955-43dc-858d-b109b0791676",
+    "trainingId": "STR-2A7BBE",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T10:07:50.495Z"
+  },
+  {
+    "id": "7a282375-dedc-436a-9327-43e033c3503f",
+    "trainingId": "STR-A3A5D9",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T10:10:40.421Z"
+  },
+  {
+    "id": "5201011d-daa2-4fdc-a66f-fed5dda15734",
+    "trainingId": "STR-307F29",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T10:43:44.286Z"
+  },
+  {
+    "id": "7959defe-4405-41ea-8a2e-e96ace183cf0",
+    "trainingId": "STR-14BCF3",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T11:02:27.185Z"
+  },
+  {
+    "id": "95fb61c6-4231-43cb-b244-f4d9c877937e",
+    "trainingId": "STR-075A80",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T11:02:57.612Z"
+  },
+  {
+    "id": "7902fc42-a2ad-4c42-a329-be726f2b0a86",
+    "trainingId": "STR-352632",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T11:06:22.247Z"
+  },
+  {
+    "id": "73c43776-944b-46bf-a835-a6df0f2883d6",
+    "trainingId": "STR-49641A",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T11:08:39.345Z"
+  },
+  {
+    "id": "89a6ff41-83ed-4d9a-a415-7040c01b1618",
+    "trainingId": "STR-B07A24",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T19:22:43.506Z"
+  },
+  {
+    "id": "6138b536-d634-4fd3-9d95-633fef0152ce",
+    "trainingId": "STR-B3A2B0",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T20:00:51.583Z"
+  },
+  {
+    "id": "36025a89-ec7e-46aa-9cab-9def13397d85",
+    "trainingId": "STR-446D1C",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T20:07:14.235Z"
+  },
+  {
+    "id": "e9a38489-8c1c-48f9-af95-b5d5df78f7d8",
+    "trainingId": "STR-411DE2",
+    "staffId": "STF-TEST-01",
+    "hospitalId": "HOSP-TEST-01",
+    "trainingType": "Hepatitis B Vaccination",
+    "completionDate": "2026-09-24",
+    "expiryDate": "2027-09-24",
+    "loggedAt": "2026-09-25T20:17:38.507Z"
+  }
+]

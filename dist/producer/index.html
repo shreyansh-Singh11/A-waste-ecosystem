@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Brand & Producer EPR Compliance Hub</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  .cert-hash {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-primary-400);
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    padding: 2px 6px;
+    border-radius: 4px;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  .prog-bar-wrap {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    height: 8px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .prog-bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #10b981, #059669);
+    transition: width 0.4s ease;
+  }
+  .prog-bar-fill.warn { background: linear-gradient(90deg, #f59e0b, #d97706); }
+  .prog-bar-fill.danger { background: linear-gradient(90deg, #f43f5e, #be123c); }
+  html.light .cert-hash, [data-theme="light"] .cert-hash {
+    background: #d1fae5;
+    color: #047857;
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  html.light .prog-bar-wrap, [data-theme="light"] .prog-bar-wrap {
+    background: #e2e8f0;
+  }
+  .category-pill-row { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-top: var(--sp-2); }
+  .token-bar { display: flex; align-items: center; gap: var(--sp-2); flex-wrap: wrap; }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="app-shell">
+  <!-- Sidebar Navigation -->
+  <aside class="app-nav">
+    <div class="brand">
+      <div class="mark">🏷️</div>
+      <div>
+        <div class="name">CirculaSync</div>
+        <div class="sub">Producer EPR Desk</div>
+      </div>
+    </div>
+
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin-bottom:var(--sp-2);">Overview</div>
+    <a class="nav-link active" href="#top"><span class="nav-icon">📊</span>Dashboard</a>
+    <a class="nav-link" href="#obligations"><span class="nav-icon">🎯</span>EPR Obligations</a>
+
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Marketplace</div>
+    <a class="nav-link" href="#marketplace"><span class="nav-icon">🛒</span>Browse Certificates</a>
+    <a class="nav-link" href="#purchases"><span class="nav-icon">📜</span>My Purchases</a>
+
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Compliance</div>
+    <a class="nav-link" href="#compliance"><span class="nav-icon">📋</span>CPCB Return Report</a>
+    <a class="nav-link" href="#transactions"><span class="nav-icon">💳</span>Audit Ledger</a>
+
+    <div class="nav-footer">
+      <div style="font-size: 11px; color: var(--text-tertiary);">SIH 2026 · CPCB E-Waste Rules 2022</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="app-main">
+    <!-- Topbar -->
+    <header class="app-topbar">
+      <div class="title-block">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <h1>Brand &amp; Producer EPR Portal</h1>
+          <span class="badge badge-success" style="font-size:11px; padding:2px 8px;"><span class="dot"></span>CPCB CONNECTED</span>
+        </div>
+        <div class="meta">Extended Producer Responsibility Marketplace &amp; Cryptographic Settlement</div>
+      </div>
+      <div class="actions token-bar">
+        <input type="text" id="producerToken" class="input" placeholder="Bearer Token" value="demo-producer-token" style="width: 170px; padding: 6px 10px; font-size: 13px;" onkeydown="if(event.key==='Enter') signIn()" />
+        <button class="btn btn-primary btn-sm" onclick="signIn()">Sign In</button>
+        <span id="authBadge" class="badge badge-neutral"><span class="dot"></span>Signed Out</span>
+        <button class="btn btn-secondary btn-sm" onclick="refreshAll()">↻ Refresh</button>
+      </div>
+    </header>
+
+    <!-- Content Area -->
+    <main class="app-content">
+
+      <!-- Gated Content Notice (when signed out) -->
+      <div id="unauthNotice" class="panel" style="display: none; text-align: center; padding: var(--sp-8);">
+        <div style="font-size: 36px; margin-bottom: var(--sp-2);">🔒</div>
+        <h2>Sign In Required</h2>
+        <p style="color: var(--color-ink-500); margin-top: var(--sp-1);">Please enter your Producer Token above (e.g. <code>demo-producer-token</code>) to access your EPR obligations, marketplace, and compliance reports.</p>
+        <p id="unauthErrorDetail" style="color: var(--color-danger-700); font-weight: 500; margin-top: var(--sp-2);"></p>
+        <div style="margin-top: var(--sp-4);">
+          <button class="btn btn-secondary btn-sm" onclick="document.getElementById('producerToken').value='demo-producer-token'; signIn();">Use Demo Producer Token</button>
+        </div>
+      </div>
+
+      <!-- Main Portal Container (visible when authenticated) -->
+      <div id="portalContent">
+
+        <!-- Company Profile & Quick Stats -->
+        <section id="top" class="section-anchor">
+          <div class="panel" style="margin-bottom: var(--sp-6);">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: var(--sp-4);">
+              <div>
+                <div style="font: var(--text-label); color: var(--color-primary-600); text-transform: uppercase;">Registered Brand / OEM</div>
+                <h2 id="companyName" style="margin-top: 4px;">Loading profile...</h2>
+                <div id="companyMeta" style="font: var(--text-caption); color: var(--color-ink-500); margin-top: 4px;">—</div>
+                <div id="companyCategories" class="category-pill-row"></div>
+              </div>
+              <div id="overallStatusBadge" style="text-align: right;"></div>
+            </div>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="kpi-grid" style="margin-bottom: var(--sp-6);">
+            <div class="kpi-card accent-primary">
+              <div class="kpi-label">Total Obligation</div>
+              <div class="kpi-value" id="kpiTarget">—</div>
+              <div class="kpi-trend" style="color: var(--color-ink-500);">CPCB Annual Target</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Fulfilled Weight</div>
+              <div class="kpi-value" id="kpiFulfilled">—</div>
+              <div class="kpi-trend" style="color: var(--color-success-700);">Verified Recycled</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Compliance Level</div>
+              <div class="kpi-value" id="kpiCompliance">—</div>
+              <div class="kpi-trend" id="kpiComplianceSub">—</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Total EPR Spend</div>
+              <div class="kpi-value" id="kpiSpend">—</div>
+              <div class="kpi-trend" style="color: var(--color-ink-500);">Certificate Purchases</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: EPR Obligations -->
+        <section id="obligations" class="section-anchor" style="margin-bottom: var(--sp-7);">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>🎯 Annual EPR Obligations (CPCB Targets)</h2>
+              <span class="hint">Mandated under E-Waste (Management) Rules, 2022</span>
+            </div>
+            <div class="table-wrap">
+              <table class="ds-table" id="obligationsTable">
+                <thead>
+                  <tr>
+                    <th>Obligation ID</th>
+                    <th>Category</th>
+                    <th>Target (kg)</th>
+                    <th>Fulfilled (kg)</th>
+                    <th>Remaining (kg)</th>
+                    <th>Compliance</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="obligationsBody">
+                  <tr><td colspan="8"><div class="skeleton skeleton-card"></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Certificate Marketplace -->
+        <section id="marketplace" class="section-anchor" style="margin-bottom: var(--sp-7);">
+          <div class="panel">
+            <div class="panel-header" style="flex-wrap: wrap; gap: var(--sp-3);">
+              <div>
+                <h2>🛒 Verified EPR Certificate Marketplace</h2>
+                <div class="hint">Auto-minted from verified recycling on our platform · Tamper-evident SHA-256 hash</div>
+              </div>
+              <div style="display: flex; gap: var(--sp-2); align-items: center;">
+                <select id="filterCategory" class="input" style="padding: 6px 10px; font-size: 13px;" onchange="loadMarketplace()">
+                  <option value="">All Categories</option>
+                  <option value="Laptop">Laptop</option>
+                  <option value="Smartphone">Smartphone</option>
+                  <option value="Computing Device">Computing Device</option>
+                  <option value="Consumer Electronics">Consumer Electronics</option>
+                  <option value="Monitor">Monitor</option>
+                  <option value="Battery / Power">Battery / Power</option>
+                  <option value="Small Household Appliance">Small Household Appliance</option>
+                </select>
+                <button class="btn btn-secondary btn-sm" onclick="loadMarketplace()">Filter</button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="ds-table" id="marketplaceTable">
+                <thead>
+                  <tr>
+                    <th>Certificate ID</th>
+                    <th>Category</th>
+                    <th>Weight</th>
+                    <th>Recycler</th>
+                    <th>Recycled Date</th>
+                    <th>Price (₹)</th>
+                    <th>Tamper-Proof Hash</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="marketplaceBody">
+                  <tr><td colspan="8"><div class="skeleton skeleton-card"></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: My Purchased Certificates -->
+        <section id="purchases" class="section-anchor" style="margin-bottom: var(--sp-7);">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>📜 My Purchased EPR Certificates</h2>
+              <span class="hint">Fulfilled certificates registered to your CPCB account</span>
+            </div>
+            <div class="table-wrap">
+              <table class="ds-table" id="purchasesTable">
+                <thead>
+                  <tr>
+                    <th>Certificate ID</th>
+                    <th>Category</th>
+                    <th>Weight (kg)</th>
+                    <th>Recycler</th>
+                    <th>Purchased Date</th>
+                    <th>Amount Paid</th>
+                    <th>Verification</th>
+                  </tr>
+                </thead>
+                <tbody id="purchasesBody">
+                  <tr><td colspan="7"><div class="skeleton skeleton-card"></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: CPCB Compliance Report -->
+        <section id="compliance" class="section-anchor" style="margin-bottom: var(--sp-7);">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>📋 CPCB Compliance Report & Environmental Contribution</h2>
+              <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print / Export PDF</button>
+            </div>
+            <div id="complianceReportWrap">
+              <div class="skeleton skeleton-card"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Transaction Ledger -->
+        <section id="transactions" class="section-anchor" style="margin-bottom: var(--sp-7);">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>💳 Transaction History</h2>
+              <span class="hint">Immutable purchase ledger for audits</span>
+            </div>
+            <div class="table-wrap">
+              <table class="ds-table" id="transactionsTable">
+                <thead>
+                  <tr>
+                    <th>Txn ID</th>
+                    <th>Certificate ID</th>
+                    <th>Category</th>
+                    <th>Weight (kg)</th>
+                    <th>Amount (₹)</th>
+                    <th>Timestamp</th>
+                  </tr>
+                </thead>
+                <tbody id="transactionsBody">
+                  <tr><td colspan="6"><div class="skeleton skeleton-card"></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div> <!-- /portalContent -->
+    </main>
+  </div>
+</div>
+
+<!-- Purchase Confirmation Modal -->
+<div id="purchaseModal" class="ds-modal-overlay" style="display: none;">
+  <div class="ds-modal" style="max-width: 480px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-4);">
+      <h3 style="margin: 0;">Confirm EPR Certificate Purchase</h3>
+      <button class="btn btn-secondary btn-sm" onclick="closePurchaseModal()">✕</button>
+    </div>
+    <div id="purchaseModalContent" style="font-size: 14px; line-height: 1.6; margin-bottom: var(--sp-5);">
+      <!-- populated dynamically -->
+    </div>
+    <div style="display: flex; justify-content: flex-end; gap: var(--sp-2);">
+      <button class="btn btn-tertiary" onclick="closePurchaseModal()">Cancel</button>
+      <button id="btnConfirmPurchase" class="btn btn-primary" onclick="executePurchase()">Confirm Purchase (₹<span id="modalPrice">0</span>)</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hash Verification Modal -->
+<div id="hashModal" class="ds-modal-overlay" style="display: none;">
+  <div class="ds-modal" style="max-width: 540px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--sp-4);">
+      <h3 style="margin: 0;">Tamper-Evident Hash Audit</h3>
+      <button class="btn btn-secondary btn-sm" onclick="closeHashModal()">✕</button>
+    </div>
+    <div id="hashModalContent" style="font-size: 13px; line-height: 1.6;">
+      <!-- populated dynamically -->
+    </div>
+    <div style="display: flex; justify-content: flex-end; margin-top: var(--sp-4);">
+      <button class="btn btn-primary btn-sm" onclick="closeHashModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script src="/assets/shared.js"></script>
+<script>
+let currentProducer = null;
+let currentObligations = [];
+let pendingPurchaseCert = null;
+
+function getAuthHeaders() {
+  const input = document.getElementById("producerToken");
+  let token = (input ? input.value : "").trim();
+  if (token.toLowerCase().startsWith("bearer ")) {
+    token = token.slice(7).trim();
+  }
+  return token ? { "Authorization": "Bearer " + token, "Content-Type": "application/json" } : { "Content-Type": "application/json" };
+}
+
+async function signIn() {
+  const tokenInput = document.getElementById("producerToken");
+  let token = tokenInput ? tokenInput.value.trim() : "";
+  if (token.toLowerCase().startsWith("bearer ")) {
+    token = token.slice(7).trim();
+    if (tokenInput) tokenInput.value = token;
+  }
+  try {
+    const res = await fetch("/api/producer/profile", { headers: getAuthHeaders() });
+    if (!res.ok) {
+      const errData = await res.json().catch(() => ({}));
+      throw new Error(errData.error || `Authentication failed (Status ${res.status})`);
+    }
+    currentProducer = await res.json();
+    if (token) {
+      try { localStorage.setItem("epr_producer_token", token); } catch (e) {}
+    }
+    document.getElementById("authBadge").className = "badge badge-success";
+    document.getElementById("authBadge").innerHTML = '<span class="dot"></span>Signed In: ' + (currentProducer.name || "Producer");
+    document.getElementById("unauthNotice").style.display = "none";
+    document.getElementById("portalContent").style.display = "block";
+    renderProfile();
+    try {
+      await refreshAll();
+    } catch (refErr) {
+      console.warn("Failed to load dashboard data:", refErr);
+    }
+  } catch (err) {
+    document.getElementById("authBadge").className = "badge badge-danger";
+    document.getElementById("authBadge").innerHTML = '<span class="dot"></span>Sign-In Failed';
+    document.getElementById("unauthNotice").style.display = "block";
+    const errorDetail = document.getElementById("unauthErrorDetail");
+    if (errorDetail) {
+      errorDetail.textContent = err.message || "Invalid or unauthorized token. Try 'demo-producer-token'.";
+    }
+    document.getElementById("portalContent").style.display = "none";
+  }
+}
+
+function renderProfile() {
+  if (!currentProducer) return;
+  document.getElementById("companyName").textContent = currentProducer.name;
+  document.getElementById("companyMeta").textContent = `GSTIN: ${currentProducer.gstin} · CPCB Reg: ${currentProducer.cpcbRegistration} · State: ${currentProducer.state}`;
+  const catsWrap = document.getElementById("companyCategories");
+  catsWrap.innerHTML = (currentProducer.categories || []).map(c => `<span class="badge badge-info">${c}</span>`).join(" ");
+}
+
+async function loadObligations() {
+  const tbody = document.getElementById("obligationsBody");
+  try {
+    const res = await fetch("/api/producer/obligations", { headers: getAuthHeaders() });
+    currentObligations = await res.json();
+    if (!currentObligations.length) {
+      tbody.innerHTML = `<tr><td colspan="8">${dsEmptyState({ icon: "🎯", title: "No obligations found", desc: "No active EPR obligations registered for this financial year." })}</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = currentObligations.map(o => {
+      const remaining = Math.max(0, o.targetWeightKg - (o.fulfilledWeightKg || 0));
+      const pct = o.targetWeightKg > 0 ? Math.round(((o.fulfilledWeightKg || 0) / o.targetWeightKg) * 100) : 100;
+      let statusClass = "badge-success";
+      let statusText = "COMPLIANT";
+      if (pct < 50) { statusClass = "badge-danger"; statusText = "NON_COMPLIANT"; }
+      else if (pct < 100) { statusClass = "badge-warning"; statusText = "AT_RISK"; }
+      return `
+        <tr>
+          <td class="id-mono">${o.id}</td>
+          <td><strong>${o.category}</strong></td>
+          <td>${o.targetWeightKg} kg</td>
+          <td style="color: var(--color-success-700); font-weight: 600;">${o.fulfilledWeightKg || 0} kg</td>
+          <td>${remaining.toFixed(1)} kg</td>
+          <td>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span>${pct}%</span>
+              <div class="prog-bar-wrap" style="width: 80px;">
+                <div class="prog-bar-fill ${pct < 50 ? 'danger' : pct < 100 ? 'warn' : ''}" style="width: ${Math.min(100, pct)}%;"></div>
+              </div>
+            </div>
+          </td>
+          <td>${dsFormatDate(o.deadline)}</td>
+          <td><span class="badge ${statusClass}"><span class="dot"></span>${statusText}</span></td>
+        </tr>
+      `;
+    }).join("");
+    dsEnhanceTable("obligationsTable", { pageSize: 5, placeholder: "Search targets..." });
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="8">${dsErrorState({ title: "Failed to load obligations", desc: err.message, retry: "loadObligations()" })}</td></tr>`;
+  }
+}
+
+async function loadMarketplace() {
+  const tbody = document.getElementById("marketplaceBody");
+  const cat = document.getElementById("filterCategory").value;
+  let url = "/api/epr/certificates?status=AVAILABLE";
+  if (cat) url += "&category=" + encodeURIComponent(cat);
+
+  try {
+    const res = await fetch(url, { headers: getAuthHeaders() });
+    const certs = await res.json();
+    if (!certs.length) {
+      tbody.innerHTML = `<tr><td colspan="8">${dsEmptyState({ icon: "🛒", title: "No certificates available", desc: "No available EPR certificates match the selected filters." })}</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = certs.map(c => `
+      <tr>
+        <td class="id-mono"><strong>${c.id}</strong></td>
+        <td><span class="badge badge-info">${c.category}</span></td>
+        <td><strong>${c.weightKg} kg</strong></td>
+        <td>${c.recyclerId}</td>
+        <td>${dsFormatDate(c.recycledAt)}</td>
+        <td style="color: var(--color-primary-600); font-weight: 700;">₹${c.priceINR.toLocaleString('en-IN')}</td>
+        <td>
+          <span class="cert-hash" title="${c.verificationHash}">${c.verificationHash}</span>
+          <a href="javascript:void(0)" style="font-size: 11px; margin-left: 4px;" onclick="auditHash('${c.id}')">Audit</a>
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" onclick='openPurchaseModal(${JSON.stringify(c)})'>Buy Certificate</button>
+        </td>
+      </tr>
+    `).join("");
+    dsEnhanceTable("marketplaceTable", { pageSize: 5, placeholder: "Search marketplace..." });
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="8">${dsErrorState({ title: "Failed to load marketplace", desc: err.message, retry: "loadMarketplace()" })}</td></tr>`;
+  }
+}
+
+async function loadPurchases() {
+  const tbody = document.getElementById("purchasesBody");
+  try {
+    const res = await fetch("/api/epr/certificates?status=SOLD", { headers: getAuthHeaders() });
+    const certs = await res.json();
+    const myCerts = certs.filter(c => c.purchasedBy === (currentProducer ? currentProducer.id : "PROD-001"));
+    if (!myCerts.length) {
+      tbody.innerHTML = `<tr><td colspan="7">${dsEmptyState({ icon: "📜", title: "No certificates purchased yet", desc: "Browse the marketplace above to purchase certificates and fulfil your targets." })}</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = myCerts.map(c => `
+      <tr>
+        <td class="id-mono"><strong>${c.id}</strong></td>
+        <td><span class="badge badge-info">${c.category}</span></td>
+        <td><strong>${c.weightKg} kg</strong></td>
+        <td>${c.recyclerId}</td>
+        <td>${dsFormatDate(c.purchasedAt)}</td>
+        <td>₹${(c.priceINR || 0).toLocaleString('en-IN')}</td>
+        <td>
+          <span class="badge badge-success"><span class="dot"></span>VERIFIED</span>
+          <a href="javascript:void(0)" style="font-size: 11px; margin-left: 4px;" onclick="auditHash('${c.id}')">View Hash</a>
+        </td>
+      </tr>
+    `).join("");
+    dsEnhanceTable("purchasesTable", { pageSize: 5, placeholder: "Search purchased certs..." });
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="7">${dsErrorState({ title: "Failed to load purchases", desc: err.message, retry: "loadPurchases()" })}</td></tr>`;
+  }
+}
+
+async function loadComplianceReport() {
+  const wrap = document.getElementById("complianceReportWrap");
+  try {
+    const res = await fetch("/api/producer/compliance/report", { headers: getAuthHeaders() });
+    const report = await res.json();
+    const comp = report.compliance;
+    const summary = report.summary;
+
+    // Update KPIs
+    document.getElementById("kpiTarget").textContent = comp.categories.reduce((s, c) => s + c.targetKg, 0) + " kg";
+    document.getElementById("kpiFulfilled").textContent = comp.categories.reduce((s, c) => s + c.fulfilledKg, 0) + " kg";
+    document.getElementById("kpiCompliance").textContent = comp.overallCompliancePct + "%";
+    document.getElementById("kpiComplianceSub").textContent = comp.overallStatus;
+    document.getElementById("kpiSpend").textContent = "₹" + summary.totalSpendINR.toLocaleString('en-IN');
+
+    // Update overall badge
+    let overallBadge = "badge-success";
+    if (comp.overallStatus === "NON_COMPLIANT") overallBadge = "badge-danger";
+    else if (comp.overallStatus === "AT_RISK") overallBadge = "badge-warning";
+    document.getElementById("overallStatusBadge").innerHTML = `
+      <div style="font: var(--text-label); color: var(--color-ink-500);">ANNUAL STATUS</div>
+      <span class="badge ${overallBadge}" style="font-size: 14px; padding: 6px 12px; margin-top: 4px;">
+        <span class="dot"></span>${comp.overallStatus} (${comp.overallCompliancePct}%)
+      </span>
+    `;
+
+    wrap.innerHTML = `
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--sp-4); margin-bottom: var(--sp-5);">
+        <div class="stat-card" style="padding: var(--sp-4);">
+          <div class="label">Total Recycled Weight Fulfilled</div>
+          <div class="num" style="color: var(--color-primary-600);">${summary.totalWeightRecycledKg} kg</div>
+          <div style="font: var(--text-caption); color: var(--color-ink-500); margin-top: 4px;">Across ${summary.totalCertificatesPurchased} verified certificates</div>
+        </div>
+        <div class="stat-card" style="padding: var(--sp-4);">
+          <div class="label">Estimated CO₂ Avoided</div>
+          <div class="num" style="color: var(--color-success-700);">${summary.totalCo2SavedKg} kg</div>
+          <div style="font: var(--text-caption); color: var(--color-ink-500); margin-top: 4px;">Net environmental dividend achieved</div>
+        </div>
+        <div class="stat-card" style="padding: var(--sp-4);">
+          <div class="label">Total Compliance Investment</div>
+          <div class="num">₹${summary.totalSpendINR.toLocaleString('en-IN')}</div>
+          <div style="font: var(--text-caption); color: var(--color-ink-500); margin-top: 4px;">Funds recycler operations & citizen credits</div>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom: var(--sp-3);">Category Progress Breakdown</h3>
+      <div style="display: grid; gap: var(--sp-3);">
+        ${comp.categories.map(cat => `
+          <div style="background: var(--color-ink-50); padding: var(--sp-3) var(--sp-4); border-radius: var(--radius-md);">
+            <div style="display: flex; justify-content: space-between; font-weight: 600; margin-bottom: 4px;">
+              <span>${cat.category}</span>
+              <span>${cat.fulfilledKg} / ${cat.targetKg} kg (${cat.compliancePct}%)</span>
+            </div>
+            <div class="prog-bar-wrap">
+              <div class="prog-bar-fill ${cat.status === 'NON_COMPLIANT' ? 'danger' : cat.status === 'AT_RISK' ? 'warn' : ''}" style="width: ${Math.min(100, cat.compliancePct)}%;"></div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font: var(--text-caption); color: var(--color-ink-500); margin-top: 4px;">
+              <span>Remaining: ${cat.remainingKg} kg</span>
+              <span>Status: <strong style="color: ${cat.status === 'COMPLIANT' ? 'var(--color-success-700)' : cat.status === 'AT_RISK' ? 'var(--color-warning-700)' : 'var(--color-danger-700)'};">${cat.status}</strong></span>
+            </div>
+          </div>
+        `).join("")}
+      </div>
+    `;
+  } catch (err) {
+    wrap.innerHTML = dsErrorState({ title: "Failed to load compliance report", desc: err.message, retry: "loadComplianceReport()" });
+  }
+}
+
+async function loadTransactions() {
+  const tbody = document.getElementById("transactionsBody");
+  try {
+    const res = await fetch("/api/producer/transactions", { headers: getAuthHeaders() });
+    const txns = await res.json();
+    if (!txns.length) {
+      tbody.innerHTML = `<tr><td colspan="6">${dsEmptyState({ icon: "💳", title: "No transactions yet", desc: "Purchase records will appear here as certificates are acquired." })}</td></tr>`;
+      return;
+    }
+    tbody.innerHTML = txns.map(t => `
+      <tr>
+        <td class="id-mono">${t.id}</td>
+        <td class="id-mono">${t.certificateId}</td>
+        <td><span class="badge badge-info">${t.category}</span></td>
+        <td>${t.weightKg} kg</td>
+        <td style="font-weight: 600;">₹${(t.amountINR || 0).toLocaleString('en-IN')}</td>
+        <td>${dsFormatDate(t.timestamp)}</td>
+      </tr>
+    `).join("");
+    dsEnhanceTable("transactionsTable", { pageSize: 5, placeholder: "Search transactions..." });
+  } catch (err) {
+    tbody.innerHTML = `<tr><td colspan="6">${dsErrorState({ title: "Failed to load transactions", desc: err.message, retry: "loadTransactions()" })}</td></tr>`;
+  }
+}
+
+function openPurchaseModal(cert) {
+  pendingPurchaseCert = cert;
+  const modal = document.getElementById("purchaseModal");
+  const content = document.getElementById("purchaseModalContent");
+  document.getElementById("modalPrice").textContent = cert.priceINR.toLocaleString('en-IN');
+
+  const matchingObl = currentObligations.find(o => o.category === cert.category);
+
+  content.innerHTML = `
+    <div style="background: var(--color-ink-50); padding: var(--sp-3); border-radius: var(--radius-md); margin-bottom: var(--sp-3);">
+      <div><strong>Certificate ID:</strong> <code>${cert.id}</code></div>
+      <div><strong>Category:</strong> ${cert.category}</div>
+      <div><strong>Verified Weight:</strong> ${cert.weightKg} kg</div>
+      <div><strong>Recycler ID:</strong> ${cert.recyclerId}</div>
+      <div><strong>Price:</strong> ₹${cert.priceINR.toLocaleString('en-IN')} (₹${cert.pricePerKgINR}/kg)</div>
+    </div>
+    ${matchingObl ? `
+      <div style="font: var(--text-caption); color: var(--color-success-700);">
+        ✓ This certificate will automatically count towards your <strong>${matchingObl.category}</strong> obligation (${matchingObl.id}).
+      </div>
+    ` : `
+      <div style="font: var(--text-caption); color: var(--color-warning-700);">
+        ⚠️ You do not have an active obligation for ${cert.category}. The certificate will still be purchased and stored in your account.
+      </div>
+    `}
+  `;
+  modal.style.display = "flex";
+}
+
+function closePurchaseModal() {
+  document.getElementById("purchaseModal").style.display = "none";
+  pendingPurchaseCert = null;
+}
+
+async function executePurchase() {
+  if (!pendingPurchaseCert) return;
+  const btn = document.getElementById("btnConfirmPurchase");
+  btn.disabled = true;
+  btn.textContent = "Processing...";
+
+  try {
+    const res = await fetch(`/api/epr/certificates/${pendingPurchaseCert.id}/purchase`, {
+      method: "POST",
+      headers: getAuthHeaders(),
+      body: JSON.stringify({}),
+    });
+    const result = await res.json();
+    if (!res.ok) throw new Error(result.error || "Purchase failed");
+
+    closePurchaseModal();
+    alert(`Certificate ${pendingPurchaseCert.id} successfully purchased! Your obligation has been updated.`);
+    await refreshAll();
+  } catch (err) {
+    alert("Purchase failed: " + err.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Confirm Purchase";
+  }
+}
+
+async function auditHash(certId) {
+  try {
+    const res = await fetch(`/api/epr/certificates/${certId}/verify`);
+    const data = await res.json();
+    const modal = document.getElementById("hashModal");
+    const content = document.getElementById("hashModalContent");
+    content.innerHTML = `
+      <div style="margin-bottom: var(--sp-3);">
+        <span class="badge ${data.valid ? 'badge-success' : 'badge-danger'}">
+          <span class="dot"></span>${data.valid ? 'CRYPTOGRAPHICALLY VALID' : 'TAMPER DETECTED'}
+        </span>
+      </div>
+      <div style="background: var(--color-ink-50); padding: var(--sp-3); border-radius: var(--radius-md); font-family: var(--font-mono); word-break: break-all;">
+        <div style="margin-bottom: 8px;"><strong>Computed Hash (SHA-256):</strong><br><span style="color: var(--color-primary-600);">${data.expectedHash}</span></div>
+        <div><strong>Stored Certificate Hash:</strong><br><span style="color: var(--color-ink-700);">${data.actualHash}</span></div>
+      </div>
+      <div style="margin-top: var(--sp-3); font: var(--text-caption); color: var(--color-ink-500);">
+        This hash seals the certificate ID, item ID, recycler ID, timestamp, weight (${data.certificate.weightKg} kg), and category (${data.certificate.category}) into an immutable digest.
+      </div>
+    `;
+    modal.style.display = "flex";
+  } catch (err) {
+    alert("Hash audit failed: " + err.message);
+  }
+}
+
+function closeHashModal() {
+  document.getElementById("hashModal").style.display = "none";
+}
+
+async function refreshAll() {
+  await Promise.all([
+    loadObligations(),
+    loadMarketplace(),
+    loadPurchases(),
+    loadComplianceReport(),
+    loadTransactions(),
+  ]);
+}
+
+// Auto-sign in on page load with demo token or stored token
+window.addEventListener("DOMContentLoaded", () => {
+  try {
+    const savedToken = localStorage.getItem("epr_producer_token");
+    if (savedToken && document.getElementById("producerToken")) {
+      document.getElementById("producerToken").value = savedToken;
+    }
+  } catch (e) {}
+  signIn();
+});
+</script>
+
+</body>
+</html>

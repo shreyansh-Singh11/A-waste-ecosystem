@@ -1,0 +1,608 @@
+[
+  {
+    "lotId": "2515ee7e-6b1f-4324-ae6b-471e7c71a1fe",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3000000000000003,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "OPEN",
+    "createdAt": "2026-09-25T04:33:11.901Z",
+    "endsAt": "2026-09-25T08:33:11.901Z",
+    "topBidId": null,
+    "topBidPrice": 0,
+    "totalBids": 0
+  },
+  {
+    "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T04:33:36.727Z",
+    "endsAt": "2026-09-25T08:33:36.727Z",
+    "topBidId": "731084b6-023d-4729-9c28-f46695d8299a",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "731084b6-023d-4729-9c28-f46695d8299a",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T04:33:36.747Z",
+    "settlementId": "0a2ab066-53c3-4346-9d09-643aa9783243"
+  },
+  {
+    "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T04:34:15.323Z",
+    "endsAt": "2026-09-25T08:34:15.323Z",
+    "topBidId": "bfa5f929-e6ba-43e9-8bcc-bf54543ea157",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "bfa5f929-e6ba-43e9-8bcc-bf54543ea157",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T04:34:15.336Z",
+    "settlementId": "ed2589a5-d6f2-4bca-a7f2-d660c76756bb"
+  },
+  {
+    "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T04:38:28.606Z",
+    "endsAt": "2026-09-25T08:38:28.606Z",
+    "topBidId": "0588bb00-8b7a-4686-8e67-9ea73df64b12",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "0588bb00-8b7a-4686-8e67-9ea73df64b12",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T04:38:28.629Z",
+    "settlementId": "4c9a8540-dfb2-4880-8fb7-0089c6cfcca3"
+  },
+  {
+    "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T09:24:24.531Z",
+    "endsAt": "2026-09-25T13:24:24.531Z",
+    "topBidId": "7acf6776-72ee-407c-800f-60ecf148f226",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "7acf6776-72ee-407c-800f-60ecf148f226",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T09:24:24.542Z",
+    "settlementId": "038221af-ebb1-4e7d-920a-684a99b5d14f"
+  },
+  {
+    "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T09:47:57.443Z",
+    "endsAt": "2026-09-25T13:47:57.443Z",
+    "topBidId": "9284bf71-377f-4514-b1e7-61a4edcd3a0e",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "9284bf71-377f-4514-b1e7-61a4edcd3a0e",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T09:47:57.457Z",
+    "settlementId": "e896c797-c632-4b5e-856d-9be6e89ee79a"
+  },
+  {
+    "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T10:07:49.744Z",
+    "endsAt": "2026-09-25T14:07:49.744Z",
+    "topBidId": "560a0b71-a56a-4a9e-8a7a-54420ec4b211",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "560a0b71-a56a-4a9e-8a7a-54420ec4b211",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T10:07:49.758Z",
+    "settlementId": "0b8d8b40-9b24-4ad3-855f-86cc0364ca13"
+  },
+  {
+    "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T10:10:39.632Z",
+    "endsAt": "2026-09-25T14:10:39.632Z",
+    "topBidId": "18c168ef-ecfe-4c9f-94af-372284cea506",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "18c168ef-ecfe-4c9f-94af-372284cea506",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T10:10:39.662Z",
+    "settlementId": "94dd10ba-7509-4901-93d2-c396fda06f0b"
+  },
+  {
+    "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T10:43:43.580Z",
+    "endsAt": "2026-09-25T14:43:43.580Z",
+    "topBidId": "7563379f-d46f-449c-b6da-0fa4731b130d",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "7563379f-d46f-449c-b6da-0fa4731b130d",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T10:43:43.609Z",
+    "settlementId": "a9366e58-971c-49f3-803a-02b6d3c32489"
+  },
+  {
+    "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T11:02:26.515Z",
+    "endsAt": "2026-09-25T15:02:26.515Z",
+    "topBidId": "2011e1d2-b07e-4bad-ae9a-f29bd46074c1",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "2011e1d2-b07e-4bad-ae9a-f29bd46074c1",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T11:02:26.525Z",
+    "settlementId": "9167d823-5a6b-4dcf-b0e8-db08b9a591d6"
+  },
+  {
+    "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T11:02:56.840Z",
+    "endsAt": "2026-09-25T15:02:56.840Z",
+    "topBidId": "db13e11d-f840-4253-b846-243fa8bc4c4f",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "db13e11d-f840-4253-b846-243fa8bc4c4f",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T11:02:56.852Z",
+    "settlementId": "fee7dcfa-7f61-4dcf-9fb0-cd84b39ea855"
+  },
+  {
+    "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T11:06:21.132Z",
+    "endsAt": "2026-09-25T15:06:21.132Z",
+    "topBidId": "316dd049-56e9-4acf-940f-7e8f5e5d6093",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "316dd049-56e9-4acf-940f-7e8f5e5d6093",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T11:06:21.162Z",
+    "settlementId": "885e9fc4-008c-44f3-9862-b9002697af43"
+  },
+  {
+    "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T11:08:38.182Z",
+    "endsAt": "2026-09-25T15:08:38.182Z",
+    "topBidId": "3fc2fb46-0aa1-4102-aa98-20ce9f2fb888",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "3fc2fb46-0aa1-4102-aa98-20ce9f2fb888",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T11:08:38.213Z",
+    "settlementId": "1f31e264-ab23-44da-a6a5-ff64b5bdbfba"
+  },
+  {
+    "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T19:22:35.652Z",
+    "endsAt": "2026-09-25T23:22:35.652Z",
+    "topBidId": "a48a857b-a689-42fc-b00b-99e14798f6e0",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "a48a857b-a689-42fc-b00b-99e14798f6e0",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T19:22:35.664Z",
+    "settlementId": "a161b1a0-97dd-4fc0-b3ee-ca92095e0634"
+  },
+  {
+    "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T20:00:45.334Z",
+    "endsAt": "2026-09-26T00:00:45.334Z",
+    "topBidId": "b1cb63a5-eed5-464b-bfec-9782e2b65b69",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "b1cb63a5-eed5-464b-bfec-9782e2b65b69",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T20:00:45.380Z",
+    "settlementId": "02dff1cb-977c-4970-92a9-03103db771d1"
+  },
+  {
+    "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T20:07:02.132Z",
+    "endsAt": "2026-09-26T00:07:02.132Z",
+    "topBidId": "1c23e328-618f-4a0c-8775-ca97f5bedc1d",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "1c23e328-618f-4a0c-8775-ca97f5bedc1d",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T20:07:02.141Z",
+    "settlementId": "d419629f-1c4b-4210-95a0-258d7fedeaba"
+  },
+  {
+    "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+    "sellerId": "KABADIWALA-TEST-01",
+    "items": [
+      {
+        "itemId": "ITEM-TEST-AUCTION-01",
+        "category": "Laptop",
+        "weightKg": 2.1
+      },
+      {
+        "itemId": "ITEM-TEST-AUCTION-03",
+        "category": "Smartphone",
+        "weightKg": 0.2
+      }
+    ],
+    "totalWeightKg": 2.3,
+    "reservePrice": 500,
+    "indicativePriceBand": {
+      "low": 400,
+      "high": 750
+    },
+    "photoUrls": [],
+    "categoryMix": "Laptop, Smartphone",
+    "status": "SETTLED",
+    "createdAt": "2026-09-25T20:17:26.757Z",
+    "endsAt": "2026-09-26T00:17:26.757Z",
+    "topBidId": "26df0423-a285-4e45-829f-6f0bbb53b2e1",
+    "topBidPrice": 172.5,
+    "totalBids": 2,
+    "winnerId": "RECYCLER-TEST-B",
+    "winningBidId": "26df0423-a285-4e45-829f-6f0bbb53b2e1",
+    "finalPrice": 172.5,
+    "escrowLocked": true,
+    "closedAt": "2026-09-25T20:17:26.768Z",
+    "settlementId": "381abc70-fd17-4f3f-90f1-df2473473381"
+  }
+]

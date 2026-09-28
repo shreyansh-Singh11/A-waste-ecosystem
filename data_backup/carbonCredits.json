@@ -1,0 +1,566 @@
+[
+  {
+    "creditId": "5e1eaa29-3501-4f59-aa93-8e60e5feb05c",
+    "serialNumber": "VCC-2026-MP-00001",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T10:06:54.981Z",
+    "verificationHash": "59d10202591b2ff746c74a2d7f5a8a80678aba61ed3eff35c62200bf9b288cb6",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T10:06:54.985Z"
+  },
+  {
+    "creditId": "2df85e53-f5ec-442f-b397-0e8817d563ed",
+    "serialNumber": "VCC-2026-MP-00002",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:06:54.981Z",
+    "verificationHash": "759e66c6a60736e832da2027affed058a7afc1472b3d6803c39a6b2e31fe1a44",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "af721a26-408a-420d-ae4e-c455645cfd8f",
+    "serialNumber": "VCC-2026-MP-00003",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:06:54.981Z",
+    "verificationHash": "9bdb9d370ad516d31a790cb6fbe4a7d47ea3747b3b1b914d82d94b064e60ea79",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "dd2589d5-9634-4880-be52-2703a17547eb",
+    "serialNumber": "VCC-2026-MP-00004",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T10:07:50.233Z",
+    "verificationHash": "6cd1a9a38c914b003e3d5d39478446ca03f485bd2018a9605021030c55e6db7a",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T10:07:50.247Z"
+  },
+  {
+    "creditId": "847cdeaf-2a6d-434d-b760-24ac54bfba5e",
+    "serialNumber": "VCC-2026-MP-00005",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:07:50.235Z",
+    "verificationHash": "53b9cb0eb771669fed8519f8583a35497c4fc11f8481df0ca365fa71545afc15",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "d3773a52-32db-4008-a888-3bc6f1f43f72",
+    "serialNumber": "VCC-2026-MP-00006",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:07:50.235Z",
+    "verificationHash": "49ee22b44d4620287743eaac9084f3d0de867dd52c241be371f9f5905f75f687",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "b97096d0-66e3-4dec-86ba-276803a027af",
+    "serialNumber": "VCC-2026-MP-00007",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T10:10:40.134Z",
+    "verificationHash": "da204345c3ebb4be30eec2c3f69cf35b24008dc5ff365679be029906905e237e",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T10:10:40.141Z"
+  },
+  {
+    "creditId": "d96ef8aa-0c23-4fb4-ac14-cb440799e5ab",
+    "serialNumber": "VCC-2026-MP-00008",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:10:40.135Z",
+    "verificationHash": "718b3cbd9dba8e4f5861ebcae47582929292009fbce6f8dcfd3f6f1df793181a",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "031c4b0b-3419-413e-9cfb-d3d34cdffc3f",
+    "serialNumber": "VCC-2026-MP-00009",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:10:40.135Z",
+    "verificationHash": "f49168b5cbdcb1fffdcbaf9f53eb20ebc7233b645af4aed85e883dd0a0ea50f2",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "5d5e91ca-b1b0-4fbe-85f6-d31dca66e92d",
+    "serialNumber": "VCC-2026-MP-00010",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T10:43:44.107Z",
+    "verificationHash": "38934b72ecd620ec7436643c61df320ff35492c255a90ca5c2c51ab752e373fe",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T10:43:44.112Z"
+  },
+  {
+    "creditId": "c7d5a508-59ac-411d-a43c-16cd2738036b",
+    "serialNumber": "VCC-2026-MP-00011",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:43:44.108Z",
+    "verificationHash": "015d3157d90bcca7b9cf78a8ac61c8054e12ae31d8240b6de1fc20cbd3313928",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "2e9efb8a-89ac-49a6-a66f-1e6f302e857f",
+    "serialNumber": "VCC-2026-MP-00012",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T10:43:44.108Z",
+    "verificationHash": "60e9d891ef93936e8e39446176014f151f5a09a4141f05ab9631656565ef864b",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "9104dd53-e82f-456e-8ef1-6486ea3ee543",
+    "serialNumber": "VCC-2026-MP-00013",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T11:02:27.029Z",
+    "verificationHash": "afa4e4314e5b83e19faf22a3147f04f3cb8e5259008125dfcdfe73e3ba74c0f3",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T11:02:27.035Z"
+  },
+  {
+    "creditId": "9dfb588a-105b-4c01-a983-2b9e79443747",
+    "serialNumber": "VCC-2026-MP-00014",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:02:27.030Z",
+    "verificationHash": "d6edf15cce918c4e35265b241f63dea9c44d18668fe02afe7e66c148ef06353e",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "815f1b7a-713e-40a5-a202-1cb25e020b75",
+    "serialNumber": "VCC-2026-MP-00015",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:02:27.030Z",
+    "verificationHash": "c5cae951aa831de386c4c5355a907eb30073386aab3ca30449706cba061fa860",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "0a656e83-1402-48b7-82ea-49caa63bd677",
+    "serialNumber": "VCC-2026-MP-00016",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T11:02:57.397Z",
+    "verificationHash": "c213a4879e87dccadef1348983cfb8c033536edf72259906348c733143e4f028",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T11:02:57.405Z"
+  },
+  {
+    "creditId": "df575975-bbbb-4d51-a60c-5d83009f5c29",
+    "serialNumber": "VCC-2026-MP-00017",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:02:57.399Z",
+    "verificationHash": "0dae44d8e0f544b6200506fa4d097223f8fd39691f5be2bec69f28fd9a9ae8b4",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "0a4a5787-0645-4e52-9757-86de7d4631eb",
+    "serialNumber": "VCC-2026-MP-00018",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:02:57.399Z",
+    "verificationHash": "8ad28abe5b6f874ca77b9f8492a06b63f2d4a8f571a3545d1c8648e05ba997ed",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "4f49eca7-5a66-4c59-b583-75bff0e73347",
+    "serialNumber": "VCC-2026-MP-00019",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T11:06:21.928Z",
+    "verificationHash": "b89aed45f31bee8181e19c932ad47d4caac9a9c7d592fa9db059de65865d50da",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T11:06:21.940Z"
+  },
+  {
+    "creditId": "9c1391d6-492d-4d13-9c88-3dc59cbb7dda",
+    "serialNumber": "VCC-2026-MP-00020",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:06:21.930Z",
+    "verificationHash": "36333a9f4b0755b3a900e4e3dbe6ddd6107b1cb5d24bb2a57cf636a585711b80",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "1db79c66-87ed-4fe1-a16d-c5e451bc0b90",
+    "serialNumber": "VCC-2026-MP-00021",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:06:21.930Z",
+    "verificationHash": "e72479f247b83a910b0c072947e36efe0fe0ea57b63d5e23fcc9ac66f98afb2e",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "3a88fbf9-9560-4d97-9ad0-90f8d9671e06",
+    "serialNumber": "VCC-2026-MP-00022",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T11:08:39.010Z",
+    "verificationHash": "4bd8691d06f436c047534fcb8adcfa1606edab236cc52855220a5deecb2744fe",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T11:08:39.019Z"
+  },
+  {
+    "creditId": "1ee01a6a-50e6-4d9c-98b6-4293ba52b3da",
+    "serialNumber": "VCC-2026-MP-00023",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:08:39.011Z",
+    "verificationHash": "e1e93dcc98c2c09f54515785f8b8127b8d28cea4152919e348f3defa6a985dfc",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "b88c960f-95db-4163-8d05-3da1037fd52f",
+    "serialNumber": "VCC-2026-MP-00024",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T11:08:39.012Z",
+    "verificationHash": "8bd3278f8467ba1b2d78fc61d2dc1c0661a31dbf4a1805f5c631a4e9dcd74364",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "02f7927b-acaa-4496-b642-789f19a95391",
+    "serialNumber": "VCC-2026-MP-00025",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T19:22:36.110Z",
+    "verificationHash": "a0ab77641b2313669e9127d6b2a282d031a47dbca91dcf1da8de2560e9e30219",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T19:22:36.114Z"
+  },
+  {
+    "creditId": "1b3fdb70-45de-4c5d-9f68-0f35229a15cd",
+    "serialNumber": "VCC-2026-MP-00026",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T19:22:36.111Z",
+    "verificationHash": "ea7992e48cdae3e0f9d377187c49dcfcdaa265b8899fd1ef2d5ef0edf78243ae",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "347fa0e8-db32-4681-9a1a-998c0c323c9c",
+    "serialNumber": "VCC-2026-MP-00027",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T19:22:36.111Z",
+    "verificationHash": "a8a6fde7e3edc2bc741d30ebb991ccb01ca1a136d29c5b99c812d9ab7053e697",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "75ce3768-bd50-4843-b448-bfced97761dd",
+    "serialNumber": "VCC-2026-MP-00028",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T20:00:45.791Z",
+    "verificationHash": "c319a7766989f47133fa8975941d1df5d4c350564506802cb7ae0e02ebd23710",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T20:00:45.795Z"
+  },
+  {
+    "creditId": "38a196b8-35ad-44fd-9162-c13e6a215a3b",
+    "serialNumber": "VCC-2026-MP-00029",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:00:45.792Z",
+    "verificationHash": "7e620caeafff53f396269dbe4949bdaac667d09591a62d10f1c56930a7cc1fc7",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "190f882a-5bbb-4f14-b05d-36437881fe3f",
+    "serialNumber": "VCC-2026-MP-00030",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:00:45.792Z",
+    "verificationHash": "97c7fc8137e2ca9cfa64e51ed5f7c09afc052e7d31ddb8c012bac90d679724ed",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "420f0358-1103-4a44-aeb7-8d2142eede76",
+    "serialNumber": "VCC-2026-MP-00031",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T20:07:02.575Z",
+    "verificationHash": "a4ff5e2cc7712b18a2842ca077bb3219ef70c1b31ccaa03ef576ebc04f5eae4e",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T20:07:02.580Z"
+  },
+  {
+    "creditId": "d6949482-f8bd-4088-8009-117c3193f3f2",
+    "serialNumber": "VCC-2026-MP-00032",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:07:02.577Z",
+    "verificationHash": "0bcca235d693d4c655b54262509373e69eabd06409b117cb759250a6371c9610",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "e9060747-d1e2-4203-8bb4-a95e7e52a6cc",
+    "serialNumber": "VCC-2026-MP-00033",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:07:02.577Z",
+    "verificationHash": "55001bd604c667756b9b562e858903000ec5aa26e9e9f513a57aaf8e827ef8c9",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "e5d3cd26-3c67-4986-b457-12d814c2e4ec",
+    "serialNumber": "VCC-2026-MP-00034",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "RETIRED",
+    "mintedAt": "2026-09-25T20:17:27.241Z",
+    "verificationHash": "8e778bd4757727f029c9286ead97d4e8951a0d55d6d84d93af61d73c2578c819",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    },
+    "retiredTo": "Tata Consultancy Services (TCS) ESG Division",
+    "retiredAt": "2026-09-25T20:17:27.244Z"
+  },
+  {
+    "creditId": "b79acdca-a5ef-4818-9ef3-4555c8071300",
+    "serialNumber": "VCC-2026-MP-00035",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:17:27.241Z",
+    "verificationHash": "391ac34873400926a9954c30012277c57437458a137646e0954d4cdd4511e6f7",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  },
+  {
+    "creditId": "32ff0282-3d7f-45df-978a-2fe3f5f3d0ef",
+    "serialNumber": "VCC-2026-MP-00036",
+    "vintageYear": "2026",
+    "standard": "Verra / Gold Standard Aligned",
+    "pricePerCreditINR": 1800,
+    "status": "AVAILABLE",
+    "mintedAt": "2026-09-25T20:17:27.241Z",
+    "verificationHash": "1b017a8b8e8c23c3919e4bb4af48d36a0c33150b5466c8461ecaa2277c6a6b46",
+    "metadata": {
+      "co2eTonnes": 1,
+      "projectRegion": "Madhya Pradesh, India",
+      "note": "Test Minting for Automated Verification"
+    }
+  }
+]

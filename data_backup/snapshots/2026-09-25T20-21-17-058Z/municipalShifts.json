@@ -1,0 +1,418 @@
+[
+  {
+    "shiftId": "MSH-2026-001",
+    "driverId": "MDRV-101",
+    "vehicleId": "MP-04-GC-4412",
+    "wardId": "Ward-12 (Arera Colony)",
+    "routeGeoJson": null,
+    "status": "ACTIVE",
+    "startedAt": "2026-09-24T06:00:00.000Z",
+    "pickups": [
+      {
+        "pickupId": "PK-001",
+        "householdId": "HH-12-045",
+        "weightKg": 4.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2156,
+        "gpsLng": 77.4328,
+        "timestamp": "2026-09-24T06:22:10.000Z"
+      },
+      {
+        "pickupId": "PK-002",
+        "householdId": "HH-12-046",
+        "weightKg": 3.8,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2159,
+        "gpsLng": 77.4332,
+        "timestamp": "2026-09-24T06:28:40.000Z"
+      },
+      {
+        "pickupId": "PK-003",
+        "householdId": "HH-12-047",
+        "weightKg": 5.2,
+        "segregationStatus": "MIXED_FLAGGED",
+        "gpsLat": 23.2163,
+        "gpsLng": 77.4339,
+        "timestamp": "2026-09-24T06:35:12.000Z"
+      }
+    ]
+  },
+  {
+    "shiftId": "274c5f12-f691-41a7-80c0-c163ad4ded09",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-24T18:09:09.959Z",
+    "pickups": [
+      {
+        "pickupId": "41438196-bbe3-4acd-9637-2e57683953c3",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-24T18:09:09.962Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "f8808413-5727-4cfc-b756-ef19001313b2",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-24T18:09:25.284Z",
+    "pickups": [
+      {
+        "pickupId": "3532e72f-9d2d-4ae2-8027-ec961ae8c4a1",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-24T18:09:25.288Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "2c62d9e0-3aa6-41ac-9e7d-0a0106389a87",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-24T18:40:39.567Z",
+    "pickups": [
+      {
+        "pickupId": "55d1ae1f-1e0b-4e5b-bd94-2869ccf9ab83",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-24T18:40:39.571Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "1dfa3413-a7ba-4d44-a1ec-f54f0deca9ab",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T04:34:15.369Z",
+    "pickups": [
+      {
+        "pickupId": "a27bad53-3fb1-4b06-a3b3-24ed6955f861",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T04:34:15.373Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "60808606-e7ad-4f79-88bb-062d19eb6bcd",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T04:38:28.593Z",
+    "pickups": [
+      {
+        "pickupId": "69f448e0-469b-4d68-8376-f3d5cd135330",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T04:38:28.602Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "f6f9d8d7-e676-4a23-ba32-319fa61b2fdf",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T09:24:24.762Z",
+    "pickups": [
+      {
+        "pickupId": "17cbd436-58e4-44c9-b22d-2be785026dfe",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T09:24:24.765Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "da382bfb-d360-4384-afa8-f4cf47f4b27a",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T09:47:57.815Z",
+    "pickups": [
+      {
+        "pickupId": "d419d393-5786-41f0-bb03-92236ad78d84",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T09:47:57.819Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "f30e47f9-fb97-4d51-bb08-06156cf85491",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T10:07:50.448Z",
+    "pickups": [
+      {
+        "pickupId": "c3f8cbf4-1612-457d-b832-a108b46970cc",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T10:07:50.453Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "a521c1c8-3dc2-4d44-9c4a-078fdcf27e37",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T10:10:40.324Z",
+    "pickups": [
+      {
+        "pickupId": "63911672-2aab-4edb-b31f-84f4fd65ba5a",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T10:10:40.333Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "7ba8d739-c9b4-4883-93bc-8033ce0fb7d5",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T10:43:44.220Z",
+    "pickups": [
+      {
+        "pickupId": "9e9799b1-ad39-4638-8f42-2332ee24cb6c",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T10:43:44.225Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "5ec20403-ddad-4c87-82fd-91dbcebe8cde",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T11:02:27.134Z",
+    "pickups": [
+      {
+        "pickupId": "4e2031b6-1794-4e5d-9f27-8728ae8f334e",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T11:02:27.139Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "26f32ae0-c94c-4a1d-bd9c-7c7a0aed2084",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T11:02:57.560Z",
+    "pickups": [
+      {
+        "pickupId": "8ea5b1c2-094b-4f89-bdfa-0417d5e2a64b",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T11:02:57.566Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "62cb1710-1faf-466f-9dcc-077f02d3d283",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T11:06:22.163Z",
+    "pickups": [
+      {
+        "pickupId": "7cbd031d-dd04-49fe-bd85-c7de622e71b4",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T11:06:22.174Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "d1680530-686b-4c4b-82a6-56cf65fbbf33",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T11:08:39.260Z",
+    "pickups": [
+      {
+        "pickupId": "b1ac075c-f647-4756-b19d-caee35d53020",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T11:08:39.267Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "e733d6bd-72b4-4afb-a9c3-c6f60f667b81",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T19:22:43.460Z",
+    "pickups": [
+      {
+        "pickupId": "838d9cdb-ae9c-4d11-88d5-cea9b022280c",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T19:22:43.466Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "6b9cb541-a30f-4ca4-8885-a3ba1bff9c82",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T20:00:51.543Z",
+    "pickups": [
+      {
+        "pickupId": "96f4dabe-a0a6-45d7-9656-03d5c63b3ffb",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T20:00:51.547Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "4ea64c1f-628b-4916-902f-77f2357e99a3",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T20:07:14.195Z",
+    "pickups": [
+      {
+        "pickupId": "33939a73-f3e3-4809-b126-85b6e682a9cd",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T20:07:14.201Z",
+        "status": "COLLECTED"
+      }
+    ]
+  },
+  {
+    "shiftId": "4d7da0b5-cec9-443e-abe2-dd73ea9a3796",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "wardId": "Ward-Test-Area",
+    "routeGeoJson": null,
+    "status": "IN_TRANSIT",
+    "startedAt": "2026-09-25T20:17:38.456Z",
+    "pickups": [
+      {
+        "pickupId": "9bac6d72-cf58-4c71-83f0-e69f753f2e98",
+        "householdId": "HH-TEST-001",
+        "weightKg": 5.5,
+        "segregationStatus": "SEGREGATED_WET_DRY",
+        "gpsLat": 23.2,
+        "gpsLng": 77.4,
+        "timestamp": "2026-09-25T20:17:38.461Z",
+        "status": "COLLECTED"
+      }
+    ]
+  }
+]

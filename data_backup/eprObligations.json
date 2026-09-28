@@ -1,0 +1,24 @@
+[
+  {
+    "id": "OBL-2026-001",
+    "producerId": "PROD-001",
+    "financialYear": "2026-27",
+    "category": "Laptop",
+    "targetWeightKg": 10,
+    "fulfilledWeightKg": 2,
+    "status": "ACTIVE",
+    "deadline": "2027-03-31T23:59:59.000Z",
+    "createdAt": "2026-04-01T00:00:00.000Z"
+  },
+  {
+    "id": "OBL-2026-002",
+    "producerId": "PROD-001",
+    "financialYear": "2026-27",
+    "category": "Smartphone",
+    "targetWeightKg": 5,
+    "fulfilledWeightKg": 0,
+    "status": "ACTIVE",
+    "deadline": "2027-03-31T23:59:59.000Z",
+    "createdAt": "2026-04-01T00:00:00.000Z"
+  }
+]

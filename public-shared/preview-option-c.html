@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Option C Preview — E-Waste Schematic Blueprint Glassmorphism</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-base: #080e14;
+    --blueprint-grid: rgba(14, 165, 233, 0.08);
+    --blueprint-line: rgba(16, 185, 129, 0.15);
+    --glass-bg: rgba(15, 27, 38, 0.55);
+    --glass-border: rgba(56, 189, 248, 0.22);
+    --glass-glow: rgba(56, 189, 248, 0.12);
+    --accent-emerald: #10b981;
+    --accent-cyan: #38bdf8;
+    --accent-amber: #f59e0b;
+    --text-primary: #f0f6fc;
+    --text-muted: #8b9bb0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--bg-base);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
+    min-height: 100vh;
+    padding: 32px 24px;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* ── TECHNICAL SCHEMATIC BLUEPRINT BACKGROUND ── */
+  .blueprint-layer {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background-image: 
+      /* Micro Grid */
+      linear-gradient(var(--blueprint-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-grid) 1px, transparent 1px),
+      /* Major 80px Engineering Grid */
+      linear-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.12) 1px, transparent 1px);
+    background-size: 20px 20px, 20px 20px, 80px 80px, 80px 80px;
+    background-position: -1px -1px;
+  }
+
+  /* Ambient Circuit Glow Nodes */
+  .glow-orb-1 {
+    position: fixed;
+    top: 10%; left: 15%; width: 450px; height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+    filter: blur(60px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .glow-orb-2 {
+    position: fixed;
+    bottom: 10%; right: 10%; width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(14, 165, 233, 0.14) 0%, transparent 70%);
+    filter: blur(70px);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Technical Watermark & Crosshairs */
+  .crosshair {
+    position: fixed;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(56, 189, 248, 0.35);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .ch-top-left { top: 16px; left: 24px; }
+  .ch-top-right { top: 16px; right: 24px; }
+  .ch-bottom-left { bottom: 16px; left: 24px; }
+
+  /* ── FROSTED GLASS PANELS ── */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+    padding: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .glass-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45), 0 0 20px 0 var(--glass-glow);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Top Banner */
+  .header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  .brand-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-logo {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid var(--accent-emerald);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .brand-title h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .brand-title p {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .tech-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    color: #34d399;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .pulse-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 8px #34d399;
+  }
+
+  /* Dashboard Grid */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1fr;
+    gap: 24px;
+  }
+
+  /* Section Titles */
+  .panel-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-cyan);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .panel-heading {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  /* Gadget Items */
+  .device-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .device-info { display: flex; align-items: center; gap: 12px; }
+  .device-icon { font-size: 22px; }
+  .device-name { font-size: 13.5px; font-weight: 600; }
+  .device-meta { font-size: 11px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; }
+  .val-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-emerald);
+  }
+
+  /* Auction Timer Box */
+  .auction-box {
+    text-align: center;
+    padding: 20px;
+    background: rgba(16, 185, 129, 0.04);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    margin-bottom: 16px;
+  }
+  .countdown {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+    margin: 8px 0;
+  }
+  .bid-stats {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .bid-stat-item .val { font-size: 18px; font-weight: 700; color: var(--accent-cyan); font-family: 'JetBrains Mono', monospace; }
+  .bid-stat-item .lbl { font-size: 11px; color: var(--text-muted); }
+
+  /* Wallet & Metal Metric */
+  .metal-meter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .metal-chip {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  .metal-chip strong { color: var(--accent-amber); font-family: 'JetBrains Mono', monospace; }
+
+  /* Button */
+  .btn-glass {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-emerald);
+    background: rgba(16, 185, 129, 0.15);
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: all 0.2s ease;
+  }
+  .btn-glass:hover {
+    background: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.3);
+  }
+</style>
+</head>
+<body>
+
+<div class="blueprint-layer"></div>
+<div class="glow-orb-1"></div>
+<div class="glow-orb-2"></div>
+
+<div class="crosshair ch-top-left">SYS_REF: CAD-GRID // DWG-881 // SCALE 1:1</div>
+<div class="crosshair ch-top-right">SEC-EPR: CPCB-ETP-2026 // TRACE-ACTIVE</div>
+<div class="crosshair ch-bottom-left">GRID_COORD: 23°15'N 77°24'E // BHOPAL_HUB</div>
+
+<div class="container">
+  
+  <div class="header-bar">
+    <div class="brand-title">
+      <div class="brand-logo">⚡</div>
+      <div>
+        <h1>Smart E-Waste Platform</h1>
+        <p>REVERSE AUCTION &amp; CIRCULAR RECOVERY // SCHEMATIC BLUEPRINT VIEW</p>
+      </div>
+    </div>
+    <div class="tech-badge">
+      <span class="pulse-dot"></span>
+      <span>GLASSMORPHISM OPTION C // BLUEPRINT CAD</span>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+
+    <!-- Column 1: Registered E-Waste -->
+    <div class="glass-card">
+      <div class="panel-label">
+        <span>COLLECTION STREAM</span>
+        <span>4 LOTS ACTIVE</span>
+      </div>
+      <div class="panel-heading">Registered Hardware</div>
+
+      <div class="device-row">
+        <div class="device-info">
+          <div class="device-icon">💻</div>
+          <div>
+            <div class="device-name">Dell Latitude E5470</div>
+            <div class="device-meta">GRADE B · 1.8 Kg</div>
+          </div>
+        </div>
+        <div class="val-badge">₹6,850</div>
+      </div>
+
+      <div class="device-row">
+        <div class="device-info">
+          <div class="device-icon">📱</div>
+          <div>
+            <div class="device-name">iPhone 11 (Damaged)</div>
+            <div class="device-meta">GRADE C · 0.2 Kg</div>
+          </div>
+        </div>
+        <div class="val-badge">₹2,400</div>
+      </div>
+
+      <div class="device-row">
+        <div class="device-info">
+          <div class="device-icon">🖥️</div>
+          <div>
+            <div class="device-name">HP Server Motherboard</div>
+            <div class="device-meta">GOLD VIA · 3.2 Kg</div>
+          </div>
+        </div>
+        <div class="val-badge">₹1,260</div>
+      </div>
+
+      <button class="btn-glass" style="margin-top: 14px;">+ Register New Asset</button>
+    </div>
+
+    <!-- Column 2: Reverse Auction Engine -->
+    <div class="glass-card">
+      <div class="panel-label">
+        <span>CPCB-ETP COMPLIANT</span>
+        <span>REVERSE BIDDING</span>
+      </div>
+      <div class="panel-heading">Live Reverse Auction</div>
+
+      <div class="auction-box">
+        <div style="font-size: 11.5px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">AUCTION COUNTDOWN // LOT #EW-8841</div>
+        <div class="countdown">00:04:32</div>
+        <div style="font-size: 12px; color: var(--accent-emerald);">Upward B2B Competition Active</div>
+
+        <div class="bid-stats">
+          <div class="bid-stat-item">
+            <div class="val">₹2,850</div>
+            <div class="lbl">Leading Bid / Kg</div>
+          </div>
+          <div class="bid-stat-item">
+            <div class="val">45</div>
+            <div class="lbl">Verified Bids</div>
+          </div>
+          <div class="bid-stat-item">
+            <div class="val">6</div>
+            <div class="lbl">Recyclers</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-glass">Place Competing Upward Bid</button>
+    </div>
+
+    <!-- Column 3: Recovery & Wallet -->
+    <div class="glass-card">
+      <div class="panel-label">
+        <span>URBAN MINING</span>
+        <span>METRICS</span>
+      </div>
+      <div class="panel-heading">Precious Metal Recovery</div>
+
+      <div style="padding: 16px; background: rgba(0,0,0,0.25); border-radius: 12px; border: 1px solid rgba(255,255,255,0.06);">
+        <div style="font-size: 11px; color: var(--text-muted);">GREEN WALLET BALANCE</div>
+        <div style="font-size: 30px; font-weight: 700; color: #fff; font-family: 'JetBrains Mono', monospace; margin: 4px 0;">₹12,450</div>
+        <div style="font-size: 11.5px; color: var(--accent-emerald);">✓ Instant UPI Liquidity Enabled</div>
+      </div>
+
+      <div class="metal-meter">
+        <div class="metal-chip">🟡 Gold (Au): <strong>0.42g</strong></div>
+        <div class="metal-chip">⚪ Silver (Ag): <strong>2.80g</strong></div>
+        <div class="metal-chip">🟤 Copper (Cu): <strong>420g</strong></div>
+        <div class="metal-chip">🔘 Palladium: <strong>0.08g</strong></div>
+      </div>
+
+      <button class="btn-glass" style="margin-top: 14px; border-color: var(--accent-cyan); background: rgba(56, 189, 248, 0.15);">Redeem Green Credits</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

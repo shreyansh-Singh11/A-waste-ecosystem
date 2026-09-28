@@ -1,0 +1,578 @@
+[
+  {
+    "bidId": "5e824bd7-1c33-4887-aee3-5c7c8d59c16c",
+    "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T04:33:36.738Z"
+  },
+  {
+    "bidId": "731084b6-023d-4729-9c28-f46695d8299a",
+    "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T04:33:36.743Z"
+  },
+  {
+    "bidId": "d1b5ab20-82ae-4da1-94ae-4c9fe83fece3",
+    "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T04:34:15.326Z"
+  },
+  {
+    "bidId": "bfa5f929-e6ba-43e9-8bcc-bf54543ea157",
+    "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T04:34:15.330Z"
+  },
+  {
+    "bidId": "f68cba6b-06f8-49cc-9192-a45b7dd0165e",
+    "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T04:38:28.619Z"
+  },
+  {
+    "bidId": "0588bb00-8b7a-4686-8e67-9ea73df64b12",
+    "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T04:38:28.622Z"
+  },
+  {
+    "bidId": "328d02fe-e689-4f37-a470-16c14274ef65",
+    "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T09:24:24.534Z"
+  },
+  {
+    "bidId": "7acf6776-72ee-407c-800f-60ecf148f226",
+    "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T09:24:24.537Z"
+  },
+  {
+    "bidId": "91336c31-e878-4ec6-9154-a0bff61eee41",
+    "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T09:47:57.448Z"
+  },
+  {
+    "bidId": "9284bf71-377f-4514-b1e7-61a4edcd3a0e",
+    "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T09:47:57.452Z"
+  },
+  {
+    "bidId": "92691386-ca2a-4852-af83-d8c61435a830",
+    "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T10:07:49.748Z"
+  },
+  {
+    "bidId": "560a0b71-a56a-4a9e-8a7a-54420ec4b211",
+    "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T10:07:49.752Z"
+  },
+  {
+    "bidId": "4a3d72c8-dedc-4923-b570-260d568e6d88",
+    "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T10:10:39.642Z"
+  },
+  {
+    "bidId": "18c168ef-ecfe-4c9f-94af-372284cea506",
+    "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T10:10:39.651Z"
+  },
+  {
+    "bidId": "9261bf3e-1c88-4611-8e27-e87443f52a53",
+    "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T10:43:43.590Z"
+  },
+  {
+    "bidId": "7563379f-d46f-449c-b6da-0fa4731b130d",
+    "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T10:43:43.597Z"
+  },
+  {
+    "bidId": "f0007227-bec0-4fbc-ada2-229a53121af6",
+    "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T11:02:26.518Z"
+  },
+  {
+    "bidId": "2011e1d2-b07e-4bad-ae9a-f29bd46074c1",
+    "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T11:02:26.521Z"
+  },
+  {
+    "bidId": "2465bcca-c50e-4b5c-a4c4-dbf642b3d527",
+    "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T11:02:56.843Z"
+  },
+  {
+    "bidId": "db13e11d-f840-4253-b846-243fa8bc4c4f",
+    "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T11:02:56.848Z"
+  },
+  {
+    "bidId": "29e52c4c-c65c-4bc9-9e4d-23c016bdda74",
+    "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T11:06:21.142Z"
+  },
+  {
+    "bidId": "316dd049-56e9-4acf-940f-7e8f5e5d6093",
+    "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T11:06:21.152Z"
+  },
+  {
+    "bidId": "a476a78d-820c-4a07-9d21-6e48335d02c6",
+    "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T11:08:38.193Z"
+  },
+  {
+    "bidId": "3fc2fb46-0aa1-4102-aa98-20ce9f2fb888",
+    "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T11:08:38.201Z"
+  },
+  {
+    "bidId": "6212f21d-3826-46cb-87d4-abdf195b3a4a",
+    "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T19:22:35.656Z"
+  },
+  {
+    "bidId": "a48a857b-a689-42fc-b00b-99e14798f6e0",
+    "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T19:22:35.660Z"
+  },
+  {
+    "bidId": "6bd658d8-e325-4e8e-8ca7-dd32821d50f4",
+    "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T20:00:45.351Z"
+  },
+  {
+    "bidId": "b1cb63a5-eed5-464b-bfec-9782e2b65b69",
+    "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T20:00:45.376Z"
+  },
+  {
+    "bidId": "907eb2cb-60fb-4ac9-9dbb-adc3d5ae0336",
+    "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T20:07:02.135Z"
+  },
+  {
+    "bidId": "1c23e328-618f-4a0c-8775-ca97f5bedc1d",
+    "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T20:07:02.137Z"
+  },
+  {
+    "bidId": "5f72e6a3-3b14-41cb-a34b-34ee6ae9fa3a",
+    "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T20:17:26.760Z"
+  },
+  {
+    "bidId": "26df0423-a285-4e45-829f-6f0bbb53b2e1",
+    "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T20:17:26.763Z"
+  },
+  {
+    "bidId": "887d9d98-97ba-4c5f-b88d-e3bcb28f2214",
+    "lotId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-25T20:23:09.762Z"
+  },
+  {
+    "bidId": "a0afe2d1-7c71-427f-9239-a986768626d8",
+    "lotId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-25T20:23:09.766Z"
+  },
+  {
+    "bidId": "232b9cef-30c7-4e25-9fca-845139019ec1",
+    "lotId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T06:51:38.675Z"
+  },
+  {
+    "bidId": "c84c2327-adc3-40ea-87e9-b664b4a80244",
+    "lotId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T06:51:38.677Z"
+  },
+  {
+    "bidId": "3b83234e-07a9-4804-b15b-42509cfd203d",
+    "lotId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T10:03:12.481Z"
+  },
+  {
+    "bidId": "cea8e819-8abd-41ce-9615-c121f85ff183",
+    "lotId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T10:03:12.485Z"
+  },
+  {
+    "bidId": "d05a6bff-48f6-493a-8f35-834c48b9457a",
+    "lotId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T10:11:02.859Z"
+  },
+  {
+    "bidId": "ef4bfe4d-d995-49b4-83e4-deef0371a050",
+    "lotId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T10:11:02.862Z"
+  },
+  {
+    "bidId": "4648a2f2-8ef6-43f8-819b-52c32459e105",
+    "lotId": "d87c8680-4794-466f-a831-9d2404b0f626",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T10:41:01.431Z"
+  },
+  {
+    "bidId": "6949b020-f568-4214-a0e7-2a12190c3323",
+    "lotId": "d87c8680-4794-466f-a831-9d2404b0f626",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T10:41:01.434Z"
+  },
+  {
+    "bidId": "074c28da-2152-4d9b-b83e-87497f62dfa0",
+    "lotId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T10:49:37.950Z"
+  },
+  {
+    "bidId": "d2810039-8d51-4d7e-9a96-e2eee2be915c",
+    "lotId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T10:49:37.953Z"
+  },
+  {
+    "bidId": "2435db3a-9435-4a3f-8306-69a584466a8b",
+    "lotId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T10:50:36.182Z"
+  },
+  {
+    "bidId": "35bf0176-26c3-4860-918e-71e79279777b",
+    "lotId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T10:50:36.185Z"
+  },
+  {
+    "bidId": "74dd905d-72a3-4b3d-af7a-e3e395a503c7",
+    "lotId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T11:15:26.011Z"
+  },
+  {
+    "bidId": "3d4723b1-4a45-4efc-a2ad-2e66620c8cef",
+    "lotId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T11:15:26.016Z"
+  },
+  {
+    "bidId": "7fb47db1-73b9-4eec-91e8-0beda33ce48e",
+    "lotId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T12:56:49.503Z"
+  },
+  {
+    "bidId": "41b40980-5cc9-4a45-88a4-7403e11aa07c",
+    "lotId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T12:56:49.507Z"
+  },
+  {
+    "bidId": "26251258-6936-4f4d-91a9-cbe410fa5a4a",
+    "lotId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-26T13:02:47.963Z"
+  },
+  {
+    "bidId": "91eac55c-6022-4d56-ab9e-088941b9e850",
+    "lotId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-26T13:02:47.967Z"
+  },
+  {
+    "bidId": "a919c5c8-a3b8-4440-92e2-49b7f21896e2",
+    "lotId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T14:06:29.174Z"
+  },
+  {
+    "bidId": "34349097-d844-426b-ab4c-f3f47465d2ac",
+    "lotId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T14:06:29.177Z"
+  },
+  {
+    "bidId": "1bc4eac5-d540-40b2-9089-9cb47a8e2491",
+    "lotId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T14:11:32.313Z"
+  },
+  {
+    "bidId": "d78c8560-eb4c-428b-a411-3bb7fdc90389",
+    "lotId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T14:11:32.317Z"
+  },
+  {
+    "bidId": "a1fd6e18-1de2-4a29-bf32-5cdeed1ddeb8",
+    "lotId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T14:54:12.309Z"
+  },
+  {
+    "bidId": "ff5382a2-b6d0-48bc-b7d0-b436560d6f27",
+    "lotId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T14:54:12.315Z"
+  },
+  {
+    "bidId": "c32352ee-f969-4a6b-8072-a40a83a106a6",
+    "lotId": "0215b95d-b1cc-40a1-921b-540c12611143",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T15:26:17.982Z"
+  },
+  {
+    "bidId": "6d80bad5-82f4-463d-aca1-7382265e908d",
+    "lotId": "0215b95d-b1cc-40a1-921b-540c12611143",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T15:26:17.987Z"
+  },
+  {
+    "bidId": "f1c0683e-16e5-4eff-96b6-dbc2fea22436",
+    "lotId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T17:07:55.380Z"
+  },
+  {
+    "bidId": "3f23d038-8a7b-40b7-b2f3-4fcadf22799e",
+    "lotId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T17:07:55.384Z"
+  },
+  {
+    "bidId": "0f8d106d-6936-46aa-9cb6-2640922fda50",
+    "lotId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T17:50:20.643Z"
+  },
+  {
+    "bidId": "23387de2-525d-4304-afb7-9ee04cbb48b8",
+    "lotId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T17:50:20.647Z"
+  },
+  {
+    "bidId": "c97673e8-c67e-43bc-9975-99fadcfe86cf",
+    "lotId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T17:50:36.661Z"
+  },
+  {
+    "bidId": "242f8388-2fe0-452e-a893-39f735071a8d",
+    "lotId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T17:50:36.664Z"
+  },
+  {
+    "bidId": "6b5a7cb5-cabc-4a51-924e-67403c242481",
+    "lotId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T19:57:06.284Z"
+  },
+  {
+    "bidId": "a9de1777-0d6b-4427-b71b-a981252c0d81",
+    "lotId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T19:57:06.288Z"
+  },
+  {
+    "bidId": "08986d8b-92fe-4d1d-92b3-2a84fee67f49",
+    "lotId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T20:10:46.632Z"
+  },
+  {
+    "bidId": "dd8e73b5-4977-4cb0-a29a-f0356a18724b",
+    "lotId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T20:10:46.635Z"
+  },
+  {
+    "bidId": "2fb4564a-6066-432d-a07d-4390ac38edfb",
+    "lotId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+    "bidderId": "RECYCLER-TEST-A",
+    "bidPricePerKg": 50,
+    "totalBidPrice": 115,
+    "placedAt": "2026-09-28T20:11:24.244Z"
+  },
+  {
+    "bidId": "427b7148-3970-48c9-b234-93c994f5e274",
+    "lotId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+    "bidderId": "RECYCLER-TEST-B",
+    "bidPricePerKg": 75,
+    "totalBidPrice": 172.5,
+    "placedAt": "2026-09-28T20:11:24.247Z"
+  }
+]

@@ -1,0 +1,326 @@
+{
+  "backupTimestamp": "2026-09-25T20:21:19.324Z",
+  "totalFiles": 53,
+  "totalBytes": 451366,
+  "totalRecords": 1030,
+  "files": [
+    {
+      "fileName": "activityFeed.json",
+      "recordCount": 1,
+      "sizeBytes": 261,
+      "sha256": "f536945374a46a7d8a836893d7b83023da7316b44dbed3420061dd6f4bf283e3"
+    },
+    {
+      "fileName": "alerts.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "anomalyFlags.json",
+      "recordCount": 2,
+      "sizeBytes": 803,
+      "sha256": "a509bc09ac296a18a63cced731ea6828673e7d6d6b4dacd703432af3e7274beb"
+    },
+    {
+      "fileName": "auctionAuditLogs.json",
+      "recordCount": 132,
+      "sizeBytes": 44532,
+      "sha256": "3ea812d2b7cf28475aac567524dd67154eda9eaa0e7a52526f923d5e8ac10403"
+    },
+    {
+      "fileName": "auctionBids.json",
+      "recordCount": 32,
+      "sizeBytes": 7842,
+      "sha256": "c8f5245f717ea3471107d588b854d0a79eab43c20e448664fdf2d960840e2414"
+    },
+    {
+      "fileName": "auctionLots.json",
+      "recordCount": 17,
+      "sizeBytes": 16709,
+      "sha256": "c3bf03219b5cfaef74bd10a24efd8f23846aa68544ae07e4ef68a5c4ac376387"
+    },
+    {
+      "fileName": "auctionSettlements.json",
+      "recordCount": 16,
+      "sizeBytes": 6082,
+      "sha256": "ec26b4c927d57aaf496cb4b2e662c44d7ff2e135599c0628ab8043d6847af521"
+    },
+    {
+      "fileName": "carbonCredits.json",
+      "recordCount": 36,
+      "sizeBytes": 20270,
+      "sha256": "028fc5051852551b2e2b08d8ba4044267bb3f84e0c57159a31c99698073e70c8"
+    },
+    {
+      "fileName": "carbonTransactions.json",
+      "recordCount": 12,
+      "sizeBytes": 6050,
+      "sha256": "5da22a2a42e5cec1e80f311f9eb9ced5a2b96fe77b6a1bf0b3d8683dd866f866"
+    },
+    {
+      "fileName": "citizenRewards.json",
+      "recordCount": 38,
+      "sizeBytes": 13046,
+      "sha256": "d03907f0fa2ca2374fc6303761b5ba7afa60ffaa77fffaf5d70d50be133ba832"
+    },
+    {
+      "fileName": "collectionRequests.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "collectors.json",
+      "recordCount": 1,
+      "sizeBytes": 466,
+      "sha256": "0132d4f1a2fcc9fce3ab0b4b6872a6a13ba61b485bdcb3337627b5e0a5513149"
+    },
+    {
+      "fileName": "commodityMarketplace.json",
+      "recordCount": 12,
+      "sizeBytes": 5439,
+      "sha256": "e07db4c354c69fe411df9b9dcbe3e460317bd8c7a40e5bbcdbc1bb25e2efbb99"
+    },
+    {
+      "fileName": "commodityOrders.json",
+      "recordCount": 9,
+      "sizeBytes": 6821,
+      "sha256": "980d1de196764129221f280464d4984c7efc7749296607fbe9d55bc9b1212d3d"
+    },
+    {
+      "fileName": "compostOfftake.json",
+      "recordCount": 36,
+      "sizeBytes": 10730,
+      "sha256": "45f78c9c240e79b4bc288203c67018cc8fadca37c358daaced0fb2416b528185"
+    },
+    {
+      "fileName": "contractorSettlements.json",
+      "recordCount": 12,
+      "sizeBytes": 9264,
+      "sha256": "b298c1298d276bf69d480e8e6190b0331dfb3ae1919339ab41f8829930fee473"
+    },
+    {
+      "fileName": "deviceGrades.json",
+      "recordCount": 51,
+      "sizeBytes": 25485,
+      "sha256": "99ca3170c2f1fe71ceddf106c03396946971e178e239e21f3e9a90b44f19082c"
+    },
+    {
+      "fileName": "educationalContent.json",
+      "recordCount": 9,
+      "sizeBytes": 6998,
+      "sha256": "80857a128693110b238894aae944f09c06d426948e4c3f3fdb4a15cc2e10bd1d"
+    },
+    {
+      "fileName": "eprCertificates.json",
+      "recordCount": 1,
+      "sizeBytes": 835,
+      "sha256": "fc4acf52b9e2aae06b5e8097c0bae029c7dfbbe5d82eb70509b88ee5baddaaae"
+    },
+    {
+      "fileName": "eprObligations.json",
+      "recordCount": 2,
+      "sizeBytes": 583,
+      "sha256": "06986c6f7c1c3f21acf11e057b3d96390cedc51c3592cec0eac8622a413d27a8"
+    },
+    {
+      "fileName": "eprTransactions.json",
+      "recordCount": 1,
+      "sizeBytes": 413,
+      "sha256": "9e31909d055365c0eb0387468ddeeac7fde094b23829c2c5bb98671f1336c31c"
+    },
+    {
+      "fileName": "hazmatIncidents.json",
+      "recordCount": 8,
+      "sizeBytes": 9634,
+      "sha256": "4ffe3949f9ba87e4d8bad5fef9ef2860789ed5e2ab68ae28323debe616182854"
+    },
+    {
+      "fileName": "items.json",
+      "recordCount": 1,
+      "sizeBytes": 846,
+      "sha256": "5120e3f6e6435755804779ba8cf7682335909bea03a79fa686a524cad13b7ee5"
+    },
+    {
+      "fileName": "medicalAuditLogs.json",
+      "recordCount": 108,
+      "sizeBytes": 35984,
+      "sha256": "d88c2440cc5541012350bc981e928d695c8ff7fb01a391f52e3965ee4303b025"
+    },
+    {
+      "fileName": "medicalCertificates.json",
+      "recordCount": 18,
+      "sizeBytes": 4304,
+      "sha256": "0ac74340e54abad7a815c881b62961bbe2e3baf126abb285d5f3604951c356e5"
+    },
+    {
+      "fileName": "medicalManifests.json",
+      "recordCount": 20,
+      "sizeBytes": 6317,
+      "sha256": "9e8b85bba3d5e24f3a4b5bd93ff381cecf591d20d17390ab654fba628da2952c"
+    },
+    {
+      "fileName": "medicalStaffTraining.json",
+      "recordCount": 19,
+      "sizeBytes": 5955,
+      "sha256": "4e9b83d08c098df05a9680bd37ed5de93ab99e7df9d3f9a5f60b331a7c577750"
+    },
+    {
+      "fileName": "medicalTransport.json",
+      "recordCount": 18,
+      "sizeBytes": 5528,
+      "sha256": "42ce5766f7ea7040a0ac52e94f2d3fe44bc294297846d3ca066ac69913211303"
+    },
+    {
+      "fileName": "medicalTreatments.json",
+      "recordCount": 18,
+      "sizeBytes": 6410,
+      "sha256": "a8add7d3a1ac5eaa635a4a893c4ab3ef602a75989c3879b3ed626e72368356b5"
+    },
+    {
+      "fileName": "medicalWhistleblower.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "municipalAuditLogs.json",
+      "recordCount": 234,
+      "sizeBytes": 82551,
+      "sha256": "8be0ff72354ee4d1caebdd5c750119a2b73589a2f700203791adac4c4110b3f2"
+    },
+    {
+      "fileName": "municipalMrfInventory.json",
+      "recordCount": 18,
+      "sizeBytes": 6332,
+      "sha256": "82a2f6e381f68135968ee46632fbc41fb9702846094dd66711b523b7c1a5bf10"
+    },
+    {
+      "fileName": "municipalRecyclerOrders.json",
+      "recordCount": 17,
+      "sizeBytes": 5153,
+      "sha256": "91208803268bb251d3a4b8a92b5ace9fe41eb0dd9cf0c7bf02106f475b771efc"
+    },
+    {
+      "fileName": "municipalRoutes.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "municipalShifts.json",
+      "recordCount": 19,
+      "sizeBytes": 11893,
+      "sha256": "ee8fb909887b7b898b4f5c2cc78d328638250dff4bb6200ab8e35e3ce7dfff43"
+    },
+    {
+      "fileName": "municipalTrips.json",
+      "recordCount": 18,
+      "sizeBytes": 14404,
+      "sha256": "effda20c76ea8191a990bbe24d2e300bae02ade73fc3f0334e678baed2ba3aa4"
+    },
+    {
+      "fileName": "municipalWhistleblower.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "notifications.json",
+      "recordCount": 1,
+      "sizeBytes": 305,
+      "sha256": "666d8676d6a2fa0ff275bbd314a1adcd8b841899de030238f09fb398433469df"
+    },
+    {
+      "fileName": "offlineSyncQueue.json",
+      "recordCount": 8,
+      "sizeBytes": 4255,
+      "sha256": "c5aebc2df5ccac68e3e0f0c72cf4122829f04f57691fa5c8ebda6c0fdeb45997"
+    },
+    {
+      "fileName": "preciousMetalsByModel.json",
+      "recordCount": 16,
+      "sizeBytes": 2151,
+      "sha256": "880ee8dedda8f9f5061a2f787906567f5adae24c0a5dbe7f5e3f11a4dc1be1bb"
+    },
+    {
+      "fileName": "producers.json",
+      "recordCount": 1,
+      "sizeBytes": 442,
+      "sha256": "b89a682f00acce1ab395c6ebe4195d55613163a004bb6e8c5fee1da7e85d2de2"
+    },
+    {
+      "fileName": "rewardClaims.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "rewards.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "snakeRoutes.json",
+      "recordCount": 8,
+      "sizeBytes": 25119,
+      "sha256": "8f24faffbbcfb9da99ee868d68c1b51890dbf176be64751f958ac71e3df85aa7"
+    },
+    {
+      "fileName": "statusHistory.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "suspiciousActivity.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "transactions.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "fileName": "userFeeLedger.json",
+      "recordCount": 17,
+      "sizeBytes": 4259,
+      "sha256": "30e6d31183a3ff5d9cefb4631415e20b3c73b2c1a885fabe0f7162b3b7d503ae"
+    },
+    {
+      "fileName": "users.json",
+      "recordCount": 3,
+      "sizeBytes": 399,
+      "sha256": "cfffe170171a86d0bc018af0bae5ef03c28ff7f0bc3834f31b7504118fd5bebd"
+    },
+    {
+      "fileName": "visionScans.json",
+      "recordCount": 15,
+      "sizeBytes": 14546,
+      "sha256": "db440a940be1c76859f68ee875eb7f7334f636d8b0293c07c927643fa631dd02"
+    },
+    {
+      "fileName": "wallets.json",
+      "recordCount": 0,
+      "sizeBytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "fileName": "whistleblowerReports.json",
+      "recordCount": 20,
+      "sizeBytes": 20264,
+      "sha256": "5440166e09a286e35aaaeebac425e6563d8f5a619f68c06bad65585f67f3ae3f"
+    },
+    {
+      "fileName": "workerCertifications.json",
+      "recordCount": 5,
+      "sizeBytes": 1664,
+      "sha256": "4fa1c724045202526e86ae215f75ba1499302d55a9931fc6c071eac8618dbf71"
+    }
+  ]
+}

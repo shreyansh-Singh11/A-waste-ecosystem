@@ -1,0 +1,222 @@
+[
+  {
+    "id": "med-rec-001",
+    "batchCode": "MED-784210",
+    "hospitalId": "AIIMS-Bhopal-Hosp",
+    "wasteType": "YELLOW",
+    "colorCode": "Yellow (Soiled & Anatomical Waste)",
+    "weightKg": 42.5,
+    "qrTag": "QR-BMW-AIIMS-Y01",
+    "status": "COLLECTED",
+    "createdAt": "2026-09-24T07:15:00.000Z"
+  },
+  {
+    "id": "med-rec-002",
+    "batchCode": "MED-784211",
+    "hospitalId": "Hamidia-Hospital-Bhopal",
+    "wasteType": "RED",
+    "colorCode": "Red (Contaminated Recyclable Plastics)",
+    "weightKg": 31,
+    "qrTag": "QR-BMW-HAM-R01",
+    "status": "COLLECTED",
+    "createdAt": "2026-09-24T07:45:00.000Z"
+  },
+  {
+    "id": "b7f26004-6143-4759-ba0a-ffc59967a501",
+    "batchCode": "MED-CA05AD",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-24T18:09:09.973Z"
+  },
+  {
+    "id": "600012b7-2a15-4154-858e-ef6cb6b79b6f",
+    "batchCode": "MED-72A68C",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-24T18:09:25.307Z"
+  },
+  {
+    "id": "b03b8271-f2ec-4df2-bd68-b4d11be7f5e5",
+    "batchCode": "MED-0CB2AA",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-24T18:40:39.594Z"
+  },
+  {
+    "id": "3b785b79-7619-46a1-9dde-eaf07565659c",
+    "batchCode": "MED-5CE6E5",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T04:34:15.399Z"
+  },
+  {
+    "id": "07723a46-d971-4502-ac40-13549975e2b2",
+    "batchCode": "MED-4BD707",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T04:38:28.641Z"
+  },
+  {
+    "id": "39a16eac-c50c-4421-bf19-fb5f6f964e3d",
+    "batchCode": "MED-B84878",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T09:24:24.783Z"
+  },
+  {
+    "id": "b538688d-464a-4958-bf52-0db9348ae68c",
+    "batchCode": "MED-51D888",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T09:47:57.839Z"
+  },
+  {
+    "id": "06f80ec5-12c5-489c-80fa-0c56df55067d",
+    "batchCode": "MED-96B5E6",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T10:07:50.477Z"
+  },
+  {
+    "id": "a823fd49-3c0e-436e-b6d7-39deb81698b2",
+    "batchCode": "MED-C0B4B3",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T10:10:40.382Z"
+  },
+  {
+    "id": "22fa28dc-a68f-427d-987d-9fd6189c058d",
+    "batchCode": "MED-6EC82B",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T10:43:44.259Z"
+  },
+  {
+    "id": "eb85d6f8-9f3a-42f5-9af8-9cfcd8707dae",
+    "batchCode": "MED-42DCC2",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T11:02:27.164Z"
+  },
+  {
+    "id": "c9bf64e4-7013-4d50-8853-533020f3240e",
+    "batchCode": "MED-95502A",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T11:02:57.591Z"
+  },
+  {
+    "id": "fd6c9407-2a1b-4896-8ed0-520e6f0f0801",
+    "batchCode": "MED-489BAA",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T11:06:22.219Z"
+  },
+  {
+    "id": "9b0b4a17-6421-4471-adca-a53fba4ef047",
+    "batchCode": "MED-5A6C22",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T11:08:39.314Z"
+  },
+  {
+    "id": "ee2a2e73-d0ca-4c62-a1c5-12316465a1c1",
+    "batchCode": "MED-A59F5E",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T19:22:43.489Z"
+  },
+  {
+    "id": "ad95cd45-0acf-4be0-9f58-9bbec6f3ef4e",
+    "batchCode": "MED-DA2081",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T20:00:51.569Z"
+  },
+  {
+    "id": "28d94b0d-f78c-417d-999f-3381320d7d91",
+    "batchCode": "MED-972EB4",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T20:07:14.221Z"
+  },
+  {
+    "id": "9dd49391-a1ba-4183-94ab-e0674a8cf469",
+    "batchCode": "MED-9C7589",
+    "hospitalId": "HOSP-TEST-01",
+    "wasteType": "RED",
+    "colorCode": "Red (Recyclable Plastics)",
+    "weightKg": 25,
+    "qrTag": "QR-TEST-BMW-01",
+    "status": "CERTIFIED",
+    "createdAt": "2026-09-25T20:17:38.489Z"
+  }
+]

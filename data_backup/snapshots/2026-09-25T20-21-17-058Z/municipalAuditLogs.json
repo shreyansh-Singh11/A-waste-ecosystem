@@ -1,0 +1,2801 @@
+[
+  {
+    "id": "d3f01022-7161-484e-8aab-6cc984746371",
+    "action": "SHIFT_CREATED",
+    "entityId": "274c5f12-f691-41a7-80c0-c163ad4ded09",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:09.961Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "11f82870-53f8-4aeb-b30e-78e20569f780",
+    "action": "PICKUP_RECORDED",
+    "entityId": "41438196-bbe3-4acd-9637-2e57683953c3",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:09.963Z",
+    "details": {
+      "shiftId": "274c5f12-f691-41a7-80c0-c163ad4ded09",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "0d2690bf-0ebc-4450-af94-adae5153e5dc",
+    "action": "TRIP_LOCKED",
+    "entityId": "b64e31e8-91e4-44c9-ba97-44b70329da4f",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:09.966Z",
+    "details": {
+      "shiftId": "274c5f12-f691-41a7-80c0-c163ad4ded09",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "a4703277-139a-4020-8d74-9211b020b2d6",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "a57331f8-e229-4a96-b2db-be5ee15a7596",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:09:09.968Z",
+    "details": {
+      "tripId": "b64e31e8-91e4-44c9-ba97-44b70329da4f",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "02eb822d-76ab-458b-8e9b-f1f8ab375c22",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "b64e31e8-91e4-44c9-ba97-44b70329da4f",
+    "actorId": "system",
+    "timestamp": "2026-09-24T18:09:09.969Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "9d1f4f4c-476b-4079-b74a-27e3cd20e4f9",
+    "action": "SHIFT_CREATED",
+    "entityId": "f8808413-5727-4cfc-b756-ef19001313b2",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:25.286Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "fd1b718d-d64f-4d0e-a458-afc4ec485e5a",
+    "action": "PICKUP_RECORDED",
+    "entityId": "3532e72f-9d2d-4ae2-8027-ec961ae8c4a1",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:25.289Z",
+    "details": {
+      "shiftId": "f8808413-5727-4cfc-b756-ef19001313b2",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "f06a689e-4b92-47cf-8e73-d6ee4bb14ac9",
+    "action": "TRIP_LOCKED",
+    "entityId": "ac52b210-d68e-4f6b-986f-ffe6bad736e2",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:09:25.292Z",
+    "details": {
+      "shiftId": "f8808413-5727-4cfc-b756-ef19001313b2",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "29ae9cda-9544-4b2a-a0ba-e2b3650941fb",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "21949eef-7474-4edd-95f2-f8d3c01529c2",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:09:25.294Z",
+    "details": {
+      "tripId": "ac52b210-d68e-4f6b-986f-ffe6bad736e2",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "055edc6e-3a6e-4ef8-bf8d-ad022658bb38",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "ac52b210-d68e-4f6b-986f-ffe6bad736e2",
+    "actorId": "system",
+    "timestamp": "2026-09-24T18:09:25.296Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "954cc93e-e433-4f2a-9f91-0c982c9af6eb",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "da6c73c5-fbea-4491-88a6-51e0059cb89c",
+    "actorId": "system",
+    "timestamp": "2026-09-24T18:09:25.299Z",
+    "details": {
+      "tripId": "ac52b210-d68e-4f6b-986f-ffe6bad736e2",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "1d97b67d-d49d-4506-9693-9edeb2cfcd15",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "2b9dfdce-545c-4ee2-9eab-8bb47a9bc781",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:09:25.302Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "d25da411-c7ce-43c2-a641-93801028f89e",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "0e36ff35-37d8-4dae-817c-8f35d636922f",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:09:25.304Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "04afb885-92d5-4bd7-8683-222262387d12",
+    "action": "SHIFT_CREATED",
+    "entityId": "2c62d9e0-3aa6-41ac-9e7d-0a0106389a87",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:40:39.569Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "009750cc-da57-4a6f-921c-86f05baf4dd1",
+    "action": "PICKUP_RECORDED",
+    "entityId": "55d1ae1f-1e0b-4e5b-bd94-2869ccf9ab83",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:40:39.572Z",
+    "details": {
+      "shiftId": "2c62d9e0-3aa6-41ac-9e7d-0a0106389a87",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "802ca919-1627-4c81-8c05-c6a32cfc4afc",
+    "action": "TRIP_LOCKED",
+    "entityId": "e41cd1c8-3f56-466c-aaf3-2c0db15c86f6",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-24T18:40:39.577Z",
+    "details": {
+      "shiftId": "2c62d9e0-3aa6-41ac-9e7d-0a0106389a87",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "166b89e3-963d-4d88-a471-dd3dfdfbfc3a",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "13b3f8ca-bbd2-44a3-8fcf-afb6a9e73000",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:40:39.580Z",
+    "details": {
+      "tripId": "e41cd1c8-3f56-466c-aaf3-2c0db15c86f6",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "b64bfcc9-d664-46d1-9ecd-8c665fed6eb1",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "e41cd1c8-3f56-466c-aaf3-2c0db15c86f6",
+    "actorId": "system",
+    "timestamp": "2026-09-24T18:40:39.583Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "3d37db93-5504-4ecb-9839-ca468400bd78",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "a40708d4-2b6e-4518-adc2-2fe67254c5e1",
+    "actorId": "system",
+    "timestamp": "2026-09-24T18:40:39.586Z",
+    "details": {
+      "tripId": "e41cd1c8-3f56-466c-aaf3-2c0db15c86f6",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "f25d2187-3a21-4b01-b0e9-e74c611700a8",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "48875922-09b1-48d1-b757-41f71d6629ef",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:40:39.588Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "ddd3565d-0cf0-442f-808d-d694db850232",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "1c6acc28-8ee7-47e2-80aa-dcbb52e04507",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-24T18:40:39.590Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "e0f4bbf2-aa0f-41b4-85e7-9f924ba19369",
+    "action": "SHIFT_CREATED",
+    "entityId": "1dfa3413-a7ba-4d44-a1ec-f54f0deca9ab",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:34:15.371Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "698aa17b-9816-4ab7-aec7-da6e71187b28",
+    "action": "PICKUP_RECORDED",
+    "entityId": "a27bad53-3fb1-4b06-a3b3-24ed6955f861",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:34:15.375Z",
+    "details": {
+      "shiftId": "1dfa3413-a7ba-4d44-a1ec-f54f0deca9ab",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "bc426d83-d004-4999-854e-1dbfda3a0b52",
+    "action": "TRIP_LOCKED",
+    "entityId": "87a77424-8f99-4673-b601-08720e42a194",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:34:15.379Z",
+    "details": {
+      "shiftId": "1dfa3413-a7ba-4d44-a1ec-f54f0deca9ab",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "6c522f05-64c7-4b24-ae75-3a2a4c02380c",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "08375f1e-d617-4f21-8fa0-3c3ec00852ff",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:34:15.385Z",
+    "details": {
+      "tripId": "87a77424-8f99-4673-b601-08720e42a194",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "a02d60f4-6ca7-4636-93d2-6a2a71b3ed47",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "87a77424-8f99-4673-b601-08720e42a194",
+    "actorId": "system",
+    "timestamp": "2026-09-25T04:34:15.387Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "9665e25c-5967-4cac-be04-88108919d3dc",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "34706a00-d4f8-4194-b383-f26b6474caac",
+    "actorId": "system",
+    "timestamp": "2026-09-25T04:34:15.390Z",
+    "details": {
+      "tripId": "87a77424-8f99-4673-b601-08720e42a194",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "9ea41e3f-f973-4359-87d2-ff4600e04363",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "2fa2493c-988e-4637-b3bf-dde8f8b52dbb",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:34:15.392Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "b6714780-7c5d-4131-bd3e-8bee87cf9d3a",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "1aec90a1-18cf-4330-a201-2d7757284b9f",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:34:15.394Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "7158a57c-2aa0-4709-812e-1b8cb88b0f9e",
+    "action": "SHIFT_CREATED",
+    "entityId": "60808606-e7ad-4f79-88bb-062d19eb6bcd",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:38:28.599Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "093ee24a-a478-4344-ac93-9fb465612da9",
+    "action": "PICKUP_RECORDED",
+    "entityId": "69f448e0-469b-4d68-8376-f3d5cd135330",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:38:28.605Z",
+    "details": {
+      "shiftId": "60808606-e7ad-4f79-88bb-062d19eb6bcd",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "8f05fbca-3802-49ad-9dfb-0cc8657a3cec",
+    "action": "TRIP_LOCKED",
+    "entityId": "ac18ac3a-2bdb-4baa-a4fc-a59d24654698",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T04:38:28.609Z",
+    "details": {
+      "shiftId": "60808606-e7ad-4f79-88bb-062d19eb6bcd",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "0cb143dd-0cc4-481a-a381-21944745377c",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "cb062cdd-2e1b-4dc4-a1ae-695eccf3ac1e",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:38:28.621Z",
+    "details": {
+      "tripId": "ac18ac3a-2bdb-4baa-a4fc-a59d24654698",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "a9a23f84-2676-49f2-93ef-09456121ed3e",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "ac18ac3a-2bdb-4baa-a4fc-a59d24654698",
+    "actorId": "system",
+    "timestamp": "2026-09-25T04:38:28.623Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "96acc6cb-66b4-4877-a565-8f9991dc6c77",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "8c4c304d-0eb7-4175-abd2-3bd877e35bbe",
+    "actorId": "system",
+    "timestamp": "2026-09-25T04:38:28.626Z",
+    "details": {
+      "tripId": "ac18ac3a-2bdb-4baa-a4fc-a59d24654698",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "48316fa8-25b2-4272-86b1-0c3fd96003a5",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "54821502-31ad-4e2a-a3c7-01619773d8ae",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:38:28.632Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "b144f3bb-6c9d-4c7d-8248-38ffa6b2f727",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "4e70a4bb-0968-4998-b0c2-61e5d0a4a86a",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T04:38:28.635Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "e5de9b20-a56a-4690-b337-34052c61cc3a",
+    "action": "SHIFT_CREATED",
+    "entityId": "f6f9d8d7-e676-4a23-ba32-319fa61b2fdf",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:24:24.763Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "ac2b3477-10a5-4d16-ac60-62897373a619",
+    "action": "PICKUP_RECORDED",
+    "entityId": "17cbd436-58e4-44c9-b22d-2be785026dfe",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:24:24.766Z",
+    "details": {
+      "shiftId": "f6f9d8d7-e676-4a23-ba32-319fa61b2fdf",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "21590614-8071-45f8-afc1-46a1a4c45d65",
+    "action": "TRIP_LOCKED",
+    "entityId": "d86c5f24-4286-432f-ab41-d0d3f581eda0",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:24:24.769Z",
+    "details": {
+      "shiftId": "f6f9d8d7-e676-4a23-ba32-319fa61b2fdf",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "33d3ae20-b7a5-4004-9010-eb2ca0422012",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "eb30139a-0106-41c8-81ab-99643371445d",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:24:24.771Z",
+    "details": {
+      "tripId": "d86c5f24-4286-432f-ab41-d0d3f581eda0",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "cca24ce1-0965-4b2d-bc25-cda0de123732",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "d86c5f24-4286-432f-ab41-d0d3f581eda0",
+    "actorId": "system",
+    "timestamp": "2026-09-25T09:24:24.774Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "1daa848c-4584-4038-9d80-60254b3fef61",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "ed8d285a-8018-42a6-bc73-930643fdc632",
+    "actorId": "system",
+    "timestamp": "2026-09-25T09:24:24.777Z",
+    "details": {
+      "tripId": "d86c5f24-4286-432f-ab41-d0d3f581eda0",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "42cf06ea-bbc8-41bd-9458-0aef7bedd339",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "c886265d-d327-49e7-afc8-9632a5c57905",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:24:24.778Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "6d141b5f-6aa8-451f-94a0-20401c52ef46",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "2c7bdd00-b812-468a-9f44-f8c8bbf35104",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:24:24.780Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "6074a2ad-9c51-4820-9ab6-c31941b079f1",
+    "action": "SHIFT_CREATED",
+    "entityId": "da382bfb-d360-4384-afa8-f4cf47f4b27a",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:47:57.818Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "74306a4b-4e9f-4f5f-8112-cd7b8a648662",
+    "action": "PICKUP_RECORDED",
+    "entityId": "d419d393-5786-41f0-bb03-92236ad78d84",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:47:57.820Z",
+    "details": {
+      "shiftId": "da382bfb-d360-4384-afa8-f4cf47f4b27a",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "9bc4a210-864b-410e-bdd8-9cbf804952f6",
+    "action": "TRIP_LOCKED",
+    "entityId": "a28ee1ec-156f-417f-981e-278e2f209709",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T09:47:57.824Z",
+    "details": {
+      "shiftId": "da382bfb-d360-4384-afa8-f4cf47f4b27a",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "46e3b140-46da-4399-92d4-225b6b5b9664",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "d2ad40a7-086c-458b-9b8c-e24f33e76882",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:47:57.826Z",
+    "details": {
+      "tripId": "a28ee1ec-156f-417f-981e-278e2f209709",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "c8e89189-ef3f-4381-9023-65d8713365e9",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "a28ee1ec-156f-417f-981e-278e2f209709",
+    "actorId": "system",
+    "timestamp": "2026-09-25T09:47:57.828Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "5649190a-2370-4361-8439-6ff477b5b5d2",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "09f931e8-8a6f-47dc-b053-4bf8a37dae83",
+    "actorId": "system",
+    "timestamp": "2026-09-25T09:47:57.830Z",
+    "details": {
+      "tripId": "a28ee1ec-156f-417f-981e-278e2f209709",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "1f227970-70b3-460a-b9eb-4242cc8a9207",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "6ce67156-ddad-43bc-914f-8a8e2e531c74",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:47:57.832Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "cea55331-bdf9-42c3-aef6-44fd431b0de7",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "b33a03ef-e46c-41c3-9e31-2d2c3ff2b4b1",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T09:47:57.834Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "2d8ff50e-06c8-4d38-9fec-b1fc0718a313",
+    "action": "SHIFT_CREATED",
+    "entityId": "f30e47f9-fb97-4d51-bb08-06156cf85491",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:07:50.451Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "fbb3ecbb-b85d-48b0-8249-920f7c896399",
+    "action": "PICKUP_RECORDED",
+    "entityId": "c3f8cbf4-1612-457d-b832-a108b46970cc",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:07:50.456Z",
+    "details": {
+      "shiftId": "f30e47f9-fb97-4d51-bb08-06156cf85491",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "eaf78d65-fa85-4f21-b24d-295461585ee0",
+    "action": "TRIP_LOCKED",
+    "entityId": "fdc9287d-4db8-4d10-806a-afbaa32808df",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:07:50.460Z",
+    "details": {
+      "shiftId": "f30e47f9-fb97-4d51-bb08-06156cf85491",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "bf42ec7e-e574-40c2-8c57-dd5a69bf81df",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "c1f5909d-0688-451a-8ac6-0fe1098ba89a",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:07:50.462Z",
+    "details": {
+      "tripId": "fdc9287d-4db8-4d10-806a-afbaa32808df",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "25656811-0396-42d6-a5ae-6a469b051173",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "fdc9287d-4db8-4d10-806a-afbaa32808df",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:07:50.464Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "6a3f1720-22f2-4a2d-9e19-b9ce9128eed5",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "a38dd5a2-dd1c-425b-b293-fe650f4834d3",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:07:50.467Z",
+    "details": {
+      "tripId": "fdc9287d-4db8-4d10-806a-afbaa32808df",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "5c1ef4d4-5cca-413d-9c1d-349ec98fba4d",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "0e314231-c3fc-4f18-b359-fc1454f2aab6",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:07:50.469Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "de99cd0e-e2fe-4d82-af92-55583a68667d",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "6aa072fa-6371-41ea-afab-87be79016807",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:07:50.472Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "94cd4f32-011f-4002-a7ed-dcd195430f93",
+    "action": "SHIFT_CREATED",
+    "entityId": "a521c1c8-3dc2-4d44-9c4a-078fdcf27e37",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:10:40.330Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "1c081f04-b05b-4bef-8c59-ce482cfb477f",
+    "action": "PICKUP_RECORDED",
+    "entityId": "63911672-2aab-4edb-b31f-84f4fd65ba5a",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:10:40.335Z",
+    "details": {
+      "shiftId": "a521c1c8-3dc2-4d44-9c4a-078fdcf27e37",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "9258d708-cef9-44fb-afd0-873a8bc975b9",
+    "action": "TRIP_LOCKED",
+    "entityId": "924231c4-b771-40ca-bf08-452ebb88dc6e",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:10:40.344Z",
+    "details": {
+      "shiftId": "a521c1c8-3dc2-4d44-9c4a-078fdcf27e37",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "4a5f3fca-2462-4f4b-8db8-567b1247438c",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "0804bd64-b661-4c05-855e-5caa50bb7f57",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:10:40.349Z",
+    "details": {
+      "tripId": "924231c4-b771-40ca-bf08-452ebb88dc6e",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "8a2b5d7c-ee1f-45ca-8a86-41c343e034d3",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "924231c4-b771-40ca-bf08-452ebb88dc6e",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:10:40.354Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "5818754e-e10c-44a6-a307-463e5250d614",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "18a1574d-c563-4911-8d0c-dffcbf6319aa",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:10:40.360Z",
+    "details": {
+      "tripId": "924231c4-b771-40ca-bf08-452ebb88dc6e",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "0d7c0153-2c32-4c9c-a6d2-4b0f2df72579",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "bda4ea12-4be1-4efc-8f71-44853e18b52b",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:10:40.365Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "49075464-a7de-42b0-bf44-f9cabbb8d408",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "eb22cf68-75a7-429a-9c77-25c545fc8d8c",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:10:40.372Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "aea2360b-652a-46bf-baa3-ead599f14051",
+    "action": "SHIFT_CREATED",
+    "entityId": "7ba8d739-c9b4-4883-93bc-8033ce0fb7d5",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:43:44.223Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "2dad2a8b-ec36-43fd-8bb2-a537ebbcee57",
+    "action": "PICKUP_RECORDED",
+    "entityId": "9e9799b1-ad39-4638-8f42-2332ee24cb6c",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:43:44.227Z",
+    "details": {
+      "shiftId": "7ba8d739-c9b4-4883-93bc-8033ce0fb7d5",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "600211d5-abaa-4f2b-822f-18aee1ffb226",
+    "action": "TRIP_LOCKED",
+    "entityId": "7145bee0-a507-428f-8412-15ce5dc63221",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T10:43:44.231Z",
+    "details": {
+      "shiftId": "7ba8d739-c9b4-4883-93bc-8033ce0fb7d5",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "7daa53c3-7915-4784-b187-0a5adeba26af",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "48f3850e-e969-40f0-a4b4-edddf881aa17",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:43:44.237Z",
+    "details": {
+      "tripId": "7145bee0-a507-428f-8412-15ce5dc63221",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "ba06c5cd-5e2e-4383-9829-5debd4969510",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "7145bee0-a507-428f-8412-15ce5dc63221",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:43:44.240Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "70eccdac-7bf1-4fd6-ac60-b36ff8d8ecf0",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "6b01db8f-e713-4106-b468-bc789520d0f7",
+    "actorId": "system",
+    "timestamp": "2026-09-25T10:43:44.244Z",
+    "details": {
+      "tripId": "7145bee0-a507-428f-8412-15ce5dc63221",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "47ff05fa-74f0-41bd-8fdd-cb8d7f627cad",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "50bff543-0be2-4e08-b752-382869463613",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:43:44.247Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "a764462a-94d9-444c-957b-0571ed142e00",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "94a3e2d3-3ca8-4f9a-aab1-a44ef188eefe",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T10:43:44.252Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "d48d19ee-59e1-49d7-b4da-4bb713eb1f58",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-D15FBC00",
+    "actorId": "CITIZEN-TEST-01",
+    "timestamp": "2026-09-25T11:00:23.825Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "303dc7b6-d823-4cde-be2d-e57e8d6fb614",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-54AAC94B",
+    "actorId": "CITIZEN-TEST-02",
+    "timestamp": "2026-09-25T11:00:23.828Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "6a7d1e18-a2c7-47a1-bb3e-29b6d42792e6",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-D15FBC00",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T11:00:23.830Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "83b916da-81b9-4041-a294-99b9f3826bd0",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-D15FBC00",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T11:00:23.833Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "1ad73631-cdaf-4b1f-a9cb-96fc364c19bc",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-0C156F6C",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T11:00:23.954Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "720a6d4f-4cd6-41a7-90bf-10f15ab1e40a",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-6532AC7F",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T11:00:23.962Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "1daca8fe-092b-47e0-b56f-9c78f9b1df09",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-415FDA96",
+    "actorId": "CITIZEN-TEST-01",
+    "timestamp": "2026-09-25T11:02:26.627Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "6e2af7b1-d051-4ea3-88a8-8d02993e3af8",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-A4286F01",
+    "actorId": "CITIZEN-TEST-02",
+    "timestamp": "2026-09-25T11:02:26.632Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "16b9f76c-18c6-4371-ba26-feb834f6bd97",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-415FDA96",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T11:02:26.636Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "669e0440-dfbe-47a8-b068-e6be6d191f1a",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-415FDA96",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T11:02:26.640Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "e3726f2f-8e31-4436-af8e-1772c214bd44",
+    "action": "SHIFT_CREATED",
+    "entityId": "5ec20403-ddad-4c87-82fd-91dbcebe8cde",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:27.138Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "82693f91-d695-4956-aad4-c7adb7c807ff",
+    "action": "PICKUP_RECORDED",
+    "entityId": "4e2031b6-1794-4e5d-9f27-8728ae8f334e",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:27.141Z",
+    "details": {
+      "shiftId": "5ec20403-ddad-4c87-82fd-91dbcebe8cde",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "1abe4bb2-1fa0-4ede-8c1d-8167d89ea59d",
+    "action": "TRIP_LOCKED",
+    "entityId": "7ac7cc4f-8d4b-479d-a647-fcb8a6d540e6",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:27.145Z",
+    "details": {
+      "shiftId": "5ec20403-ddad-4c87-82fd-91dbcebe8cde",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "116bbfa4-6909-4556-a94d-f3327ff00e85",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "76424089-f3c0-42a1-886a-704c87b276b3",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:27.148Z",
+    "details": {
+      "tripId": "7ac7cc4f-8d4b-479d-a647-fcb8a6d540e6",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "a3e529a6-ccbd-48eb-aaa2-5c4403aa7b0e",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "7ac7cc4f-8d4b-479d-a647-fcb8a6d540e6",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:02:27.152Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "2643b376-885f-4ae5-a91b-56aa0432bf85",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "319d2a1a-6b69-4bca-bf28-d8a0c910f6b9",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:02:27.155Z",
+    "details": {
+      "tripId": "7ac7cc4f-8d4b-479d-a647-fcb8a6d540e6",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "b052f029-44ad-4044-a589-7191c62d3445",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "ce0a3b3e-04cc-47fd-8598-96324e5f5734",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:27.157Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "a43ff9bc-95fd-4cfc-a7e9-bc5e6331e821",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "1b3c7adc-8092-4c13-84a1-0ae2e9ac8fd7",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:27.159Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "0f5a65bd-3d96-4e19-9bde-499852374f67",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-B6852FDB",
+    "actorId": "CITIZEN-TEST-1790334176940",
+    "timestamp": "2026-09-25T11:02:56.948Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "27d6c192-bc30-43c3-b977-15adedfcb412",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-3B1B9474",
+    "actorId": "CITIZEN-TEST-EMERG-1790334176940",
+    "timestamp": "2026-09-25T11:02:56.952Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "80496664-d8ab-4649-ba93-f353a66f8cb5",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-B6852FDB",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T11:02:56.954Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "f9010a44-7347-4d89-966d-4bd2e8bbf98e",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-B6852FDB",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T11:02:56.958Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "b3cacf65-6bd3-43d1-bf74-653490e574d4",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-57458706",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T11:02:57.005Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "cec8e41d-f60b-4b91-a3d4-2a52cdbdab05",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-80AF27C1",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T11:02:57.013Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "5bc69af9-bf1e-457f-9021-9ca38bb5c85d",
+    "action": "SHIFT_CREATED",
+    "entityId": "26f32ae0-c94c-4a1d-bd9c-7c7a0aed2084",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:57.564Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "60bfc522-11cd-416a-b5d8-4b695f5977e0",
+    "action": "PICKUP_RECORDED",
+    "entityId": "8ea5b1c2-094b-4f89-bdfa-0417d5e2a64b",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:57.567Z",
+    "details": {
+      "shiftId": "26f32ae0-c94c-4a1d-bd9c-7c7a0aed2084",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "c64dd7e4-3d6e-40aa-9ac1-d6d13cd38186",
+    "action": "TRIP_LOCKED",
+    "entityId": "029ee51c-754d-4fdf-87f0-205bb5381017",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:02:57.571Z",
+    "details": {
+      "shiftId": "26f32ae0-c94c-4a1d-bd9c-7c7a0aed2084",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "2ac8e6bd-76ed-4912-b241-8144d0f981ca",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "e94dd4bb-42d2-4c5e-824e-172996f763b6",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:57.574Z",
+    "details": {
+      "tripId": "029ee51c-754d-4fdf-87f0-205bb5381017",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "0d4c4d7c-41cc-4c65-8d0d-8c2a54553c05",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "029ee51c-754d-4fdf-87f0-205bb5381017",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:02:57.576Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "5f8eec4a-7562-4ad1-87d1-ccf79ffef2d8",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "023db87b-634f-4e66-a4de-3abf1985918b",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:02:57.581Z",
+    "details": {
+      "tripId": "029ee51c-754d-4fdf-87f0-205bb5381017",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "a4a915c3-e7ac-4dea-af9c-c57bdd255972",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "b3b913b1-dea5-41d8-b0b5-1187d8d6a58b",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:57.584Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "ceab9afd-b9b4-49aa-8f0c-edb624ac9367",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "dcbb96ae-d708-44b9-a065-12bf26b3aee5",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:02:57.587Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "e6665652-8448-4bea-aee9-04e768fb3802",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-C4ADD6AE",
+    "actorId": "CITIZEN-TEST-1790334381351",
+    "timestamp": "2026-09-25T11:06:21.360Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "9d905d10-b568-4ca4-8fb8-10f9a3bccbb7",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-1D31BD89",
+    "actorId": "CITIZEN-TEST-EMERG-1790334381351",
+    "timestamp": "2026-09-25T11:06:21.367Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "cbc0054b-3db4-4c24-a767-28fc8d4363f0",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-C4ADD6AE",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T11:06:21.371Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "4d9aba6b-7c0c-46a5-a837-033e87827e22",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-C4ADD6AE",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T11:06:21.376Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "7c897f7f-96ec-46d0-bda9-b7076f8908ae",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-105E689C",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T11:06:21.413Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "c4123c5e-83f5-48f6-9551-efb0703b8471",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-509A1217",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T11:06:21.420Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "fa8caef5-e825-4361-87ec-24e58ae1718b",
+    "action": "SHIFT_CREATED",
+    "entityId": "62cb1710-1faf-466f-9dcc-077f02d3d283",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:06:22.171Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "c095e543-6d03-4404-a379-802b0d4ae645",
+    "action": "PICKUP_RECORDED",
+    "entityId": "7cbd031d-dd04-49fe-bd85-c7de622e71b4",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:06:22.176Z",
+    "details": {
+      "shiftId": "62cb1710-1faf-466f-9dcc-077f02d3d283",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "9dd8a246-e783-4951-bb88-d32745da1163",
+    "action": "TRIP_LOCKED",
+    "entityId": "73b83802-ddd2-455d-8744-3d97b5c04d31",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:06:22.183Z",
+    "details": {
+      "shiftId": "62cb1710-1faf-466f-9dcc-077f02d3d283",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "d7edb124-92e7-4adc-9f32-f545dd917c73",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "0ffee2fc-8998-4aac-9954-316b1c6aa210",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:06:22.190Z",
+    "details": {
+      "tripId": "73b83802-ddd2-455d-8744-3d97b5c04d31",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "7a06ac99-3bc5-4e9a-9bcc-2c9f8b287a14",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "73b83802-ddd2-455d-8744-3d97b5c04d31",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:06:22.194Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "85e58a14-cff8-4115-bd88-9f4a46e1bbe4",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "e879ff4c-1d45-4497-afcd-8ee5da89306f",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:06:22.200Z",
+    "details": {
+      "tripId": "73b83802-ddd2-455d-8744-3d97b5c04d31",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "833baf89-37a9-4771-86bd-ded0e79998a1",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "b2c6dd3b-e9ab-454a-a7f3-0405b0a9842b",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:06:22.205Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "d715563f-6f31-485a-9e88-dfe13db42613",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "48c801a6-ccb3-4f52-a24b-2a24c4942413",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:06:22.210Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "7b73f1ce-9325-4771-b3cb-97ce2a2b459c",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-878C04B9",
+    "actorId": "CITIZEN-TEST-1790334518429",
+    "timestamp": "2026-09-25T11:08:38.445Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "4f6125fe-a0ce-41b0-8581-c6c1eab056c2",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-35A9F676",
+    "actorId": "CITIZEN-TEST-EMERG-1790334518429",
+    "timestamp": "2026-09-25T11:08:38.457Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "79b37b47-159c-4b75-acb2-82096ffded3e",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-878C04B9",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T11:08:38.463Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "d5e250e4-3505-4013-8ebf-4add29899027",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-878C04B9",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T11:08:38.475Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "5ee3322c-751a-41a4-9862-654df0774c81",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-5A7E079A",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T11:08:38.549Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "bdd2c4ae-1d4d-4013-809e-1b2842563dea",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-B9CDFA0B",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T11:08:38.560Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "14b264e6-4219-4196-963e-58ccc04059bb",
+    "action": "SHIFT_CREATED",
+    "entityId": "d1680530-686b-4c4b-82a6-56cf65fbbf33",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:08:39.265Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "718385f0-9f19-41dd-b840-e6eff673d257",
+    "action": "PICKUP_RECORDED",
+    "entityId": "b1ac075c-f647-4756-b19d-caee35d53020",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:08:39.271Z",
+    "details": {
+      "shiftId": "d1680530-686b-4c4b-82a6-56cf65fbbf33",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "be14de82-c2f1-487e-af91-5c72a0ad9f84",
+    "action": "TRIP_LOCKED",
+    "entityId": "06b59b09-4eea-4ffb-bbb8-630e973e55fa",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T11:08:39.280Z",
+    "details": {
+      "shiftId": "d1680530-686b-4c4b-82a6-56cf65fbbf33",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "0b463527-ee88-4caa-87f6-6572c1438b99",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "df66ce16-cf76-4495-ba40-6b7a9c5211e6",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:08:39.287Z",
+    "details": {
+      "tripId": "06b59b09-4eea-4ffb-bbb8-630e973e55fa",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "55688310-749a-4685-9ca1-4af913b249ce",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "06b59b09-4eea-4ffb-bbb8-630e973e55fa",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:08:39.293Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "d1ce1286-0e1a-4679-8361-f52c7858ddd2",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "0132f70f-7ecd-428a-96c4-e8d1b0eb09c5",
+    "actorId": "system",
+    "timestamp": "2026-09-25T11:08:39.298Z",
+    "details": {
+      "tripId": "06b59b09-4eea-4ffb-bbb8-630e973e55fa",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "3b033379-ccbe-41b6-8ab9-0e80b5a1fbba",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "2570f291-9ae9-4e8b-96d4-eafd1786a24e",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:08:39.301Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "25ebeb43-0399-490d-b0fe-d7976272103f",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "73bde4e0-88d4-4198-8593-6af175178b5b",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T11:08:39.306Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "ca09351e-a5e4-43da-ae67-973b9f272124",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-E72243A4",
+    "actorId": "CITIZEN-TEST-1790364155754",
+    "timestamp": "2026-09-25T19:22:35.762Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "1bfba7ed-0ed3-430c-9ae8-4ed35ad0a389",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-77520B59",
+    "actorId": "CITIZEN-TEST-EMERG-1790364155754",
+    "timestamp": "2026-09-25T19:22:35.766Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "50fd5392-732c-4292-a5e2-48eb37c005c7",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-E72243A4",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T19:22:35.769Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "b917995c-da42-4b4a-8fad-99182c0357f8",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-E72243A4",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T19:22:35.773Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "5d1025b7-a055-441a-b879-33c243e0ebb4",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-5F3D8F18",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T19:22:35.876Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "f9b005e2-2b75-4682-b9a3-2afb53816e7f",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-83916616",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T19:22:35.881Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "da276b11-c00c-424e-bc7e-7c677a00bfb7",
+    "action": "SHIFT_CREATED",
+    "entityId": "e733d6bd-72b4-4afb-a9c3-c6f60f667b81",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T19:22:43.464Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "1594ce0c-9862-443c-87f6-3b80bf61c7ba",
+    "action": "PICKUP_RECORDED",
+    "entityId": "838d9cdb-ae9c-4d11-88d5-cea9b022280c",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T19:22:43.467Z",
+    "details": {
+      "shiftId": "e733d6bd-72b4-4afb-a9c3-c6f60f667b81",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "1bc02ac3-b9d2-4978-a421-48767a9eb4c6",
+    "action": "TRIP_LOCKED",
+    "entityId": "24061b11-aad1-4539-97ff-f6ac1ac09cd1",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T19:22:43.470Z",
+    "details": {
+      "shiftId": "e733d6bd-72b4-4afb-a9c3-c6f60f667b81",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "8548af91-9989-4bde-b7bc-d417bbfa0a5e",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "a637d817-fab8-42bc-9e84-8009cd98b71b",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T19:22:43.473Z",
+    "details": {
+      "tripId": "24061b11-aad1-4539-97ff-f6ac1ac09cd1",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "68c85ee5-2152-4f7e-a7d9-aeb3922dd232",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "24061b11-aad1-4539-97ff-f6ac1ac09cd1",
+    "actorId": "system",
+    "timestamp": "2026-09-25T19:22:43.476Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "c2c0237a-0448-4f32-90cb-3d7420c92f33",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "bd8f15f6-c34d-4ae4-9abd-b02f53d92d1f",
+    "actorId": "system",
+    "timestamp": "2026-09-25T19:22:43.479Z",
+    "details": {
+      "tripId": "24061b11-aad1-4539-97ff-f6ac1ac09cd1",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "37cf2cda-ef08-47bc-938f-353bc2eb8805",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "276df868-8731-41ff-847a-70fd8094f2d9",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T19:22:43.482Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "95db7daf-b423-455a-9cc3-bd4fb948f747",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "899019b4-5eae-40b3-bed2-84478722f8eb",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T19:22:43.484Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "ab73ced0-619b-437a-93d6-8707c3ccd222",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-A24EFDF3",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T19:49:13.368Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 79.2,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "8b94588b-e9f4-4996-b28d-82d43ba4931d",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-8F0A7984",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T19:49:13.371Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 89.1,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "1293ab65-4d96-4cd1-90b0-f9fe2ee44088",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-3BD1EDBB",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T19:49:13.374Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "53d17941-838a-4636-a5e9-b27bf98fcd51",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-9EB9BBA0",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T19:49:13.377Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "4329c0fa-2cc3-498f-ab15-f01b914b0e27",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-9EB9BBA0",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T19:49:13.379Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "f5c71b7e-7e9b-4d39-a43f-b2ff92cf59fa",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T19:49:13.386Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "db5ec00a-d4f7-497e-a45a-afbc40f58219",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-70F2369C",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:00:38.968Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 92,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "03ca2c2d-845a-41be-a5c5-6bd65860f8d6",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-C0B88088",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:00:38.971Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 84.8,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "ef495ff6-117b-4fed-92d9-b44c1bb93a91",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-F8A8EBFB",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T20:00:38.974Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "dd215a59-2f4c-4edd-bbcd-36d90a9746dd",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-68E0982E",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:00:38.978Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "802a12e6-f33c-445c-be0a-c65019605f7c",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-68E0982E",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T20:00:38.981Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "61c40648-a8ca-4ba7-9e46-12d2f535ee85",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:00:38.988Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "c1ff375b-dede-440b-833b-7bd9524e1d52",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-825C77FB",
+    "actorId": "CITIZEN-TEST-1790366445462",
+    "timestamp": "2026-09-25T20:00:45.467Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "ab422716-4d4c-4d4c-b077-5f1754d0ffed",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-F12DBC79",
+    "actorId": "CITIZEN-TEST-EMERG-1790366445462",
+    "timestamp": "2026-09-25T20:00:45.471Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "df95391b-c51d-436f-876e-97887fb081d2",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-825C77FB",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T20:00:45.473Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "26bff497-04e0-4d33-8359-5913c7a48f8f",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-825C77FB",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T20:00:45.476Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "726a5813-056c-4ce1-a3f0-9682c7d6d588",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-7AB9EF26",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:00:45.501Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "8c44c322-d6bf-4d57-8a11-fd0dcc446e46",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-8EEAE5BA",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T20:00:45.504Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "f2c3725f-d06f-4585-9d28-4f62899c691b",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-5E41A436",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:00:45.683Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 79.9,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "976050b7-819f-49fa-aff9-a09f46022b5b",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-1FE56167",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:00:45.686Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 81.8,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "0a5622ae-c829-429d-b0b8-66e8d786e8de",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-EA2B2C79",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T20:00:45.689Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "d9e8ed60-89fc-48bd-84f1-36a43ba2082b",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-A73722E2",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:00:45.692Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "4fb1cad5-bc1c-4a43-a38d-189df757f112",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-A73722E2",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T20:00:45.694Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "b2aca6fe-d07e-496c-8f45-6682e2d7e445",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:00:45.701Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "9cab6ae4-850a-40cd-bedf-bc7632ce42b2",
+    "action": "SHIFT_CREATED",
+    "entityId": "6b9cb541-a30f-4ca4-8885-a3ba1bff9c82",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:00:51.546Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "3d01aea0-7b64-42c3-a9c3-a1235242750a",
+    "action": "PICKUP_RECORDED",
+    "entityId": "96f4dabe-a0a6-45d7-9656-03d5c63b3ffb",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:00:51.548Z",
+    "details": {
+      "shiftId": "6b9cb541-a30f-4ca4-8885-a3ba1bff9c82",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "46a43246-8a05-49f9-a54a-c7becd992708",
+    "action": "TRIP_LOCKED",
+    "entityId": "679bba74-a066-4c57-b435-ac97d67a9136",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:00:51.552Z",
+    "details": {
+      "shiftId": "6b9cb541-a30f-4ca4-8885-a3ba1bff9c82",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "c4338993-5991-405e-ad88-388bf1e7906d",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "5d2bfd0e-054c-44f3-a297-ef4de5d71550",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:00:51.555Z",
+    "details": {
+      "tripId": "679bba74-a066-4c57-b435-ac97d67a9136",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "8bc2d198-a5bf-4099-84c4-6131b465fcc0",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "679bba74-a066-4c57-b435-ac97d67a9136",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:00:51.557Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "d0612dcf-62cc-4a1f-9cae-0fc2c5fec890",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "68b20ea7-721a-41f4-8468-7e54413dfbd0",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:00:51.560Z",
+    "details": {
+      "tripId": "679bba74-a066-4c57-b435-ac97d67a9136",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "accd2294-509f-4204-b54a-f49690964b42",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "8bd94671-a62e-472c-bac8-ac634c495d8e",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:00:51.562Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "c26ad83c-7c4f-4dad-90c2-fdff322856ba",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "a09215b0-5a5f-44fd-ad35-84c21cc06384",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:00:51.564Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "d863abe5-7576-4c0b-83f4-6d168e1eba57",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-BC13E24E",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:01:13.895Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 86.2,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "b4cc8a66-4aaa-407b-ba00-a077ef790c97",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-08C637DA",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:01:13.898Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 81.1,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "9ed8ca2c-ff0b-4116-b8cb-dc300c230fad",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-B14CF6F3",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T20:01:13.901Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "2550b0e5-c687-47e0-b901-873bdfb46113",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-8A569325",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:01:13.905Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "d64de82a-a652-4833-a583-02e688ecab33",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-8A569325",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T20:01:13.907Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "3ae50948-29f3-4a2f-af9f-6efbbb86ece1",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:01:13.913Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "f521a9ed-df79-418b-81ec-e791aad9aa04",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-3E3C35FA",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:02:05.147Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 80.7,
+      "qualityGrade": "GRADE_B_ACCEPTABLE"
+    }
+  },
+  {
+    "id": "8167bf7f-c0af-427b-89fc-2155fd92cf79",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-FABA13C3",
+    "actorId": "MP-04-HE-9901",
+    "timestamp": "2026-09-25T20:02:05.150Z",
+    "details": {
+      "wardId": "Ward 45 (BHEL Township)",
+      "totalHouseholds": 420,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "e7d4ecce-732c-48cb-9596-c2969a843b96",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-7C04E627",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:02:05.154Z",
+    "details": {
+      "incidentType": "BIO_HAZARD_PATHOGEN_SPILL",
+      "severity": "LEVEL_3_CRITICAL_EVACUATION",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-500M"
+    }
+  },
+  {
+    "id": "f519cd13-1818-480c-b518-1d370803def4",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-7C04E627",
+    "actorId": "DISTRICT-DISASTER-DIRECTOR",
+    "timestamp": "2026-09-25T20:02:05.156Z",
+    "details": {
+      "resolutionNotes": "Decontaminated using 1% Sodium Hypochlorite fogging."
+    }
+  },
+  {
+    "id": "6de5e933-6809-40c0-bd5d-5a76df1925c2",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-OFFLINE-TEST",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:02:05.160Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "7421cf45-d934-490f-bb70-4fa8c86d671e",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-B2386D9A",
+    "actorId": "CITIZEN-TEST-1790366822230",
+    "timestamp": "2026-09-25T20:07:02.235Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "de3f40f9-8f4b-488c-a4b8-57e6ccb31682",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-9A0B2E7E",
+    "actorId": "CITIZEN-TEST-EMERG-1790366822230",
+    "timestamp": "2026-09-25T20:07:02.238Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "40ab9226-247d-4fb9-9677-592691877511",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-B2386D9A",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T20:07:02.241Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "0d3cfebc-486b-4c2c-8c5e-f92dd16b07ba",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-B2386D9A",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T20:07:02.246Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "d4c859c1-4b05-4541-8254-bd280fb3fb54",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-79A579E2",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:07:02.270Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "75200fca-e0b6-4162-b387-9fbc57767065",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-6F1FEC01",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T20:07:02.274Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "ff4480a2-ab04-44d8-b90e-34eda06fa57d",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-E64FA57B",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:07:02.452Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 91.5,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "b7c56d72-9eed-40ef-ae77-2efb82f77f98",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-04B47F67",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:07:02.454Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 89.2,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "ae1b2d91-998a-4abc-bc99-4a97c0043289",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-13BF50C2",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T20:07:02.457Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "3391846d-d0f3-4a20-a7ef-a1ff7c5aa29d",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-F054B557",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:07:02.462Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "e9caf310-d926-418c-b070-f82935556cab",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-F054B557",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T20:07:02.465Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "5da880e1-6a1e-4fbd-84f1-3993e67f5c2f",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:07:02.471Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "41a1488f-5ada-4bc4-9431-4b2deb45d8fb",
+    "action": "SHIFT_CREATED",
+    "entityId": "4ea64c1f-628b-4916-902f-77f2357e99a3",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:07:14.199Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "a8f2221a-ea7c-4ef9-9aab-56958c889275",
+    "action": "PICKUP_RECORDED",
+    "entityId": "33939a73-f3e3-4809-b126-85b6e682a9cd",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:07:14.202Z",
+    "details": {
+      "shiftId": "4ea64c1f-628b-4916-902f-77f2357e99a3",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "8cf9350f-2fd5-4a05-9c74-c8922d0d6b91",
+    "action": "TRIP_LOCKED",
+    "entityId": "b0380a31-84e7-42e0-94da-b439abbf8359",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:07:14.205Z",
+    "details": {
+      "shiftId": "4ea64c1f-628b-4916-902f-77f2357e99a3",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "e6cdf779-0bc6-46e6-9424-5dfa46885fd4",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "6486bb15-91b0-4d1f-a805-57a896ef0519",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:07:14.207Z",
+    "details": {
+      "tripId": "b0380a31-84e7-42e0-94da-b439abbf8359",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "9c1ba45f-77a9-4232-8f3a-bb148c73f9d7",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "b0380a31-84e7-42e0-94da-b439abbf8359",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:07:14.209Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "13f76290-e789-4413-ac23-40018d7e4f04",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "8d016843-7821-4222-a4a4-e59284a640bb",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:07:14.212Z",
+    "details": {
+      "tripId": "b0380a31-84e7-42e0-94da-b439abbf8359",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "cc211c0a-426f-4824-9598-bf13e8093a81",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "955f2f2a-c9e9-4171-b12a-ac62034c9b49",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:07:14.215Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "8c08fd15-a888-48f9-9952-3979b7cec8d8",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "74faf528-b2ff-4d0c-bf84-f0a21911c44e",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:07:14.218Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  },
+  {
+    "id": "83f2c21c-d650-4251-a7da-08b89024089c",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-277F9BCD",
+    "actorId": "CITIZEN-TEST-1790367446852",
+    "timestamp": "2026-09-25T20:17:26.857Z",
+    "details": {
+      "ward": "Ward 12 (Arera Colony)",
+      "category": "MUNICIPAL_MSW",
+      "isEmergency": false,
+      "slaHours": 24
+    }
+  },
+  {
+    "id": "82ead6a9-84b0-474c-a887-f870987c9621",
+    "action": "OPEN_DUMP_REPORTED",
+    "entityId": "DUMP-REP-94432243",
+    "actorId": "CITIZEN-TEST-EMERG-1790367446852",
+    "timestamp": "2026-09-25T20:17:26.861Z",
+    "details": {
+      "ward": "Ward 07 (Bairagarh)",
+      "category": "BIO_MEDICAL_HAZARD",
+      "isEmergency": true,
+      "slaHours": 6
+    }
+  },
+  {
+    "id": "8d4caef8-1c0e-4621-9d34-c9c3ce10aa25",
+    "action": "CLEANUP_CREW_DISPATCHED",
+    "entityId": "DUMP-REP-277F9BCD",
+    "actorId": "CREW-ARERA-02",
+    "timestamp": "2026-09-25T20:17:26.864Z",
+    "details": {
+      "vehicleId": "MP-04-CL-5501"
+    }
+  },
+  {
+    "id": "37d5abee-dad3-41d5-bc9a-52d4f3712955",
+    "action": "DUMP_CLEANUP_VERIFIED",
+    "entityId": "DUMP-REP-277F9BCD",
+    "actorId": "INSP-ALOK-VERMA",
+    "timestamp": "2026-09-25T20:17:26.868Z",
+    "details": {
+      "clearedWeightKg": 215,
+      "isSlaBreached": false
+    }
+  },
+  {
+    "id": "ad98c414-02e2-4627-a8ed-41a9672238e2",
+    "action": "COMMODITY_LOT_LISTED",
+    "entityId": "COMMODITY-LOT-09B70B60",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:17:26.893Z",
+    "details": {
+      "materialCode": "HDPE_RIGID_REGRIND",
+      "weightKg": 2000,
+      "rate": 46
+    }
+  },
+  {
+    "id": "87d6c8c1-4363-41e9-ad14-75f153d66eaa",
+    "action": "COMMODITY_ORDER_PLACED",
+    "entityId": "B2B-PO-5EC66C4A",
+    "actorId": "EcoPlast Polymeric Converters LLP",
+    "timestamp": "2026-09-25T20:17:26.896Z",
+    "details": {
+      "totalAmountINR": 54280,
+      "weightPurchasedKg": 1000
+    }
+  },
+  {
+    "id": "de82f9b7-859c-4fee-9bca-2a64d55c31c1",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-82879024",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:17:27.140Z",
+    "details": {
+      "stream": "MUNICIPAL_WET",
+      "ssqiScore": 86.5,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "88d8a86f-a458-4c0a-a9c5-e0f6609e130b",
+    "action": "VISION_QUALITY_INSPECTED",
+    "entityId": "VISION-SCAN-30879510",
+    "actorId": "MRF-BHOPAL-CENTRAL",
+    "timestamp": "2026-09-25T20:17:27.143Z",
+    "details": {
+      "stream": "MUNICIPAL_DRY",
+      "ssqiScore": 88.3,
+      "qualityGrade": "GRADE_A_EXCELLENT"
+    }
+  },
+  {
+    "id": "3eeb7ca2-eab8-4869-a590-cbd8a47db931",
+    "action": "SNAKE_ROUTE_GENERATED",
+    "entityId": "SNAKE-RT-EB14ECF1",
+    "actorId": "MP-04-HE-3301",
+    "timestamp": "2026-09-25T20:17:27.146Z",
+    "details": {
+      "wardId": "Ward 12 (Arera Colony)",
+      "totalHouseholds": 500,
+      "dieselSavedLiters": 2
+    }
+  },
+  {
+    "id": "b45304bb-4796-4748-9101-7407fe66a454",
+    "action": "HAZMAT_ALERT_TRIGGERED",
+    "entityId": "HAZMAT-INCIDENT-7F7530B4",
+    "actorId": "INSP-HAZMAT-DUTY",
+    "timestamp": "2026-09-25T20:17:27.150Z",
+    "details": {
+      "incidentType": "BATTERY_THERMAL_RUNAWAY",
+      "severity": "LEVEL_2_ELEVATED",
+      "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M"
+    }
+  },
+  {
+    "id": "246d7f47-7549-44fc-bcca-06ec08fd9991",
+    "action": "HAZMAT_INCIDENT_RESOLVED",
+    "entityId": "HAZMAT-INCIDENT-7F7530B4",
+    "actorId": "CHIEF-DISASTER-OFFICER",
+    "timestamp": "2026-09-25T20:17:27.153Z",
+    "details": {
+      "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated"
+    }
+  },
+  {
+    "id": "445ee977-4491-41c2-b3be-516d4a26ddd4",
+    "action": "OFFLINE_QUEUE_SYNCHRONIZED",
+    "entityId": "WRK-FIELD-OFFLINE-01",
+    "actorId": "syncEngine",
+    "timestamp": "2026-09-25T20:17:27.158Z",
+    "details": {
+      "syncedCount": 1
+    }
+  },
+  {
+    "id": "c34388bd-e7a3-4bd2-b330-b4efc5d8c559",
+    "action": "SHIFT_CREATED",
+    "entityId": "4d7da0b5-cec9-443e-abe2-dd73ea9a3796",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:17:38.459Z",
+    "details": {
+      "vehicleId": "MP-04-TEST-1234",
+      "wardId": "Ward-Test-Area"
+    }
+  },
+  {
+    "id": "4fbd84c7-0550-441a-b8cc-2022d83fa017",
+    "action": "PICKUP_RECORDED",
+    "entityId": "9bac6d72-cf58-4c71-83f0-e69f753f2e98",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:17:38.462Z",
+    "details": {
+      "shiftId": "4d7da0b5-cec9-443e-abe2-dd73ea9a3796",
+      "householdId": "HH-TEST-001",
+      "weightKg": 5.5,
+      "segregationStatus": "SEGREGATED_WET_DRY"
+    }
+  },
+  {
+    "id": "8fab2c56-2e73-45c7-8755-2c17585205e7",
+    "action": "TRIP_LOCKED",
+    "entityId": "576df6b8-49c1-428e-8d43-b374bc72b59f",
+    "actorId": "MDRV-TEST-01",
+    "timestamp": "2026-09-25T20:17:38.466Z",
+    "details": {
+      "shiftId": "4d7da0b5-cec9-443e-abe2-dd73ea9a3796",
+      "destinationFacilityId": "MRF-TEST-CENTRAL",
+      "totalPickupWeight": 5.5
+    }
+  },
+  {
+    "id": "1cb1d556-d0e3-4263-84d7-035cabf96169",
+    "action": "WEIGHBRIDGE_RECORDED",
+    "entityId": "b23721d3-647c-4a23-93be-242ec53d25d3",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:17:38.470Z",
+    "details": {
+      "tripId": "576df6b8-49c1-428e-8d43-b374bc72b59f",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000
+    }
+  },
+  {
+    "id": "3fb6c882-25d1-4ba3-acb5-3fabd5df6830",
+    "action": "GATE_PASS_REJECTED",
+    "entityId": "576df6b8-49c1-428e-8d43-b374bc72b59f",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:17:38.473Z",
+    "details": {
+      "residualWeightKg": 250,
+      "tripTotal": 1000,
+      "residualPercent": 25,
+      "reason": "Residual weight exceeds 15% of trip total"
+    }
+  },
+  {
+    "id": "391d1145-bd53-4171-9732-6574f2f0f040",
+    "action": "GATE_PASS_APPROVED",
+    "entityId": "7216960a-2b78-42a0-9573-89ab21afebda",
+    "actorId": "system",
+    "timestamp": "2026-09-25T20:17:38.476Z",
+    "details": {
+      "tripId": "576df6b8-49c1-428e-8d43-b374bc72b59f",
+      "residualWeightKg": 100,
+      "residualPercent": 10
+    }
+  },
+  {
+    "id": "f1a9960a-fbbf-4851-8837-c2064115e224",
+    "action": "MRF_SORTING_LOGGED",
+    "entityId": "6c852e22-4d9b-4818-83cc-9da0f07742f4",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:17:38.480Z",
+    "details": {
+      "materialCount": 2,
+      "totalSortedKg": 500
+    }
+  },
+  {
+    "id": "a2db333c-6605-4cdf-94ce-d468377fad88",
+    "action": "RECYCLER_ORDER_CREATED",
+    "entityId": "e0bccaa4-8a14-4fbb-8afb-46c4b6cb6d09",
+    "actorId": "MRF-TEST-CENTRAL",
+    "timestamp": "2026-09-25T20:17:38.482Z",
+    "details": {
+      "materialType": "PET_BOTTLES",
+      "weightKg": 200,
+      "recyclerId": "RECYC-TEST-01",
+      "totalPrice": 7000
+    }
+  }
+]

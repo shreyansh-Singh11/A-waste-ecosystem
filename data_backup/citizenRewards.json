@@ -1,0 +1,390 @@
+[
+  {
+    "transactionId": "KARMA-TX-9901A",
+    "citizenId": "CITIZEN-BHOPAL-77",
+    "citizenName": "Rohit Verma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-A1B2C3D4 in Ward 24",
+    "referenceId": "DUMP-REP-A1B2C3D4",
+    "timestamp": "2026-09-25T12:00:00.000Z"
+  },
+  {
+    "transactionId": "KARMA-TX-9902B",
+    "citizenId": "CITIZEN-BHOPAL-12",
+    "citizenName": "Dr. Ananya Sen",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported emergency bio-medical dump DUMP-REP-E5F6G7H8 in Ward 18",
+    "referenceId": "DUMP-REP-E5F6G7H8",
+    "timestamp": "2026-09-25T08:00:00.000Z"
+  },
+  {
+    "transactionId": "KARMA-TX-9903C",
+    "citizenId": "CITIZEN-BHOPAL-12",
+    "citizenName": "Dr. Ananya Sen",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-E5F6G7H8 sanitized within 6h SLA target",
+    "referenceId": "DUMP-REP-E5F6G7H8",
+    "timestamp": "2026-09-25T11:15:00.000Z"
+  },
+  {
+    "transactionId": "KARMA-TX-C5251D0F",
+    "citizenId": "CITIZEN-TEST-01",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-D15FBC00 in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-D15FBC00",
+    "timestamp": "2026-09-25T11:00:23.824Z"
+  },
+  {
+    "transactionId": "KARMA-TX-DA315D25",
+    "citizenId": "CITIZEN-TEST-02",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-54AAC94B in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-54AAC94B",
+    "timestamp": "2026-09-25T11:00:23.827Z"
+  },
+  {
+    "transactionId": "KARMA-TX-14176416",
+    "citizenId": "CITIZEN-TEST-01",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-D15FBC00 sanitized within SLA target",
+    "referenceId": "DUMP-REP-D15FBC00",
+    "timestamp": "2026-09-25T11:00:23.832Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-13447C0C",
+    "citizenId": "CITIZEN-TEST-01",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T11:00:23.839Z"
+  },
+  {
+    "transactionId": "KARMA-TX-52D115FF",
+    "citizenId": "CITIZEN-TEST-01",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-415FDA96 in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-415FDA96",
+    "timestamp": "2026-09-25T11:02:26.625Z"
+  },
+  {
+    "transactionId": "KARMA-TX-82C6117A",
+    "citizenId": "CITIZEN-TEST-02",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-A4286F01 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-A4286F01",
+    "timestamp": "2026-09-25T11:02:26.629Z"
+  },
+  {
+    "transactionId": "KARMA-TX-D2F1DF8D",
+    "citizenId": "CITIZEN-TEST-01",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-415FDA96 sanitized within SLA target",
+    "referenceId": "DUMP-REP-415FDA96",
+    "timestamp": "2026-09-25T11:02:26.638Z"
+  },
+  {
+    "transactionId": "KARMA-TX-91A158AD",
+    "citizenId": "CITIZEN-TEST-1790334176940",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-B6852FDB in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-B6852FDB",
+    "timestamp": "2026-09-25T11:02:56.943Z"
+  },
+  {
+    "transactionId": "KARMA-TX-CF57F572",
+    "citizenId": "CITIZEN-TEST-EMERG-1790334176940",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-3B1B9474 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-3B1B9474",
+    "timestamp": "2026-09-25T11:02:56.951Z"
+  },
+  {
+    "transactionId": "KARMA-TX-26E3F47E",
+    "citizenId": "CITIZEN-TEST-1790334176940",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-B6852FDB sanitized within SLA target",
+    "referenceId": "DUMP-REP-B6852FDB",
+    "timestamp": "2026-09-25T11:02:56.956Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-A449BCCB",
+    "citizenId": "CITIZEN-TEST-1790334176940",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T11:02:56.966Z"
+  },
+  {
+    "transactionId": "KARMA-TX-8426E165",
+    "citizenId": "CITIZEN-TEST-1790334381351",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-C4ADD6AE in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-C4ADD6AE",
+    "timestamp": "2026-09-25T11:06:21.358Z"
+  },
+  {
+    "transactionId": "KARMA-TX-18D6085C",
+    "citizenId": "CITIZEN-TEST-EMERG-1790334381351",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-1D31BD89 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-1D31BD89",
+    "timestamp": "2026-09-25T11:06:21.365Z"
+  },
+  {
+    "transactionId": "KARMA-TX-21D9DB51",
+    "citizenId": "CITIZEN-TEST-1790334381351",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-C4ADD6AE sanitized within SLA target",
+    "referenceId": "DUMP-REP-C4ADD6AE",
+    "timestamp": "2026-09-25T11:06:21.374Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-A7E85739",
+    "citizenId": "CITIZEN-TEST-1790334381351",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T11:06:21.382Z"
+  },
+  {
+    "transactionId": "KARMA-TX-C5C5B0D4",
+    "citizenId": "CITIZEN-TEST-1790334518429",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-878C04B9 in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-878C04B9",
+    "timestamp": "2026-09-25T11:08:38.440Z"
+  },
+  {
+    "transactionId": "KARMA-TX-E98C4E35",
+    "citizenId": "CITIZEN-TEST-EMERG-1790334518429",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-35A9F676 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-35A9F676",
+    "timestamp": "2026-09-25T11:08:38.454Z"
+  },
+  {
+    "transactionId": "KARMA-TX-7FC9A732",
+    "citizenId": "CITIZEN-TEST-1790334518429",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-878C04B9 sanitized within SLA target",
+    "referenceId": "DUMP-REP-878C04B9",
+    "timestamp": "2026-09-25T11:08:38.469Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-53D73CA8",
+    "citizenId": "CITIZEN-TEST-1790334518429",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T11:08:38.486Z"
+  },
+  {
+    "transactionId": "KARMA-TX-59097B94",
+    "citizenId": "CITIZEN-TEST-1790364155754",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-E72243A4 in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-E72243A4",
+    "timestamp": "2026-09-25T19:22:35.760Z"
+  },
+  {
+    "transactionId": "KARMA-TX-5CDB312A",
+    "citizenId": "CITIZEN-TEST-EMERG-1790364155754",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-77520B59 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-77520B59",
+    "timestamp": "2026-09-25T19:22:35.764Z"
+  },
+  {
+    "transactionId": "KARMA-TX-FDFF1CB7",
+    "citizenId": "CITIZEN-TEST-1790364155754",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-E72243A4 sanitized within SLA target",
+    "referenceId": "DUMP-REP-E72243A4",
+    "timestamp": "2026-09-25T19:22:35.771Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-5765C0AC",
+    "citizenId": "CITIZEN-TEST-1790364155754",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T19:22:35.778Z"
+  },
+  {
+    "transactionId": "KARMA-TX-E8CDF943",
+    "citizenId": "CITIZEN-TEST-1790366445462",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-825C77FB in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-825C77FB",
+    "timestamp": "2026-09-25T20:00:45.466Z"
+  },
+  {
+    "transactionId": "KARMA-TX-4F347D03",
+    "citizenId": "CITIZEN-TEST-EMERG-1790366445462",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-F12DBC79 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-F12DBC79",
+    "timestamp": "2026-09-25T20:00:45.470Z"
+  },
+  {
+    "transactionId": "KARMA-TX-7BB1DC2F",
+    "citizenId": "CITIZEN-TEST-1790366445462",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-825C77FB sanitized within SLA target",
+    "referenceId": "DUMP-REP-825C77FB",
+    "timestamp": "2026-09-25T20:00:45.475Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-95FF0664",
+    "citizenId": "CITIZEN-TEST-1790366445462",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T20:00:45.480Z"
+  },
+  {
+    "transactionId": "KARMA-TX-6B9AFF60",
+    "citizenId": "CITIZEN-TEST-1790366822230",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-B2386D9A in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-B2386D9A",
+    "timestamp": "2026-09-25T20:07:02.234Z"
+  },
+  {
+    "transactionId": "KARMA-TX-55999C43",
+    "citizenId": "CITIZEN-TEST-EMERG-1790366822230",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-9A0B2E7E in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-9A0B2E7E",
+    "timestamp": "2026-09-25T20:07:02.237Z"
+  },
+  {
+    "transactionId": "KARMA-TX-A14052A3",
+    "citizenId": "CITIZEN-TEST-1790366822230",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-B2386D9A sanitized within SLA target",
+    "referenceId": "DUMP-REP-B2386D9A",
+    "timestamp": "2026-09-25T20:07:02.244Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-E5FF688B",
+    "citizenId": "CITIZEN-TEST-1790366822230",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T20:07:02.249Z"
+  },
+  {
+    "transactionId": "KARMA-TX-1BEAC7D1",
+    "citizenId": "CITIZEN-TEST-1790367446852",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-277F9BCD in Ward Ward 12 (Arera Colony)",
+    "referenceId": "DUMP-REP-277F9BCD",
+    "timestamp": "2026-09-25T20:17:26.856Z"
+  },
+  {
+    "transactionId": "KARMA-TX-067E1D96",
+    "citizenId": "CITIZEN-TEST-EMERG-1790367446852",
+    "citizenName": "Sunil Joshi",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Reported illegal open dump DUMP-REP-94432243 in Ward Ward 07 (Bairagarh)",
+    "referenceId": "DUMP-REP-94432243",
+    "timestamp": "2026-09-25T20:17:26.860Z"
+  },
+  {
+    "transactionId": "KARMA-TX-F062D6B0",
+    "citizenId": "CITIZEN-TEST-1790367446852",
+    "citizenName": "Priya Sharma",
+    "type": "EARNED",
+    "points": 50,
+    "reason": "Bonus: Dump DUMP-REP-277F9BCD sanitized within SLA target",
+    "referenceId": "DUMP-REP-277F9BCD",
+    "timestamp": "2026-09-25T20:17:26.867Z"
+  },
+  {
+    "transactionId": "REBATE-VOUCHER-6F6CC1C0",
+    "citizenId": "CITIZEN-TEST-1790367446852",
+    "citizenName": "Priya Sharma",
+    "type": "REDEEMED",
+    "points": 50,
+    "reason": "User-fee rebate voucher applied for HH-ARERA-102 (2026-09)",
+    "referenceId": "HH-ARERA-102",
+    "rebateINR": 50,
+    "timestamp": "2026-09-25T20:17:26.873Z"
+  }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "admin1", "name": "Platform Admin", "role": "ADMIN", "token": "demo-admin-token" },
+  { "id": "gov-mp-bhopal", "name": "MP State Nodal Officer", "role": "GOVERNMENT", "token": "demo-gov-token", "state": "Madhya Pradesh", "district": "Bhopal" },
+  { "id": "prod-techvista", "name": "TechVista EPR Manager", "role": "PRODUCER", "token": "demo-producer-token", "producerId": "PROD-001" }
+]

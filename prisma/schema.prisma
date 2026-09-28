@@ -1,0 +1,561 @@
+// Prisma Schema for E-Waste & EPR Management Platform
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// -------------------------------------------------------------
+// 1. User & Wallet Models
+// -------------------------------------------------------------
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  phone     String?
+  role      String   @default("citizen") // citizen, collector, producer, admin
+  createdAt DateTime @default(now())
+
+  wallet             Wallet?
+  requests           CollectionRequest[]
+  items              Item[]
+  activityFeed       ActivityFeed[]
+  notifications      Notification[]
+}
+
+model Wallet {
+  id         String   @id @default(uuid())
+  userId     String   @unique
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  credits    Float    @default(0.0)
+  currency   String   @default("INR")
+  updatedAt  DateTime @updatedAt
+
+  transactions WalletTransaction[]
+}
+
+model WalletTransaction {
+  id          String   @id @default(uuid())
+  walletId    String
+  wallet      Wallet   @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  type        String   // CREDIT, DEBIT
+  amount      Float
+  description String
+  timestamp   DateTime @default(now())
+}
+
+// -------------------------------------------------------------
+// 2. Collector Model
+// -------------------------------------------------------------
+
+model Collector {
+  id          String   @id @default(uuid())
+  name        String
+  phone       String
+  vehicleNo   String?
+  status      String   @default("AVAILABLE") // AVAILABLE, BUSY, OFFLINE
+  latitude    Float
+  longitude   Float
+  capacityKg  Float    @default(100.0)
+  createdAt   DateTime @default(now())
+
+  requests    CollectionRequest[]
+}
+
+// -------------------------------------------------------------
+// 3. E-Waste Item Model
+// -------------------------------------------------------------
+
+model Item {
+  id             String   @id @default(uuid())
+  ownerId        String
+  owner          User     @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  title          String
+  category       String
+  subcategory    String?
+  weightKg       Float
+  condition      String   @default("USED")
+  declaredImages String[]
+  aiDetected     Boolean  @default(false)
+  aiConfidence   Float?
+  createdAt      DateTime @default(now())
+
+  requests       CollectionRequest[]
+}
+
+// -------------------------------------------------------------
+// 4. Collection Request & Status History
+// -------------------------------------------------------------
+
+model CollectionRequest {
+  id          String    @id @default(uuid())
+  itemId      String
+  item        Item      @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  collectorId String?
+  collector   Collector? @relation(fields: [collectorId], references: [id])
+  status      String    @default("REQUESTED") // REQUESTED, ASSIGNED, IN_TRANSIT, RECEIVED, RECYCLED
+  qrToken     String?   @unique
+  pickupLat   Float?
+  pickupLng   Float?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  history     StatusHistory[]
+}
+
+model StatusHistory {
+  id         String            @id @default(uuid())
+  requestId  String
+  request    CollectionRequest @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  status     String
+  note       String?
+  timestamp  DateTime          @default(now())
+}
+
+// -------------------------------------------------------------
+// 5. EPR Producer, Obligations & Certificates
+// -------------------------------------------------------------
+
+model Producer {
+  id           String   @id @default(uuid())
+  brandName    String
+  companyName  String
+  gstin        String   @unique
+  email        String   @unique
+  createdAt    DateTime @default(now())
+
+  obligations  EprObligation[]
+  certificates EprCertificate[]
+}
+
+model EprObligation {
+  id           String   @id @default(uuid())
+  producerId   String
+  producer     Producer @relation(fields: [producerId], references: [id], onDelete: Cascade)
+  year         Int
+  targetKg     Float
+  fulfilledKg  Float    @default(0.0)
+  status       String   @default("PENDING") // PENDING, COMPLIANT, DEFICIT
+  createdAt    DateTime @default(now())
+}
+
+model EprCertificate {
+  id            String   @id @default(uuid())
+  certificateId String   @unique
+  producerId    String
+  producer      Producer @relation(fields: [producerId], references: [id], onDelete: Cascade)
+  weightKg      Float
+  category      String
+  issuedAt      DateTime @default(now())
+
+  transactions  EprTransaction[]
+}
+
+model EprTransaction {
+  id            String         @id @default(uuid())
+  certificateId String
+  certificate   EprCertificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)
+  buyerName     String
+  sellerName    String
+  price         Float
+  hash          String
+  timestamp     DateTime       @default(now())
+}
+
+// -------------------------------------------------------------
+// 6. System Activity, Alerts & Notifications
+// -------------------------------------------------------------
+
+model ActivityFeed {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  details   String
+  timestamp DateTime @default(now())
+}
+
+model Alert {
+  id        String   @id @default(uuid())
+  type      String   // REPEATED_SCAN, SUSPICIOUS_WEIGHT, UNMATCHED_COLLECTOR
+  severity  String   @default("MEDIUM") // LOW, MEDIUM, HIGH, CRITICAL
+  message   String
+  status    String   @default("OPEN")   // OPEN, RESOLVED, IGNORED
+  createdAt DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model PreciousMetal {
+  id           String   @id @default(uuid())
+  category     String   @unique
+  goldGramsKg  Float
+  silverGrams  Float
+  copperGrams  Float
+  updatedAt    DateTime @updatedAt
+}
+
+// -------------------------------------------------------------
+// 7. Phase 1: Municipal & Medical Waste Operations Models
+// -------------------------------------------------------------
+
+model MunicipalShift {
+  id               String   @id @default(uuid())
+  shiftId          String   @unique
+  driverId         String
+  driverName       String?
+  vehicleNo        String
+  wardNumber       String
+  zone             String
+  status           String   @default("ACTIVE") // ACTIVE, COMPLETED, CANCELLED
+  totalPickups     Int      @default(0)
+  totalWeightKg    Float    @default(0.0)
+  startTime        DateTime @default(now())
+  endTime          DateTime?
+  trips            MunicipalTrip[]
+}
+
+model MunicipalTrip {
+  id               String   @id @default(uuid())
+  tripId           String   @unique
+  shiftId          String
+  shift            MunicipalShift @relation(fields: [shiftId], references: [shiftId], onDelete: Cascade)
+  facilityId       String
+  grossWeightKg    Float?
+  tareWeightKg     Float?
+  netWeightKg      Float?
+  residualWeightKg Float?
+  gatePassId       String?
+  gatePassStatus   String?
+  status           String   @default("IN_TRANSIT")
+  completedAt      DateTime?
+}
+
+model MedicalManifest {
+  id               String   @id @default(uuid())
+  batchCode        String   @unique
+  hospitalId       String
+  hospitalName     String
+  category         String   // RED, YELLOW, BLUE, WHITE
+  wasteDescription String
+  weightKg         Float
+  status           String   @default("MANIFESTED")
+  timestamp        DateTime @default(now())
+}
+
+model MedicalTreatment {
+  id               String   @id @default(uuid())
+  treatmentId      String   @unique
+  batchCode        String
+  facilityId       String
+  method           String   // AUTOCLAVE, INCINERATION, SHREDDING
+  temperatureC     Float?
+  pressurePsi      Float?
+  cycleDurationMin Int?
+  certificateId    String?
+  status           String   @default("TREATED")
+  treatedAt        DateTime @default(now())
+}
+
+// -------------------------------------------------------------
+// 8. Phase 2: E-Waste Auction, Device Grading & Harvesting Models
+// -------------------------------------------------------------
+
+model DeviceGrade {
+  id               String   @id @default(uuid())
+  deviceId         String   @unique
+  category         String
+  grade            String   // A, B, C
+  screenCondition  String
+  casingCondition  String
+  batteryCondition String
+  liIonHazard      Boolean  @default(false)
+  quarantineTag    String?
+  gradedAt         DateTime @default(now())
+}
+
+model AuctionLot {
+  id               String   @id @default(uuid())
+  lotId            String   @unique
+  title            String
+  category         String
+  weightKg         Float
+  reservePriceINR  Float
+  currentBidINR    Float?
+  highestBidder    String?
+  status           String   @default("OPEN") // OPEN, CLOSED, SETTLED
+  expiresAt        DateTime
+  createdAt        DateTime @default(now())
+  bids             AuctionBid[]
+}
+
+model AuctionBid {
+  id               String   @id @default(uuid())
+  lotId            String
+  lot              AuctionLot @relation(fields: [lotId], references: [lotId], onDelete: Cascade)
+  bidderId         String
+  bidderName       String
+  bidAmountINR     Float
+  timestamp        DateTime @default(now())
+}
+
+model AuctionSettlement {
+  id               String   @id @default(uuid())
+  settlementId     String   @unique
+  lotId            String
+  winnerId         String
+  finalPriceINR    Float
+  weighbridgeKg    Float
+  paymentRef       String
+  settledAt        DateTime @default(now())
+}
+
+// -------------------------------------------------------------
+// 9. Phase 3: Compliance, Compost & User-Fee Models
+// -------------------------------------------------------------
+
+model CompostBatch {
+  id               String   @id @default(uuid())
+  batchId          String   @unique
+  facilityId       String
+  inputWeightKg    Float
+  outputKg         Float
+  outputType       String   @default("COMPOST") // COMPOST, BIOGAS
+  conversionRate   Float
+  buyerId          String?
+  status           String   @default("PRODUCED")
+  recordedAt       DateTime @default(now())
+}
+
+model UserFeeReceipt {
+  id               String   @id @default(uuid())
+  receiptId        String   @unique
+  householdId      String
+  amountINR        Float
+  monthYear        String
+  paymentMethod    String   @default("UPI")
+  status           String   @default("PAID")
+  paidAt           DateTime @default(now())
+}
+
+model AnomalyFlag {
+  id               String   @id @default(uuid())
+  anomalyId        String   @unique
+  ruleId           String
+  severity         String   @default("WARNING")
+  entityType       String
+  entityId         String
+  description      String
+  status           String   @default("OPEN")
+  detectedAt       DateTime @default(now())
+  resolvedAt       DateTime?
+}
+
+// -------------------------------------------------------------
+// 10. Phase 4: ESG Carbon Credits & Contractor Settlement Models
+// -------------------------------------------------------------
+
+model CarbonCredit {
+  id               String   @id @default(uuid())
+  serialNumber     String   @unique
+  stream           String
+  tonnesCo2e       Float    @default(1.0)
+  vintageYear      Int
+  status           String   @default("AVAILABLE") // AVAILABLE, RETIRED
+  pricePerCreditINR Float
+  retiredToOrg     String?
+  certificateId    String?
+  mintedAt         DateTime @default(now())
+}
+
+model ContractorSettlement {
+  id               String   @id @default(uuid())
+  voucherId        String   @unique
+  contractorId     String
+  monthYear        String
+  baseEarningsINR  Float
+  bonusEarningsINR Float    @default(0.0)
+  penaltyINR       Float    @default(0.0)
+  netPayoutINR     Float
+  paymentRef       String
+  settledAt        DateTime @default(now())
+}
+
+// -------------------------------------------------------------
+// 11. Phase 5: Community Whistleblower, Forecasting, Commodities & Workers
+// -------------------------------------------------------------
+
+model WhistleblowerReport {
+  id               String   @id @default(uuid())
+  reportId         String   @unique
+  citizenId        String?
+  citizenName      String?
+  phone            String?
+  isAnonymous      Boolean  @default(false)
+  ward             String
+  latitude         Float?
+  longitude        Float?
+  address          String?
+  wasteCategory    String   // MUNICIPAL_MSW, BIO_MEDICAL_HAZARD, E_WASTE_TOXIC
+  isEmergency      Boolean  @default(false)
+  estimatedVolumeKg Float   @default(100.0)
+  photoUrl         String?
+  description      String?
+  status           String   @default("SUBMITTED") // SUBMITTED, DISPATCHED, VERIFIED
+  slaHours         Int      @default(24)
+  slaDeadline      DateTime
+  isSlaBreached    Boolean  @default(false)
+  submittedAt      DateTime @default(now())
+  dispatchedAt     DateTime?
+  resolvedAt       DateTime?
+  clearedWeightKg  Float?
+}
+
+model CitizenReward {
+  id               String   @id @default(uuid())
+  transactionId    String   @unique
+  citizenId        String
+  citizenName      String
+  type             String   // EARNED, REDEEMED
+  points           Int
+  reason           String
+  referenceId      String?
+  timestamp        DateTime @default(now())
+}
+
+model CommodityLot {
+  id               String   @id @default(uuid())
+  lotId            String   @unique
+  facilityId       String
+  materialCode     String
+  commodityName    String
+  purityGrade      String   @default("A")
+  totalWeightKg    Float
+  availableWeightKg Float
+  pricePerKgINR    Float
+  location         String?
+  status           String   @default("AVAILABLE")
+  listedAt         DateTime @default(now())
+}
+
+model CommodityOrder {
+  id               String   @id @default(uuid())
+  orderId          String   @unique
+  invoiceNo        String   @unique
+  lotId            String
+  buyerOrg         String
+  buyerGstin       String
+  weightPurchasedKg Float
+  unitPriceINR     Float
+  subtotalINR      Float
+  gstAmountINR     Float
+  totalAmountINR   Float
+  deliveryGatePass String
+  orderedAt        DateTime @default(now())
+}
+
+model WorkerSafetyProfile {
+  id               String   @id @default(uuid())
+  workerId         String   @unique
+  workerName       String
+  track            String   @default("MUNICIPAL_SWM")
+  tetanusVaccineDate DateTime?
+  hepatitisBVaccineDate DateTime?
+  ppeCertificationDate DateTime?
+  lastHealthCheckupDate DateTime?
+  updatedAt        DateTime @updatedAt
+}
+
+// -------------------------------------------------------------
+// 12. Phase 7: Edge AI Vision, Snake Routing, Hazmat & Offline PWA
+// -------------------------------------------------------------
+
+model VisionScan {
+  id                    String   @id @default(uuid())
+  scanId                String   @unique
+  cameraSensorId        String
+  facilityId            String
+  wasteStream           String
+  ssqiScore             Int
+  qualityGrade          String
+  gateAction            String
+  foreignItemsDetected  Json?
+  feedRateKgPerMinute   Float
+  scannedAt             DateTime @default(now())
+}
+
+model SnakeRoute {
+  id                     String   @id @default(uuid())
+  routeId                String   @unique
+  wardId                 String
+  vehicleId              String
+  status                 String   @default("ACTIVE_DISPATCH")
+  totalHouseholdsCovered Int
+  zeroSkippedStreetGuarantee Boolean @default(true)
+  telemetryMetrics       Json
+  waypoints              Json
+  generatedAt            DateTime @default(now())
+}
+
+model HazmatIncident {
+  id                    String   @id @default(uuid())
+  incidentId            String   @unique
+  incidentType          String
+  severity              String
+  perimeterLockCode     String
+  location              Json
+  description           String
+  reporterId            String
+  status                String   @default("ACTIVE_CONTAINMENT")
+  sopActions            Json
+  multiChannelBroadcast Json
+  triggeredAt           DateTime @default(now())
+  resolvedAt            DateTime?
+  resolutionNotes       String?
+}
+
+model OfflineTransaction {
+  id               String   @id @default(uuid())
+  entryId          String   @unique
+  workerId         String
+  deviceUuid       String
+  actionType       String
+  payload          Json
+  offlineTimestamp DateTime
+  clientHash       String
+  status           String   @default("PENDING_SYNC")
+  queuedAt         DateTime @default(now())
+  syncedAt         DateTime?
+}
+
+// -------------------------------------------------------------
+// 13. System & Database Backup Mirror
+// -------------------------------------------------------------
+
+model JsonBackupDatabase {
+  id          String   @id @default(uuid())
+  fileName    String   @unique
+  content     Json
+  recordCount Int      @default(0)
+  sizeBytes   Int
+  sha256Hash  String
+  backedUpAt  DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+

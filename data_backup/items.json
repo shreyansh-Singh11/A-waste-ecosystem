@@ -1,0 +1,34 @@
+[
+  {
+    "id": "EW-2026-000001",
+    "device": "Lenovo ThinkPad T480",
+    "deviceModel": "Lenovo ThinkPad T480",
+    "age": "unknown",
+    "condition": "unknown",
+    "battery": "unknown",
+    "category": "Laptop",
+    "conditionAssessment": {
+      "screen": "INTACT",
+      "casing": "INTACT",
+      "battery": "NORMAL",
+      "grade": "GRADE_A"
+    },
+    "physicalGrade": "GRADE_A",
+    "lifecycleRecommendation": "REFURBISH",
+    "owner": "shreya_k",
+    "status": "REGISTERED",
+    "assignedCollector": null,
+    "outcome": null,
+    "qrToken": "5b56096d56baa325024b863bf20ca70d",
+    "active": true,
+    "createdAt": "2026-09-25T20:17:38.352Z",
+    "history": [
+      {
+        "previousStatus": null,
+        "newStatus": "REGISTERED",
+        "changedBy": "shreya_k",
+        "timestamp": "2026-09-25T20:17:38.352Z"
+      }
+    ]
+  }
+]

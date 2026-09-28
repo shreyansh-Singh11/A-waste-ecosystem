@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Physical Intake Scanner</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg-canvas);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+  #circulasync-global-header { width: 100%; }
+  .scan-wrap {
+    max-width: 520px;
+    width: 100%;
+    padding: var(--sp-6) var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+  a.back-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition-fast);
+  }
+  a.back-link:hover {
+    color: var(--color-primary-400);
+    transform: translateX(-2px);
+  }
+  .video-frame {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+  }
+  video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .scan-reticle {
+    position: absolute;
+    inset: 15% 20%;
+    border: 2px dashed rgba(16, 185, 129, 0.7);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 0 999px rgba(10, 15, 24, 0.6);
+  }
+  .scan-reticle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.9), transparent);
+    animation: scan-beam 2.2s ease-in-out infinite alternate;
+  }
+  @keyframes scan-beam {
+    0% { transform: translateY(-50px); opacity: 0.4; }
+    100% { transform: translateY(50px); opacity: 1; }
+  }
+  .success-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #10b981;
+    font-size: 30px;
+    margin: 0 auto var(--sp-3) auto;
+    animation: ds-pop 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes ds-pop {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="scan-wrap">
+  <a class="back-link" href="/collector">&larr; Back to Collector Terminal</a>
+  
+  <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+    <div>
+      <h1 style="font-size:1.6rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:4px;">Physical Intake Scan</h1>
+      <div style="font-size:0.85rem; color:var(--text-secondary);">Decentralized QR validator with instant Li-Ion safety triage</div>
+    </div>
+    <span class="badge badge-success"><span class="dot"></span>LIVE</span>
+  </div>
+
+  <section class="panel">
+    <div class="field" style="margin-bottom:0;">
+      <label for="collectorId">Active Collector / Depot ID</label>
+      <input id="collectorId" placeholder="e.g. COL-01" value="COL-01" />
+    </div>
+  </section>
+
+  <section class="panel" id="cameraSection">
+    <div class="panel-header">
+      <div>
+        <h2>Optical Camera Scanner</h2>
+        <span class="hint">Center the QR code on the citizen's device passport</span>
+      </div>
+    </div>
+    
+    <div class="video-frame">
+      <video id="video" playsinline autoplay muted></video>
+      <div class="scan-reticle"></div>
+    </div>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <div id="cameraError" style="color:var(--color-danger-400);font-size:13px;margin-top:var(--sp-2);"></div>
+    <div class="flex gap-2 mt-3">
+      <button id="startCameraBtn" class="btn btn-primary" onclick="startScanning()">📷 Start Camera</button>
+      <button id="switchCameraBtn" class="btn btn-secondary" onclick="switchCamera()" disabled>🔄 Switch Camera</button>
+    </div>
+
+    <div style="margin: var(--sp-5) 0 var(--sp-3) 0; display:flex; align-items:center; gap:var(--sp-3);">
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.1);"></div>
+      <span style="font-size:12px; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.06em;">Or Manual Fallback</span>
+      <div style="flex:1; height:1px; background:rgba(255,255,255,0.1);"></div>
+    </div>
+
+    <div class="field">
+      <label for="manualToken">Item Passport Token (Path after /track/)</label>
+      <input id="manualToken" placeholder="e.g. 8f3a1c9d2b7e4f0a..." />
+    </div>
+    <button class="btn btn-primary btn-block" onclick="handleToken(document.getElementById('manualToken').value.trim())">Look Up & Verify</button>
+  </section>
+
+  <section id="resultSection" style="display:none;"></section>
+</div>
+
+<!-- jsQR decodes QR pixel data entirely in the browser - nothing about
+     the video feed itself is ever sent to any server. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsQR/1.4.0/jsQR.js"></script>
+<script src="/assets/shared.js"></script>
+<script>
+  const video = document.getElementById("video");
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+  const cameraError = document.getElementById("cameraError");
+  const resultSection = document.getElementById("resultSection");
+
+  let scanning = true;
+  let currentToken = null;
+  let currentFacingMode = "environment";
+  let mediaStream = null;
+
+  // The QR encodes a full URL like http://host:3000/track/<token>.
+  // We only need the token part (the last path segment) to call the
+  // collector API — we do NOT navigate to the public tracking page here.
+  function extractToken(text) {
+    try {
+      const url = new URL(text);
+      return url.pathname.split("/").pop();
+    } catch {
+      return text.trim(); // wasn't a URL — assume it's already a bare token
+    }
+  }
+
+  function getCollectorId() {
+    return document.getElementById("collectorId").value.trim();
+  }
+
+  async function handleToken(rawText) {
+    if (!rawText) return;
+    const collectorId = getCollectorId();
+    if (!collectorId) {
+      showError("Enter your Collector ID above first.");
+      return;
+    }
+
+    currentToken = extractToken(rawText);
+    scanning = false; // pause camera loop while we show a result
+
+    try {
+      const res = await fetch("/api/collector/scan", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: currentToken, collectorId }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        showError(data.error || "Could not read this QR code.");
+        return;
+      }
+      showItem(data.item);
+    } catch (err) {
+      showError("Network error while looking up this item. Please try again.");
+    }
+  }
+
+  function showError(message) {
+    document.getElementById("cameraSection").style.display = "none";
+    resultSection.style.display = "block";
+    resultSection.innerHTML = `
+      <div class="panel state-block state-error" style="padding:var(--sp-6);">
+        <div class="state-icon">⚠️</div>
+        <div class="state-title">${message}</div>
+        <button class="btn btn-secondary mt-2" onclick="resetScan()">Scan Another</button>
+      </div>
+    `;
+  }
+
+  function showItem(item) {
+    document.getElementById("cameraSection").style.display = "none";
+    resultSection.style.display = "block";
+    resultSection.innerHTML = `
+      <div class="panel">
+        <div class="panel-header"><h2>Item Verified</h2>${dsBadge("SUCCESS", "Owner &amp; category verified")}</div>
+        <p><strong>${item.device}</strong> <span class="id-mono">${item.id}</span></p>
+        ${item.category ? `<p class="text-caption">${item.category}</p>` : ""}
+        <div class="card-grid mt-2">
+          <div class="stat-card"><div class="num">${dsBadge(item.status)}</div><div class="label">Current Status</div></div>
+          <div class="stat-card"><div class="num">${item.physicalGrade ? dsBadge(item.physicalGrade === 'GRADE_A' ? 'SUCCESS' : item.physicalGrade === 'GRADE_B' ? 'DEFAULT' : 'DANGER', item.physicalGrade.replace('_', ' ')) : (item.condition || "—")}</div><div class="label">Physical Grade</div></div>
+          <div class="stat-card"><div class="num">${item.lifecycleRecommendation ? `<span class="badge ${item.lifecycleRecommendation === 'REFURBISH' ? 'badge-success' : item.lifecycleRecommendation === 'HARVEST_PARTS' ? 'badge-warning' : 'badge-neutral'}">${item.lifecycleRecommendation}</span>` : 'RECYCLE'}</div><div class="label">Routing Recommendation</div></div>
+          <div class="stat-card"><div class="num">${item.owner}</div><div class="label">Registered By</div></div>
+        </div>
+        ${(item.conditionAssessment?.battery === 'SWOLLEN' || (item.battery && item.battery.toLowerCase().includes('swollen'))) ? `
+          <div class="alert alert-danger mt-3" style="padding:var(--sp-3); font-size:12px; border-radius:var(--radius-md); background:var(--color-danger-50); border:1px solid var(--color-danger-200); color:var(--color-danger-700);">
+            ⚠️ <strong>FIRE SAFETY HAZARD:</strong> Swollen battery flagged. Handle with care and isolate in fire-resistant container during transport.
+          </div>` : ''}
+        <div class="field mt-4">
+          <label for="facilityInput">Facility / location (optional)</label>
+          <input id="facilityInput" placeholder="e.g. Zone A Depot" />
+        </div>
+        <div class="flex gap-2">
+          <button class="btn btn-success btn-lg" onclick="confirmCollection()">✅ Confirm Collection</button>
+          <button class="btn btn-tertiary" onclick="resetScan()">Cancel</button>
+        </div>
+      </div>
+    `;
+  }
+
+  async function confirmCollection() {
+    const collectorId = getCollectorId();
+    const facility = document.getElementById("facilityInput").value.trim();
+
+    try {
+      const res = await fetch("/api/collector/confirm-collection", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token: currentToken, collectorId, facility: facility || undefined }),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        showError(data.error || "Could not confirm collection.");
+        return;
+      }
+
+      resultSection.innerHTML = `
+        <div class="panel" style="text-align:center;">
+          <div class="success-check">✓</div>
+          <div style="font:var(--text-h2);">Collection Confirmed</div>
+          <p class="text-caption mt-2"><span class="id-mono">${data.item.id}</span> is now ${dsBadge(data.item.status)}</p>
+          <button class="btn btn-primary mt-4" onclick="resetScan()">Scan Another</button>
+        </div>
+      `;
+    } catch (err) {
+      showError("Network error while confirming collection. Please try again.");
+    }
+  }
+
+  function resetScan() {
+    stopCamera();
+    currentToken = null;
+    resultSection.style.display = "none";
+    document.getElementById("cameraSection").style.display = "block";
+    scanning = true;
+    requestAnimationFrame(tick);
+  }
+
+  async function startScanning() {
+    scanning = true;
+    cameraError.textContent = "";
+    const startBtn = document.getElementById("startCameraBtn");
+    const switchBtn = document.getElementById("switchCameraBtn");
+    startBtn.disabled = true;
+    try {
+      if (!navigator.mediaDevices?.getUserMedia) {
+        throw new Error("camera-api-unavailable");
+      }
+      if (mediaStream) mediaStream.getTracks().forEach(t => t.stop());
+      let constraints = { video: { facingMode: { ideal: currentFacingMode }, width: { ideal: 1280 }, height: { ideal: 720 } }, audio: false };
+      try {
+        mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
+      } catch (firstErr) {
+        mediaStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+      }
+      video.srcObject = mediaStream;
+      video.setAttribute("playsinline", "true");
+      video.muted = true;
+      await video.play();
+      switchBtn.disabled = false;
+      requestAnimationFrame(tick);
+    } catch (err) {
+      startBtn.disabled = false;
+      switchBtn.disabled = true;
+      if (!window.isSecureContext && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+        cameraError.textContent = "Camera access is blocked because this phone is using HTTP. Open the app over HTTPS (or localhost), then allow Camera permission.";
+      } else if (err?.name === "NotAllowedError" || err?.name === "PermissionDeniedError") {
+        cameraError.textContent = "Camera permission was denied. Allow Camera for this site in Chrome settings, then press Start Camera again.";
+      } else if (err?.name === "NotFoundError") {
+        cameraError.textContent = "No camera was found on this device.";
+      } else {
+        cameraError.textContent = "Could not access the camera. You can still enter the QR code manually.";
+      }
+    }
+  }
+
+  async function switchCamera() {
+    currentFacingMode = currentFacingMode === "environment" ? "user" : "environment";
+    await startScanning();
+  }
+
+  function stopCamera() {
+    scanning = false;
+    if (mediaStream) {
+      mediaStream.getTracks().forEach(t => t.stop());
+      mediaStream = null;
+    }
+    video.srcObject = null;
+  }
+
+  function tick() {
+    if (!scanning) return; // paused while a result is being shown
+    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+      canvas.height = video.videoHeight;
+      canvas.width = video.videoWidth;
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const code = jsQR(imageData.data, imageData.width, imageData.height);
+      if (code && code.data) {
+        handleToken(code.data);
+        return;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+
+</script>
+
+</body>
+</html>

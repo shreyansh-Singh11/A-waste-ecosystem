@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  circulasync:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: circulasync-platform
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      - DATABASE_URL=postgresql://neondb_owner:npg_VdK2I6kQWjgu@ep-blue-truth-b5d9ycvi-pooler.c-7.us-east-2.aws.neon.tech/neondb?sslmode=require
+      - MAX_IMAGE_SIZE_MB=5
+    volumes:
+      - ./data:/app/data
+      - ./data_backup:/app/data_backup
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/stats"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s

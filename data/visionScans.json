@@ -1,0 +1,3699 @@
+[
+  {
+    "scanId": "VISION-SCAN-DEMO-01",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "sampleWeightKg": 320,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.2,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 90.6,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 97.2,
+    "inspectedAt": "2026-09-25T14:30:00.000Z"
+  },
+  {
+    "scanId": "VISION-SCAN-DEMO-02",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-4402",
+    "stream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 210,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 14.8,
+      "hazardContamPct": 1.2,
+      "ssqiScore": 77.4,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins"
+    ],
+    "confidenceScorePct": 95.8,
+    "inspectedAt": "2026-09-25T15:15:00.000Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A24EFDF3",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 12,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.7,
+      "ssqiScore": 79.2,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T19:49:13.365Z"
+  },
+  {
+    "scanId": "VISION-SCAN-8F0A7984",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 7.1,
+      "hazardContamPct": 0.6,
+      "ssqiScore": 89.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T19:49:13.370Z"
+  },
+  {
+    "scanId": "VISION-SCAN-70F2369C",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 4.8,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.2,
+      "ssqiScore": 92,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T20:00:38.949Z"
+  },
+  {
+    "scanId": "VISION-SCAN-C0B88088",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 7,
+      "hazardContamPct": 1.7,
+      "ssqiScore": 84.8,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T20:00:38.970Z"
+  },
+  {
+    "scanId": "VISION-SCAN-5E41A436",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 11.3,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.8,
+      "ssqiScore": 79.9,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T20:00:45.680Z"
+  },
+  {
+    "scanId": "VISION-SCAN-1FE56167",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 8.8,
+      "hazardContamPct": 1.9,
+      "ssqiScore": 81.8,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "inspectedAt": "2026-09-25T20:00:45.685Z"
+  },
+  {
+    "scanId": "VISION-SCAN-BC13E24E",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 86.2,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 6.3,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.1,
+      "ssqiScore": 86.2,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:01:13.891Z",
+    "inspectedAt": "2026-09-25T20:01:13.893Z"
+  },
+  {
+    "scanId": "VISION-SCAN-08C637DA",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 81.1,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 11.1,
+      "hazardContamPct": 1.4,
+      "ssqiScore": 81.1,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:01:13.897Z",
+    "inspectedAt": "2026-09-25T20:01:13.897Z"
+  },
+  {
+    "scanId": "VISION-SCAN-3E3C35FA",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 250,
+    "feedRateKgPerMinute": 250,
+    "ssqiScore": 80.7,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 8.4,
+      "wetContamPct": 3.6,
+      "hazardContamPct": 0.6,
+      "ssqiScore": 80.7,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:02:05.144Z",
+    "inspectedAt": "2026-09-25T20:02:05.145Z"
+  },
+  {
+    "scanId": "VISION-SCAN-E64FA57B",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 91.5,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.4,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.1,
+      "ssqiScore": 91.5,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:07:02.449Z",
+    "inspectedAt": "2026-09-25T20:07:02.449Z"
+  },
+  {
+    "scanId": "VISION-SCAN-04B47F67",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 89.2,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 4.3,
+      "hazardContamPct": 1.4,
+      "ssqiScore": 89.2,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:07:02.453Z",
+    "inspectedAt": "2026-09-25T20:07:02.453Z"
+  },
+  {
+    "scanId": "VISION-SCAN-82879024",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 86.5,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 7.7,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 86.5,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:17:27.137Z",
+    "inspectedAt": "2026-09-25T20:17:27.137Z"
+  },
+  {
+    "scanId": "VISION-SCAN-30879510",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 88.3,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 4.1,
+      "hazardContamPct": 1.7,
+      "ssqiScore": 88.3,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:17:27.141Z",
+    "inspectedAt": "2026-09-25T20:17:27.141Z"
+  },
+  {
+    "scanId": "VISION-SCAN-EA844073",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 92,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.1,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.1,
+      "ssqiScore": 92,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:23:10.111Z",
+    "inspectedAt": "2026-09-25T20:23:10.112Z"
+  },
+  {
+    "scanId": "VISION-SCAN-5376DBA0",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 87.7,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 6.9,
+      "hazardContamPct": 1,
+      "ssqiScore": 87.7,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-25T20:23:10.116Z",
+    "inspectedAt": "2026-09-25T20:23:10.116Z"
+  },
+  {
+    "scanId": "VISION-SCAN-CBA7900C",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 87.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 7.3,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 87.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T06:51:39.012Z",
+    "inspectedAt": "2026-09-26T06:51:39.012Z"
+  },
+  {
+    "scanId": "VISION-SCAN-C36A8DB6",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 88.8,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 4,
+      "hazardContamPct": 1.6,
+      "ssqiScore": 88.8,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T06:51:39.018Z",
+    "inspectedAt": "2026-09-26T06:51:39.018Z"
+  },
+  {
+    "scanId": "VISION-SCAN-4967A110",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 88.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 4.5,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.3,
+      "ssqiScore": 88.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:03:12.915Z",
+    "inspectedAt": "2026-09-26T10:03:12.916Z"
+  },
+  {
+    "scanId": "VISION-SCAN-30A8D271",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 89.2,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 7.3,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 89.2,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:03:12.921Z",
+    "inspectedAt": "2026-09-26T10:03:12.921Z"
+  },
+  {
+    "scanId": "VISION-SCAN-603CE046",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 91.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 4.6,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 91.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:11:03.197Z",
+    "inspectedAt": "2026-09-26T10:11:03.197Z"
+  },
+  {
+    "scanId": "VISION-SCAN-CCCF539F",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 81,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 10.8,
+      "hazardContamPct": 1.5,
+      "ssqiScore": 81,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:11:03.203Z",
+    "inspectedAt": "2026-09-26T10:11:03.203Z"
+  },
+  {
+    "scanId": "VISION-SCAN-4D0AB487",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 91.8,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.5,
+      "wetContamPct": 0,
+      "hazardContamPct": 0,
+      "ssqiScore": 91.8,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:41:01.755Z",
+    "inspectedAt": "2026-09-26T10:41:01.757Z"
+  },
+  {
+    "scanId": "VISION-SCAN-99B77B82",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 84.7,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 10.4,
+      "hazardContamPct": 0.7,
+      "ssqiScore": 84.7,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:41:01.764Z",
+    "inspectedAt": "2026-09-26T10:41:01.764Z"
+  },
+  {
+    "scanId": "VISION-SCAN-B72D408B",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 79.7,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 11.4,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.8,
+      "ssqiScore": 79.7,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:49:38.266Z",
+    "inspectedAt": "2026-09-26T10:49:38.267Z"
+  },
+  {
+    "scanId": "VISION-SCAN-9715FEF9",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 85.2,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 8.7,
+      "hazardContamPct": 1.1,
+      "ssqiScore": 85.2,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:49:38.272Z",
+    "inspectedAt": "2026-09-26T10:49:38.272Z"
+  },
+  {
+    "scanId": "VISION-SCAN-6AD1D89F",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 84.4,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 6.7,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.4,
+      "ssqiScore": 84.4,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:50:36.515Z",
+    "inspectedAt": "2026-09-26T10:50:36.515Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A8E00D07",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 96.2,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 3.2,
+      "hazardContamPct": 0,
+      "ssqiScore": 96.2,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T10:50:36.519Z",
+    "inspectedAt": "2026-09-26T10:50:36.519Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A510AE70",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 80.2,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 11.9,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 80.2,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T11:15:26.344Z",
+    "inspectedAt": "2026-09-26T11:15:26.345Z"
+  },
+  {
+    "scanId": "VISION-SCAN-28CEAE1F",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 91,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 4.2,
+      "hazardContamPct": 1,
+      "ssqiScore": 91,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T11:15:26.352Z",
+    "inspectedAt": "2026-09-26T11:15:26.352Z"
+  },
+  {
+    "scanId": "VISION-SCAN-F75E19C0",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 87.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.6,
+      "wetContamPct": 2.4,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 87.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T11:18:54.964Z",
+    "inspectedAt": "2026-09-26T11:18:54.964Z"
+  },
+  {
+    "scanId": "VISION-SCAN-631878AE",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 87.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.6,
+      "wetContamPct": 2.4,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 87.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T11:18:58.984Z",
+    "inspectedAt": "2026-09-26T11:18:58.984Z"
+  },
+  {
+    "scanId": "VISION-SCAN-0B5A6BF7",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 84.2,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 9.2,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.5,
+      "ssqiScore": 84.2,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T12:56:49.866Z",
+    "inspectedAt": "2026-09-26T12:56:49.867Z"
+  },
+  {
+    "scanId": "VISION-SCAN-2E905E11",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 84.5,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 7.6,
+      "hazardContamPct": 1.6,
+      "ssqiScore": 84.5,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T12:56:49.872Z",
+    "inspectedAt": "2026-09-26T12:56:49.872Z"
+  },
+  {
+    "scanId": "VISION-SCAN-D814B6BB",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 87,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 6.3,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.9,
+      "ssqiScore": 87,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T13:02:48.386Z",
+    "inspectedAt": "2026-09-26T13:02:48.387Z"
+  },
+  {
+    "scanId": "VISION-SCAN-0CD51D3D",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 87.5,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 5.1,
+      "hazardContamPct": 1.6,
+      "ssqiScore": 87.5,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T13:02:48.393Z",
+    "inspectedAt": "2026-09-26T13:02:48.393Z"
+  },
+  {
+    "scanId": "VISION-SCAN-8D1BAE2C",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 87.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.6,
+      "wetContamPct": 2.4,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 87.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-26T16:17:41.434Z",
+    "inspectedAt": "2026-09-26T16:17:41.434Z"
+  },
+  {
+    "scanId": "VISION-SCAN-72CEF7C0",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 79.3,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 10.9,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.1,
+      "ssqiScore": 79.3,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:06:29.590Z",
+    "inspectedAt": "2026-09-28T14:06:29.591Z"
+  },
+  {
+    "scanId": "VISION-SCAN-F6F052AA",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 86.5,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 10.6,
+      "hazardContamPct": 0.2,
+      "ssqiScore": 86.5,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:06:29.596Z",
+    "inspectedAt": "2026-09-28T14:06:29.596Z"
+  },
+  {
+    "scanId": "VISION-SCAN-1EE16A79",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 87.4,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 5.5,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.1,
+      "ssqiScore": 87.4,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:11:32.935Z",
+    "inspectedAt": "2026-09-28T14:11:32.936Z"
+  },
+  {
+    "scanId": "VISION-SCAN-3E9646A5",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 84.2,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 9.8,
+      "hazardContamPct": 1,
+      "ssqiScore": 84.2,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:11:32.942Z",
+    "inspectedAt": "2026-09-28T14:11:32.942Z"
+  },
+  {
+    "scanId": "VISION-SCAN-75B816CB",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:12.443Z",
+    "inspectedAt": "2026-09-28T14:51:12.443Z"
+  },
+  {
+    "scanId": "VISION-SCAN-568F20EC",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:20.392Z",
+    "inspectedAt": "2026-09-28T14:51:20.392Z"
+  },
+  {
+    "scanId": "VISION-SCAN-68DA62CE",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:39.305Z",
+    "inspectedAt": "2026-09-28T14:51:39.305Z"
+  },
+  {
+    "scanId": "VISION-SCAN-74B60A96",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:47.227Z",
+    "inspectedAt": "2026-09-28T14:51:47.227Z"
+  },
+  {
+    "scanId": "VISION-SCAN-F252C31B",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:48.627Z",
+    "inspectedAt": "2026-09-28T14:51:48.627Z"
+  },
+  {
+    "scanId": "VISION-SCAN-4F8375E8",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:49.658Z",
+    "inspectedAt": "2026-09-28T14:51:49.658Z"
+  },
+  {
+    "scanId": "VISION-SCAN-72668797",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:50.262Z",
+    "inspectedAt": "2026-09-28T14:51:50.262Z"
+  },
+  {
+    "scanId": "VISION-SCAN-FBFCF6ED",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:50.461Z",
+    "inspectedAt": "2026-09-28T14:51:50.461Z"
+  },
+  {
+    "scanId": "VISION-SCAN-DF814F64",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:50.646Z",
+    "inspectedAt": "2026-09-28T14:51:50.646Z"
+  },
+  {
+    "scanId": "VISION-SCAN-9E7A4F8A",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:50.830Z",
+    "inspectedAt": "2026-09-28T14:51:50.830Z"
+  },
+  {
+    "scanId": "VISION-SCAN-ED010074",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:51.091Z",
+    "inspectedAt": "2026-09-28T14:51:51.091Z"
+  },
+  {
+    "scanId": "VISION-SCAN-EBCB2AEF",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:51.227Z",
+    "inspectedAt": "2026-09-28T14:51:51.227Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A47BD870",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:52.714Z",
+    "inspectedAt": "2026-09-28T14:51:52.714Z"
+  },
+  {
+    "scanId": "VISION-SCAN-61E27EEE",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:51:52.881Z",
+    "inspectedAt": "2026-09-28T14:51:52.881Z"
+  },
+  {
+    "scanId": "VISION-SCAN-0313E957",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:51.678Z",
+    "inspectedAt": "2026-09-28T14:52:51.678Z"
+  },
+  {
+    "scanId": "VISION-SCAN-82F7FF6A",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:51.809Z",
+    "inspectedAt": "2026-09-28T14:52:51.809Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A1371421",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:51.968Z",
+    "inspectedAt": "2026-09-28T14:52:51.968Z"
+  },
+  {
+    "scanId": "VISION-SCAN-15DAA012",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:52.115Z",
+    "inspectedAt": "2026-09-28T14:52:52.116Z"
+  },
+  {
+    "scanId": "VISION-SCAN-029B3FFB",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:52.265Z",
+    "inspectedAt": "2026-09-28T14:52:52.265Z"
+  },
+  {
+    "scanId": "VISION-SCAN-1B0EFB3C",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:52.434Z",
+    "inspectedAt": "2026-09-28T14:52:52.434Z"
+  },
+  {
+    "scanId": "VISION-SCAN-9AAA908C",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:52:52.649Z",
+    "inspectedAt": "2026-09-28T14:52:52.649Z"
+  },
+  {
+    "scanId": "VISION-SCAN-E608FF94",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:08.100Z",
+    "inspectedAt": "2026-09-28T14:53:08.100Z"
+  },
+  {
+    "scanId": "VISION-SCAN-76FB3C4B",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:15.272Z",
+    "inspectedAt": "2026-09-28T14:53:15.272Z"
+  },
+  {
+    "scanId": "VISION-SCAN-FB818FC3",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:20.886Z",
+    "inspectedAt": "2026-09-28T14:53:20.886Z"
+  },
+  {
+    "scanId": "VISION-SCAN-F5BD63F2",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:26.489Z",
+    "inspectedAt": "2026-09-28T14:53:26.489Z"
+  },
+  {
+    "scanId": "VISION-SCAN-61E85458",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:29.308Z",
+    "inspectedAt": "2026-09-28T14:53:29.308Z"
+  },
+  {
+    "scanId": "VISION-SCAN-E77BBC3B",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:32.106Z",
+    "inspectedAt": "2026-09-28T14:53:32.106Z"
+  },
+  {
+    "scanId": "VISION-SCAN-67E5FECC",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:43.347Z",
+    "inspectedAt": "2026-09-28T14:53:43.347Z"
+  },
+  {
+    "scanId": "VISION-SCAN-68ED585F",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:46.145Z",
+    "inspectedAt": "2026-09-28T14:53:46.145Z"
+  },
+  {
+    "scanId": "VISION-SCAN-21DEC20E",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "E_WASTE_CIRCUITS",
+    "wasteStream": "E_WASTE_CIRCUITS",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:53:48.965Z",
+    "inspectedAt": "2026-09-28T14:53:48.965Z"
+  },
+  {
+    "scanId": "VISION-SCAN-C81CEFEF",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 89,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 6.3,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 89,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:54:12.482Z",
+    "inspectedAt": "2026-09-28T14:54:12.483Z"
+  },
+  {
+    "scanId": "VISION-SCAN-E3D920EB",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 82.6,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 8.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 82.6,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T14:54:12.492Z",
+    "inspectedAt": "2026-09-28T14:54:12.492Z"
+  },
+  {
+    "scanId": "VISION-SCAN-7E4359A3",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:24:53.082Z",
+    "inspectedAt": "2026-09-28T15:24:53.082Z"
+  },
+  {
+    "scanId": "VISION-SCAN-07F3FA63",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:09.925Z",
+    "inspectedAt": "2026-09-28T15:25:09.925Z"
+  },
+  {
+    "scanId": "VISION-SCAN-73A56D4D",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:17.467Z",
+    "inspectedAt": "2026-09-28T15:25:17.467Z"
+  },
+  {
+    "scanId": "VISION-SCAN-9FA1B749",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:25.887Z",
+    "inspectedAt": "2026-09-28T15:25:25.887Z"
+  },
+  {
+    "scanId": "VISION-SCAN-80B916EA",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:28.712Z",
+    "inspectedAt": "2026-09-28T15:25:28.712Z"
+  },
+  {
+    "scanId": "VISION-SCAN-1B7973F0",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:33.015Z",
+    "inspectedAt": "2026-09-28T15:25:33.015Z"
+  },
+  {
+    "scanId": "VISION-SCAN-C2A51AFF",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:25:41.785Z",
+    "inspectedAt": "2026-09-28T15:25:41.785Z"
+  },
+  {
+    "scanId": "VISION-SCAN-6A268308",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 81.8,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 8.4,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.4,
+      "ssqiScore": 81.8,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:26:18.350Z",
+    "inspectedAt": "2026-09-28T15:26:18.351Z"
+  },
+  {
+    "scanId": "VISION-SCAN-32D7631D",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 88.8,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 9,
+      "hazardContamPct": 0.1,
+      "ssqiScore": 88.8,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T15:26:18.358Z",
+    "inspectedAt": "2026-09-28T15:26:18.358Z"
+  },
+  {
+    "scanId": "VISION-SCAN-A12AD353",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T18:03:43.110Z",
+    "inspectedAt": "2026-09-28T18:03:43.110Z"
+  },
+  {
+    "scanId": "VISION-SCAN-E90C8B44",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T19:55:19.330Z",
+    "inspectedAt": "2026-09-28T19:55:19.330Z"
+  },
+  {
+    "scanId": "VISION-SCAN-F53A08BE",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 78.5,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 11.4,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.1,
+      "ssqiScore": 78.5,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T19:57:06.629Z",
+    "inspectedAt": "2026-09-28T19:57:06.630Z"
+  },
+  {
+    "scanId": "VISION-SCAN-311E6653",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 79.4,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 10.8,
+      "hazardContamPct": 1.9,
+      "ssqiScore": 79.4,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T19:57:06.635Z",
+    "inspectedAt": "2026-09-28T19:57:06.635Z"
+  },
+  {
+    "scanId": "VISION-SCAN-51D77B5C",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T19:58:15.072Z",
+    "inspectedAt": "2026-09-28T19:58:15.073Z"
+  },
+  {
+    "scanId": "VISION-SCAN-82B4CAE1",
+    "cameraSensorId": "CAMERA-CONVEYOR-01",
+    "facilityId": "MRF-CENTRAL-01",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY_RECYCLABLE",
+    "wasteStream": "MUNICIPAL_DRY_RECYCLABLE",
+    "sampleWeightKg": 45,
+    "feedRateKgPerMinute": 45,
+    "ssqiScore": 43.4,
+    "qualityGrade": "CONTAMINATED_REJECT",
+    "gateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 24.5,
+      "wetContamPct": 10.5,
+      "hazardContamPct": 1.8,
+      "ssqiScore": 43.4,
+      "qualityGrade": "CONTAMINATED_REJECT",
+      "automatedGateAction": "PNEUMATIC_REJECT_GATE_TRIGGERED"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T19:58:17.853Z",
+    "inspectedAt": "2026-09-28T19:58:17.853Z"
+  },
+  {
+    "scanId": "VISION-SCAN-FF6437A0",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 80.7,
+    "qualityGrade": "GRADE_B_ACCEPTABLE",
+    "gateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 9.7,
+      "wetContamPct": 0,
+      "hazardContamPct": 1.2,
+      "ssqiScore": 80.7,
+      "qualityGrade": "GRADE_B_ACCEPTABLE",
+      "automatedGateAction": "PROCEED_WITH_SECONDARY_AIR_CLASSIFIER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T20:10:47.042Z",
+    "inspectedAt": "2026-09-28T20:10:47.043Z"
+  },
+  {
+    "scanId": "VISION-SCAN-EA60CD50",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 92.5,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 5.6,
+      "hazardContamPct": 0.2,
+      "ssqiScore": 92.5,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T20:10:47.048Z",
+    "inspectedAt": "2026-09-28T20:10:47.048Z"
+  },
+  {
+    "scanId": "VISION-SCAN-4DA27D5A",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_WET",
+    "wasteStream": "MUNICIPAL_WET",
+    "sampleWeightKg": 300,
+    "feedRateKgPerMinute": 300,
+    "ssqiScore": 89.1,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 6.2,
+      "wetContamPct": 0,
+      "hazardContamPct": 0.4,
+      "ssqiScore": 89.1,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "LDPE single-use polybags",
+        "confidence": 0.95
+      },
+      {
+        "item": "Multi-layered snack wrappers (PET/Al foil)",
+        "confidence": 0.95
+      },
+      {
+        "item": "Polypropylene milk pouches",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "LDPE single-use polybags",
+      "Multi-layered snack wrappers (PET/Al foil)",
+      "Polypropylene milk pouches"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T20:11:24.599Z",
+    "inspectedAt": "2026-09-28T20:11:24.599Z"
+  },
+  {
+    "scanId": "VISION-SCAN-D2192E83",
+    "cameraSensorId": "MP-04-HE-8821",
+    "facilityId": "MRF-BHOPAL-CENTRAL",
+    "vehicleId": "MP-04-HE-8821",
+    "stream": "MUNICIPAL_DRY",
+    "wasteStream": "MUNICIPAL_DRY",
+    "sampleWeightKg": 180,
+    "feedRateKgPerMinute": 180,
+    "ssqiScore": 88.8,
+    "qualityGrade": "GRADE_A_EXCELLENT",
+    "gateAction": "AUTOMATED_RELEASE_TO_HOPPER",
+    "imageUrl": "/assets/images/conveyor_vision_sample.jpg",
+    "metrics": {
+      "plasticContamPct": 0,
+      "wetContamPct": 4,
+      "hazardContamPct": 1.6,
+      "ssqiScore": 88.8,
+      "qualityGrade": "GRADE_A_EXCELLENT",
+      "automatedGateAction": "AUTOMATED_RELEASE_TO_HOPPER"
+    },
+    "foreignItemsDetected": [
+      {
+        "item": "Kitchen food slurry residue",
+        "confidence": 0.95
+      },
+      {
+        "item": "Soiled paper napkins",
+        "confidence": 0.95
+      },
+      {
+        "item": "Debris / silt fine particles",
+        "confidence": 0.95
+      }
+    ],
+    "detectedForeignItems": [
+      "Kitchen food slurry residue",
+      "Soiled paper napkins",
+      "Debris / silt fine particles"
+    ],
+    "confidenceScorePct": 96.4,
+    "scannedAt": "2026-09-28T20:11:24.605Z",
+    "inspectedAt": "2026-09-28T20:11:24.605Z"
+  }
+]

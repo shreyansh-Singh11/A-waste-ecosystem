@@ -1,0 +1,20 @@
+[
+  {
+    "id": "PROD-001",
+    "name": "TechVista India Pvt. Ltd.",
+    "gstin": "23AABCU9603R1ZM",
+    "cpcbRegistration": "CPCB/EPR/EE/2026/001",
+    "categories": [
+      "Consumer Electronics",
+      "Smartphone",
+      "Laptop",
+      "Battery / Power"
+    ],
+    "state": "Madhya Pradesh",
+    "contact": {
+      "name": "Rajesh Kumar",
+      "email": "epr@techvista.example"
+    },
+    "registeredAt": "2026-01-15T00:00:00.000Z"
+  }
+]

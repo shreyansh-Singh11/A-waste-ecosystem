@@ -1,0 +1,10 @@
+# Cloudflare Pages Clean Routing Rules
+/user              /user/index.html            200
+/collector         /collector/index.html       200
+/collector/scan    /collector/scan.html        200
+/government        /government/index.html      200
+/producer          /producer/index.html        200
+/municipal         /municipal/index.html       200
+/medical           /medical/index.html         200
+/demo              /demo/index.html            200
+/track/*           /track/track.html           200

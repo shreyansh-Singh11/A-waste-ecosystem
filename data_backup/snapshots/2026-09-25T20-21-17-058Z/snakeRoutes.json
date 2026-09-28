@@ -1,0 +1,857 @@
+[
+  {
+    "routeId": "SNAKE-RT-DEMO-01",
+    "wardId": "Ward 24 (MP Nagar)",
+    "vehicleId": "MP-04-HE-8821",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 450,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.8,
+      "baselineDistanceKm": 17.1,
+      "distanceSavedKm": 5.3,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 63,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 54,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 68,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 50,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.8
+      }
+    ],
+    "generatedAt": "2026-09-25T06:00:00.000Z"
+  },
+  {
+    "routeId": "SNAKE-RT-3BD1EDBB",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T19:49:13.373Z"
+  },
+  {
+    "routeId": "SNAKE-RT-F8A8EBFB",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:00:38.973Z"
+  },
+  {
+    "routeId": "SNAKE-RT-EA2B2C79",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:00:45.688Z"
+  },
+  {
+    "routeId": "SNAKE-RT-B14CF6F3",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:01:13.900Z"
+  },
+  {
+    "routeId": "SNAKE-RT-FABA13C3",
+    "wardId": "Ward 45 (BHEL Township)",
+    "vehicleId": "MP-04-HE-9901",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 420,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 59,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 50,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 63,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 46,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 67,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:02:05.149Z"
+  },
+  {
+    "routeId": "SNAKE-RT-13BF50C2",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:07:02.456Z"
+  },
+  {
+    "routeId": "SNAKE-RT-EB14ECF1",
+    "wardId": "Ward 12 (Arera Colony)",
+    "vehicleId": "MP-04-HE-3301",
+    "status": "ACTIVE_DISPATCH",
+    "totalHouseholdsCovered": 500,
+    "zeroSkippedStreetGuarantee": true,
+    "telemetryMetrics": {
+      "optimizedDistanceKm": 11.5,
+      "baselineDistanceKm": 16.7,
+      "distanceSavedKm": 5.2,
+      "dieselSavedLiters": 2,
+      "co2AvoidedKg": 5.4,
+      "fuelEfficiencyGainPct": 31
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "type": "START_DEPOT",
+        "name": "Zone Depot Sub-Station",
+        "lat": 23.2301,
+        "lng": 77.4302
+      },
+      {
+        "step": 2,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Main Avenue Lane 1",
+        "householdsAssigned": 70,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2321,
+        "lng": 77.4312,
+        "cumulativeKm": 1.4
+      },
+      {
+        "step": 3,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Sector A Residential Cross 2",
+        "householdsAssigned": 60,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2331,
+        "lng": 77.4332,
+        "cumulativeKm": 2.7
+      },
+      {
+        "step": 4,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Central Market Lane 3",
+        "householdsAssigned": 75,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2341,
+        "lng": 77.4322,
+        "cumulativeKm": 4.1
+      },
+      {
+        "step": 5,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Green Park Perimeter 4",
+        "householdsAssigned": 55,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2361,
+        "lng": 77.4342,
+        "cumulativeKm": 5.4
+      },
+      {
+        "step": 6,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Hospital Link Road 5",
+        "householdsAssigned": 65,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2381,
+        "lng": 77.4352,
+        "cumulativeKm": 6.8
+      },
+      {
+        "step": 7,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Commercial Zone Connector 6",
+        "householdsAssigned": 80,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Left Turn into Sub-Lane",
+        "lat": 23.2401,
+        "lng": 77.4372,
+        "cumulativeKm": 8.1
+      },
+      {
+        "step": 8,
+        "type": "STREET_COLLECTION_SEGMENT",
+        "streetName": "Outer Ring Service Road 7",
+        "householdsAssigned": 95,
+        "coverageGuaranteePct": 100,
+        "turnInstruction": "Serpentine Right Turn into Corridor",
+        "lat": 23.2431,
+        "lng": 77.4392,
+        "cumulativeKm": 9.5
+      },
+      {
+        "step": 9,
+        "type": "UNLOAD_DESTINATION",
+        "name": "Central MRF Logistics Hub",
+        "lat": 23.245,
+        "lng": 77.442,
+        "cumulativeKm": 11.5
+      }
+    ],
+    "generatedAt": "2026-09-25T20:17:27.144Z"
+  }
+]

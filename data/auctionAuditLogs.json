@@ -1,0 +1,3469 @@
+[
+  {
+    "id": "d6955e5b-87ee-4930-bd26-8417e95bdcd3",
+    "action": "DEVICE_GRADED",
+    "entityId": "3a728485-f87a-43c0-8990-8ce6b64c0191",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:33:11.895Z"
+  },
+  {
+    "id": "e9be6f5b-08de-4838-8bce-b7234ab1aec8",
+    "action": "DEVICE_GRADED",
+    "entityId": "c7af29b0-acb1-4fba-a3b8-9e81c9413c57",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T04:33:11.899Z"
+  },
+  {
+    "id": "961e59a6-ab20-414d-be12-53d534f45af6",
+    "action": "DEVICE_GRADED",
+    "entityId": "47e55042-edb7-4f3e-9f51-00608ea875c1",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:33:11.901Z"
+  },
+  {
+    "id": "2a9bc44f-2414-4488-9e91-a360ea156221",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "2515ee7e-6b1f-4324-ae6b-471e7c71a1fe",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T04:33:11.902Z"
+  },
+  {
+    "id": "f034568e-ec47-4ca0-bd1b-9f126f008d78",
+    "action": "DEVICE_GRADED",
+    "entityId": "c73023cd-0a8a-4f2c-a74e-c39ccf629fd8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:33:36.718Z"
+  },
+  {
+    "id": "f649df49-c3d5-4ef7-a4aa-20a409a0b6ad",
+    "action": "DEVICE_GRADED",
+    "entityId": "6cc08fd9-bd83-4df0-9341-054253db2843",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T04:33:36.723Z"
+  },
+  {
+    "id": "7537016f-83a2-4a29-a97a-e1c8aed0f9db",
+    "action": "DEVICE_GRADED",
+    "entityId": "4517b184-e0f2-439f-8d2d-f58cd840ccf5",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:33:36.726Z"
+  },
+  {
+    "id": "6af81cb6-b50f-4ada-bfa0-f30c7025ed9b",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T04:33:36.734Z"
+  },
+  {
+    "id": "3622586b-2424-46b0-a1a4-1075ed2c5da6",
+    "action": "BID_PLACED",
+    "entityId": "5e824bd7-1c33-4887-aee3-5c7c8d59c16c",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T04:33:36.741Z"
+  },
+  {
+    "id": "a5148a9f-6be1-468c-b950-a2e38c8a0d0a",
+    "action": "BID_PLACED",
+    "entityId": "731084b6-023d-4729-9c28-f46695d8299a",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:33:36.746Z"
+  },
+  {
+    "id": "0fb6e57e-2f40-46ad-b360-ab6ef6622131",
+    "action": "AUCTION_CLOSED",
+    "entityId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:33:36.748Z"
+  },
+  {
+    "id": "210da6c1-71db-4711-b726-73cbb2ba6465",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "0a2ab066-53c3-4346-9d09-643aa9783243",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "9c2fb38b-8d6f-437e-ade6-90a36f53b066",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T04:33:36.754Z"
+  },
+  {
+    "id": "71f532b7-8bde-4830-ad24-c493aff23261",
+    "action": "DEVICE_GRADED",
+    "entityId": "9adc714c-b905-4b32-b076-a2f781e77c36",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:34:15.290Z"
+  },
+  {
+    "id": "de721739-7273-4741-b165-2cf70cabe57e",
+    "action": "DEVICE_GRADED",
+    "entityId": "07f25ebd-8852-44b0-b145-a46608fccdc9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T04:34:15.302Z"
+  },
+  {
+    "id": "7dc41bbe-bcfc-4bac-8ec0-24526941b55f",
+    "action": "DEVICE_GRADED",
+    "entityId": "a49a469a-4833-4416-89f0-29713b4eab04",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:34:15.322Z"
+  },
+  {
+    "id": "6979e527-a928-4f56-8539-6dd243fc336a",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T04:34:15.325Z"
+  },
+  {
+    "id": "52f319e2-aa7b-407b-b094-3f5fff2c3615",
+    "action": "BID_PLACED",
+    "entityId": "d1b5ab20-82ae-4da1-94ae-4c9fe83fece3",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T04:34:15.328Z"
+  },
+  {
+    "id": "3818021f-c046-4795-b8bf-2720d6dd823e",
+    "action": "BID_PLACED",
+    "entityId": "bfa5f929-e6ba-43e9-8bcc-bf54543ea157",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:34:15.334Z"
+  },
+  {
+    "id": "315f455c-46fc-4e9e-956c-9c107146a47a",
+    "action": "AUCTION_CLOSED",
+    "entityId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:34:15.337Z"
+  },
+  {
+    "id": "f34dd39c-bf77-4a3f-b273-3f82df417170",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "ed2589a5-d6f2-4bca-a7f2-d660c76756bb",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "c95615ee-b01e-403e-a4c5-5bf5e115091f",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T04:34:15.341Z"
+  },
+  {
+    "id": "9db6e5b5-4a63-40c8-9c53-0a0e69e49dca",
+    "action": "DEVICE_GRADED",
+    "entityId": "407eb796-77b1-4f38-a270-9b22d94b174f",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:38:28.591Z"
+  },
+  {
+    "id": "adcd8792-ac2d-4207-a784-975af23861b5",
+    "action": "DEVICE_GRADED",
+    "entityId": "27f6851a-ac90-4663-b828-49777cc6b0a0",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T04:38:28.601Z"
+  },
+  {
+    "id": "8fd621aa-351c-451a-bea8-699f719ff40e",
+    "action": "DEVICE_GRADED",
+    "entityId": "9474c262-f444-472d-855a-ad295664c826",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T04:38:28.605Z"
+  },
+  {
+    "id": "b08649a8-7a6c-4845-9166-218d9de42958",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "8684ae17-be56-429c-93e9-e304b754d407",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T04:38:28.608Z"
+  },
+  {
+    "id": "8f7f2225-d947-4d31-aa46-9496ccd28b86",
+    "action": "BID_PLACED",
+    "entityId": "f68cba6b-06f8-49cc-9192-a45b7dd0165e",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T04:38:28.621Z"
+  },
+  {
+    "id": "a6cafca6-f31d-4b6d-a483-f4bd4e3d20c6",
+    "action": "BID_PLACED",
+    "entityId": "0588bb00-8b7a-4686-8e67-9ea73df64b12",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:38:28.625Z"
+  },
+  {
+    "id": "f8696a21-da68-4705-aed6-a7f8077ff924",
+    "action": "AUCTION_CLOSED",
+    "entityId": "8684ae17-be56-429c-93e9-e304b754d407",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T04:38:28.631Z"
+  },
+  {
+    "id": "559a2247-f649-481f-8c53-61c93edc2628",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "4c9a8540-dfb2-4880-8fb7-0089c6cfcca3",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "8684ae17-be56-429c-93e9-e304b754d407",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T04:38:28.637Z"
+  },
+  {
+    "id": "41523159-5397-432d-8d6d-9d75fb826548",
+    "action": "DEVICE_GRADED",
+    "entityId": "d0e55a5f-cf7c-4337-84ed-cf354916cf6c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T09:24:24.524Z"
+  },
+  {
+    "id": "b7498d9e-2e2a-4b29-87af-b97c57627b1b",
+    "action": "DEVICE_GRADED",
+    "entityId": "5cbf0458-f93c-4e3a-9405-b6e7d18567cb",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T09:24:24.528Z"
+  },
+  {
+    "id": "c9087c07-37d8-4806-803d-72d83b914a0f",
+    "action": "DEVICE_GRADED",
+    "entityId": "023d7679-3b8e-487f-a177-6a95756da7ae",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T09:24:24.530Z"
+  },
+  {
+    "id": "0e24c178-f7ce-423d-ab4f-0815f03fe7c4",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T09:24:24.532Z"
+  },
+  {
+    "id": "e76b002d-7aa0-40a6-99a9-bd4b84c63f5c",
+    "action": "BID_PLACED",
+    "entityId": "328d02fe-e689-4f37-a470-16c14274ef65",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T09:24:24.535Z"
+  },
+  {
+    "id": "1d7560c7-957a-4734-9401-9a3f93b99549",
+    "action": "BID_PLACED",
+    "entityId": "7acf6776-72ee-407c-800f-60ecf148f226",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T09:24:24.539Z"
+  },
+  {
+    "id": "87a17bf1-b366-4a4a-8a8e-2da380edee3f",
+    "action": "AUCTION_CLOSED",
+    "entityId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T09:24:24.543Z"
+  },
+  {
+    "id": "bb0cff06-c522-414a-9b37-779820e0f5d9",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "038221af-ebb1-4e7d-920a-684a99b5d14f",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "aea3b1f6-5da3-4e9e-851b-0b958ad93cb9",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T09:24:24.547Z"
+  },
+  {
+    "id": "2abb5bfd-667b-489e-b52b-8f946fd011a6",
+    "action": "DEVICE_GRADED",
+    "entityId": "6227abec-ccb7-4d76-be99-5a827977b3ab",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T09:47:57.434Z"
+  },
+  {
+    "id": "0dfcdebd-8ea9-4926-90ad-9f1b683a2baa",
+    "action": "DEVICE_GRADED",
+    "entityId": "b31baa8b-5e36-4ec3-bd79-c36e989fa93c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T09:47:57.439Z"
+  },
+  {
+    "id": "46c608d0-b16d-4e00-b318-c4d9d13f7444",
+    "action": "DEVICE_GRADED",
+    "entityId": "a907b620-acc1-49ca-ac3f-05b5d862168e",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T09:47:57.442Z"
+  },
+  {
+    "id": "1855c66a-c3a5-40e7-a131-5d4b699cedd2",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T09:47:57.446Z"
+  },
+  {
+    "id": "690d05ff-d3e9-486f-818b-4398017d217f",
+    "action": "BID_PLACED",
+    "entityId": "91336c31-e878-4ec6-9154-a0bff61eee41",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T09:47:57.451Z"
+  },
+  {
+    "id": "2e25f5d1-ba14-4513-92a3-bf9c75b98751",
+    "action": "BID_PLACED",
+    "entityId": "9284bf71-377f-4514-b1e7-61a4edcd3a0e",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T09:47:57.454Z"
+  },
+  {
+    "id": "37db3dbb-d967-4d96-8ea0-6f710fc9dd1f",
+    "action": "AUCTION_CLOSED",
+    "entityId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T09:47:57.459Z"
+  },
+  {
+    "id": "e4566d6f-3bbf-4b7b-9e97-7bcb01e625f7",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "e896c797-c632-4b5e-856d-9be6e89ee79a",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "19ec4ddb-2a4c-48db-ac91-9e041047c81c",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T09:47:57.464Z"
+  },
+  {
+    "id": "f46e8484-d0a9-4959-85ad-9f1ec939c550",
+    "action": "DEVICE_GRADED",
+    "entityId": "a0ecb54c-17c7-4063-be48-acda66263d26",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:07:49.736Z"
+  },
+  {
+    "id": "1f15516e-86ab-4c23-a09a-94affbfc2e60",
+    "action": "DEVICE_GRADED",
+    "entityId": "74525942-6fea-4726-8e5d-3a7f3b3ad28c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T10:07:49.740Z"
+  },
+  {
+    "id": "cbfa7af6-f59d-43e0-aabf-9a6624a6462f",
+    "action": "DEVICE_GRADED",
+    "entityId": "aac8a5d0-9a79-48bd-8dfd-bc9a7d92f2b9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:07:49.743Z"
+  },
+  {
+    "id": "c3c72c36-ce78-4829-bc81-d2031766e63e",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T10:07:49.746Z"
+  },
+  {
+    "id": "1f067c7e-ce6d-4746-ba34-ce34375648cc",
+    "action": "BID_PLACED",
+    "entityId": "92691386-ca2a-4852-af83-d8c61435a830",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T10:07:49.750Z"
+  },
+  {
+    "id": "b6a774e4-b880-4ef4-8763-927302a1e385",
+    "action": "BID_PLACED",
+    "entityId": "560a0b71-a56a-4a9e-8a7a-54420ec4b211",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:07:49.756Z"
+  },
+  {
+    "id": "2f7e55d9-4267-49d1-9fad-1300af579c0d",
+    "action": "AUCTION_CLOSED",
+    "entityId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:07:49.759Z"
+  },
+  {
+    "id": "6026c088-5fd1-4823-b4b6-b2c2d6fb0e77",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "0b8d8b40-9b24-4ad3-855f-86cc0364ca13",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "e0a817dc-b438-4e7d-ab67-d2dbac2b0413",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T10:07:49.764Z"
+  },
+  {
+    "id": "e7dcab2b-cdcb-4127-b6d6-bf2629696a4c",
+    "action": "DEVICE_GRADED",
+    "entityId": "93aedaa5-dad0-4917-8c49-2917239db763",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:10:39.617Z"
+  },
+  {
+    "id": "4ca9ad56-7ed5-4739-acb3-21bae7cee34d",
+    "action": "DEVICE_GRADED",
+    "entityId": "dfe16d74-27d2-4fbf-9e49-2aa60eca398a",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T10:10:39.624Z"
+  },
+  {
+    "id": "15f825f6-083c-4878-ace8-5a8554445405",
+    "action": "DEVICE_GRADED",
+    "entityId": "dd6d9190-78bb-4133-9add-08b62920121a",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:10:39.630Z"
+  },
+  {
+    "id": "fe4a5b98-06f1-401a-b843-b5b537398238",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T10:10:39.639Z"
+  },
+  {
+    "id": "2443a1b5-23a5-4ae2-843b-70d2d479cbca",
+    "action": "BID_PLACED",
+    "entityId": "4a3d72c8-dedc-4923-b570-260d568e6d88",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T10:10:39.648Z"
+  },
+  {
+    "id": "d2a86e91-b826-46f4-8210-81b536b1f24b",
+    "action": "BID_PLACED",
+    "entityId": "18c168ef-ecfe-4c9f-94af-372284cea506",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:10:39.657Z"
+  },
+  {
+    "id": "741bc80a-2a32-4b73-a6e2-f27fbdfee63b",
+    "action": "AUCTION_CLOSED",
+    "entityId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:10:39.665Z"
+  },
+  {
+    "id": "f46ed886-f7a6-447d-82ea-44e3c14c9275",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "94dd10ba-7509-4901-93d2-c396fda06f0b",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "44043133-da3d-4456-ac5e-ac61a59cad1b",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T10:10:39.677Z"
+  },
+  {
+    "id": "f00f3fa1-0f74-4b1b-ae53-0ccaa64fff01",
+    "action": "DEVICE_GRADED",
+    "entityId": "e19f3fa1-3a11-4348-9cb5-4ad55f2442b7",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:43:43.562Z"
+  },
+  {
+    "id": "d3a73dde-49c0-4893-a355-f15d98abf826",
+    "action": "DEVICE_GRADED",
+    "entityId": "0416732d-e089-4cef-ba8d-62e9d98cc930",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T10:43:43.571Z"
+  },
+  {
+    "id": "959018d6-99d5-4288-8d43-a97f88166df4",
+    "action": "DEVICE_GRADED",
+    "entityId": "87735aa3-7032-4365-a30c-38117f0cd2db",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T10:43:43.578Z"
+  },
+  {
+    "id": "ab6795c7-b96f-4f9a-9237-17fe5be982f5",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T10:43:43.586Z"
+  },
+  {
+    "id": "63c26ed1-9f7a-4b24-a880-f00d30a4bc7f",
+    "action": "BID_PLACED",
+    "entityId": "9261bf3e-1c88-4611-8e27-e87443f52a53",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T10:43:43.594Z"
+  },
+  {
+    "id": "9cc4c127-d663-4f5e-8dc6-96bb39cec036",
+    "action": "BID_PLACED",
+    "entityId": "7563379f-d46f-449c-b6da-0fa4731b130d",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:43:43.604Z"
+  },
+  {
+    "id": "14551673-8514-41dc-87b6-91567a5ffbe7",
+    "action": "AUCTION_CLOSED",
+    "entityId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T10:43:43.611Z"
+  },
+  {
+    "id": "e7ad482b-bb8c-437f-9003-8c9c3b0ba9d8",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "a9366e58-971c-49f3-803a-02b6d3c32489",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "47493931-818a-46a7-bc27-e678b8aa8d16",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T10:43:43.625Z"
+  },
+  {
+    "id": "26273437-9c77-4f0d-b0fd-9e5a3f3a0fe1",
+    "action": "DEVICE_GRADED",
+    "entityId": "2008c355-f29a-4431-bd4e-c983c47bc2d5",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:02:26.509Z"
+  },
+  {
+    "id": "2398ea76-ce3e-4e5b-9820-c14b8aca73cf",
+    "action": "DEVICE_GRADED",
+    "entityId": "4d98fa2c-3482-46f5-a47f-4af36dc3af2c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T11:02:26.511Z"
+  },
+  {
+    "id": "876bfca7-b51f-47fd-b443-2a558f357766",
+    "action": "DEVICE_GRADED",
+    "entityId": "2c1b5d7c-4411-4c83-9d43-960dab97f574",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:02:26.514Z"
+  },
+  {
+    "id": "38e09b52-174c-4484-8ab4-82f12890c379",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T11:02:26.517Z"
+  },
+  {
+    "id": "8c102554-33fa-4f39-977d-5612aeeaa051",
+    "action": "BID_PLACED",
+    "entityId": "f0007227-bec0-4fbc-ada2-229a53121af6",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T11:02:26.520Z"
+  },
+  {
+    "id": "cfe20e28-b604-4a8c-bd80-86bd0074e780",
+    "action": "BID_PLACED",
+    "entityId": "2011e1d2-b07e-4bad-ae9a-f29bd46074c1",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:02:26.523Z"
+  },
+  {
+    "id": "e5b09032-a37a-4509-bc50-ad9631ad7028",
+    "action": "AUCTION_CLOSED",
+    "entityId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:02:26.527Z"
+  },
+  {
+    "id": "57893bb4-ca61-448e-b1cf-c6803a276167",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "9167d823-5a6b-4dcf-b0e8-db08b9a591d6",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "398bfb9c-b9a4-42d0-83fa-b24b7f861f3f",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T11:02:26.531Z"
+  },
+  {
+    "id": "f9a7913c-5b76-4157-8b05-05ab50d80daa",
+    "action": "DEVICE_GRADED",
+    "entityId": "7440275f-a837-44bf-a184-d41118ac0047",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:02:56.834Z"
+  },
+  {
+    "id": "543823a6-505a-459c-9d90-363e5c7fba38",
+    "action": "DEVICE_GRADED",
+    "entityId": "0c198e1f-849a-47d5-9537-133281c9c1b9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T11:02:56.837Z"
+  },
+  {
+    "id": "0ea43a2d-da50-425d-87dd-9782d5efb36f",
+    "action": "DEVICE_GRADED",
+    "entityId": "5d431ce7-9337-40c9-a966-8e754931eacf",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:02:56.839Z"
+  },
+  {
+    "id": "1153f456-2b32-4e01-9696-4684458aa302",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T11:02:56.842Z"
+  },
+  {
+    "id": "26c03ff5-ff9e-4a85-8303-dbb11405976e",
+    "action": "BID_PLACED",
+    "entityId": "2465bcca-c50e-4b5c-a4c4-dbf642b3d527",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T11:02:56.847Z"
+  },
+  {
+    "id": "4332c413-2ad6-4ded-8952-c713dca31877",
+    "action": "BID_PLACED",
+    "entityId": "db13e11d-f840-4253-b846-243fa8bc4c4f",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:02:56.850Z"
+  },
+  {
+    "id": "d9ae17b6-a84a-441d-94a8-29edea4e6d46",
+    "action": "AUCTION_CLOSED",
+    "entityId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:02:56.853Z"
+  },
+  {
+    "id": "b3472a58-572d-4a4e-8d16-c9ab5965b382",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "fee7dcfa-7f61-4dcf-9fb0-cd84b39ea855",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "4eb737bf-8b74-45cc-86ae-e19a23fda3f9",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T11:02:56.856Z"
+  },
+  {
+    "id": "f9d102cd-82a4-4190-bf8a-c47d31f0a0e9",
+    "action": "DEVICE_GRADED",
+    "entityId": "ea168f94-9862-4caa-aaf5-1080499481ec",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:06:21.117Z"
+  },
+  {
+    "id": "6ba4a5bc-64a2-4131-b4db-44843539427f",
+    "action": "DEVICE_GRADED",
+    "entityId": "9a7ea034-0403-4acb-8149-c3dd2914ffa8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T11:06:21.124Z"
+  },
+  {
+    "id": "39a8427e-1bb0-451c-930a-8dbc701a0c7f",
+    "action": "DEVICE_GRADED",
+    "entityId": "8266cc70-c766-4e62-8908-20d127eca5c4",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:06:21.130Z"
+  },
+  {
+    "id": "acf83a9e-d23a-4c4d-907b-db0438851544",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T11:06:21.139Z"
+  },
+  {
+    "id": "2548b073-c6e8-4155-82a0-7be8d85c290b",
+    "action": "BID_PLACED",
+    "entityId": "29e52c4c-c65c-4bc9-9e4d-23c016bdda74",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T11:06:21.148Z"
+  },
+  {
+    "id": "3971357d-48dc-4f97-ab20-4efa61c91a50",
+    "action": "BID_PLACED",
+    "entityId": "316dd049-56e9-4acf-940f-7e8f5e5d6093",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:06:21.158Z"
+  },
+  {
+    "id": "3b5b7d59-3964-4154-bef9-11af69e62f31",
+    "action": "AUCTION_CLOSED",
+    "entityId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:06:21.166Z"
+  },
+  {
+    "id": "d842017a-b5e0-4e67-8ec3-8b445b26a680",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "885e9fc4-008c-44f3-9862-b9002697af43",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "10bff1bf-231f-4602-b427-cb887e12e9b4",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T11:06:21.178Z"
+  },
+  {
+    "id": "858bc154-5974-4827-b301-12d8eb49bea4",
+    "action": "DEVICE_GRADED",
+    "entityId": "8566c37a-7652-4052-b9ae-a8c14442d806",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:08:38.169Z"
+  },
+  {
+    "id": "698e065e-954b-4e63-857f-8ee52906f2b9",
+    "action": "DEVICE_GRADED",
+    "entityId": "e837b5de-2aee-404b-9ada-480330fb5437",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T11:08:38.175Z"
+  },
+  {
+    "id": "df3312fd-48e8-4b5f-9a71-a2c7e4d60ea8",
+    "action": "DEVICE_GRADED",
+    "entityId": "238fa866-3dea-4d52-b461-09e37beffe5a",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T11:08:38.180Z"
+  },
+  {
+    "id": "030fc8b6-3f23-4c0a-8575-9d967671a6a8",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T11:08:38.189Z"
+  },
+  {
+    "id": "8cd2ef3a-0c62-4d26-9213-e63dd5e149ef",
+    "action": "BID_PLACED",
+    "entityId": "a476a78d-820c-4a07-9d21-6e48335d02c6",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T11:08:38.198Z"
+  },
+  {
+    "id": "f82334e6-2a05-4278-a418-74d3bbf398cc",
+    "action": "BID_PLACED",
+    "entityId": "3fc2fb46-0aa1-4102-aa98-20ce9f2fb888",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:08:38.208Z"
+  },
+  {
+    "id": "dca720e4-8650-4190-9840-77e08993d121",
+    "action": "AUCTION_CLOSED",
+    "entityId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T11:08:38.216Z"
+  },
+  {
+    "id": "ffa2b65d-916f-47ef-bf90-d35673245c15",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "1f31e264-ab23-44da-a6a5-ff64b5bdbfba",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "3f897a3f-7c98-4874-ae78-c1cb5252c94d",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T11:08:38.229Z"
+  },
+  {
+    "id": "bbc0cbd6-9869-4f4e-af74-34ca636f4b5b",
+    "action": "DEVICE_GRADED",
+    "entityId": "692793fa-8132-4c6b-9ef0-9e3d27e7ab50",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T19:22:35.646Z"
+  },
+  {
+    "id": "c80a2368-0d7f-466c-9b0a-23bd967b678a",
+    "action": "DEVICE_GRADED",
+    "entityId": "b0d02e1f-fda0-4c83-883d-ee50bee29a97",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T19:22:35.649Z"
+  },
+  {
+    "id": "88dc92ac-0fec-4a31-a436-80dc679a2323",
+    "action": "DEVICE_GRADED",
+    "entityId": "0da85e01-1920-41e1-8ee5-b80349ec99bf",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T19:22:35.651Z"
+  },
+  {
+    "id": "1df4910e-e597-4f90-ad86-15ba5f880939",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "6d2911c1-d931-4973-a494-71a844ad739c",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T19:22:35.654Z"
+  },
+  {
+    "id": "27c13f24-8c50-4f9f-bff6-5f6a496fb371",
+    "action": "BID_PLACED",
+    "entityId": "6212f21d-3826-46cb-87d4-abdf195b3a4a",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T19:22:35.659Z"
+  },
+  {
+    "id": "6efa7fa5-9c3a-4b89-91c5-9ee6962d90ff",
+    "action": "BID_PLACED",
+    "entityId": "a48a857b-a689-42fc-b00b-99e14798f6e0",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T19:22:35.662Z"
+  },
+  {
+    "id": "95a2db57-8e3f-41e8-a517-493dd31da8f7",
+    "action": "AUCTION_CLOSED",
+    "entityId": "6d2911c1-d931-4973-a494-71a844ad739c",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T19:22:35.665Z"
+  },
+  {
+    "id": "f4f06223-33db-4bb8-b8b7-7f24ced53bb1",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "a161b1a0-97dd-4fc0-b3ee-ca92095e0634",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "6d2911c1-d931-4973-a494-71a844ad739c",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T19:22:35.669Z"
+  },
+  {
+    "id": "73f36576-c6ac-4a25-bc37-cdf1949fd6cd",
+    "action": "DEVICE_GRADED",
+    "entityId": "b6d6f650-4496-4f19-bed2-99a69e5669dd",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:00:45.325Z"
+  },
+  {
+    "id": "19642dde-c402-45d4-a303-531bbaa3485f",
+    "action": "DEVICE_GRADED",
+    "entityId": "d6719dbb-59d5-4517-8c77-caccd729e970",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T20:00:45.329Z"
+  },
+  {
+    "id": "50acf4a3-0a71-4162-92c9-81f62aeebea1",
+    "action": "DEVICE_GRADED",
+    "entityId": "93e96c40-81d9-4f57-9dec-3e707aacd44e",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:00:45.333Z"
+  },
+  {
+    "id": "2707b947-191b-465a-8cbd-d1e1464cb7fa",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T20:00:45.347Z"
+  },
+  {
+    "id": "ce068e4b-bdd5-4900-b6ae-43ce76c56609",
+    "action": "BID_PLACED",
+    "entityId": "6bd658d8-e325-4e8e-8ca7-dd32821d50f4",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T20:00:45.374Z"
+  },
+  {
+    "id": "62e92553-e352-4e51-a884-1a8ce23079f8",
+    "action": "BID_PLACED",
+    "entityId": "b1cb63a5-eed5-464b-bfec-9782e2b65b69",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:00:45.378Z"
+  },
+  {
+    "id": "9e13fc21-22b7-40ec-90a6-2222509ed67c",
+    "action": "AUCTION_CLOSED",
+    "entityId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:00:45.382Z"
+  },
+  {
+    "id": "b27ec006-23aa-4f36-9e3d-a8c61cf520c2",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "02dff1cb-977c-4970-92a9-03103db771d1",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "49dd3b1d-b3a6-4fd0-90d9-90a8891bf3be",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T20:00:45.386Z"
+  },
+  {
+    "id": "80007325-3ba8-4f3a-a224-d19c90cb6175",
+    "action": "DEVICE_GRADED",
+    "entityId": "18246244-360b-4e9c-ae6b-f2e1ce8d7b30",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:07:02.127Z"
+  },
+  {
+    "id": "1d116429-1eda-4f24-9631-ffdb1ca94c7d",
+    "action": "DEVICE_GRADED",
+    "entityId": "fc0b8fef-674d-4007-b587-ffcb802f55b5",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T20:07:02.129Z"
+  },
+  {
+    "id": "cc9977e1-ac41-44c2-8819-43e694c0ff36",
+    "action": "DEVICE_GRADED",
+    "entityId": "97af19e1-eb3a-49bc-b310-ccfd39ef9215",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:07:02.131Z"
+  },
+  {
+    "id": "663b7cd5-7f75-4143-8844-a869ad2d4431",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T20:07:02.133Z"
+  },
+  {
+    "id": "8e02568e-86d3-4084-aea5-4949ab58c0f8",
+    "action": "BID_PLACED",
+    "entityId": "907eb2cb-60fb-4ac9-9dbb-adc3d5ae0336",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T20:07:02.136Z"
+  },
+  {
+    "id": "432454e4-c526-43da-9f41-04595b22ee98",
+    "action": "BID_PLACED",
+    "entityId": "1c23e328-618f-4a0c-8775-ca97f5bedc1d",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:07:02.139Z"
+  },
+  {
+    "id": "128cc1b2-e962-41a0-bef3-80dfe1b68a03",
+    "action": "AUCTION_CLOSED",
+    "entityId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:07:02.143Z"
+  },
+  {
+    "id": "6cfeb30d-bae2-4604-ac35-c42c94a28660",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "d419629f-1c4b-4210-95a0-258d7fedeaba",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "26cc9ef0-8570-442e-87ac-10e138b9da57",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T20:07:02.146Z"
+  },
+  {
+    "id": "48f82737-da69-4f6c-8b15-705c9b44568c",
+    "action": "DEVICE_GRADED",
+    "entityId": "7b048097-a056-4bde-81b7-1da4c4c227c0",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:17:26.752Z"
+  },
+  {
+    "id": "77a64bef-ae5c-413a-bd40-371b6a679c60",
+    "action": "DEVICE_GRADED",
+    "entityId": "ee0c6091-0515-4f1f-aca4-770eb4c6ff63",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T20:17:26.754Z"
+  },
+  {
+    "id": "7b27c7d2-b534-4882-b6fa-86dfb6c555d4",
+    "action": "DEVICE_GRADED",
+    "entityId": "357ff002-ea00-43f6-bd29-a3d9cb2a9f25",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:17:26.757Z"
+  },
+  {
+    "id": "a1f7b3b9-59d9-460d-933a-3af8f3ba9399",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T20:17:26.759Z"
+  },
+  {
+    "id": "6ad58bd1-1f5d-4d56-bcd2-d52060926bdb",
+    "action": "BID_PLACED",
+    "entityId": "5f72e6a3-3b14-41cb-a34b-34ee6ae9fa3a",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T20:17:26.762Z"
+  },
+  {
+    "id": "65184839-c50e-47c1-a51b-df6f588429f9",
+    "action": "BID_PLACED",
+    "entityId": "26df0423-a285-4e45-829f-6f0bbb53b2e1",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:17:26.765Z"
+  },
+  {
+    "id": "c49a81b2-bf09-41f2-981a-31361f0336eb",
+    "action": "AUCTION_CLOSED",
+    "entityId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:17:26.769Z"
+  },
+  {
+    "id": "a620b8b6-e2f1-47d5-981c-5001cbeb533e",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "381abc70-fd17-4f3f-90f1-df2473473381",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "053dc8e1-4b71-4c4e-907b-2675d639a320",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T20:17:26.772Z"
+  },
+  {
+    "id": "557a179c-0a81-4773-89f5-6f3f78e1877d",
+    "action": "DEVICE_GRADED",
+    "entityId": "d5094984-4ac3-4dff-a205-7cabab376591",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:23:09.747Z"
+  },
+  {
+    "id": "ce5499a2-2bf6-4815-b5db-ed87a825cb13",
+    "action": "DEVICE_GRADED",
+    "entityId": "79af747e-3b7a-4d5f-9371-67e0c6c20717",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-25T20:23:09.750Z"
+  },
+  {
+    "id": "1a94b441-c4db-43ff-889f-6ea12437dc39",
+    "action": "DEVICE_GRADED",
+    "entityId": "51f5ba89-82b7-4b48-9bcc-8ecd2d40c05d",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-25T20:23:09.755Z"
+  },
+  {
+    "id": "cce7b4ed-cc2d-4261-86bc-049a5a19a61a",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-25T20:23:09.759Z"
+  },
+  {
+    "id": "90096a68-4ca8-45d9-8198-e522ac75c6d0",
+    "action": "BID_PLACED",
+    "entityId": "887d9d98-97ba-4c5f-b88d-e3bcb28f2214",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-25T20:23:09.764Z"
+  },
+  {
+    "id": "375276db-d76c-4aeb-96b6-73feca481d4c",
+    "action": "BID_PLACED",
+    "entityId": "a0afe2d1-7c71-427f-9239-a986768626d8",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:23:09.771Z"
+  },
+  {
+    "id": "e0d2eaf9-e616-424b-b503-7a9169e50f9c",
+    "action": "AUCTION_CLOSED",
+    "entityId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-25T20:23:09.775Z"
+  },
+  {
+    "id": "5c1fc917-930d-4dcb-a20c-ef240bc81529",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "c073172b-1180-47a9-a822-1cda8353d460",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "b8646a3e-7ba2-43ff-97f2-5493ebcedfbe",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-25T20:23:09.780Z"
+  },
+  {
+    "id": "78193dfd-edd8-4a05-b669-4f95cf12eb55",
+    "action": "DEVICE_GRADED",
+    "entityId": "89b80317-2dcd-4b19-b812-08131ec6812b",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T06:51:38.665Z"
+  },
+  {
+    "id": "4bc6a1cc-1f3b-46cf-81ea-215f2720fba2",
+    "action": "DEVICE_GRADED",
+    "entityId": "64a2be0b-b3f4-4cee-9681-5af72d72ab4e",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T06:51:38.669Z"
+  },
+  {
+    "id": "e5fe9a6f-5889-4d9c-bdf0-9835384c9268",
+    "action": "DEVICE_GRADED",
+    "entityId": "782cb693-0833-4cc0-af0b-3cf30e11938e",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T06:51:38.671Z"
+  },
+  {
+    "id": "1b3a02d2-f8b7-4e52-99c0-4492a3a71c20",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T06:51:38.673Z"
+  },
+  {
+    "id": "0e64d228-44e9-43dc-ac9e-3abc7a4f4447",
+    "action": "BID_PLACED",
+    "entityId": "232b9cef-30c7-4e25-9fca-845139019ec1",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T06:51:38.676Z"
+  },
+  {
+    "id": "369ad741-5244-4fd6-a233-a6376dfe34b5",
+    "action": "BID_PLACED",
+    "entityId": "c84c2327-adc3-40ea-87e9-b664b4a80244",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T06:51:38.679Z"
+  },
+  {
+    "id": "b801f1f1-2a69-4fd0-9cec-48594750a6e8",
+    "action": "AUCTION_CLOSED",
+    "entityId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T06:51:38.682Z"
+  },
+  {
+    "id": "958770d5-4ed0-46a0-ab5e-6c89ef0f73e3",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "be52af89-371e-46ac-8e3a-f655e0658ef5",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "badc00d0-4ecc-46c9-a325-f9153b303e34",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T06:51:38.687Z"
+  },
+  {
+    "id": "158343fd-2000-4199-a289-901d0d5aa1af",
+    "action": "DEVICE_GRADED",
+    "entityId": "625f8687-69fb-4767-adea-6f97cc006675",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:03:12.469Z"
+  },
+  {
+    "id": "40ac09c9-615d-4bd3-af8c-ea8255f3fe5a",
+    "action": "DEVICE_GRADED",
+    "entityId": "27e53fb4-0c3b-40bf-a3eb-fe45251fc232",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T10:03:12.472Z"
+  },
+  {
+    "id": "59fc9444-e3b2-4ff2-a6b1-86ed7fa92871",
+    "action": "DEVICE_GRADED",
+    "entityId": "b5d89c47-c8c9-43bd-b329-fedd640562f9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:03:12.475Z"
+  },
+  {
+    "id": "148b0b26-609d-49ae-8c9d-cdf3ba33adde",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T10:03:12.479Z"
+  },
+  {
+    "id": "26a31865-c148-4e38-96ad-01e787e94869",
+    "action": "BID_PLACED",
+    "entityId": "3b83234e-07a9-4804-b15b-42509cfd203d",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T10:03:12.484Z"
+  },
+  {
+    "id": "268251dd-2f36-4c1e-abcc-fbb7cf82cfa3",
+    "action": "BID_PLACED",
+    "entityId": "cea8e819-8abd-41ce-9615-c121f85ff183",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:03:12.487Z"
+  },
+  {
+    "id": "d7977cc1-a9ef-4ab2-9cb8-9d839ec1252d",
+    "action": "AUCTION_CLOSED",
+    "entityId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:03:12.490Z"
+  },
+  {
+    "id": "e9fb283c-5c03-48f1-9d75-edd0d0fc69fd",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "15440a5f-bca6-43e7-97a4-8dc5e01113aa",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "760dfdec-eb08-45f7-aa39-46e849f535e3",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T10:03:12.495Z"
+  },
+  {
+    "id": "96643b1e-0378-4068-81a5-7f708a5b60a5",
+    "action": "DEVICE_GRADED",
+    "entityId": "2fbd9546-a19f-4dd0-a548-345ffdd3b3e8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:11:02.849Z"
+  },
+  {
+    "id": "35148c83-16df-4769-aa9f-ae7e44e4ab47",
+    "action": "DEVICE_GRADED",
+    "entityId": "3acdbc9a-9fa2-4a66-a122-6272ecf78722",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T10:11:02.853Z"
+  },
+  {
+    "id": "312e090e-4a35-4735-9ff3-0fecb47f2371",
+    "action": "DEVICE_GRADED",
+    "entityId": "765bcb42-63b1-4223-8d54-3c58d1144705",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:11:02.856Z"
+  },
+  {
+    "id": "2b200327-ff73-41ad-b9d5-3b3dd92594b1",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T10:11:02.858Z"
+  },
+  {
+    "id": "b11b4954-0506-4adb-a43e-be3803f97a5a",
+    "action": "BID_PLACED",
+    "entityId": "d05a6bff-48f6-493a-8f35-834c48b9457a",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T10:11:02.861Z"
+  },
+  {
+    "id": "52427908-55e6-4aaf-baaf-6f73d3b2bc3b",
+    "action": "BID_PLACED",
+    "entityId": "ef4bfe4d-d995-49b4-83e4-deef0371a050",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:11:02.864Z"
+  },
+  {
+    "id": "02206dd7-5346-4c13-b8c1-0eb90c3bf7f4",
+    "action": "AUCTION_CLOSED",
+    "entityId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:11:02.867Z"
+  },
+  {
+    "id": "7bbac71d-25cb-4dfc-869a-e85aef745c5f",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "8a16b6a2-1c47-47dc-a729-7c801d3d4822",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "1148698f-4bc0-44c5-9e99-e750d6cd264a",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T10:11:02.873Z"
+  },
+  {
+    "id": "0b91ae0a-df09-492e-a044-3286676ba7c5",
+    "action": "DEVICE_GRADED",
+    "entityId": "61947ae8-458b-4f33-a33d-4dc8b558f7a6",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:41:01.421Z"
+  },
+  {
+    "id": "8642dff6-9055-4e1d-88d5-6dacd03e8bde",
+    "action": "DEVICE_GRADED",
+    "entityId": "4954071a-1d96-4b3d-95d3-46520b61961c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T10:41:01.424Z"
+  },
+  {
+    "id": "6348544b-7f99-430d-8cc7-9dbffe4724a4",
+    "action": "DEVICE_GRADED",
+    "entityId": "33f87b79-006a-4f60-ad94-e497cf449aa9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:41:01.427Z"
+  },
+  {
+    "id": "9993b3be-c435-4db4-864a-8b0c0345c987",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "d87c8680-4794-466f-a831-9d2404b0f626",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T10:41:01.429Z"
+  },
+  {
+    "id": "7506573d-5383-4ae8-8710-d1a4a1c45d5b",
+    "action": "BID_PLACED",
+    "entityId": "4648a2f2-8ef6-43f8-819b-52c32459e105",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "d87c8680-4794-466f-a831-9d2404b0f626",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T10:41:01.433Z"
+  },
+  {
+    "id": "ccc974aa-224e-47f7-911c-59eb513f92eb",
+    "action": "BID_PLACED",
+    "entityId": "6949b020-f568-4214-a0e7-2a12190c3323",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "d87c8680-4794-466f-a831-9d2404b0f626",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:41:01.436Z"
+  },
+  {
+    "id": "6a4cc115-0be3-4eaa-b1ff-9b463fe6c68e",
+    "action": "AUCTION_CLOSED",
+    "entityId": "d87c8680-4794-466f-a831-9d2404b0f626",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:41:01.439Z"
+  },
+  {
+    "id": "aa1a273a-352a-41b6-8123-9fdd06f41047",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "2178bf7c-77d7-4b9d-8910-b126656cd75e",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "d87c8680-4794-466f-a831-9d2404b0f626",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T10:41:01.444Z"
+  },
+  {
+    "id": "c9203238-6777-469f-8b2c-bc02eccf7cf8",
+    "action": "DEVICE_GRADED",
+    "entityId": "f936b227-7573-4d24-8afc-1d42d065162f",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:49:37.941Z"
+  },
+  {
+    "id": "73768766-2a27-4733-89ab-b8dd4b4056bb",
+    "action": "DEVICE_GRADED",
+    "entityId": "2c6ec772-9acc-442e-8ab4-96a783dbadcb",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T10:49:37.944Z"
+  },
+  {
+    "id": "1f2d505e-2b36-4dfe-92c8-b42918fce0d0",
+    "action": "DEVICE_GRADED",
+    "entityId": "e8df5e03-058f-4d39-8431-8d17521677ac",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:49:37.946Z"
+  },
+  {
+    "id": "c94dc2dc-abba-4d13-b36c-f754e4d33b74",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T10:49:37.949Z"
+  },
+  {
+    "id": "a8ead344-e15d-4bb3-a067-a0a24209567f",
+    "action": "BID_PLACED",
+    "entityId": "074c28da-2152-4d9b-b83e-87497f62dfa0",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T10:49:37.952Z"
+  },
+  {
+    "id": "187c18f1-5e3d-4208-8c8b-69a0cf5ac21e",
+    "action": "BID_PLACED",
+    "entityId": "d2810039-8d51-4d7e-9a96-e2eee2be915c",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:49:37.956Z"
+  },
+  {
+    "id": "9b75899c-935f-469c-8416-100759e0c54b",
+    "action": "AUCTION_CLOSED",
+    "entityId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:49:37.959Z"
+  },
+  {
+    "id": "e8548f02-3015-445c-a68d-026bcfbb3de3",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "53188ca2-0117-40ff-9acb-46857812ec64",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "d8c606ce-1379-4167-985c-2cfa24d6a27c",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T10:49:37.963Z"
+  },
+  {
+    "id": "ea32f8e5-bff7-4213-bc82-c3fcd0017c5a",
+    "action": "DEVICE_GRADED",
+    "entityId": "5afab716-9414-436e-9121-8c2fc3c107aa",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:50:36.172Z"
+  },
+  {
+    "id": "e302e70a-076d-43bf-89a5-a2db0b57bc81",
+    "action": "DEVICE_GRADED",
+    "entityId": "db34a90f-2ae3-4e9e-8cc2-7c1f70a617f3",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T10:50:36.175Z"
+  },
+  {
+    "id": "3ef952f0-0a85-4270-b4d2-10dd5a5bb7c7",
+    "action": "DEVICE_GRADED",
+    "entityId": "a258f326-aeec-43e1-9d57-74c77c13ba29",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T10:50:36.179Z"
+  },
+  {
+    "id": "85f1601e-1452-493f-9e85-3f6b5be4a550",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T10:50:36.181Z"
+  },
+  {
+    "id": "2af2905a-9645-4853-923a-d742206c198b",
+    "action": "BID_PLACED",
+    "entityId": "2435db3a-9435-4a3f-8306-69a584466a8b",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T10:50:36.184Z"
+  },
+  {
+    "id": "25895498-f81d-4e35-8e6a-1783e348f68a",
+    "action": "BID_PLACED",
+    "entityId": "35bf0176-26c3-4860-918e-71e79279777b",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:50:36.188Z"
+  },
+  {
+    "id": "a645279d-d21a-4ecf-ba4d-8d6b383def17",
+    "action": "AUCTION_CLOSED",
+    "entityId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T10:50:36.191Z"
+  },
+  {
+    "id": "a30c8356-6386-46f4-b007-f6419cc3b58e",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "469af867-aa6f-4dd9-8e3c-05912c7f0703",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "8b53a68a-9241-4750-a80b-4af3e4900de7",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T10:50:36.195Z"
+  },
+  {
+    "id": "1c12929c-402b-42f1-8b1d-90466eb7a953",
+    "action": "DEVICE_GRADED",
+    "entityId": "78934211-794d-4b13-bc7e-d8945fb0197f",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T11:15:26.002Z"
+  },
+  {
+    "id": "461c3858-7560-418f-b04a-203e4d00d0d4",
+    "action": "DEVICE_GRADED",
+    "entityId": "44981f5d-e23e-4838-b8b6-c05b410d329d",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T11:15:26.005Z"
+  },
+  {
+    "id": "bbdada26-cddc-4a10-8814-beb3c4f2f39a",
+    "action": "DEVICE_GRADED",
+    "entityId": "1b5e7858-ed7a-4dbd-b80f-4a9d3ec23fd8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T11:15:26.007Z"
+  },
+  {
+    "id": "8e7d5b15-ed87-4290-a329-ee79dba9d577",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T11:15:26.010Z"
+  },
+  {
+    "id": "f0cced52-8080-451e-b0fa-7cf628f571e2",
+    "action": "BID_PLACED",
+    "entityId": "74dd905d-72a3-4b3d-af7a-e3e395a503c7",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T11:15:26.014Z"
+  },
+  {
+    "id": "25d65e98-d6b8-4fd1-9cd6-d40ce85b5034",
+    "action": "BID_PLACED",
+    "entityId": "3d4723b1-4a45-4efc-a2ad-2e66620c8cef",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T11:15:26.018Z"
+  },
+  {
+    "id": "b1976409-07f9-4291-834f-cc3e3a1336c7",
+    "action": "AUCTION_CLOSED",
+    "entityId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T11:15:26.021Z"
+  },
+  {
+    "id": "734b9617-0b73-490f-9d21-6f7d49190a2b",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "b6237c38-a72d-44b0-b631-4774c3f82ac1",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "6f10ba06-b6f8-43f1-a19e-9f257238b629",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T11:15:26.025Z"
+  },
+  {
+    "id": "1c4c80aa-08bd-4060-8b7d-712cf1d9f599",
+    "action": "DEVICE_GRADED",
+    "entityId": "483d5802-c891-4681-9129-e09ae9ce20c2",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T12:56:49.490Z"
+  },
+  {
+    "id": "1dc5f36c-d9eb-400b-8bdd-4f9bb0f6c3fe",
+    "action": "DEVICE_GRADED",
+    "entityId": "bc2e7dce-ca10-43b2-ba0e-3bdeec46c8c0",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T12:56:49.495Z"
+  },
+  {
+    "id": "67d3d06c-649b-48ff-acb7-128b6c091fc0",
+    "action": "DEVICE_GRADED",
+    "entityId": "5caa00f9-6ff5-474c-b50d-fc93a5269541",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T12:56:49.499Z"
+  },
+  {
+    "id": "ad43639a-f97c-4d38-b7a2-bd4f36f099ac",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T12:56:49.502Z"
+  },
+  {
+    "id": "007ef872-9ed5-4cf4-a42d-91e01fd0f564",
+    "action": "BID_PLACED",
+    "entityId": "7fb47db1-73b9-4eec-91e8-0beda33ce48e",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T12:56:49.505Z"
+  },
+  {
+    "id": "f73f789d-c5e6-4801-811b-26bd728f47b3",
+    "action": "BID_PLACED",
+    "entityId": "41b40980-5cc9-4a45-88a4-7403e11aa07c",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T12:56:49.512Z"
+  },
+  {
+    "id": "0b7d3ca7-fc04-4fdb-86c5-58719c851a50",
+    "action": "AUCTION_CLOSED",
+    "entityId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T12:56:49.515Z"
+  },
+  {
+    "id": "a505ff8f-c050-4e33-81d3-99163fe6a494",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "66b14903-06b3-43cc-a514-5cc1d783ccca",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "d8dae629-2554-4729-980c-e4931f3aefb2",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T12:56:49.518Z"
+  },
+  {
+    "id": "91080be3-b4be-4233-bb1b-2c63e0989ab8",
+    "action": "DEVICE_GRADED",
+    "entityId": "c37796b4-2814-4f50-b534-8a361bebf7d9",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T13:02:47.950Z"
+  },
+  {
+    "id": "78c0b71b-c5a1-45f0-b741-fb191ff541b0",
+    "action": "DEVICE_GRADED",
+    "entityId": "024b66aa-74c8-44ba-a18a-f4791c8974f1",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-26T13:02:47.954Z"
+  },
+  {
+    "id": "e2b1a10f-f0bd-4b75-8ae6-2df8d03f3e1d",
+    "action": "DEVICE_GRADED",
+    "entityId": "fc04da65-42ff-4696-8192-176c2dd6aed1",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-26T13:02:47.957Z"
+  },
+  {
+    "id": "c7d2db57-a23c-4b0a-bf88-8413764cfd51",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-26T13:02:47.960Z"
+  },
+  {
+    "id": "156166e8-1cf1-4ac7-9101-83bc50fdc1fb",
+    "action": "BID_PLACED",
+    "entityId": "26251258-6936-4f4d-91a9-cbe410fa5a4a",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-26T13:02:47.966Z"
+  },
+  {
+    "id": "1eedd549-b455-4fe5-afd4-e248a90fcd32",
+    "action": "BID_PLACED",
+    "entityId": "91eac55c-6022-4d56-ab9e-088941b9e850",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-26T13:02:47.969Z"
+  },
+  {
+    "id": "b2ec49b7-c5bb-43bc-89ec-b34c3435232e",
+    "action": "AUCTION_CLOSED",
+    "entityId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-26T13:02:47.972Z"
+  },
+  {
+    "id": "78e6dc20-6306-4f23-a4f1-24931952413c",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "f483f31d-8d7c-4348-b558-b73eea067f00",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "4fcdf6d0-8226-409e-9320-23620092bdc0",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-26T13:02:47.977Z"
+  },
+  {
+    "id": "e352a234-8554-4b30-8c06-da4ebcc0b332",
+    "action": "DEVICE_GRADED",
+    "entityId": "214c86b3-b29a-42cf-9e75-499dca4bfdf7",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:06:29.162Z"
+  },
+  {
+    "id": "97d8682e-6c18-47ab-8086-3a45d91e1fe7",
+    "action": "DEVICE_GRADED",
+    "entityId": "7493fba3-b6ac-4b1e-b567-f6aa289b835c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T14:06:29.165Z"
+  },
+  {
+    "id": "397d61e0-62d4-407a-91b6-849d1fa6c616",
+    "action": "DEVICE_GRADED",
+    "entityId": "45a0ed17-13fd-449e-8a5c-0c75e5a30a65",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:06:29.168Z"
+  },
+  {
+    "id": "620e4151-f4de-4d75-b206-04c36f5b26c1",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T14:06:29.171Z"
+  },
+  {
+    "id": "7d9495fd-28b5-4a0d-9cea-3fb95b88583c",
+    "action": "BID_PLACED",
+    "entityId": "a919c5c8-a3b8-4440-92e2-49b7f21896e2",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T14:06:29.176Z"
+  },
+  {
+    "id": "f4d63ccd-3e29-4260-a730-237409cf2272",
+    "action": "BID_PLACED",
+    "entityId": "34349097-d844-426b-ab4c-f3f47465d2ac",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:06:29.180Z"
+  },
+  {
+    "id": "acd4220c-f969-4431-9c1b-b279c4f58c81",
+    "action": "AUCTION_CLOSED",
+    "entityId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:06:29.183Z"
+  },
+  {
+    "id": "c9b6c67d-6f0c-4a31-ab2e-404784434930",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "abacfcde-65b9-44d5-8a56-9a5a1fed4c8a",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "f6c5e586-4fd5-4a27-9fca-00ff760ce1a8",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T14:06:29.187Z"
+  },
+  {
+    "id": "7e48ca35-e5a5-4f1e-807a-ac3351dac1e6",
+    "action": "DEVICE_GRADED",
+    "entityId": "2983dbc2-a119-4d2e-aa3e-49a2dec81f00",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:11:32.302Z"
+  },
+  {
+    "id": "24ac419b-3a14-49bb-a2d1-66e199f0d7b9",
+    "action": "DEVICE_GRADED",
+    "entityId": "20f3328e-0693-442f-a699-d19f35ec944f",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T14:11:32.306Z"
+  },
+  {
+    "id": "ed22cb74-4e2c-40b4-aaca-0ce7fd885d7d",
+    "action": "DEVICE_GRADED",
+    "entityId": "ecce81cf-d0af-40ad-9fdb-4044c4be07e2",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:11:32.309Z"
+  },
+  {
+    "id": "81ed31a9-da40-46ff-92e7-2a07bcbd9622",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T14:11:32.312Z"
+  },
+  {
+    "id": "0c05c98b-84a7-48fa-a231-e14ce8a76fb1",
+    "action": "BID_PLACED",
+    "entityId": "1bc4eac5-d540-40b2-9089-9cb47a8e2491",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T14:11:32.316Z"
+  },
+  {
+    "id": "9da14135-efb7-46a6-b148-f00cfe62993e",
+    "action": "BID_PLACED",
+    "entityId": "d78c8560-eb4c-428b-a411-3bb7fdc90389",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:11:32.319Z"
+  },
+  {
+    "id": "69519f4e-5cf4-4138-89f8-be9a160a5528",
+    "action": "AUCTION_CLOSED",
+    "entityId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:11:32.323Z"
+  },
+  {
+    "id": "1e265988-a36b-491d-aeb0-84f7fbf60b2b",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "ace83473-17a7-4d94-a37c-f13c7959fe8a",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "f9daeec4-fbf5-4cca-9aaa-08b293280841",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T14:11:32.327Z"
+  },
+  {
+    "id": "9a1b403b-aff1-4617-9668-def612f1a281",
+    "action": "DEVICE_GRADED",
+    "entityId": "a502a4d9-5947-433d-85d9-9843a47882d8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:54:12.284Z"
+  },
+  {
+    "id": "a80d1503-e1d4-41db-8cb7-dc601cc41be2",
+    "action": "DEVICE_GRADED",
+    "entityId": "0ddd6078-beef-4601-85e8-fe2212fbc2f2",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T14:54:12.292Z"
+  },
+  {
+    "id": "2ab10cee-54fc-4115-89c2-ef1b81ee9f00",
+    "action": "DEVICE_GRADED",
+    "entityId": "87d0b4ed-83c7-4256-8ca8-177e1a3fd871",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T14:54:12.298Z"
+  },
+  {
+    "id": "5b012e6d-ed0b-4d6f-8a57-200d1ffd4fd6",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T14:54:12.306Z"
+  },
+  {
+    "id": "424bfc39-d047-4a41-a3bf-48554c010232",
+    "action": "BID_PLACED",
+    "entityId": "a1fd6e18-1de2-4a29-bf32-5cdeed1ddeb8",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T14:54:12.312Z"
+  },
+  {
+    "id": "31cdcacf-f304-46a2-ae5e-15072bd4eb97",
+    "action": "BID_PLACED",
+    "entityId": "ff5382a2-b6d0-48bc-b7d0-b436560d6f27",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:54:12.321Z"
+  },
+  {
+    "id": "9dd35716-93c2-436e-b176-edb1808ca930",
+    "action": "AUCTION_CLOSED",
+    "entityId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T14:54:12.326Z"
+  },
+  {
+    "id": "74468242-dc4d-42fd-be55-c9136dc551b2",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "0ae04997-6076-4581-9af1-0f6b06fd7650",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "7a8b6747-73a9-4b19-adb3-ca70be96546e",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T14:54:12.332Z"
+  },
+  {
+    "id": "6707dd80-7dda-4a01-986f-770da493dff8",
+    "action": "DEVICE_GRADED",
+    "entityId": "0ff467e7-c342-444b-8208-82d37b7ba91b",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T15:26:17.969Z"
+  },
+  {
+    "id": "314909ec-d1ce-48c7-98f0-db66f1aa8293",
+    "action": "DEVICE_GRADED",
+    "entityId": "e16956c0-032c-453f-bba3-d1b9b5b5fe9c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T15:26:17.974Z"
+  },
+  {
+    "id": "3202c7df-d775-48a3-b436-9cf1bf7bf439",
+    "action": "DEVICE_GRADED",
+    "entityId": "9fe76fe6-9a3d-43d9-a70b-2feca0dd65cf",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T15:26:17.977Z"
+  },
+  {
+    "id": "d847dfda-c429-4239-8e6c-8b111be58c05",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "0215b95d-b1cc-40a1-921b-540c12611143",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T15:26:17.980Z"
+  },
+  {
+    "id": "874f4269-e1bd-4bba-848a-25216dde2bce",
+    "action": "BID_PLACED",
+    "entityId": "c32352ee-f969-4a6b-8072-a40a83a106a6",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "0215b95d-b1cc-40a1-921b-540c12611143",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T15:26:17.985Z"
+  },
+  {
+    "id": "0e300646-20e8-4dde-9395-41cff0c1f7ed",
+    "action": "BID_PLACED",
+    "entityId": "6d80bad5-82f4-463d-aca1-7382265e908d",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "0215b95d-b1cc-40a1-921b-540c12611143",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T15:26:17.990Z"
+  },
+  {
+    "id": "22ee6082-706f-4536-9f4d-c3df298dfbed",
+    "action": "AUCTION_CLOSED",
+    "entityId": "0215b95d-b1cc-40a1-921b-540c12611143",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T15:26:17.993Z"
+  },
+  {
+    "id": "085d4927-75b1-4c12-957c-b6caf58c8872",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "78ccc72a-8c1d-409b-8361-dcb7e21b7bae",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "0215b95d-b1cc-40a1-921b-540c12611143",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T15:26:17.997Z"
+  },
+  {
+    "id": "2d31b917-8020-45b1-adcf-7e6ed87460ba",
+    "action": "DEVICE_GRADED",
+    "entityId": "470cbab9-42c0-428a-92f5-ac288c6f41d0",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:07:55.368Z"
+  },
+  {
+    "id": "6602d748-7faa-4608-93d7-8bbb0f768d5a",
+    "action": "DEVICE_GRADED",
+    "entityId": "a8a61a1b-bfe5-4e4e-98ed-3a2f50b522eb",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T17:07:55.372Z"
+  },
+  {
+    "id": "175c7456-9ea2-4f32-95ae-5c87b07c031c",
+    "action": "DEVICE_GRADED",
+    "entityId": "4898a149-dc65-4fe5-951a-76974ca9bd14",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:07:55.375Z"
+  },
+  {
+    "id": "75784d09-3878-4da2-9872-9ac9986947a0",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T17:07:55.378Z"
+  },
+  {
+    "id": "629f8b73-9e69-471e-8bfa-68c3bea946ce",
+    "action": "BID_PLACED",
+    "entityId": "f1c0683e-16e5-4eff-96b6-dbc2fea22436",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T17:07:55.382Z"
+  },
+  {
+    "id": "a368fe9a-b4a1-4d10-8a0a-fa6dc34ac054",
+    "action": "BID_PLACED",
+    "entityId": "3f23d038-8a7b-40b7-b2f3-4fcadf22799e",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:07:55.386Z"
+  },
+  {
+    "id": "cdbf17f1-9476-4fc1-98a2-154fe3bc7703",
+    "action": "AUCTION_CLOSED",
+    "entityId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:07:55.391Z"
+  },
+  {
+    "id": "b6f8b6df-b42e-43a1-a78b-c34a0b3d759b",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "b0df8ae4-c900-48c5-81ac-4eb721fa4132",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "60e22db8-bb89-4815-8737-5b7a719f7bd1",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T17:07:55.395Z"
+  },
+  {
+    "id": "09cb61d6-eedd-4ad7-931f-151d01e8ff48",
+    "action": "DEVICE_GRADED",
+    "entityId": "fb4e8a84-46ff-454d-ba62-e90b5375eccf",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:50:20.624Z"
+  },
+  {
+    "id": "5d7a7036-18f2-4fa4-b970-a529886a3274",
+    "action": "DEVICE_GRADED",
+    "entityId": "db688360-51c7-4f48-9916-c403a8f7902c",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T17:50:20.632Z"
+  },
+  {
+    "id": "331f462d-2feb-42a3-b93f-56838cd35af8",
+    "action": "DEVICE_GRADED",
+    "entityId": "68589457-700c-4151-a526-9020e04d6256",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:50:20.637Z"
+  },
+  {
+    "id": "440db1b5-eaee-4bdd-818c-28803b8bcb5f",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T17:50:20.641Z"
+  },
+  {
+    "id": "7fe28564-9b62-4924-b6ac-8e97ecf6db79",
+    "action": "BID_PLACED",
+    "entityId": "0f8d106d-6936-46aa-9cb6-2640922fda50",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T17:50:20.645Z"
+  },
+  {
+    "id": "345d38a4-fb38-4c35-91ce-f8fc60cb55d4",
+    "action": "BID_PLACED",
+    "entityId": "23387de2-525d-4304-afb7-9ee04cbb48b8",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:50:20.650Z"
+  },
+  {
+    "id": "3b0dae1c-85fb-4961-8305-b718bb3daf41",
+    "action": "AUCTION_CLOSED",
+    "entityId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:50:20.654Z"
+  },
+  {
+    "id": "d95740fb-4d20-418d-aa9e-f8494dfc5bcf",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "bc25ab17-d894-4711-b0df-bf4b0bcf87fb",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "216aca22-03ae-420e-a7b5-ae1deec01575",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T17:50:20.659Z"
+  },
+  {
+    "id": "571e169d-3f86-4652-be59-85276ca4e034",
+    "action": "DEVICE_GRADED",
+    "entityId": "67bd8f7b-21e2-42ad-8d4b-b72a70fb1dc8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:50:36.650Z"
+  },
+  {
+    "id": "b9cec41b-29a1-4903-8425-84d284ad1ba8",
+    "action": "DEVICE_GRADED",
+    "entityId": "0b152333-2a76-4269-95f6-1e183862ea84",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T17:50:36.653Z"
+  },
+  {
+    "id": "7a0de13f-02a5-440e-a352-1feb2274211b",
+    "action": "DEVICE_GRADED",
+    "entityId": "e74d88aa-84cf-4367-9213-6253705b11e8",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T17:50:36.656Z"
+  },
+  {
+    "id": "2e7b777d-cd93-4c5f-9acb-d3cfa53203fa",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T17:50:36.659Z"
+  },
+  {
+    "id": "0c330747-6160-4ca8-96dc-c1f9fa2e1167",
+    "action": "BID_PLACED",
+    "entityId": "c97673e8-c67e-43bc-9975-99fadcfe86cf",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T17:50:36.663Z"
+  },
+  {
+    "id": "d1b0cab0-c1fb-42c4-b87c-0a1001da5177",
+    "action": "BID_PLACED",
+    "entityId": "242f8388-2fe0-452e-a893-39f735071a8d",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:50:36.666Z"
+  },
+  {
+    "id": "4f405c6d-7b5d-4c9a-9d68-dc108ebca9a0",
+    "action": "AUCTION_CLOSED",
+    "entityId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T17:50:36.670Z"
+  },
+  {
+    "id": "0b106fdc-5f92-4f4e-95fc-3ba9275d054c",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "3402e9dc-6cae-46f9-8999-9c565521bd84",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "11a74c75-3157-4858-bb5a-057cf23e5987",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T17:50:36.674Z"
+  },
+  {
+    "id": "8cde9895-44cd-4f56-8984-2859b2560617",
+    "action": "DEVICE_GRADED",
+    "entityId": "74de7008-0454-4256-90b3-442be2348121",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T19:57:06.272Z"
+  },
+  {
+    "id": "d8674a78-dc46-4826-b835-05bf734c2f0e",
+    "action": "DEVICE_GRADED",
+    "entityId": "a758920f-632b-4a87-aa36-4e7bb81aa493",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T19:57:06.276Z"
+  },
+  {
+    "id": "2d7813f8-9486-4240-8055-ed71f508279d",
+    "action": "DEVICE_GRADED",
+    "entityId": "d44f197a-6bb0-4f37-a3fd-8674d5f01b9f",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T19:57:06.279Z"
+  },
+  {
+    "id": "7c9104b7-8f43-4efc-807b-af11aa96c518",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T19:57:06.282Z"
+  },
+  {
+    "id": "20039c21-77b6-4987-86d5-b3bdd08dc684",
+    "action": "BID_PLACED",
+    "entityId": "6b5a7cb5-cabc-4a51-924e-67403c242481",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T19:57:06.286Z"
+  },
+  {
+    "id": "45698cc5-5a5b-4b56-b125-2efcc265ed37",
+    "action": "BID_PLACED",
+    "entityId": "a9de1777-0d6b-4427-b71b-a981252c0d81",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T19:57:06.291Z"
+  },
+  {
+    "id": "c1b94113-b2f8-4af1-aaac-721f27105a1b",
+    "action": "AUCTION_CLOSED",
+    "entityId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T19:57:06.294Z"
+  },
+  {
+    "id": "92b4e6d9-34be-4497-ab4e-e134228c8ac5",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "7a1fda1d-eec4-476c-be10-0c701675b60b",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "ae100ab7-1ab2-4368-a540-3adcc8968bf3",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T19:57:06.298Z"
+  },
+  {
+    "id": "188791d1-d475-4584-b7fb-dec7dce8f649",
+    "action": "DEVICE_GRADED",
+    "entityId": "49a2b69f-7ead-48bf-bcff-28690eb59b35",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T20:10:46.620Z"
+  },
+  {
+    "id": "30c17720-b5d3-4346-b710-25f30fa192d0",
+    "action": "DEVICE_GRADED",
+    "entityId": "91fe1fbb-32e8-426e-8259-6310fa43b08b",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T20:10:46.623Z"
+  },
+  {
+    "id": "c5dfa4b5-3b90-42c5-b729-c255dc78fbbb",
+    "action": "DEVICE_GRADED",
+    "entityId": "e4c1186f-444c-46f7-b42f-700edaca7c96",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T20:10:46.626Z"
+  },
+  {
+    "id": "2797d1f9-7a59-4d03-ad24-e91e6c5d6dcb",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T20:10:46.630Z"
+  },
+  {
+    "id": "a8ffa223-1c75-4de1-be24-803292e7b87a",
+    "action": "BID_PLACED",
+    "entityId": "08986d8b-92fe-4d1d-92b3-2a84fee67f49",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T20:10:46.634Z"
+  },
+  {
+    "id": "9c7a1239-ce79-4585-8444-2ff856f16715",
+    "action": "BID_PLACED",
+    "entityId": "dd8e73b5-4977-4cb0-a29a-f0356a18724b",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T20:10:46.637Z"
+  },
+  {
+    "id": "d89fa6e8-722f-4c02-bf9f-9ec93919ba9f",
+    "action": "AUCTION_CLOSED",
+    "entityId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T20:10:46.641Z"
+  },
+  {
+    "id": "bf9bcd77-3c87-4b20-9a09-1e58db8be7e2",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "10067520-a79b-4e59-8950-622aedabced6",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "5a2cc5ae-12a9-433a-972d-65cee1717dbf",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T20:10:46.645Z"
+  },
+  {
+    "id": "47dc7138-b5bd-4c43-a664-b82074497833",
+    "action": "DEVICE_GRADED",
+    "entityId": "d1bafe0c-7c5d-4515-8f0b-b5237ce1b1c0",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-01",
+      "grade": "A",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T20:11:24.233Z"
+  },
+  {
+    "id": "3dd65af3-e61b-493b-b7fc-042b5c96b2cb",
+    "action": "DEVICE_GRADED",
+    "entityId": "a09e2485-80ba-47b1-ad31-e85ec5647a35",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-02",
+      "grade": "C",
+      "liIonHazard": true
+    },
+    "timestamp": "2026-09-28T20:11:24.236Z"
+  },
+  {
+    "id": "94990fe7-b0db-4d51-9d0d-137b70fec324",
+    "action": "DEVICE_GRADED",
+    "entityId": "20ef4a22-51a5-4200-8d67-1f23d84c5771",
+    "actorId": "SYSTEM",
+    "details": {
+      "itemId": "ITEM-TEST-AUCTION-03",
+      "grade": "B",
+      "liIonHazard": false
+    },
+    "timestamp": "2026-09-28T20:11:24.240Z"
+  },
+  {
+    "id": "c84c1ab8-156c-4242-b002-b9eb8940f031",
+    "action": "AUCTION_LOT_CREATED",
+    "entityId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "itemCount": 2,
+      "reservePrice": 500
+    },
+    "timestamp": "2026-09-28T20:11:24.242Z"
+  },
+  {
+    "id": "d94b8f18-4051-4de2-8e7a-809b322f7f2b",
+    "action": "BID_PLACED",
+    "entityId": "2fb4564a-6066-432d-a07d-4390ac38edfb",
+    "actorId": "RECYCLER-TEST-A",
+    "details": {
+      "lotId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+      "bidPricePerKg": 50,
+      "totalBidPrice": 115
+    },
+    "timestamp": "2026-09-28T20:11:24.246Z"
+  },
+  {
+    "id": "f59ec3be-62a9-4d0f-871c-56ab5566e883",
+    "action": "BID_PLACED",
+    "entityId": "427b7148-3970-48c9-b234-93c994f5e274",
+    "actorId": "RECYCLER-TEST-B",
+    "details": {
+      "lotId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+      "bidPricePerKg": 75,
+      "totalBidPrice": 172.5
+    },
+    "timestamp": "2026-09-28T20:11:24.249Z"
+  },
+  {
+    "id": "dc1bb1e5-d32e-4b03-9e81-eb800378cddb",
+    "action": "AUCTION_CLOSED",
+    "entityId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+    "actorId": "SYSTEM",
+    "details": {
+      "winnerId": "RECYCLER-TEST-B",
+      "finalPrice": 172.5
+    },
+    "timestamp": "2026-09-28T20:11:24.253Z"
+  },
+  {
+    "id": "e20dd43b-269a-43a7-9b9e-c9e3e44d8301",
+    "action": "PAYMENT_SETTLED",
+    "entityId": "fd72d3e3-d1d8-4c36-a3ef-095e40f4c85d",
+    "actorId": "KABADIWALA-TEST-01",
+    "details": {
+      "lotId": "0a770e64-eaa1-44d0-bd2a-21bc09d82646",
+      "payoutAmount": 168.75,
+      "upiVpa": "kabadiwala-test@upi",
+      "verifiedWeightKg": 2.25
+    },
+    "timestamp": "2026-09-28T20:11:24.257Z"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "EPR-TXN-2026-000001",
+    "certificateId": "EPR-CERT-2026-000001",
+    "producerId": "PROD-001",
+    "producerName": "TechVista India Pvt. Ltd.",
+    "category": "Laptop",
+    "weightKg": 2,
+    "amountINR": 60,
+    "obligationId": "OBL-2026-001",
+    "verificationHash": "sha256:3abc39d82759309d1f35cadd8b1ecce884b67418d0f1f4f7af1a4712dfc171cc",
+    "timestamp": "2026-09-28T20:11:34.419Z"
+  }
+]

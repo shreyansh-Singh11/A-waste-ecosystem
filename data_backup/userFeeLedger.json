@@ -1,0 +1,155 @@
+[
+  {
+    "receiptId": "512f4fc1-e3e4-40a1-b900-e1d4aeb3db19",
+    "householdId": "HH-TEST-001",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T04:43:21.605Z"
+  },
+  {
+    "receiptId": "b779b9c4-dd86-47f9-9d27-6714a9abf25b",
+    "householdId": "HH-TEST-1790327977495",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T09:19:37.496Z"
+  },
+  {
+    "receiptId": "cc06de06-4e5e-4186-9854-4e55920e3857",
+    "householdId": "HH-TEST-1790328000959",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T09:20:00.960Z"
+  },
+  {
+    "receiptId": "98adec8f-6ccc-4f72-93aa-e0cb597d7f01",
+    "householdId": "HH-TEST-1790328264648",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T09:24:24.649Z"
+  },
+  {
+    "receiptId": "1e0a0e51-675b-4842-a494-aa825bc76fdd",
+    "householdId": "HH-TEST-1790329677657",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T09:47:57.659Z"
+  },
+  {
+    "receiptId": "28dcf586-6f4e-404d-8869-fdcf4a5895d7",
+    "householdId": "HH-TEST-1790330869931",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T10:07:49.932Z"
+  },
+  {
+    "receiptId": "4e990025-6143-4087-a915-9b0e12cc86e0",
+    "householdId": "HH-TEST-1790331039931",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T10:10:39.933Z"
+  },
+  {
+    "receiptId": "481f876e-644f-4239-ab3d-8cf03b2188ce",
+    "householdId": "HH-TEST-1790332936124",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T10:42:16.125Z"
+  },
+  {
+    "receiptId": "3fa6ba9b-3a5f-477a-b127-1dd8df067701",
+    "householdId": "HH-TEST-1790333023829",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T10:43:43.832Z"
+  },
+  {
+    "receiptId": "ff5c34fb-9d95-483b-bce0-20e1b41d1330",
+    "householdId": "HH-TEST-1790334146831",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T11:02:26.833Z"
+  },
+  {
+    "receiptId": "45bf4688-d0ca-456b-adff-aff415ddac7a",
+    "householdId": "HH-TEST-1790334177173",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T11:02:57.176Z"
+  },
+  {
+    "receiptId": "0abcb696-89ff-41ca-8fa3-598bd3d66dfe",
+    "householdId": "HH-TEST-1790334381612",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T11:06:21.614Z"
+  },
+  {
+    "receiptId": "b1be5f1e-935b-4404-b8ef-896266e9dada",
+    "householdId": "HH-TEST-1790334518790",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T11:08:38.792Z"
+  },
+  {
+    "receiptId": "00851dc6-74a9-4613-945f-cff198005ca3",
+    "householdId": "HH-TEST-1790364155981",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T19:22:35.982Z"
+  },
+  {
+    "receiptId": "ac5f18f1-c2dc-4b60-9a5f-bf079acb1621",
+    "householdId": "HH-TEST-1790366445591",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T20:00:45.592Z"
+  },
+  {
+    "receiptId": "95fb1a5e-b687-4d75-be97-a1aaaa463cae",
+    "householdId": "HH-TEST-1790366822360",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T20:07:02.360Z"
+  },
+  {
+    "receiptId": "9e7772ad-2804-48c8-b64e-72e86b654533",
+    "householdId": "HH-TEST-1790367446981",
+    "amountINR": 100,
+    "monthYear": "2026-09",
+    "paymentMethod": "UPI",
+    "status": "PAID",
+    "paidAt": "2026-09-25T20:17:26.982Z"
+  }
+]

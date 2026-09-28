@@ -1,0 +1,29 @@
+{
+  "routes": [
+    {
+      "routePath": "/api/v1/identify-ewaste",
+      "mountPath": "/api/v1",
+      "method": "OPTIONS",
+      "module": [
+        "api/v1/identify-ewaste.js:onRequestOptions"
+      ]
+    },
+    {
+      "routePath": "/api/v1/identify-ewaste",
+      "mountPath": "/api/v1",
+      "method": "POST",
+      "module": [
+        "api/v1/identify-ewaste.js:onRequestPost"
+      ]
+    },
+    {
+      "routePath": "/api/:path*",
+      "mountPath": "/api",
+      "method": "",
+      "module": [
+        "api/[[path]].js:onRequest"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}

@@ -1,0 +1,56 @@
+{
+  "Smartphone": {
+    "harmfulComponents": ["Lithium-ion battery", "Lead solder", "Brominated flame retardants", "Trace gold, silver & palladium in circuitry"],
+    "healthEffects": "A damaged or crushed lithium battery can leak, overheat, or catch fire. Lead exposure from informal dismantling is linked to nerve and kidney damage, and brominated flame retardants have been associated with hormonal disruption.",
+    "environmentalEffects": "When dumped in landfills, batteries corrode and leach lithium, cobalt, and heavy metals into soil and groundwater. Circuit boards contain precious metals that are lost forever if not recovered through proper recycling.",
+    "properDisposalTip": "Never puncture or burn the battery. Hand the phone to a certified e-waste collector — the precious metals inside are valuable enough that many recyclers pay or offer credits for them."
+  },
+  "Laptop": {
+    "harmfulComponents": ["Lithium-ion battery", "Lead & tin solder", "Mercury in some older backlit screens", "Brominated flame retardants in plastics"],
+    "healthEffects": "Informal recycling (open-air burning of cables, acid stripping of boards) exposes workers and nearby residents to lead, mercury, and toxic fumes, which are linked to respiratory illness and neurological damage, especially in children.",
+    "environmentalEffects": "Heavy metals from an improperly discarded laptop can contaminate soil and groundwater for decades. The aluminum, copper, and rare-earth elements inside are fully recyclable but are wasted when the device goes to landfill.",
+    "properDisposalTip": "Wipe your data first, then hand it to a verified recycler. Working laptops are often refurbished and reused, which avoids the environmental cost of manufacturing a new one entirely."
+  },
+  "Computing Device": {
+    "harmfulComponents": ["Lead & tin solder on circuit boards", "Capacitors containing electrolytic chemicals", "Brominated flame retardants"],
+    "healthEffects": "Improper disassembly releases lead and other heavy metals as dust or fumes, which can cause long-term neurological and respiratory harm.",
+    "environmentalEffects": "Circuit boards leach metals into soil and water if landfilled. Proper recycling recovers copper, aluminum, and gold that would otherwise be mined again at high environmental cost.",
+    "properDisposalTip": "Hand the device over intact rather than dismantling it yourself — certified recyclers have the equipment to safely recover materials."
+  },
+  "Monitor": {
+    "harmfulComponents": ["Leaded glass (older CRT monitors)", "Mercury vapor (some backlights)", "Cadmium in some internal components"],
+    "healthEffects": "A cracked CRT monitor can release lead dust; damaged mercury backlights release vapor that's toxic if inhaled. Both are linked to nervous system damage with prolonged exposure.",
+    "environmentalEffects": "Lead and mercury from broken monitors are persistent environmental contaminants — they don't break down and accumulate in soil, water, and the food chain.",
+    "properDisposalTip": "Never break the screen to make it 'smaller' for disposal. Transport it whole to a collection centre equipped to handle glass and mercury safely."
+  },
+  "Battery / Power": {
+    "harmfulComponents": ["Lithium, cobalt & nickel (Li-ion)", "Lead & sulfuric acid (lead-acid)", "Cadmium (older Ni-Cd batteries)", "Mercury (some older button cells)"],
+    "healthEffects": "Batteries are one of the most hazardous e-waste categories. Puncturing or crushing them can cause fires or chemical burns. Cadmium and lead exposure are linked to kidney damage and developmental harm in children.",
+    "environmentalEffects": "A single battery in a landfill can contaminate a large volume of soil and groundwater with heavy metals. This is why batteries are treated as hazardous waste in most regulations, not ordinary trash.",
+    "properDisposalTip": "Never throw batteries in regular household trash. Tape terminals if damaged, and take them to a dedicated battery drop-off or e-waste collector — this category typically carries the highest hazardous-material credit bonus."
+  },
+  "Small Household Appliance": {
+    "harmfulComponents": ["Small lithium or lead-acid batteries", "PVC-coated wiring", "Lead solder on internal boards"],
+    "healthEffects": "Burning PVC-coated wire (a common informal recycling shortcut) releases dioxins, which are carcinogenic and persist in the body for years.",
+    "environmentalEffects": "Plastic housings that aren't recycled break down into microplastics; internal metals leach into soil if landfilled.",
+    "properDisposalTip": "Keep it intact and hand it to a collector rather than stripping wires yourself — wire burning is illegal in most jurisdictions precisely because of the health risk."
+  },
+  "Large Household Appliance": {
+    "harmfulComponents": ["Refrigerants (CFCs/HFCs in fridges & ACs)", "Compressor oils", "Lead in older wiring and solder", "Insulation foam blown with ozone-depleting gases"],
+    "healthEffects": "Refrigerant gases don't directly poison people on contact, but improperly vented CFCs contribute to ozone depletion, which increases UV exposure and skin cancer risk population-wide.",
+    "environmentalEffects": "A single fridge's refrigerant, if vented instead of safely recovered, can have the greenhouse impact of driving a car for a year. Compressor oil is also a groundwater contaminant if it leaks.",
+    "properDisposalTip": "Never puncture the refrigerant lines. These appliances need a specialized recycler that can safely recover the refrigerant before the unit is scrapped."
+  },
+  "Consumer Electronics": {
+    "harmfulComponents": ["Lead solder", "Brominated flame retardants in plastic casings", "Small internal batteries"],
+    "healthEffects": "Fumes from burning plastic casings (common in informal scrap yards) are linked to respiratory irritation and long-term cancer risk.",
+    "environmentalEffects": "Untreated plastics and flame retardants persist in the environment and can bioaccumulate up the food chain.",
+    "properDisposalTip": "Hand devices to a verified collector rather than disposing of them with regular household waste."
+  },
+  "default": {
+    "harmfulComponents": ["Heavy metals such as lead, mercury or cadmium", "Flame-retardant plastics", "Small internal batteries or capacitors"],
+    "healthEffects": "Informal handling of electronic waste — burning, acid stripping, or manual disassembly without protection — exposes people to toxic metals and fumes linked to respiratory, neurological, and developmental harm.",
+    "environmentalEffects": "Electronic waste sent to landfill leaches heavy metals and chemicals into soil and groundwater, and wastes recoverable materials like copper, aluminum, and precious metals.",
+    "properDisposalTip": "Don't put this in regular household trash. Hand it to a verified collection centre or recycler so hazardous materials are handled safely and valuable materials are recovered."
+  }
+}

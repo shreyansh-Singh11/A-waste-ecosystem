@@ -1,0 +1,249 @@
+[
+  {
+    "incidentId": "HAZMAT-INCIDENT-DEMO-01",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2, Govindpura Industrial Area"
+    },
+    "description": "Expanded Li-Ion battery pack showing rapid thermal inflation and smoke venting",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "ACTIVE_CONTAINMENT",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T16:00:00.000Z"
+    },
+    "triggeredAt": "2026-09-25T16:00:00.000Z",
+    "resolvedAt": null,
+    "resolutionNotes": null
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-9EB9BBA0",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T19:49:13.376Z"
+    },
+    "triggeredAt": "2026-09-25T19:49:13.376Z",
+    "resolvedAt": "2026-09-25T19:49:13.378Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-68E0982E",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:00:38.976Z"
+    },
+    "triggeredAt": "2026-09-25T20:00:38.976Z",
+    "resolvedAt": "2026-09-25T20:00:38.979Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-A73722E2",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:00:45.691Z"
+    },
+    "triggeredAt": "2026-09-25T20:00:45.691Z",
+    "resolvedAt": "2026-09-25T20:00:45.693Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-8A569325",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:01:13.903Z"
+    },
+    "triggeredAt": "2026-09-25T20:01:13.903Z",
+    "resolvedAt": "2026-09-25T20:01:13.906Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-7C04E627",
+    "incidentType": "BIO_HAZARD_PATHOGEN_SPILL",
+    "severity": "LEVEL_3_CRITICAL_EVACUATION",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-500M",
+    "location": {
+      "address": "Apex Hospital BMW Quarantine Bay 4",
+      "lat": 23.21,
+      "lng": 77.42
+    },
+    "description": "Yellow bag puncture with fluid spill",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Deploy 1% Sodium Hypochlorite aerosol disinfectant fogging",
+      "Immediate quarantine of transport corridor; zero unauthorized entry",
+      "Issue Level-C Tyvek suits and dual-cartridge respirators to crew",
+      "Direct rapid incident report to MPPCB Bio-Medical Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:02:05.152Z"
+    },
+    "triggeredAt": "2026-09-25T20:02:05.152Z",
+    "resolvedAt": "2026-09-25T20:02:05.155Z",
+    "resolutionNotes": "Decontaminated using 1% Sodium Hypochlorite fogging.",
+    "clearedBy": "DISTRICT-DISASTER-DIRECTOR"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-F054B557",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:07:02.460Z"
+    },
+    "triggeredAt": "2026-09-25T20:07:02.460Z",
+    "resolvedAt": "2026-09-25T20:07:02.463Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  },
+  {
+    "incidentId": "HAZMAT-INCIDENT-7F7530B4",
+    "incidentType": "BATTERY_THERMAL_RUNAWAY",
+    "severity": "LEVEL_2_ELEVATED",
+    "perimeterLockCode": "HAZMAT-LOCK-RADIUS-150M",
+    "location": {
+      "lat": 23.234,
+      "lng": 77.435,
+      "address": "Central E-Waste Warehouse Bay 2"
+    },
+    "description": "Swollen Li-Ion battery pack thermal inflation",
+    "reporterId": "INSP-HAZMAT-DUTY",
+    "status": "RESOLVED",
+    "sopActions": [
+      "Submerge unit immediately in inert Pyro-Gel / vermiculite fire tank",
+      "Isolate 25m perimeter; deploy Class-D copper powder extinguishers",
+      "Cut auxiliary electrical connections and exhaust chamber ventilation",
+      "Notify Municipal Disaster Cell & Industrial Safety Inspector"
+    ],
+    "multiChannelBroadcast": {
+      "smsAlertsSent": 24,
+      "whatsappEmergencyNotifs": 18,
+      "fireDepartmentNotified": true,
+      "spcbEmergencyDutyNotified": true,
+      "timestamp": "2026-09-25T20:17:27.148Z"
+    },
+    "triggeredAt": "2026-09-25T20:17:27.148Z",
+    "resolvedAt": "2026-09-25T20:17:27.152Z",
+    "resolutionNotes": "Unit submerged in Pyro-Gel vermiculite tank and isolated",
+    "clearedBy": "CHIEF-DISASTER-OFFICER"
+  }
+]

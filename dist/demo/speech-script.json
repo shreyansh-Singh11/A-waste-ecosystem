@@ -1,0 +1,362 @@
+[
+  {
+    "id": "intro",
+    "chapter": 1,
+    "title": "Problem Statement & Unified Ledger",
+    "timeStart": 0,
+    "timeEnd": 45,
+    "targetUrl": "/",
+    "roleTag": "🏛️ Apex System Overview",
+    "accentColor": "#10b981",
+    "keyMetrics": {
+      "Streams": "3 Parallel",
+      "Statutory Rules": "E-Waste 2022 · SWM 2016 · BMW 2016",
+      "Compliance Marks": "4,200 Swachh"
+    },
+    "speech": [
+      {
+        "time": 0,
+        "text": "Respected Jury members, India generates over 1.7 million tonnes of electronic waste, 62 million tonnes of municipal solid waste, and 614 tonnes of hazardous biomedical waste daily.",
+        "emphasis": "1.7 million tonnes of electronic waste"
+      },
+      {
+        "time": 15,
+        "text": "Yet today, these three critical streams operate in disconnected data silos — creating severe leakage, ghost recycling fraud, and massive regulatory non-compliance.",
+        "emphasis": "disconnected data silos — creating severe leakage"
+      },
+      {
+        "time": 30,
+        "text": "We present CirculaSync — India's first unified, multi-stream circular economy ledger connecting Citizens, Recyclers, Municipalities, Hospitals, and Brands with mathematical proof of compliance.",
+        "emphasis": "CirculaSync — India's first unified, multi-stream circular economy ledger"
+      }
+    ],
+    "keywords": [
+      "E-Waste Rules 2022",
+      "SWM Rules 2016",
+      "BMW Rules 2016",
+      "Decentralized Traceability",
+      "Zero Data Leakage"
+    ],
+    "juryDefense": {
+      "question": "Why combine E-Waste, Municipal Waste, and Biomedical Waste in one platform?",
+      "answer": "Cities and pollution control boards (CPCBs) struggle with fragmented vendors and parallel audit trails. CirculaSync unifies cross-stream logistics, carbon offset calculations, and municipal Swachh Survekshan marks into a single zero-trust compliance architecture without duplicating IT infrastructure."
+    },
+    "stageActions": [
+      { "at": 5, "action": "highlight", "target": ".hero-title", "label": "Unified Multi-Stream Engine" },
+      { "at": 20, "action": "highlight", "target": ".kpi-cockpit", "label": "Real-time Statutory Metrics" },
+      { "at": 38, "action": "navigate", "target": "/user", "label": "Launching Citizen Portal..." }
+    ]
+  },
+  {
+    "id": "citizen",
+    "chapter": 2,
+    "title": "Citizen Circular Portal & AI Diagnostics",
+    "timeStart": 45,
+    "timeEnd": 95,
+    "targetUrl": "/user",
+    "roleTag": "👤 Citizen App",
+    "accentColor": "#06d6a0",
+    "keyMetrics": {
+      "AI Inspection": "Gemini 2.5 Flash",
+      "Salvage Value": "₹1,250 Gold/Silver",
+      "Safety Triage": "Li-ion Swelling Detection"
+    },
+    "speech": [
+      {
+        "time": 45,
+        "text": "Let us begin with the Citizen journey. An owner simply snaps a photo of their retired device — here, a damaged laptop.",
+        "emphasis": "snaps a photo of their retired device"
+      },
+      {
+        "time": 58,
+        "text": "Our integrated Gemini Vision AI performs instant optical triage: evaluating physical casing integrity, assessing battery swelling fire hazards, and classifying it as Grade B.",
+        "emphasis": "evaluating physical casing integrity, assessing battery swelling"
+      },
+      {
+        "time": 72,
+        "text": "The engine immediately calculates salvageable precious metals — 0.024 grams of gold and 0.12 grams of silver — crediting ₹1,250 in estimated recovery value.",
+        "emphasis": "0.024 grams of gold and 0.12 grams of silver"
+      },
+      {
+        "time": 85,
+        "text": "With one tap, the citizen books doorstep pickup and receives an immutable Digital Product Passport QR token, earning Swachh Karma Coins.",
+        "emphasis": "Digital Product Passport QR token, earning Swachh Karma Coins"
+      }
+    ],
+    "keywords": [
+      "Gemini AI Vision",
+      "Li-ion Fire Hazard Triage",
+      "Grade A/B/C Classification",
+      "Precious Metal Salvage",
+      "Digital Product Passport QR"
+    ],
+    "juryDefense": {
+      "question": "What if the citizen uploads a blurry image or attempts to spoof the AI?",
+      "answer": "Our system implements a multi-tier confidence threshold. If AI confidence drops below 75%, it automatically triggers a physical verification flag, forcing the secondary SSQI gate at the collector intake depot to authenticate before credits are disbursed."
+    },
+    "stageActions": [
+      { "at": 50, "action": "click", "target": "#citizenWorkspaceTabs button[data-tab='ai']", "label": "Opening AI Vision Scanner" },
+      { "at": 65, "action": "fill", "target": "#aiDevice", "value": "Lenovo ThinkPad X1 Carbon (Grade B)" },
+      { "at": 80, "action": "click", "target": "#quickDemoBtn", "label": "Loading Verified Eco-Card" },
+      { "at": 92, "action": "navigate", "target": "/collector", "label": "Handing off to Recycler..." }
+    ]
+  },
+  {
+    "id": "collector",
+    "chapter": 3,
+    "title": "Recycler Hub & 5-Min Reverse Auctions",
+    "timeStart": 95,
+    "timeEnd": 160,
+    "targetUrl": "/collector",
+    "roleTag": "🏭 Recycler / Collector Hub",
+    "accentColor": "#f59e0b",
+    "keyMetrics": {
+      "Auction Type": "5-Min Reverse English",
+      "Logistics": "TSP Shortest-Path",
+      "Gate Security": "Optical QR Validator"
+    },
+    "speech": [
+      {
+        "time": 95,
+        "text": "Now, we enter the Authorized Recycler Facility. The collector verifies the citizen's item via optical QR camera scan at the physical intake gate.",
+        "emphasis": "optical QR camera scan at the physical intake gate"
+      },
+      {
+        "time": 110,
+        "text": "Our Traveling Salesperson logistics algorithm plans the optimal cluster collection route across city depots, slashing transit fuel by 34% and cutting 18 kilograms of transport CO₂.",
+        "emphasis": "slashing transit fuel by 34% and cutting 18 kg CO₂"
+      },
+      {
+        "time": 128,
+        "text": "Notice our automated commodity marketplace: segregated circuit boards and lithium batteries enter a live 5-minute reverse English auction.",
+        "emphasis": "segregated circuit boards enter a live 5-minute reverse English auction"
+      },
+      {
+        "time": 145,
+        "text": "Authorized formal recyclers submit competitive downward bids in real time. Smart contracts escrow the funds, preventing informal scrap mafia diversion.",
+        "emphasis": "Smart contracts escrow the funds, preventing informal scrap mafia diversion"
+      }
+    ],
+    "keywords": [
+      "Optical Intake Scanner",
+      "Traveling Salesperson (TSP)",
+      "Reverse English Auction",
+      "Escrow Settlement",
+      "Informal Sector Formalization"
+    ],
+    "juryDefense": {
+      "question": "How do you stop collusive bidding among registered recyclers?",
+      "answer": "The auction engine uses dynamic reserve pricing tied to live London Metal Exchange (LME) spot rates for copper and gold. Bids cannot violate algorithmic floor margins, and auto-settlement locks collateral in escrow before gate clearance."
+    },
+    "stageActions": [
+      { "at": 102, "action": "click", "target": "#tabBtn-scan", "label": "Opening Optical Intake Scanner" },
+      { "at": 120, "action": "click", "target": "#tabBtn-routes", "label": "Viewing TSP Shortest Route" },
+      { "at": 135, "action": "click", "target": "#tabBtn-auctions", "label": "Watching 5-Min Live Auction" },
+      { "at": 155, "action": "navigate", "target": "/municipal", "label": "Transitioning to Municipal SWM..." }
+    ]
+  },
+  {
+    "id": "municipal",
+    "chapter": 4,
+    "title": "Municipal SWM: Eulerian Snake Routing",
+    "timeStart": 160,
+    "timeEnd": 215,
+    "targetUrl": "/municipal",
+    "roleTag": "🚛 Municipal Corporation SWM",
+    "accentColor": "#10b981",
+    "keyMetrics": {
+      "Route Guarantee": "Eulerian Chinese Postman",
+      "Skipped Streets": "0% Mathematical Guarantee",
+      "Weighbridge": "RFID Gross/Tare Tamper-Lock"
+    },
+    "speech": [
+      {
+        "time": 160,
+        "text": "Next is Municipal Solid Waste Management. Urban Local Bodies routinely suffer from uncollected lanes and disputed contractor invoices.",
+        "emphasis": "uncollected lanes and disputed contractor invoices"
+      },
+      {
+        "time": 174,
+        "text": "CirculaSync implements Eulerian Chinese Postman Snake Routing — mathematically guaranteeing that sanitation tippers traverse every single street in the ward with zero skips and minimum backtracking.",
+        "emphasis": "Eulerian Chinese Postman Snake Routing — zero skips and minimum backtracking"
+      },
+      {
+        "time": 192,
+        "text": "When trucks arrive at the Material Recovery Facility, our automated RFID weighbridge captures Gross and Tare weights with automated moisture deductions, feeding into city compost offtake ledgers.",
+        "emphasis": "RFID weighbridge captures Gross and Tare weights"
+      },
+      {
+        "time": 206,
+        "text": "Contractor payments are automatically calculated strictly on verified wet and dry segregation purity ratios.",
+        "emphasis": "payments calculated strictly on verified segregation purity ratios"
+      }
+    ],
+    "keywords": [
+      "Eulerian Path Theorem",
+      "Chinese Postman Algorithm",
+      "Zero Skipped Streets",
+      "Weighbridge Tare Lock",
+      "Compost Offtake Transparency"
+    ],
+    "juryDefense": {
+      "question": "What happens if a sanitation vehicle faces a roadblock during its Eulerian route?",
+      "answer": "The mobile telemetry engine detects road obstructions via live GPS stall thresholds and recalculates the Eulerian graph in real time, preserving the zero-unserved-node property through minimum weight matching on the remaining subgraph."
+    },
+    "stageActions": [
+      { "at": 168, "action": "click", "target": "#tabBtn-routes", "label": "Displaying Eulerian Snake Route" },
+      { "at": 185, "action": "highlight", "target": "#snakeRouteStats", "label": "100% Street Traversal Coverage" },
+      { "at": 198, "action": "click", "target": "#tabBtn-scale", "label": "Locking RFID Weighbridge Scale" },
+      { "at": 210, "action": "navigate", "target": "/medical", "label": "Switching to Biomedical Waste..." }
+    ]
+  },
+  {
+    "id": "medical",
+    "chapter": 5,
+    "title": "Biomedical Waste: 4-Color CPCB Segregation",
+    "timeStart": 215,
+    "timeEnd": 260,
+    "targetUrl": "/medical",
+    "roleTag": "🏥 Healthcare BMW Portal",
+    "accentColor": "#ec4899",
+    "keyMetrics": {
+      "Segregation": "CPCB 4-Color (Yellow, Red, White, Blue)",
+      "Chain of Custody": "Barcoded Digital Manifest",
+      "Destruction": "Autoclave / Shredder Verified"
+    },
+    "speech": [
+      {
+        "time": 215,
+        "text": "Healthcare facilities require strict bio-safety compliance under Central Pollution Control Board 2016 rules.",
+        "emphasis": "strict bio-safety compliance under CPCB 2016 rules"
+      },
+      {
+        "time": 227,
+        "text": "CirculaSync enforces strict 4-color segregation: Yellow for infectious anatomical waste, Red for recyclable plastics, White for sharps, and Blue for glass and implants.",
+        "emphasis": "Yellow infectious, Red plastics, White sharps, Blue glassware"
+      },
+      {
+        "time": 240,
+        "text": "Every batch is tracked with unique barcoded manifests from hospital ward to Common Bio-Medical Waste Treatment Facility (CBWTF).",
+        "emphasis": "unique barcoded manifests from hospital to treatment facility"
+      },
+      {
+        "time": 250,
+        "text": "Thermal autoclave kill cycles and shredder destruction certificates are cryptographically locked, preventing hazardous needle repackaging and illegal plastic resale.",
+        "emphasis": "Thermal autoclave kill cycles cryptographically locked"
+      }
+    ],
+    "keywords": [
+      "CPCB BMW Rules 2016",
+      "4-Color Bag Segregation",
+      "CBWTF Digital Manifest",
+      "Autoclave Sterilization Log",
+      "Anti-Repackaging Protection"
+    ],
+    "juryDefense": {
+      "question": "How do you prevent hospitals from dumping infectious needles in yellow bags?",
+      "answer": "Our system enforces weight and density anomaly bounds per bag color code at bed-side weighment and gate intake. Any discrepancy exceeding 5% triggers an immediate non-compliance quarantine flag reported to the State Pollution Control Board."
+    },
+    "stageActions": [
+      { "at": 222, "action": "highlight", "target": ".bmw-color-grid", "label": "4-Color Segregation Bins" },
+      { "at": 235, "action": "click", "target": "#tabBtn-manifest", "label": "Verifying Barcoded Manifest" },
+      { "at": 248, "action": "click", "target": "#tabBtn-treatment", "label": "Reviewing Autoclave Destruction Cert" },
+      { "at": 256, "action": "navigate", "target": "/producer", "label": "Inspecting Brand EPR Desk..." }
+    ]
+  },
+  {
+    "id": "producer",
+    "chapter": 6,
+    "title": "Brand EPR Compliance & Voluntary Carbon Credits",
+    "timeStart": 260,
+    "timeEnd": 285,
+    "targetUrl": "/producer",
+    "roleTag": "🏷️ Brand EPR Compliance Desk",
+    "accentColor": "#6366f1",
+    "keyMetrics": {
+      "Target Fulfillment": "CPCB Annual EPR Quota",
+      "Verification": "SHA-256 Tamper-Proof Hash",
+      "ESG Credits": "Voluntary Carbon Credits (VCC)"
+    },
+    "speech": [
+      {
+        "time": 260,
+        "text": "Under MoEFCC Extended Producer Responsibility mandates, electronic brands face severe penalties for unmet recycling quotas.",
+        "emphasis": "brands face severe penalties for unmet recycling quotas"
+      },
+      {
+        "time": 270,
+        "text": "On our Brand Desk, producers track their live category deficit, purchase authentic recycling certificates minted directly from verified physical batches, and audit the SHA-256 cryptographic proof.",
+        "emphasis": "purchase authentic recycling certificates minted from verified physical batches"
+      },
+      {
+        "time": 279,
+        "text": "Zero double counting, zero fake paper certificates, and certified Voluntary Carbon Credits minted for ESG board reporting.",
+        "emphasis": "Zero double counting, zero fake paper certificates"
+      }
+    ],
+    "keywords": [
+      "EPR Deficit Quota",
+      "SHA-256 Tamper-Evident Hash",
+      "Anti-Double Counting Ledger",
+      "Voluntary Carbon Credits",
+      "BRSR ESG Reporting"
+    ],
+    "juryDefense": {
+      "question": "Can a recycling certificate be sold to more than one electronics brand?",
+      "answer": "No. Certificates are minted with unique SHA-256 batch signatures. Upon purchase, the certificate status flips permanently to RETIRED, binding the exact kilograms to the buyer's CPCB registration number with cryptographic immutability."
+    },
+    "stageActions": [
+      { "at": 264, "action": "highlight", "target": ".epr-quota-meter", "label": "Annual Deficit Quota Tracker" },
+      { "at": 273, "action": "click", "target": "#tabBtn-certs", "label": "Auditing SHA-256 Hash Verification" },
+      { "at": 282, "action": "navigate", "target": "/government", "label": "Opening Government Command Hub..." }
+    ]
+  },
+  {
+    "id": "government",
+    "chapter": 7,
+    "title": "Government Command Hub & Jury Verdict",
+    "timeStart": 285,
+    "timeEnd": 300,
+    "targetUrl": "/government",
+    "roleTag": "🏛️ Apex Regulatory Command Hub",
+    "accentColor": "#f59e0b",
+    "keyMetrics": {
+      "City Rating": "4,200 / 4,200 Swachh Marks",
+      "Statutory Reporting": "1-Click CPCB Form-4",
+      "HAZMAT Radar": "Autonomous Anomaly Triage"
+    },
+    "speech": [
+      {
+        "time": 285,
+        "text": "Finally, the Government Command Hub gives state regulators a live bird's-eye view across India.",
+        "emphasis": "live bird's-eye view across India"
+      },
+      {
+        "time": 291,
+        "text": "Real-time Swachh Survekshan marks, autonomous HAZMAT anomaly radar, and one-click CPCB Form-4 generation.",
+        "emphasis": "autonomous HAZMAT anomaly radar, one-click CPCB Form-4"
+      },
+      {
+        "time": 296,
+        "text": "CirculaSync transforms waste compliance from reactive paperwork into an automated, mathematically verified circular economy. Thank you!",
+        "emphasis": "automated, mathematically verified circular economy. Thank you!"
+      }
+    ],
+    "keywords": [
+      "Swachh Survekshan Scorecard",
+      "Automated CPCB Form-4",
+      "HAZMAT Spatial Radar",
+      "Merkle Tree Audit Proof",
+      "Smart India Hackathon 2026"
+    ],
+    "juryDefense": {
+      "question": "Is this system scalable to all 4,000+ urban local bodies in India?",
+      "answer": "Yes. Built on lightweight Node.js event-driven architecture, geospatial SQLite/PostgreSQL, and edge-first PWA caching, CirculaSync deploys seamlessly in tier-1 metros as well as remote rural panchayats with offline-first synchronization."
+    },
+    "stageActions": [
+      { "at": 288, "action": "highlight", "target": "#swachhScoreValue", "label": "4,200 Swachh Composite Marks" },
+      { "at": 294, "action": "click", "target": "#tabBtn-cpcb", "label": "Generating CPCB Form-4 Report" },
+      { "at": 299, "action": "highlight", "target": ".gov-title-block", "label": "Demo Complete · Ready for Q&A" }
+    ]
+  }
+]

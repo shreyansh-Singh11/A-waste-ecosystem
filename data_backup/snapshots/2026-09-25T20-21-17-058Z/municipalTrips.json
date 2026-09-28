@@ -1,0 +1,446 @@
+[
+  {
+    "tripId": "b64e31e8-91e4-44c9-ba97-44b70329da4f",
+    "shiftId": "274c5f12-f691-41a7-80c0-c163ad4ded09",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-24T18:09:09.964Z",
+    "weighbridge": {
+      "receiptId": "a57331f8-e229-4a96-b2db-be5ee15a7596",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-24T18:09:09.967Z"
+    },
+    "gatePass": null
+  },
+  {
+    "tripId": "ac52b210-d68e-4f6b-986f-ffe6bad736e2",
+    "shiftId": "f8808413-5727-4cfc-b756-ef19001313b2",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-24T18:09:25.290Z",
+    "weighbridge": {
+      "receiptId": "21949eef-7474-4edd-95f2-f8d3c01529c2",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-24T18:09:25.293Z"
+    },
+    "gatePass": {
+      "gatePassId": "da6c73c5-fbea-4491-88a6-51e0059cb89c",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-24T18:09:25.298Z"
+    }
+  },
+  {
+    "tripId": "e41cd1c8-3f56-466c-aaf3-2c0db15c86f6",
+    "shiftId": "2c62d9e0-3aa6-41ac-9e7d-0a0106389a87",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-24T18:40:39.575Z",
+    "weighbridge": {
+      "receiptId": "13b3f8ca-bbd2-44a3-8fcf-afb6a9e73000",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-24T18:40:39.578Z"
+    },
+    "gatePass": {
+      "gatePassId": "a40708d4-2b6e-4518-adc2-2fe67254c5e1",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-24T18:40:39.584Z"
+    }
+  },
+  {
+    "tripId": "87a77424-8f99-4673-b601-08720e42a194",
+    "shiftId": "1dfa3413-a7ba-4d44-a1ec-f54f0deca9ab",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T04:34:15.378Z",
+    "weighbridge": {
+      "receiptId": "08375f1e-d617-4f21-8fa0-3c3ec00852ff",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T04:34:15.384Z"
+    },
+    "gatePass": {
+      "gatePassId": "34706a00-d4f8-4194-b383-f26b6474caac",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T04:34:15.389Z"
+    }
+  },
+  {
+    "tripId": "ac18ac3a-2bdb-4baa-a4fc-a59d24654698",
+    "shiftId": "60808606-e7ad-4f79-88bb-062d19eb6bcd",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T04:38:28.608Z",
+    "weighbridge": {
+      "receiptId": "cb062cdd-2e1b-4dc4-a1ae-695eccf3ac1e",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T04:38:28.618Z"
+    },
+    "gatePass": {
+      "gatePassId": "8c4c304d-0eb7-4175-abd2-3bd877e35bbe",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T04:38:28.625Z"
+    }
+  },
+  {
+    "tripId": "d86c5f24-4286-432f-ab41-d0d3f581eda0",
+    "shiftId": "f6f9d8d7-e676-4a23-ba32-319fa61b2fdf",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T09:24:24.768Z",
+    "weighbridge": {
+      "receiptId": "eb30139a-0106-41c8-81ab-99643371445d",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T09:24:24.770Z"
+    },
+    "gatePass": {
+      "gatePassId": "ed8d285a-8018-42a6-bc73-930643fdc632",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T09:24:24.776Z"
+    }
+  },
+  {
+    "tripId": "a28ee1ec-156f-417f-981e-278e2f209709",
+    "shiftId": "da382bfb-d360-4384-afa8-f4cf47f4b27a",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T09:47:57.822Z",
+    "weighbridge": {
+      "receiptId": "d2ad40a7-086c-458b-9b8c-e24f33e76882",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T09:47:57.825Z"
+    },
+    "gatePass": {
+      "gatePassId": "09f931e8-8a6f-47dc-b053-4bf8a37dae83",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T09:47:57.830Z"
+    }
+  },
+  {
+    "tripId": "fdc9287d-4db8-4d10-806a-afbaa32808df",
+    "shiftId": "f30e47f9-fb97-4d51-bb08-06156cf85491",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T10:07:50.458Z",
+    "weighbridge": {
+      "receiptId": "c1f5909d-0688-451a-8ac6-0fe1098ba89a",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T10:07:50.461Z"
+    },
+    "gatePass": {
+      "gatePassId": "a38dd5a2-dd1c-425b-b293-fe650f4834d3",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T10:07:50.466Z"
+    }
+  },
+  {
+    "tripId": "924231c4-b771-40ca-bf08-452ebb88dc6e",
+    "shiftId": "a521c1c8-3dc2-4d44-9c4a-078fdcf27e37",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T10:10:40.341Z",
+    "weighbridge": {
+      "receiptId": "0804bd64-b661-4c05-855e-5caa50bb7f57",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T10:10:40.347Z"
+    },
+    "gatePass": {
+      "gatePassId": "18a1574d-c563-4911-8d0c-dffcbf6319aa",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T10:10:40.358Z"
+    }
+  },
+  {
+    "tripId": "7145bee0-a507-428f-8412-15ce5dc63221",
+    "shiftId": "7ba8d739-c9b4-4883-93bc-8033ce0fb7d5",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T10:43:44.229Z",
+    "weighbridge": {
+      "receiptId": "48f3850e-e969-40f0-a4b4-edddf881aa17",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T10:43:44.235Z"
+    },
+    "gatePass": {
+      "gatePassId": "6b01db8f-e713-4106-b468-bc789520d0f7",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T10:43:44.243Z"
+    }
+  },
+  {
+    "tripId": "7ac7cc4f-8d4b-479d-a647-fcb8a6d540e6",
+    "shiftId": "5ec20403-ddad-4c87-82fd-91dbcebe8cde",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T11:02:27.143Z",
+    "weighbridge": {
+      "receiptId": "76424089-f3c0-42a1-886a-704c87b276b3",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T11:02:27.146Z"
+    },
+    "gatePass": {
+      "gatePassId": "319d2a1a-6b69-4bca-bf28-d8a0c910f6b9",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T11:02:27.154Z"
+    }
+  },
+  {
+    "tripId": "029ee51c-754d-4fdf-87f0-205bb5381017",
+    "shiftId": "26f32ae0-c94c-4a1d-bd9c-7c7a0aed2084",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T11:02:57.569Z",
+    "weighbridge": {
+      "receiptId": "e94dd4bb-42d2-4c5e-824e-172996f763b6",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T11:02:57.572Z"
+    },
+    "gatePass": {
+      "gatePassId": "023db87b-634f-4e66-a4de-3abf1985918b",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T11:02:57.579Z"
+    }
+  },
+  {
+    "tripId": "73b83802-ddd2-455d-8744-3d97b5c04d31",
+    "shiftId": "62cb1710-1faf-466f-9dcc-077f02d3d283",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T11:06:22.180Z",
+    "weighbridge": {
+      "receiptId": "0ffee2fc-8998-4aac-9954-316b1c6aa210",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T11:06:22.188Z"
+    },
+    "gatePass": {
+      "gatePassId": "e879ff4c-1d45-4497-afcd-8ee5da89306f",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T11:06:22.197Z"
+    }
+  },
+  {
+    "tripId": "06b59b09-4eea-4ffb-bbb8-630e973e55fa",
+    "shiftId": "d1680530-686b-4c4b-82a6-56cf65fbbf33",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T11:08:39.277Z",
+    "weighbridge": {
+      "receiptId": "df66ce16-cf76-4495-ba40-6b7a9c5211e6",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T11:08:39.284Z"
+    },
+    "gatePass": {
+      "gatePassId": "0132f70f-7ecd-428a-96c4-e8d1b0eb09c5",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T11:08:39.296Z"
+    }
+  },
+  {
+    "tripId": "24061b11-aad1-4539-97ff-f6ac1ac09cd1",
+    "shiftId": "e733d6bd-72b4-4afb-a9c3-c6f60f667b81",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T19:22:43.469Z",
+    "weighbridge": {
+      "receiptId": "a637d817-fab8-42bc-9e84-8009cd98b71b",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T19:22:43.472Z"
+    },
+    "gatePass": {
+      "gatePassId": "bd8f15f6-c34d-4ae4-9abd-b02f53d92d1f",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T19:22:43.477Z"
+    }
+  },
+  {
+    "tripId": "679bba74-a066-4c57-b435-ac97d67a9136",
+    "shiftId": "6b9cb541-a30f-4ca4-8885-a3ba1bff9c82",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T20:00:51.550Z",
+    "weighbridge": {
+      "receiptId": "5d2bfd0e-054c-44f3-a297-ef4de5d71550",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T20:00:51.554Z"
+    },
+    "gatePass": {
+      "gatePassId": "68b20ea7-721a-41f4-8468-7e54413dfbd0",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T20:00:51.558Z"
+    }
+  },
+  {
+    "tripId": "b0380a31-84e7-42e0-94da-b439abbf8359",
+    "shiftId": "4ea64c1f-628b-4916-902f-77f2357e99a3",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T20:07:14.203Z",
+    "weighbridge": {
+      "receiptId": "6486bb15-91b0-4d1f-a805-57a896ef0519",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T20:07:14.206Z"
+    },
+    "gatePass": {
+      "gatePassId": "8d016843-7821-4222-a4a4-e59284a640bb",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T20:07:14.211Z"
+    }
+  },
+  {
+    "tripId": "576df6b8-49c1-428e-8d43-b374bc72b59f",
+    "shiftId": "4d7da0b5-cec9-443e-abe2-dd73ea9a3796",
+    "driverId": "MDRV-TEST-01",
+    "vehicleId": "MP-04-TEST-1234",
+    "destinationFacilityId": "MRF-TEST-CENTRAL",
+    "totalPickupWeight": 5.5,
+    "status": "DELIVERED",
+    "lockedAt": "2026-09-25T20:17:38.464Z",
+    "weighbridge": {
+      "receiptId": "b23721d3-647c-4a23-93be-242ec53d25d3",
+      "facilityId": "MRF-TEST-CENTRAL",
+      "grossWeightKg": 3000,
+      "tareWeightKg": 2000,
+      "netWeightKg": 1000,
+      "recordedAt": "2026-09-25T20:17:38.468Z"
+    },
+    "gatePass": {
+      "gatePassId": "7216960a-2b78-42a0-9573-89ab21afebda",
+      "residualWeightKg": 100,
+      "residualPercent": 10,
+      "status": "APPROVED",
+      "issuedAt": "2026-09-25T20:17:38.475Z"
+    }
+  }
+]

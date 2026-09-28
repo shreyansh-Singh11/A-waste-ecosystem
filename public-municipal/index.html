@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Municipal Solid Waste & Anti-Dumping Hub</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  .hero-panel {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(15, 23, 42, 0.9) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-6);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .hero-panel .hero-greeting {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+  .hero-panel .hero-sub {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    max-width: 760px;
+    line-height: 1.5;
+  }
+  .hero-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--sp-4);
+    margin-top: var(--sp-5);
+  }
+  .hero-kpi {
+    background: var(--bg-surface);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+  }
+  .hero-kpi:hover {
+    border-color: rgba(16, 185, 129, 0.35);
+  }
+  .hero-kpi .kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+  }
+  .hero-kpi .kpi-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .badge-tag {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .status-active { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+  .status-locked { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+  .status-delivered { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
+
+  html.light .hero-panel, [data-theme="light"] .hero-panel {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(240, 253, 244, 0.95) 100%);
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  }
+  html.light .hero-panel .hero-greeting, [data-theme="light"] .hero-panel .hero-greeting {
+    color: #0f172a;
+  }
+  html.light .hero-panel .hero-sub, [data-theme="light"] .hero-panel .hero-sub {
+    color: #475569;
+  }
+  html.light .status-active, [data-theme="light"] .status-active {
+    background: #d1fae5;
+    color: #047857;
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  html.light .status-locked, [data-theme="light"] .status-locked {
+    background: #fef3c7;
+    color: #b45309;
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+  html.light .status-delivered, [data-theme="light"] .status-delivered {
+    background: #e0f2fe;
+    color: #0369a1;
+    border-color: rgba(56, 189, 248, 0.4);
+  }
+  html.light .placard-header, [data-theme="light"] .placard-header {
+    border-bottom-color: rgba(15, 23, 42, 0.08);
+  }
+
+  .timeline {
+    border-left: 2px solid var(--color-primary-500);
+    margin-left: var(--sp-3);
+    padding-left: var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+  .timeline-item {
+    position: relative;
+    background: var(--bg-surface);
+    padding: var(--sp-3) var(--sp-4);
+    border-radius: var(--radius-md);
+    border: var(--border);
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-primary-500);
+  }
+  .timeline-time { font-size: 11px; color: var(--text-tertiary); }
+  .timeline-action { font-weight: 700; color: var(--text-primary); }
+  .alert-toast { display: none; padding: var(--sp-4); border-radius: var(--radius-md); margin-bottom: var(--sp-4); }
+
+  /* Household Placard Card - cohesive dark smart tag */
+  .household-placard {
+    background: var(--bg-surface);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+    margin-bottom: var(--sp-3);
+    position: relative;
+  }
+  .placard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .placard-badge {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    font-weight: 700;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .qr-box {
+    background: #ffffff;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 8px;
+    text-align: center;
+    display: inline-block;
+  }
+  .qr-box svg {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Hardware & SCADA Simulators */
+  .sim-card {
+    background: var(--bg-card);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    margin-top: var(--sp-3);
+    position: relative;
+    overflow: hidden;
+  }
+  .sim-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .sim-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .padlock-wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    margin: 10px 0;
+  }
+  .padlock-icon-box {
+    position: relative;
+    width: 60px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .padlock-shackle {
+    width: 32px;
+    height: 28px;
+    border: 5px solid #cbd5e1;
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+    animation: padlockSnap 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  @keyframes padlockSnap {
+    0% { transform: translateY(-16px); }
+    65% { transform: translateY(0); }
+    80% { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+  .padlock-body {
+    width: 48px;
+    height: 38px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #451a03;
+    font-weight: 900;
+    font-size: 13px;
+  }
+  .mrf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    margin: 10px 0;
+  }
+  .mrf-bin-card {
+    background: rgba(0,0,0,0.3);
+    border: var(--border);
+    border-radius: var(--radius-sm);
+    padding: 8px 10px;
+    text-align: center;
+  }
+  .mrf-bin-val {
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 14px;
+    margin-top: 4px;
+    color: var(--color-primary-400);
+  }
+
+  /* Autopilot Global Floating Control Bar */
+  .autopilot-banner {
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-4) var(--sp-5);
+    margin-bottom: var(--sp-5);
+    box-shadow: 0 8px 30px rgba(79, 70, 229, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .autopilot-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .autopilot-step-pill {
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(129, 140, 248, 0.5);
+    color: #c7d2fe;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="brand">
+      <span class="mark">🏙️</span>
+      <div><span class="name">CirculaSync</span><span class="sub">Municipal Solid Waste</span></div>
+    </div>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin-bottom:var(--sp-2);">Operations</div>
+    <a class="nav-link active" href="#dashboard"><span class="nav-icon">📊</span> Overview & KPIs</a>
+    <a class="nav-link" href="#shifts"><span class="nav-icon">📋</span> Shift Manifest</a>
+    <a class="nav-link" href="#pickups"><span class="nav-icon">📦</span> Household RFID Tag</a>
+    <a class="nav-link" href="#triplock"><span class="nav-icon">🚛</span> Anti-Dumping Trip Lock</a>
+    <a class="nav-link" href="#gatepass"><span class="nav-icon">🛑</span> Landfill Gate Pass</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Value Recovery</div>
+    <a class="nav-link" href="#mrf"><span class="nav-icon">♻️</span> MRF Sorting Facility</a>
+    <a class="nav-link" href="#marketplace"><span class="nav-icon">🏪</span> B2B Recycler Offtake</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Compliance</div>
+    <a class="nav-link" href="#audit"><span class="nav-icon">🔍</span> Chain of Custody</a>
+    <a class="nav-link" href="#whistleblower"><span class="nav-icon">📢</span> Open Dump Report</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Edge Systems</div>
+    <a class="nav-link" href="/government#snakeSection"><span class="nav-icon">🐍</span> Snake Route Dispatch</a>
+    <a class="nav-link" href="/government#visionSection"><span class="nav-icon">👁️</span> Optical Quality Gate</a>
+    <a class="nav-link" href="/government#offlineSection"><span class="nav-icon">📲</span> PWA Offline Queue</a>
+    <div class="nav-footer">CirculaSync · Bhopal Urban Local Body</div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-topbar">
+      <div class="title-block">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <h1>Municipal Solid Waste Command</h1>
+          <span class="badge badge-success" style="font-size:11px; padding:2px 8px;"><span class="dot"></span>ACTIVE</span>
+        </div>
+        <div class="meta">Geo-Fenced Collection · Anti-Dumping Audit Trail · MRF Recycler Revenue</div>
+      </div>
+      <div class="actions" style="display:flex; align-items:center; gap:var(--sp-2);">
+        <button id="soundToggleBtn" class="btn btn-secondary btn-sm" onclick="toggleSound()" title="Sound Effects">🔊 Sound ON</button>
+        <span class="system-pill" style="font-size:11px;"><span class="dot"></span> Audit Trail Enforced</span>
+        <a class="btn btn-secondary btn-sm" href="/government#swachhScorecard">🏆 Swachh Compliance</a>
+        <a class="btn btn-primary btn-sm" href="/">← All Portals</a>
+      </div>
+    </header>
+
+    <main class="app-content">
+
+      <div id="toastBox" class="alert-toast"></div>
+
+      <!-- ── AUTOPILOT GLOBAL ECOSYSTEM SIMULATOR (ZERO MANUAL WORK) ── -->
+      <div class="autopilot-banner" id="autopilotBanner">
+        <div class="autopilot-title">
+          <span style="font-size:24px;">⚡</span>
+          <div>
+            <div style="font-weight:800; font-size:14px; color:#f8fafc; letter-spacing:0.3px;">SMART ECOSYSTEM AUTOPILOT &bull; LIVE SIMULATOR</div>
+            <div style="font-size:11.5px; color:#c7d2fe;">Automated end-to-end execution across Medical, Municipal, Vision Sorting &amp; Marketplaces</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:var(--sp-2); flex-wrap:wrap;">
+          <span class="autopilot-step-pill" id="autopilotStepLabel">IDLE / READY</span>
+          <button id="btnAutopilotRun" class="btn btn-primary btn-sm" onclick="toggleAutopilotSimulation()" style="background:linear-gradient(135deg, #4f46e5, #7c3aed); border:none; font-weight:700;">
+            ▶ Start Live Simulation
+          </button>
+          <select id="autopilotSpeed" style="background:#0f172a; color:#c7d2fe; border:1px solid #4338ca; padding:6px 10px; border-radius:6px; font-size:11px; font-weight:700;">
+            <option value="1">1x Speed (2.5s / step)</option>
+            <option value="2">2x Speed (1.2s / step)</option>
+            <option value="4">4x Turbo (0.6s / step)</option>
+          </select>
+          <button class="btn btn-secondary btn-sm" onclick="resetAutopilotSimulation()">↺ Reset</button>
+        </div>
+      </div>
+
+      <!-- ── Dashboard Section ── -->
+      <section class="panel hero-panel" id="dashboard">
+        <div class="hero-greeting">Daily Collection &amp; Zero-Dump Operations</div>
+        <div class="hero-sub">Ensuring 100% door-to-door coverage while strictly blocking open dumping in agricultural fields and vacant plots.</div>
+        <div class="hero-kpis">
+          <div class="hero-kpi"><div class="kpi-label">Active Shifts</div><div class="kpi-value" id="kpiActiveShifts">1</div></div>
+          <div class="hero-kpi"><div class="kpi-label">Households Serviced</div><div class="kpi-value" id="kpiPickups">3</div></div>
+          <div class="hero-kpi"><div class="kpi-label">MRF Sorted (Kg)</div><div class="kpi-value" id="kpiSortedKg">2,540</div></div>
+          <div class="hero-kpi"><div class="kpi-label">Recycler Orders</div><div class="kpi-value" id="kpiOrders">0</div></div>
+        </div>
+      </section>
+
+      <!-- ── Active Shifts & Start Shift ── -->
+      <section class="panel" id="shifts">
+        <div class="panel-header">
+          <div>
+            <h2>Collection Shift Manifest</h2>
+            <span class="hint">Start a route-verified collection shift with assigned ward polygon</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadShifts()">↻ Refresh</button>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Start New Shift</h3>
+            <div class="field"><label for="shiftDriver">Driver ID</label><input id="shiftDriver" value="MDRV-102" /></div>
+            <div class="field"><label for="shiftVehicle">Vehicle Registration No.</label><input id="shiftVehicle" value="MP-04-GC-5590" /></div>
+            <div class="field"><label for="shiftWard">Assigned Ward</label><input id="shiftWard" value="Ward-15 (Shahpura)" /></div>
+            <button class="btn btn-primary btn-block" onclick="startShift()">Launch Collection Shift</button>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Active &amp; Recent Shifts</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="shiftsTable">
+                <thead><tr><th>Shift ID</th><th>Driver</th><th>Vehicle</th><th>Ward</th><th>Status</th><th>Pickups</th></tr></thead>
+                <tbody><tr><td colspan="6" style="text-align:center;">Loading shifts...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Log Household Pickup ── -->
+      <section class="panel" id="pickups">
+        <div class="panel-header">
+          <div>
+            <h2>Household Collection (Door-to-Door Log)</h2>
+            <span class="hint">Ensures no house is skipped and checks segregation compliance</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="pkShiftId">Target Shift ID</label><input id="pkShiftId" placeholder="e.g. MSH-2026-001" value="MSH-2026-001" /></div>
+            <div class="field"><label for="pkHouseId">Household / Property ID</label><input id="pkHouseId" placeholder="e.g. HH-15-101" value="HH-15-101" /></div>
+            <div class="field">
+              <label for="pkHouseholdQr">
+                Scanned Doorstep QR Code (Physical Verification)
+                <span style="color:var(--color-danger-600); font-weight:700;">*ANTI-CHEAT MANDATORY</span>
+              </label>
+              <div class="flex gap-2">
+                <input id="pkHouseholdQr" placeholder="Scan physical QR code mounted at doorstep..." style="font-family:monospace; font-weight:600;" />
+                <button type="button" class="btn btn-secondary" onclick="simulateScanDoorstepQr()" title="Scan doorstep QR tag">📷 Scan QR</button>
+              </div>
+              <div id="antiCheatIndicator" class="mt-1" style="font-size:11px; color:var(--color-ink-600);">
+                ℹ️ Click <strong>"📲 Scan Doorstep QR"</strong> on the placard to simulate scanning the doorstep QR code.
+              </div>
+            </div>
+            <div class="field"><label for="pkWeight">Collected Weight (Kg)</label><input id="pkWeight" type="number" step="0.1" value="4.2" /></div>
+            <div class="field">
+              <label for="pkSegregation">Segregation Status</label>
+              <select id="pkSegregation">
+                <option value="SEGREGATED_WET_DRY">✅ Fully Segregated (Wet &amp; Dry separate)</option>
+                <option value="MIXED_FLAGGED">⚠️ Mixed Waste (Flagged for Advisory)</option>
+                <option value="HAZARDOUS_SEPARATE">☣️ Includes Domestic Hazardous Waste</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="recordPickup()">Log Household Pickup</button>
+          </div>
+
+          <div>
+            <!-- Demo Household Doorstep Placard -->
+            <div class="household-placard">
+              <div class="placard-header">
+                <div>
+                  <div style="font-weight:800; font-size:12px; color:var(--color-primary-900);">
+                    🏛️ SWACHH BHARAT MISSION · DOORSTEP RFID/QR PLACARD
+                  </div>
+                  <div style="font-size:10px; color:var(--color-ink-500);">Bhopal Municipal Corporation &bull; Ward 15 (Shahpura)</div>
+                </div>
+                <span class="placard-badge">🏡 REGISTERED DEMO</span>
+              </div>
+
+              <div style="display:flex; gap:var(--sp-4); align-items:center;">
+                <div class="qr-box" id="demoQrBox">
+                  <div id="demoQrContainer" style="min-width:110px; min-height:110px; display:flex; align-items:center; justify-content:center;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 27 27" shape-rendering="crispEdges"><path fill="#ffffff" d="M0 0h27v27H0z"/><path stroke="#000000" d="M1 1.5h7m1 0h1m2 0h4m1 0h1m1 0h7M1 2.5h1m5 0h1m2 0h1m2 0h5m1 0h1m5 0h1M1 3.5h1m1 0h3m1 0h1m8 0h2m1 0h1m1 0h3m1 0h1M1 4.5h1m1 0h3m1 0h1m1 0h5m3 0h1m1 0h1m1 0h3m1 0h1M1 5.5h1m1 0h3m1 0h1m1 0h1m2 0h2m1 0h1m3 0h1m1 0h3m1 0h1M1 6.5h1m5 0h1m1 0h2m1 0h2m3 0h1m1 0h1m5 0h1M1 7.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M9 8.5h6m2 0h1M1 9.5h1m3 0h1m1 0h5m2 0h1m1 0h1m1 0h5m2 0h1M3 10.5h1m1 0h1m2 0h2m3 0h4m2 0h1m3 0h2M1 11.5h1m1 0h5m1 0h1m7 0h3m4 0h1M1 12.5h6m1 0h3m1 0h2m1 0h3m1 0h1m4 0h1M1 13.5h1m2 0h2m1 0h1m1 0h1m1 0h1m2 0h2m4 0h3M1 14.5h1m1 0h3m2 0h1m4 0h1m2 0h1m1 0h3m4 0h1M7 15.5h2m1 0h1m1 0h4m1 0h4m2 0h1m1 0h1M3 16.5h1m1 0h1m2 0h2m2 0h1m1 0h1m2 0h1m1 0h1m1 0h2m2 0h1M1 17.5h2m1 0h2m1 0h2m4 0h2m2 0h6m1 0h1M9 18.5h2m3 0h2m1 0h1m3 0h1m1 0h2M1 19.5h7m1 0h1m7 0h1m1 0h1m1 0h1m1 0h3M1 20.5h1m5 0h1m2 0h1m2 0h1m1 0h3m3 0h4M1 21.5h1m1 0h3m1 0h1m1 0h1m1 0h2m1 0h11M1 22.5h1m1 0h3m1 0h1m2 0h2m1 0h1m3 0h1m1 0h1m1 0h2m2 0h1M1 23.5h1m1 0h3m1 0h1m2 0h1m1 0h4m2 0h1m2 0h1m1 0h2M1 24.5h1m5 0h1m2 0h3m1 0h1m2 0h2m2 0h2m1 0h2M1 25.5h7m1 0h1m3 0h2m4 0h2m2 0h1m1 0h1"/></svg>
+                  </div>
+                  <div style="font-family:monospace; font-size:9px; font-weight:700; color:var(--color-primary-800); margin-top:4px;">
+                    MUNI-HH-WARD15-101-SECURE
+                  </div>
+                </div>
+
+                <div style="flex:1; font-size:12px; line-height:1.6;">
+                  <div>Resident: <strong id="demoResidentName">Sunita Sharma</strong></div>
+                  <div>Address: <span id="demoAddress" style="color:var(--color-ink-700);">Plot 42, Lane 3, Shahpura Sector B</span></div>
+                  <div>Property ID: <code style="font-weight:700; color:var(--color-primary-700);">HH-15-101</code></div>
+                  <div>Bye-Law User Fee: <span class="badge badge-success" style="font-size:10px;">ACTIVE (₹100/mo)</span></div>
+
+                  <div class="mt-3 flex gap-2">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="simulateScanDoorstepQr()" style="font-size:11px;">
+                      📲 Scan Doorstep QR
+                    </button>
+                    <button type="button" class="btn btn-secondary btn-sm" onclick="simulateCheatAttempt()" style="font-size:11px;" title="Test anti-cheat rejection">
+                      ⚠️ Test Cheat Attempt
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); border-radius:6px; padding:6px 10px; margin-top:10px; font-size:11px; color:var(--color-primary-900);">
+                🔒 <strong>Anti-Cheat Security Policy:</strong> Every registered home has a weatherproof QR mounted at the gate. Municipal collection staff cannot enter fake logs or falsify 100% route coverage without physically scanning this QR code.
+              </div>
+            </div>
+
+            <div id="lastPickupResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Anti-Dumping Trip Lock & Weighbridge ── -->
+      <section class="panel" id="triplock">
+        <div class="panel-header">
+          <div>
+            <h2>Anti-Dumping Trip Lock &amp; Facility Weighbridge</h2>
+            <span class="hint">Locks vehicle trip to an authorized facility; stops unlawful dumping in fields/drains</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Step 1: Lock Trip to Destination</h3>
+            <div class="field"><label for="tlShiftId">Shift ID to Complete</label><input id="tlShiftId" value="MSH-2026-001" /></div>
+            <div class="field">
+              <label for="tlFacility">Authorized Destination</label>
+              <select id="tlFacility">
+                <option value="MRF-Bhopal-Central">🏢 Central Material Recovery Facility (MRF)</option>
+                <option value="BIO-COMPOST-PLANT-01">🌱 Municipal Composting &amp; Biomethanation Unit</option>
+                <option value="SANITARY-LANDFILL-ADAMPUR">🛑 Engineered Sanitary Landfill (Residuals Only)</option>
+              </select>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="lockTrip()">Lock Trip to Facility</button>
+            <div id="tripLockResult" class="mt-3"></div>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Step 2: Facility Weighbridge Handshake</h3>
+            <div class="field"><label for="wbTripId">Trip ID (from Step 1)</label><input id="wbTripId" placeholder="e.g. UUID returned above" /></div>
+            <div class="field"><label for="wbFacilityId">Receiving Facility ID</label><input id="wbFacilityId" value="MRF-Bhopal-Central" /></div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="wbGross">Gross Weight (Kg)</label><input id="wbGross" type="number" value="3850" /></div>
+              <div class="field" style="flex:1;"><label for="wbTare">Tare Weight (Kg)</label><input id="wbTare" type="number" value="2500" /></div>
+            </div>
+            <button class="btn btn-secondary btn-block" onclick="recordWeighbridge()">Confirm Weighbridge Inward</button>
+            <div id="weighbridgeResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Residual-Only Landfill Gate Pass ── -->
+      <section class="panel" id="gatepass">
+        <div class="panel-header">
+          <div>
+            <h2>"Residuals Only" Landfill Digital Gate Pass</h2>
+            <span class="hint">Strict enforcement: Rejects raw unsegregated waste; permits only true non-recyclable inert residues (&le; 15%)</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="gpTripId">Trip ID</label><input id="gpTripId" placeholder="Paste completed Trip ID" /></div>
+            <div class="field"><label for="gpResidualWeight">Residual Weight for Landfill (Kg)</label><input id="gpResidualWeight" type="number" value="120" /></div>
+            <button class="btn btn-primary btn-block" onclick="generateGatePass()">Request Landfill Gate Pass</button>
+          </div>
+          <div id="gatePassResult" style="background:var(--color-ink-50); padding:var(--sp-4); border-radius:var(--radius-md);">
+            <div style="font-weight:600;">Landfill Protection Protocol:</div>
+            <p style="font-size:13px; color:var(--color-ink-700); margin-top:var(--sp-2);">
+              Under Swachh Survekshan 2024 guidelines, landfill minimization achieves maximum marks only when &le; 10% waste goes to landfill. Our smart gatekeeper automatically rejects trucks attempting to dump unprocessed or raw city waste into landfill pits.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MRF Sorting Facility Tracker ── -->
+      <section class="panel" id="mrf">
+        <div class="panel-header">
+          <div>
+            <h2>Material Recovery Facility (MRF) Sorting Tracker</h2>
+            <span class="hint">Turning waste collection from a cost burden into segregated commodity assets</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadInventory()">↻ View Inventory</button>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="mrfFacilityId">MRF Facility Code</label><input id="mrfFacilityId" value="MRF-Bhopal-Central" /></div>
+            <div class="field"><label for="mrfPet">PET Plastic Bottles (Kg)</label><input id="mrfPet" type="number" value="150" /></div>
+            <div class="field"><label for="mrfHdpe">HDPE Hard Plastics (Kg)</label><input id="mrfHdpe" type="number" value="95" /></div>
+            <div class="field"><label for="mrfPaper">Cardboard &amp; Paper (Kg)</label><input id="mrfPaper" type="number" value="280" /></div>
+            <div class="field"><label for="mrfMetal">Scrap Metals (Kg)</label><input id="mrfMetal" type="number" value="65" /></div>
+            <div class="field"><label for="mrfCompost">Compostable Organics (Kg)</label><input id="mrfCompost" type="number" value="600" /></div>
+            <button class="btn btn-primary btn-block" onclick="logMrfSorting()">Log Sorted Batch to Inventory</button>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Current MRF Bulk Commodities</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="inventoryTable">
+                <thead><tr><th>Batch / Sorting ID</th><th>Facility</th><th>Total (Kg)</th><th>Logged At</th></tr></thead>
+                <tbody><tr><td colspan="4" style="text-align:center;">Loading inventory...</td></tr></tbody>
+              </table>
+            </div>
+            <div id="mrfSortingResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── B2B Recycler Marketplace ── -->
+      <section class="panel" id="marketplace">
+        <div class="panel-header">
+          <div>
+            <h2>B2B Recycler Marketplace (Municipal Offtake)</h2>
+            <span class="hint">Direct sale of bulk sorted recyclables to verified commercial re-processors</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="ordMrfId">Selling MRF Facility</label><input id="ordMrfId" value="MRF-Bhopal-Central" /></div>
+            <div class="field">
+              <label for="ordMaterial">Material Category</label>
+              <select id="ordMaterial">
+                <option value="PET_BOTTLES">PET Plastics (Baled Bottles) · ~₹35/Kg</option>
+                <option value="HDPE_CONTAINERS">HDPE Flakes &amp; Containers · ~₹42/Kg</option>
+                <option value="CARDBOARD_PAPER">Corrugated Cardboard OCC · ~₹14/Kg</option>
+                <option value="SCRAP_METAL">Mixed Steel / Aluminum Scrap · ~₹32/Kg</option>
+                <option value="ORGANIC_COMPOST">City Compost (Nutrient Enriched) · ~₹5/Kg</option>
+              </select>
+            </div>
+            <div class="field"><label for="ordWeight">Weight (Kg)</label><input id="ordWeight" type="number" value="500" /></div>
+            <div class="field"><label for="ordPrice">Agreed Price per Kg (₹)</label><input id="ordPrice" type="number" value="35" /></div>
+            <div class="field"><label for="ordRecycler">Authorized Recycler ID</label><input id="ordRecycler" value="RECYC-MP-GREEN-PLAST" /></div>
+            <button class="btn btn-primary btn-block" onclick="createRecyclerOrder()">Execute B2B Sale Order</button>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Recent Recycler Orders</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="ordersTable">
+                <thead><tr><th>Order ID</th><th>Material</th><th>Qty (Kg)</th><th>Revenue (₹)</th><th>Status</th></tr></thead>
+                <tbody><tr><td colspan="5" style="text-align:center;">Loading orders...</td></tr></tbody>
+              </table>
+            </div>
+            <div id="orderResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Chain of Custody Audit Trail ── -->
+      <section class="panel" id="audit">
+        <div class="panel-header">
+          <div>
+            <h2>Full Chain-of-Custody Audit Trail</h2>
+            <span class="hint">Tamper-evident verification: Shift &rarr; Pickups &rarr; Weighbridge &rarr; Sorting &rarr; Recycling</span>
+          </div>
+        </div>
+        <div class="sign-in-row flex gap-3" style="align-items:flex-end;">
+          <div class="field" style="margin-bottom:0; flex:1;">
+            <label for="auditShiftId">Enter Shift ID</label>
+            <input id="auditShiftId" value="MSH-2026-001" />
+          </div>
+          <button class="btn btn-primary" onclick="queryAuditTrail()">Inspect Shift Timeline</button>
+        </div>
+        <div id="auditTimelineResult" class="mt-4"></div>
+      </section>
+
+      <!-- ── Citizen Open Dump Reporter ── -->
+      <section class="panel" id="whistleblower">
+        <div class="panel-header">
+          <div>
+            <h2>Citizen / Ground Whistleblower (Anti-Open Dumping)</h2>
+            <span class="hint">Report illegal waste disposal in fields, vacant plots, or roadside drains</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="wbReporter">Reporter Name / Phone</label><input id="wbReporter" placeholder="e.g. Ramesh Singh / 98260XXXXX" /></div>
+            <div class="field"><label for="wbDesc">Incident Description &amp; Vehicle No.</label><textarea id="wbDesc" rows="3" placeholder="e.g. Tipper truck MP-04-XX seen dumping garbage in empty plot near Kolar road bypass"></textarea></div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="wbLat">GPS Latitude</label><input id="wbLat" value="23.1895" /></div>
+              <div class="field" style="flex:1;"><label for="wbLng">GPS Longitude</label><input id="wbLng" value="77.4124" /></div>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="submitOpenDumpReport()">File Whistleblower Report</button>
+            <div id="whistleblowerResult" class="mt-3"></div>
+          </div>
+          <div style="background:var(--color-ink-50); padding:var(--sp-4); border-radius:var(--radius-md);">
+            <h3 style="font:var(--text-h3);">Recent Whistleblower Grievances</h3>
+            <div class="table-wrap mt-2">
+              <table class="ds-table" id="reportsTable">
+                <thead><tr><th>Report ID</th><th>Reporter</th><th>Description</th><th>Status</th></tr></thead>
+                <tbody><tr><td colspan="4" style="text-align:center;">Loading reports...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="/assets/shared.js"></script>
+<script>
+  // ── Native Web Audio Synthesizer ──
+  let audioCtx = null;
+  let soundEnabled = true;
+  function initAudio() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+  function toggleSound() {
+    soundEnabled = !soundEnabled;
+    const btn = document.getElementById("soundToggleBtn");
+    if (btn) btn.textContent = soundEnabled ? "🔊 Sound ON" : "🔇 Sound OFF";
+  }
+  function playSound(type) {
+    if (!soundEnabled) return;
+    try {
+      initAudio();
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      if (type === 'beep' || type === 'scan') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, now);
+        osc.frequency.exponentialRampToValueAtTime(1760, now + 0.08);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.08);
+      } else if (type === 'pneumatic') {
+        const bufferSize = audioCtx.sampleRate * 0.16;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1200, now);
+        filter.Q.setValueAtTime(3.0, now);
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.16);
+        noise.connect(filter);
+        filter.connect(gain);
+        gain.connect(audioCtx.destination);
+        noise.start(now);
+        noise.stop(now + 0.16);
+      } else if (type === 'stamp') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(130, now);
+        osc.frequency.exponentialRampToValueAtTime(30, now + 0.18);
+        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.18);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.18);
+      } else if (type === 'success') {
+        [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + i * 0.07);
+          gain.gain.setValueAtTime(0.12, now + i * 0.07);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.07 + 0.2);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now + i * 0.07);
+          osc.stop(now + i * 0.07 + 0.2);
+        });
+      }
+    } catch(e) { console.warn(e); }
+  }
+
+  // ── Autopilot Global Ecosystem Simulator Runner ──
+  let autopilotRunning = false;
+  let autopilotStep = 0;
+  let autopilotTimer = null;
+
+  function toggleAutopilotSimulation() {
+    if (autopilotRunning) {
+      pauseAutopilotSimulation();
+    } else {
+      startAutopilotSimulation();
+    }
+  }
+
+  function startAutopilotSimulation() {
+    autopilotRunning = true;
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "⏸ Pause Simulation";
+    runNextAutopilotStep();
+  }
+
+  function pauseAutopilotSimulation() {
+    autopilotRunning = false;
+    if (autopilotTimer) clearTimeout(autopilotTimer);
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "▶ Resume Simulation";
+    const label = document.getElementById("autopilotStepLabel");
+    if (label) label.textContent = "PAUSED (Step " + autopilotStep + "/8)";
+  }
+
+  function resetAutopilotSimulation() {
+    pauseAutopilotSimulation();
+    autopilotStep = 0;
+    const label = document.getElementById("autopilotStepLabel");
+    if (label) label.textContent = "IDLE / READY";
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "▶ Start Live Simulation";
+  }
+
+  async function runNextAutopilotStep() {
+    if (!autopilotRunning) return;
+    autopilotStep = (autopilotStep % 8) + 1;
+    const speed = parseFloat(document.getElementById("autopilotSpeed")?.value) || 1;
+    const stepDuration = 2400 / speed;
+    const label = document.getElementById("autopilotStepLabel");
+
+    try {
+      if (autopilotStep === 1) {
+        if (label) label.textContent = "STEP 1/8: Generating CPCB Color Manifest...";
+        playSound("beep");
+      } else if (autopilotStep === 2) {
+        if (label) label.textContent = "STEP 2/8: Assigning GPS Hazmat Transport Fleet...";
+        playSound("beep");
+      } else if (autopilotStep === 3) {
+        if (label) label.textContent = "STEP 3/8: Recording CBWTF Inward Weighbridge...";
+        playSound("stamp");
+      } else if (autopilotStep === 4) {
+        if (label) label.textContent = "STEP 4/8: 1050°C Thermal Incineration Cycle...";
+        playSound("beep");
+      } else if (autopilotStep === 5) {
+        if (label) label.textContent = "STEP 5/8: Minting Cryptographic Treatment Certificate...";
+        playSound("stamp");
+      } else if (autopilotStep === 6) {
+        if (label) label.textContent = "STEP 6/8: Doorstep QR Verification & Household Pickup...";
+        simulateScanDoorstepQr();
+        await recordPickup();
+      } else if (autopilotStep === 7) {
+        if (label) label.textContent = "STEP 7/8: Anti-Dumping Corridor Trip Lock...";
+        await lockTrip();
+      } else if (autopilotStep === 8) {
+        if (label) label.textContent = "STEP 8/8: MRF Bulk Optical Sorting & Commodity Revenue...";
+        await logMrfSorting();
+        playSound("success");
+      }
+    } catch (e) {
+      console.warn("Autopilot error:", e);
+    }
+
+    if (autopilotRunning) {
+      autopilotTimer = setTimeout(runNextAutopilotStep, stepDuration);
+    }
+  }
+
+  function showToast(msg, isError = false) {
+    const box = document.getElementById("toastBox");
+    box.style.display = "block";
+    box.style.background = isError ? "var(--color-danger-100)" : "var(--color-success-100)";
+    box.style.color = isError ? "var(--color-danger-700)" : "var(--color-success-700)";
+    box.textContent = msg;
+    setTimeout(() => { box.style.display = "none"; }, 5000);
+  }
+
+  async function loadShifts() {
+    try {
+      const res = await fetch("/api/municipal/shifts");
+      const shifts = await res.json();
+      document.getElementById("kpiActiveShifts").textContent = shifts.filter(s => s.status === "ACTIVE").length;
+      let totalPickups = 0;
+      shifts.forEach(s => { totalPickups += (s.pickups || []).length; });
+      document.getElementById("kpiPickups").textContent = totalPickups;
+
+      const tbody = document.querySelector("#shiftsTable tbody");
+      if (!shifts.length) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No shifts found.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = shifts.map(s => `
+        <tr>
+          <td><strong>${s.shiftId}</strong></td>
+          <td>${s.driverId}</td>
+          <td>${s.vehicleId}</td>
+          <td>${s.wardId}</td>
+          <td><span class="status-badge ${s.status === 'ACTIVE' ? 'status-active' : 'status-locked'}">${s.status}</span></td>
+          <td>${(s.pickups || []).length} items</td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("shiftsTable", { pageSize: 5, placeholder: "Search shifts..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function startShift() {
+    const driverId = document.getElementById("shiftDriver").value.trim();
+    const vehicleId = document.getElementById("shiftVehicle").value.trim();
+    const wardId = document.getElementById("shiftWard").value.trim();
+    if (!driverId || !vehicleId || !wardId) return alert("Please fill all shift fields.");
+
+    try {
+      const res = await fetch("/api/municipal/shifts", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ driverId, vehicleId, wardId })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Shift started successfully! ID: ${data.shiftId}`);
+      document.getElementById("pkShiftId").value = data.shiftId;
+      document.getElementById("tlShiftId").value = data.shiftId;
+      document.getElementById("auditShiftId").value = data.shiftId;
+      loadShifts();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  let demoHouseholdData = {
+    householdId: "HH-15-101",
+    residentName: "Sunita Sharma",
+    address: "Plot 42, Lane 3, Shahpura Sector B",
+    qrCode: "MUNI-HH-WARD15-101-SECURE"
+  };
+
+  async function loadHouseholds() {
+    try {
+      const res = await fetch("/api/municipal/households");
+      const list = await res.json();
+      const demo = list.find(h => h.isDemo || h.householdId === "HH-15-101");
+      if (demo) {
+        demoHouseholdData = demo;
+        if (demo.qrSvg) {
+          document.getElementById("demoQrContainer").innerHTML = demo.qrSvg;
+        }
+        if (demo.residentName) {
+          document.getElementById("demoResidentName").textContent = demo.residentName;
+        }
+        if (demo.address) {
+          document.getElementById("demoAddress").textContent = demo.address;
+        }
+      }
+    } catch (e) {
+      console.warn("Could not load dynamic households from backend:", e);
+    }
+  }
+
+  function simulateScanDoorstepQr() {
+    document.getElementById("pkHouseId").value = demoHouseholdData.householdId || "HH-15-101";
+    document.getElementById("pkHouseholdQr").value = demoHouseholdData.qrCode || "MUNI-HH-WARD15-101-SECURE";
+    const ind = document.getElementById("antiCheatIndicator");
+    if (ind) {
+      ind.innerHTML = `<span style="color:var(--color-success-700); font-weight:700;">✅ Physical Doorstep Verified: Scanned QR matches household ${demoHouseholdData.householdId}!</span>`;
+    }
+    showToast(`Doorstep QR Scanned: Verified physical presence at ${demoHouseholdData.householdId}`);
+  }
+
+  function simulateCheatAttempt() {
+    document.getElementById("pkHouseId").value = "HH-15-101";
+    document.getElementById("pkHouseholdQr").value = "STAFF_SITTING_AT_TEA_STALL_FAKE_QR";
+    const ind = document.getElementById("antiCheatIndicator");
+    if (ind) {
+      ind.innerHTML = `<span style="color:var(--color-danger-700); font-weight:700;">⚠️ Cheating Simulated: Unverified QR token entered. Click "Log Household Pickup" to test security rejection!</span>`;
+    }
+    showToast("Cheating attempt prepared: Submit pickup to test security block.", true);
+  }
+
+  async function recordPickup() {
+    const shiftId = document.getElementById("pkShiftId").value.trim();
+    const householdId = document.getElementById("pkHouseId").value.trim();
+    const householdQr = document.getElementById("pkHouseholdQr").value.trim();
+    const weightKg = parseFloat(document.getElementById("pkWeight").value);
+    const segregationStatus = document.getElementById("pkSegregation").value;
+    if (!shiftId || !householdId || isNaN(weightKg)) return alert("Please fill shift ID, house ID, and weight.");
+
+    // Strict Anti-Cheat Check for Demo Household HH-15-101
+    const expectedQr = demoHouseholdData.qrCode || "MUNI-HH-WARD15-101-SECURE";
+    if (householdId.toUpperCase() === "HH-15-101") {
+      if (householdQr !== expectedQr) {
+        document.getElementById("lastPickupResult").innerHTML = `
+          <div class="alert alert-danger" style="border-left: 4px solid var(--color-danger-600); padding: 12px; margin-top: 10px;">
+            <div style="font-weight: 800; font-size: 13px; color: var(--color-danger-700);">
+              🛑 ANTI-CHEAT SECURITY TRIGGERED: PICKUP REJECTED!
+            </div>
+            <div style="font-size: 12px; margin-top: 4px; color: var(--color-danger-900);">
+              Sanitation staff cannot cheat or fake door-to-door coverage. To log collection for <strong>${householdId}</strong>, you MUST physically scan the assigned Doorstep QR Code (<code>${expectedQr}</code>) mounted at the resident gate.
+            </div>
+            <div style="font-size: 11px; margin-top: 6px; color: var(--color-ink-700);">
+              Scanned Token: <code>${householdQr || '(empty - not scanned)'}</code> &bull; Status: <strong style="color:var(--color-danger-700);">MISMATCH / LOCATION NOT VERIFIED</strong>
+            </div>
+          </div>
+        `;
+        showToast("Anti-Cheat Rejected: Physical doorstep QR scan required!", true);
+        return;
+      }
+    }
+
+    try {
+      const res = await fetch("/api/municipal/pickups", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          shiftId, householdId, householdQr, weightKg, segregationStatus,
+          gpsLat: 23.2160, gpsLng: 77.4330
+        })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Pickup logged for ${householdId} (${weightKg} kg)! Status: ${data.status}`);
+      document.getElementById("lastPickupResult").innerHTML = `
+        <div class="alert alert-success" style="border-left: 4px solid var(--color-success-600); padding: 12px; margin-top: 10px;">
+          <div style="font-weight: 800; font-size: 13px; color: var(--color-success-700);">
+            ✓ Anti-Cheat Verified Household Pickup Logged!
+          </div>
+          <div style="font-size: 12px; margin-top: 4px;">
+            Pickup <strong>${data.pickupId.slice(0, 13)}...</strong> recorded for Household <strong>${householdId}</strong> (${weightKg} Kg).
+          </div>
+          <div style="font-size: 11.5px; color: var(--color-success-800); margin-top: 4px;">
+            🛡️ Verified Doorstep QR: <code>${householdQr || expectedQr}</code> &bull; Segregation: <strong>${segregationStatus}</strong>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-ink-600); margin-top: 6px;">
+            ✓ Citizen receipt generated &bull; Municipal Swachh Bharat Coverage Ledger Updated (+1 Doorstep).
+          </div>
+        </div>`;
+      document.getElementById("pkHouseId").value = "HH-15-101";
+      document.getElementById("pkHouseholdQr").value = "";
+      const ind = document.getElementById("antiCheatIndicator");
+      if (ind) ind.innerHTML = `ℹ️ Click <strong>"📲 Scan Doorstep QR"</strong> on the placard to simulate next household scan.`;
+      loadShifts();
+    } catch (e) {
+      document.getElementById("lastPickupResult").innerHTML = `
+        <div class="alert alert-danger" style="font-size:12px; margin-top:10px;">
+          ${e.message}
+        </div>
+      `;
+      showToast(e.message, true);
+    }
+  }
+
+  async function lockTrip() {
+    const shiftId = document.getElementById("tlShiftId").value.trim();
+    const destinationFacilityId = document.getElementById("tlFacility").value;
+    if (!shiftId) return alert("Please enter shift ID.");
+
+    try {
+      playSound("stamp");
+      const res = await fetch("/api/municipal/trips/lock", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ shiftId, destinationFacilityId })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("beep");
+      showToast(`Trip locked to ${destinationFacilityId}! Trip ID: ${data.tripId}`);
+      document.getElementById("wbTripId").value = data.tripId;
+      document.getElementById("gpTripId").value = data.tripId;
+      document.getElementById("tripLockResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>🔒</span> ANTI-DUMPING GEOFENCE CORRIDOR ENGAGED &bull; TRIP ${data.tripId}
+            </div>
+            <span class="badge badge-success">✓ CORRIDOR LOCKED</span>
+          </div>
+          <div class="padlock-wrap">
+            <div class="padlock-icon-box">
+              <div class="padlock-shackle"></div>
+              <div class="padlock-body">LOCK</div>
+            </div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <span style="font-weight:700; color:#f8fafc; font-size:12.5px;">GPS Transit Path Bound to Designated Facility</span>
+                <span class="status-badge status-active" style="font-size:10px;">● ACTIVE TRACKING</span>
+              </div>
+              <div style="font-size:11.5px; color:#cbd5e1; line-height:1.6;">
+                Origin: <strong>Ward 15 (Shahpura Collection Sector)</strong> ➔ Dest: <strong style="color:#38bdf8;">${data.destinationFacilityId}</strong><br>
+                Geofence Perimeter: <span style="color:#22c55e; font-weight:700;">Locked within &plusmn;150m corridor</span> &bull; Tamper Deviation Alarm: <strong>ARMED</strong>
+              </div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:8px; font-size:11px;">
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">TRIP ID HASH</div>
+              <div style="color:#f8fafc; font-weight:700; font-family:monospace;">${data.tripId.slice(0, 16)}...</div>
+            </div>
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">CORRIDOR DEVIATION</div>
+              <div style="color:#22c55e; font-weight:700;">0.00 Meters &bull; NORMAL</div>
+            </div>
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">WEIGHBRIDGE ACTION</div>
+              <div style="color:#38bdf8; font-weight:700;">PROCEED TO SCALE</div>
+            </div>
+          </div>
+        </div>`;
+      loadShifts();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function recordWeighbridge() {
+    const tripId = document.getElementById("wbTripId").value.trim();
+    const facilityId = document.getElementById("wbFacilityId").value.trim();
+    const grossWeightKg = parseFloat(document.getElementById("wbGross").value);
+    const tareWeightKg = parseFloat(document.getElementById("wbTare").value);
+    if (!tripId || isNaN(grossWeightKg) || isNaN(tareWeightKg)) return alert("Please fill trip ID and scale weights.");
+
+    try {
+      playSound("stamp");
+      const res = await fetch("/api/municipal/weighbridge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tripId, facilityId, grossWeightKg, tareWeightKg })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("beep");
+      showToast(`Weighbridge handshake verified! Net Weight: ${data.netWeightKg} Kg`);
+      document.getElementById("weighbridgeResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>⚖️</span> MUNICIPAL WEIGHBRIDGE SCALE INWARD HANDSHAKE
+            </div>
+            <span class="badge badge-success">✓ CONFIRMED INWARD</span>
+          </div>
+          <div style="display:flex; gap:10px; align-items:center; background:#020617; padding:10px 14px; border-radius:6px; border:1px solid #1e293b; margin:6px 0; font-size:12px;">
+            <div>Gross: <strong style="color:#38bdf8;">${grossWeightKg} Kg</strong></div>
+            <div style="color:#64748b;">&minus;</div>
+            <div>Tare: <strong style="color:#f59e0b;">${tareWeightKg} Kg</strong></div>
+            <div style="color:#64748b;">=</div>
+            <div>Net Delivered: <strong style="color:#22c55e; font-size:14px;">${data.netWeightKg} Kg</strong></div>
+          </div>
+          <div style="font-size:11px; color:#94a3b8; display:flex; justify-content:space-between; align-items:center;">
+            <span>Receipt ID: <strong style="color:#f8fafc; font-family:monospace;">${data.receiptId}</strong></span>
+            <span style="color:#22c55e; font-weight:600;">✓ Shift Audit Ledger Closed</span>
+          </div>
+        </div>`;
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function generateGatePass() {
+    const tripId = document.getElementById("gpTripId").value.trim();
+    const residualWeightKg = parseFloat(document.getElementById("gpResidualWeight").value);
+    if (!tripId || isNaN(residualWeightKg)) return alert("Please fill Trip ID and Residual Weight.");
+
+    try {
+      const res = await fetch("/api/municipal/gatepass", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ tripId, residualWeightKg })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Landfill Gate Pass approved! Pass ID: ${data.gatePassId}`);
+      document.getElementById("gatePassResult").innerHTML = `
+        <div class="alert alert-success">
+          <strong>✓ GATE PASS ISSUED (${data.gatePassId})</strong><br>
+          Permitted Residual: ${residualWeightKg} Kg (&le; 15% threshold satisfied). Direct landfill dump allowed only for inert residuals.
+        </div>`;
+    } catch (e) {
+      showToast(e.message, true);
+      document.getElementById("gatePassResult").innerHTML = `
+        <div class="alert alert-danger">
+          <strong>🛑 DUMP GATE REJECTED:</strong> ${e.message}
+        </div>`;
+    }
+  }
+
+  async function loadInventory() {
+    try {
+      const res = await fetch("/api/municipal/mrf/inventory");
+      const list = await res.json();
+      let totalSorted = 0;
+      list.forEach(i => { totalSorted += (i.totalSortedKg || 0); });
+      document.getElementById("kpiSortedKg").textContent = totalSorted.toLocaleString();
+
+      const tbody = document.querySelector("#inventoryTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;">No sorted batches logged.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(i => `
+        <tr>
+          <td><strong>${i.sortingId}</strong></td>
+          <td>${i.facilityId}</td>
+          <td>${i.totalSortedKg} Kg</td>
+          <td>${new Date(i.timestamp).toLocaleTimeString()}</td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("inventoryTable", { pageSize: 5, placeholder: "Search batches..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function logMrfSorting() {
+    const facilityId = document.getElementById("mrfFacilityId").value.trim();
+    const pet = parseFloat(document.getElementById("mrfPet").value) || 0;
+    const hdpe = parseFloat(document.getElementById("mrfHdpe").value) || 0;
+    const paper = parseFloat(document.getElementById("mrfPaper").value) || 0;
+    const metal = parseFloat(document.getElementById("mrfMetal").value) || 0;
+    const compost = parseFloat(document.getElementById("mrfCompost").value) || 0;
+
+    const materials = [
+      { type: "PET_BOTTLES", weightKg: pet },
+      { type: "HDPE_CONTAINERS", weightKg: hdpe },
+      { type: "CARDBOARD_PAPER", weightKg: paper },
+      { type: "SCRAP_METAL", weightKg: metal },
+      { type: "ORGANIC_COMPOSTABLE", weightKg: compost }
+    ].filter(m => m.weightKg > 0);
+
+    try {
+      playSound("pneumatic");
+      const res = await fetch("/api/municipal/mrf/sorting", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ facilityId, materials })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("success");
+      showToast(`MRF Batch sorted! Total: ${data.totalSortedKg} Kg`);
+
+      const estRevenue = Math.round(pet * 35 + hdpe * 42 + paper * 14 + metal * 32 + compost * 5);
+
+      document.getElementById("mrfSortingResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>♻️</span> MRF OPTICAL SORTING &amp; VALUE RECOVERY &bull; BATCH ${data.sortingId}
+            </div>
+            <span class="badge badge-success">✓ +${data.totalSortedKg} Kg RECOVERED</span>
+          </div>
+          <div class="mrf-grid">
+            <div class="mrf-bin-card" style="border-top:3px solid #38bdf8;">
+              <div style="font-size:10px; color:#94a3b8;">PET PLASTIC</div>
+              <div class="mrf-bin-val" style="color:#38bdf8;">${pet} <span style="font-size:10px;">Kg</span></div>
+              <div style="font-size:9.5px; color:#64748b;">~₹${pet * 35}</div>
+            </div>
+            <div class="mrf-bin-card" style="border-top:3px solid #f59e0b;">
+              <div style="font-size:10px; color:#94a3b8;">HDPE FLAKES</div>
+              <div class="mrf-bin-val" style="color:#f59e0b;">${hdpe} <span style="font-size:10px;">Kg</span></div>
+              <div style="font-size:9.5px; color:#64748b;">~₹${hdpe * 42}</div>
+            </div>
+            <div class="mrf-bin-card" style="border-top:3px solid #e2e8f0;">
+              <div style="font-size:10px; color:#94a3b8;">PAPER / OCC</div>
+              <div class="mrf-bin-val" style="color:#e2e8f0;">${paper} <span style="font-size:10px;">Kg</span></div>
+              <div style="font-size:9.5px; color:#64748b;">~₹${paper * 14}</div>
+            </div>
+            <div class="mrf-bin-card" style="border-top:3px solid #f43f5e;">
+              <div style="font-size:10px; color:#94a3b8;">SCRAP METAL</div>
+              <div class="mrf-bin-val" style="color:#f43f5e;">${metal} <span style="font-size:10px;">Kg</span></div>
+              <div style="font-size:9.5px; color:#64748b;">~₹${metal * 32}</div>
+            </div>
+            <div class="mrf-bin-card" style="border-top:3px solid #22c55e;">
+              <div style="font-size:10px; color:#94a3b8;">COMPOST</div>
+              <div class="mrf-bin-val" style="color:#22c55e;">${compost} <span style="font-size:10px;">Kg</span></div>
+              <div style="font-size:9.5px; color:#64748b;">~₹${compost * 5}</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; background:#020617; padding:8px 12px; border-radius:6px; border:1px solid #1e293b; font-size:11px;">
+            <div>
+              <span style="color:#64748b;">Est. Circular Economy Revenue:</span>
+              <strong style="color:#22c55e; font-size:13px; margin-left:4px;">₹${estRevenue.toLocaleString()}</strong>
+            </div>
+            <div style="color:#38bdf8; font-weight:600;">
+              ✓ Inventory Stock Dispatched to B2B Recycler Market
+            </div>
+          </div>
+        </div>`;
+      loadInventory();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function loadOrders() {
+    try {
+      const res = await fetch("/api/municipal/marketplace/orders");
+      const list = await res.json();
+      document.getElementById("kpiOrders").textContent = list.length;
+      const tbody = document.querySelector("#ordersTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;">No marketplace orders yet.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(o => `
+        <tr>
+          <td><strong>${o.orderId.slice(0, 8)}...</strong></td>
+          <td>${o.materialType}</td>
+          <td>${o.weightKg} Kg</td>
+          <td>₹${o.totalPrice.toLocaleString()}</td>
+          <td><span class="badge-tag" style="background:var(--color-primary-100); color:var(--color-primary-700);">${o.status}</span></td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("ordersTable", { pageSize: 5, placeholder: "Search orders..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function createRecyclerOrder() {
+    const mrfId = document.getElementById("ordMrfId").value.trim();
+    const materialType = document.getElementById("ordMaterial").value;
+    const weightKg = parseFloat(document.getElementById("ordWeight").value);
+    const pricePerKg = parseFloat(document.getElementById("ordPrice").value);
+    const recyclerId = document.getElementById("ordRecycler").value.trim();
+
+    try {
+      const res = await fetch("/api/municipal/marketplace/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mrfId, materialType, weightKg, pricePerKg, recyclerId })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Order created! Total Revenue: ₹${data.totalPrice}`);
+      document.getElementById("orderResult").innerHTML = `
+        <div class="alert alert-success" style="font-size:12px;">
+          ✓ Sale agreement executed. Order ID: <strong>${data.orderId}</strong> | Value: <strong>₹${data.totalPrice}</strong>
+        </div>`;
+      loadOrders();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function queryAuditTrail() {
+    const shiftId = document.getElementById("auditShiftId").value.trim();
+    if (!shiftId) return alert("Please enter shift ID.");
+
+    try {
+      const res = await fetch(`/api/municipal/audit/${encodeURIComponent(shiftId)}`);
+      const logs = await res.json();
+      const wrap = document.getElementById("auditTimelineResult");
+      if (!logs.length) {
+        wrap.innerHTML = `<div class="alert alert-info">No audit logs found for Shift: ${shiftId}</div>`;
+        return;
+      }
+      wrap.innerHTML = `
+        <div class="timeline">
+          ${logs.map(log => `
+            <div class="timeline-item">
+              <div class="timeline-time">${new Date(log.timestamp).toLocaleString()} &bull; Actor: <strong>${log.actorId}</strong></div>
+              <div class="timeline-action">${log.action}</div>
+              <div style="font-size:12px; color:var(--color-ink-700); margin-top:2px;">
+                Entity: <code>${log.entityId}</code> | Details: ${JSON.stringify(log.details || {})}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function loadReports() {
+    try {
+      const res = await fetch("/api/municipal/reports");
+      const list = await res.json();
+      const tbody = document.querySelector("#reportsTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;">No whistleblower reports.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(r => `
+        <tr>
+          <td><strong>${r.reportId.slice(0, 8)}...</strong></td>
+          <td>${r.reporterId}</td>
+          <td>${r.description || 'Open dumping observed'}</td>
+          <td><span class="status-badge status-locked">${r.status}</span></td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("reportsTable", { pageSize: 5, placeholder: "Search reports..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function submitOpenDumpReport() {
+    const reporterId = document.getElementById("wbReporter").value.trim();
+    const description = document.getElementById("wbDesc").value.trim();
+    const gpsLat = parseFloat(document.getElementById("wbLat").value);
+    const gpsLng = parseFloat(document.getElementById("wbLng").value);
+    if (!reporterId || !description) return alert("Please enter reporter name and incident description.");
+
+    try {
+      const res = await fetch("/api/municipal/report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reporterId, description, gpsLat, gpsLng })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Grievance lodged! Reference ID: ${data.reportId}`);
+      document.getElementById("whistleblowerResult").innerHTML = `
+        <div class="alert alert-success" style="font-size:12px;">
+          ✓ Report dispatched to Municipal Commissioner &amp; SPCB. ID: <strong>${data.reportId}</strong>
+        </div>`;
+      document.getElementById("wbDesc").value = "";
+      loadReports();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  // Initial load
+  loadHouseholds();
+  loadShifts();
+  loadInventory();
+  loadOrders();
+  loadReports();
+</script>
+
+</body>
+</html>

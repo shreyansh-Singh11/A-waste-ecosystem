@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Citizen Circular Portal</title>
+<link rel="stylesheet" href="/assets/design-system.css" />
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<script src="/assets/shared.js"></script>
+<style>
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-ink-900);
+    font-family: var(--font-sans);
+  }
+
+  .app-shell {
+    display: flex;
+    min-height: calc(100vh - 52px);
+  }
+
+  /* Sidebar */
+  .app-nav {
+    width: 240px;
+    flex-shrink: 0;
+    background: #0d1522;
+    border-right: 1px solid var(--color-card-border);
+    padding: 20px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  html.light .app-nav {
+    background: #ffffff;
+    border-right-color: #e2e8f0;
+  }
+  .app-nav .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 8px 18px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 12px;
+  }
+  html.light .app-nav .brand {
+    border-bottom-color: #e2e8f0;
+  }
+  .app-nav .brand .mark {
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-nav .brand .name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.01em;
+  }
+  html.light .app-nav .brand .name { color: #0f172a; }
+  .app-nav .brand .sub {
+    font-size: 10.5px;
+    color: #94a3b8;
+    display: block;
+  }
+  .app-nav a.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    transition: all 0.15s ease;
+  }
+  html.light .app-nav a.nav-link { color: #64748b; }
+  .app-nav a.nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #f8fafc;
+  }
+  html.light .app-nav a.nav-link:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+  }
+  .app-nav a.nav-link.active {
+    background: rgba(16, 185, 129, 0.14);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.28);
+  }
+  html.light .app-nav a.nav-link.active {
+    color: #047857;
+    border-color: rgba(16, 185, 129, 0.4);
+  }
+  .app-nav .nav-footer {
+    margin-top: auto;
+    padding: 12px 8px;
+    font-size: 11px;
+    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  html.light .app-nav .nav-footer { border-top-color: #e2e8f0; }
+
+  /* Main Area */
+  .app-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-topbar {
+    padding: 14px 28px;
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-card-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .app-topbar h1 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--color-ink-900);
+    letter-spacing: -0.02em;
+  }
+  .app-topbar .meta {
+    font-size: 11.5px;
+    color: var(--color-ink-500);
+    margin-top: 2px;
+  }
+
+  .app-content {
+    padding: 24px 28px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Segmented Workspace Tabs */
+  .citizen-workspace-tabs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-card-border);
+    padding: 6px;
+    border-radius: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .citizen-workspace-tabs::-webkit-scrollbar { display: none; }
+
+  .cit-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 14px;
+    border-radius: 7px;
+    border: none;
+    background: transparent;
+    color: var(--color-ink-500);
+    font-weight: 600;
+    font-size: 12.5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    white-space: nowrap;
+  }
+  .cit-tab-btn:hover {
+    background: var(--color-surface-hover);
+    color: var(--color-ink-900);
+  }
+  .cit-tab-btn.active {
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  html.light .cit-tab-btn.active {
+    color: #047857;
+  }
+
+  /* Hero Cockpit Panel */
+  .hero-panel {
+    background: var(--color-surface-card);
+    border: 1px solid var(--color-card-border);
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .hero-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .hero-greeting {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--color-ink-900);
+    letter-spacing: -0.01em;
+  }
+  .hero-sub {
+    font-size: 12.5px;
+    color: var(--color-ink-500);
+    margin-top: 3px;
+  }
+  .hero-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .hero-kpi {
+    background: var(--color-surface);
+    border: 1px solid var(--color-card-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .hero-kpi .kpi-label {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-ink-500);
+    font-weight: 600;
+  }
+  .hero-kpi .kpi-value {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-ink-900);
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Grids & Cards */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .card-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .stat-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-card-border);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .preview-img {
+    margin-top: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 220px;
+    border: 1px solid var(--color-card-border);
+    object-fit: cover;
+  }
+  .qr-box {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    background: var(--color-surface);
+    border: 1px solid var(--color-card-border);
+    padding: 16px;
+    border-radius: 12px;
+  }
+  .qr-box img {
+    border-radius: 8px;
+    background: #fff;
+    padding: 6px;
+  }
+
+  /* Toasts */
+  .demo-toast {
+    background: #111827;
+    color: #34d399;
+    border: 1px solid #10b981;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    display: none;
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 10001;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  }
+  html.light .demo-toast {
+    background: #ffffff;
+    color: #047857;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+  }
+
+  @media (max-width: 900px) {
+    .app-nav { display: none; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero-kpis { grid-template-columns: repeat(3, 1fr); }
+    .app-content { padding: 16px; }
+    .app-topbar { padding: 12px 16px; }
+  }
+  @media (max-width: 600px) {
+    .hero-kpis { grid-template-columns: 1fr; }
+    .demo-toast {
+      position: fixed !important;
+      bottom: 20px !important;
+      top: auto !important;
+      left: 16px !important;
+      right: 16px !important;
+      text-align: center;
+      width: auto !important;
+      margin: 0 !important;
+    }
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+<div class="app-shell">
+
+  <nav class="app-nav">
+    <div class="brand">
+      <span class="mark">♻️</span>
+      <div><span class="name">Smart E-Waste</span><span class="sub">Citizen Portal</span></div>
+    </div>
+    <a class="nav-link active" href="javascript:void(0)" onclick="switchCitizenTab('card')"><span class="nav-icon">🪪</span> My Eco-Card &amp; Impact</a>
+    <a class="nav-link" href="javascript:void(0)" onclick="switchCitizenTab('ai')"><span class="nav-icon">🤖</span> AI Vision &amp; Register</a>
+    <a class="nav-link" href="javascript:void(0)" onclick="switchCitizenTab('pickup')"><span class="nav-icon">📦</span> Request Doorstep Pickup</a>
+    <a class="nav-link" href="javascript:void(0)" onclick="switchCitizenTab('wallet')"><span class="nav-icon">💳</span> Eco-Wallet &amp; Rewards</a>
+    <a class="nav-link" href="javascript:void(0)" onclick="switchCitizenTab('wallet', 'citizenWhistleblower')"><span class="nav-icon">📢</span> Whistleblower Dump Report</a>
+    <div style="border-top:1px solid rgba(255,255,255,0.15);margin:var(--sp-2) var(--sp-3);"></div>
+    <a class="nav-link" href="/government"><span class="nav-icon">🏛️</span> Command &amp; Compliance Hub</a>
+    <div class="nav-footer">Madhya Pradesh · Demo Environment</div>
+  </nav>
+
+
+  <div class="app-main">
+    <header class="app-topbar" id="top">
+      <div class="title-block">
+        <h1>Citizen Circular Portal</h1>
+        <div class="meta">AI Device Diagnostics · Doorstep Collection · Swachh Karma Coins</div>
+      </div>
+      <div class="actions" style="display:flex; align-items:center; gap:var(--sp-2);">
+        <button class="btn btn-primary" onclick="startCitizenDemo()" style="background:linear-gradient(135deg, #06d6a0, #05a87d); border:none; color:#062420; font-weight:700;">
+          ✨ Quick Demo (rahul123)
+        </button>
+        <div id="notifBellWrap"></div>
+      </div>
+    </header>
+
+    <main class="app-content">
+
+      <!-- ── CITIZEN WORKSPACE TABS ── -->
+      <div class="citizen-workspace-tabs" id="citizenWorkspaceTabs">
+        <button class="cit-tab-btn active" data-tab="card" onclick="switchCitizenTab('card')">
+          <span>🪪</span> My Eco-Card &amp; Impact
+        </button>
+        <button class="cit-tab-btn" data-tab="ai" onclick="switchCitizenTab('ai')">
+          <span>🤖</span> AI Vision &amp; Register
+        </button>
+        <button class="cit-tab-btn" data-tab="pickup" onclick="switchCitizenTab('pickup')">
+          <span>📦</span> Request Pickup
+        </button>
+        <button class="cit-tab-btn" data-tab="wallet" onclick="switchCitizenTab('wallet')">
+          <span>💳</span> Wallet &amp; Whistleblower
+        </button>
+      </div>
+
+
+
+      <!-- ============================================================== -->
+      <!-- TAB 1: MY ECO-CARD & DIGITAL PASSPORT                          -->
+      <!-- ============================================================== -->
+      <div id="tabContent-card" class="citizen-tab-content">
+      <section class="panel hero-panel">
+        <div class="hero-greeting" id="heroGreeting">Welcome</div>
+        <div class="hero-sub">Enter your Owner ID below to load your E-Waste Card and impact.</div>
+        <div class="hero-kpis">
+          <div class="hero-kpi"><div class="kpi-label">Items</div><div class="kpi-value" id="heroItems">—</div></div>
+          <div class="hero-kpi"><div class="kpi-label">Credits</div><div class="kpi-value" id="heroCredits">—</div></div>
+          <div class="hero-kpi"><div class="kpi-label">CO₂ Avoided</div><div class="kpi-value" id="heroImpact">—</div></div>
+        </div>
+      </section>
+      <section class="panel" id="card">
+        <div class="panel-header">
+          <h2>My E-Waste Card</h2>
+          <span class="hint">Your registered items, credits, and environmental impact</span>
+        </div>
+        <div class="sign-in-row flex gap-3" style="align-items:flex-end;">
+          <div class="field" style="margin-bottom:0;flex:1;min-width:200px;">
+            <label for="cardOwner">Owner ID</label>
+            <input id="cardOwner" placeholder="e.g. rahul123" />
+          </div>
+          <button class="btn btn-primary" onclick="loadCard()">View My Card</button>
+        </div>
+        <div id="cardResult" class="mt-4"></div>
+        <h3 style="font:var(--text-h3);margin-top:var(--sp-6);">Notifications</h3>
+        <div id="notificationsResult" class="mt-2"></div>
+      </section>
+      <section class="panel" id="passport">
+        <div class="panel-header"><h2>E-Waste Passport</h2><span class="hint">Scan an item's QR code, or open its track link, to view its full Digital Passport.</span></div>
+        <p class="text-caption">Every registered item gets a QR code (shown after registration) linking to <code>/track/&lt;token&gt;</code> — its public Digital E-Waste Passport with full journey and environmental impact.</p>
+      </section>
+      </div>
+
+
+      <!-- ============================================================== -->
+      <!-- TAB 2: AI VISION INTAKE & REGISTRATION                         -->
+      <!-- ============================================================== -->
+      <div id="tabContent-ai" class="citizen-tab-content" style="display:none;">
+      <div class="grid-2">
+        <section class="panel">
+          <div class="panel-header"><h2>Register a Device</h2></div>
+          <div class="field"><label for="owner">Your name (owner ID)</label><input id="owner" placeholder="e.g. rahul123" /></div>
+          <div class="field"><label for="device">Device</label><input id="device" placeholder="e.g. Laptop" /></div>
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category" onchange="onRegisterCategoryChange()">
+              <option value="">Select a category…</option>
+              <option>Smartphone</option>
+              <option>Laptop</option>
+              <option>Computing Device</option>
+              <option>Monitor</option>
+              <option>Battery / Power</option>
+              <option>Small Household Appliance</option>
+              <option>Large Household Appliance</option>
+              <option>Consumer Electronics</option>
+            </select>
+            <a href="#" id="registerLearnMore" style="display:none;font:var(--text-caption);margin-top:var(--sp-1);" onclick="event.preventDefault(); dsShowEducationModal(document.getElementById('category').value, document.getElementById('device').value, API)">⚠️ See harmful components & health/environmental effects</a>
+          </div>
+          <div class="field"><label for="age">Age</label><input id="age" placeholder="e.g. 4 years" /></div>
+          <div class="field">
+            <label for="deviceModel">Device model <span class="text-caption">(optional — earns bonus credits)</span></label>
+            <input id="deviceModel" list="deviceModelList" placeholder="e.g. iPhone 8, Dell Latitude E5470" oninput="onDeviceModelInput()" />
+            <datalist id="deviceModelList"></datalist>
+            <div id="metalEstimate" class="text-caption" style="margin-top:var(--sp-1);"></div>
+          </div>
+          <div class="field"><label for="condition">Condition</label><input id="condition" placeholder="e.g. Partially functional" /></div>
+          <button class="btn btn-primary btn-block" onclick="registerItem()">Register</button>
+          <div id="registerResult" class="mt-4"></div>
+        </section>
+
+        <section class="panel" id="identify">
+          <div class="panel-header"><h2>AI E-Waste Identification</h2></div>
+          <p class="text-caption">Upload a photo instead of typing the device — you still confirm before anything is saved. Supported: JPG · PNG · WEBP · HEIC, up to 5MB.</p>
+
+          <div class="field"><label for="aiOwner">Owner ID</label><input id="aiOwner" placeholder="e.g. rahul123" /></div>
+          <div class="field"><label for="aiAge">Age</label><input id="aiAge" placeholder="e.g. 4 years" /></div>
+          <div class="field"><label for="aiCondition">Condition</label><input id="aiCondition" placeholder="e.g. Partially functional" /></div>
+
+          <div class="field">
+            <label for="aiImageInput">Photo</label>
+            <input type="file" id="aiImageInput" accept="image/jpeg,image/png,image/webp,image/heic" capture="environment" />
+          </div>
+          <img id="aiPreview" class="preview-img" style="display:none;" />
+          <div id="aiFileError" class="field .error-text" style="color:var(--color-danger-700);font-size:13px;"></div>
+
+          <button id="aiIdentifyBtn" class="btn btn-primary btn-block mt-2" onclick="identifyWithAI()" disabled>Identify with AI</button>
+          <div id="aiLoading" style="display:none;color:var(--color-ink-500);margin-top:var(--sp-2);">Analyzing image…</div>
+          <div id="aiIdentifyError" style="color:var(--color-danger-700);font-size:13px;"></div>
+
+          <div id="aiResultBox" class="panel mt-4" style="display:none; background:var(--color-ink-50); border:1px solid var(--color-ink-200);">
+            <div class="flex" style="justify-content:space-between; align-items:center; margin-bottom:var(--sp-2);">
+              <span id="aiGradeBadge" class="badge badge-primary" style="font-weight:700;font-size:12px;">GRADE B</span>
+              <p id="aiDemoNote" class="badge badge-warning" style="display:none;margin:0;"></p>
+            </div>
+
+            <div style="display:grid; grid-template-columns: 1fr auto; gap: var(--sp-2); align-items: baseline;">
+              <h3 style="font:var(--text-h2); margin:0;" id="aiResDeviceTitle">Device Name</h3>
+              <span id="aiResConfidence" class="badge badge-neutral">94% (high)</span>
+            </div>
+            <p class="text-caption" style="margin-top:2px;">
+              Category: <strong id="aiResCategory"></strong> &bull; Model: <span id="aiResDevice"></span>
+            </p>
+            <p id="aiResReason" class="text-caption" style="color:var(--color-ink-700); margin-top:var(--sp-1);"></p>
+
+            <!-- Swollen Battery Fire Hazard Warning -->
+            <div id="aiBatteryHazardAlert" class="alert alert-danger mt-3" style="display:none; padding:var(--sp-3); border-radius:var(--radius-md);">
+              <strong>⚠️ FIRE HAZARD WARNING:</strong> Swollen / expanded Li-ion battery detected! Thermal runaway hazard. Handle carefully and isolate in non-combustible container.
+            </div>
+
+            <!-- Forensic Physical Damage Inspection Matrix -->
+            <div class="card-grid mt-3" style="grid-template-columns: repeat(3, 1fr); gap: var(--sp-2);">
+              <div class="stat-card" style="padding:var(--sp-2); text-align:center;">
+                <div class="text-caption" style="font-size:11px; color:var(--color-ink-500);">Display / Screen</div>
+                <div id="aiScreenState" style="font-weight:700; font-size:13px; margin-top:2px;">INTACT</div>
+              </div>
+              <div class="stat-card" style="padding:var(--sp-2); text-align:center;">
+                <div class="text-caption" style="font-size:11px; color:var(--color-ink-500);">Chassis / Casing</div>
+                <div id="aiCasingState" style="font-weight:700; font-size:13px; margin-top:2px;">DENTED</div>
+              </div>
+              <div class="stat-card" style="padding:var(--sp-2); text-align:center;">
+                <div class="text-caption" style="font-size:11px; color:var(--color-ink-500);">Battery State</div>
+                <div id="aiBatteryState" style="font-weight:700; font-size:13px; margin-top:2px;">NORMAL</div>
+              </div>
+            </div>
+
+            <!-- Lifecycle Routing Recommendation Banner -->
+            <div id="aiLifecycleBanner" class="panel mt-3" style="background:#fff; border: 1px solid var(--color-ink-200); padding:var(--sp-3);">
+              <div class="flex" style="justify-content:space-between; align-items:center;">
+                <div>
+                  <span class="text-caption" style="font-size:11px; text-transform:uppercase; letter-spacing:0.5px; color:var(--color-ink-500);">Automated Lifecycle Recommendation</span>
+                  <div id="aiRecommendedOutcome" style="font:var(--text-h3); font-weight:700; color:var(--color-primary-700);">REFURBISH</div>
+                </div>
+                <span id="aiOutcomeBadge" class="badge badge-success">CIRCULAR RESALE</span>
+              </div>
+              <p id="aiRecommendationReason" class="text-caption mt-1" style="margin-bottom:0; color:var(--color-ink-700);"></p>
+            </div>
+
+            <!-- Precious Metal Yields & Valuation -->
+            <div class="panel mt-3" style="background:#fff; border: 1px solid var(--color-ink-200); padding:var(--sp-3);">
+              <div class="flex" style="justify-content:space-between; align-items:baseline;">
+                <span style="font-weight:600; font-size:13px;">Recoverable Critical Raw Materials</span>
+                <span id="aiSalvageValue" style="font:var(--text-h3); font-weight:700; color:var(--color-success-700);">₹0 Est. Salvage</span>
+              </div>
+              <div class="flex gap-3 mt-2" style="font-size:12px; flex-wrap:wrap;">
+                <div>🟡 <strong>Au (Gold):</strong> <span id="aiMetalGold">0</span>g</div>
+                <div>⚪ <strong>Ag (Silver):</strong> <span id="aiMetalSilver">0</span>g</div>
+                <div>🔘 <strong>Pd (Palladium):</strong> <span id="aiMetalPd">0</span>g</div>
+                <div>🟤 <strong>Cu (Copper):</strong> <span id="aiMetalCu">0</span>g</div>
+              </div>
+              <div class="text-caption mt-2" style="font-size:11px; color:var(--color-ink-500);">
+                Intrinsic Scrap Metals: <span id="aiIntrinsicINR">₹0</span> &bull; Bonus Reward: <span id="aiBonusCredits">+0 Credits</span>
+              </div>
+            </div>
+
+            <p id="aiResWarning" style="display:none;color:var(--color-danger-700);font-size:13px;margin-top:var(--sp-2);"></p>
+            <a href="#" id="aiLearnMore" style="display:none;font:var(--text-caption);margin-top:var(--sp-2);" onclick="event.preventDefault(); dsShowEducationModal(document.getElementById('aiResCategory').textContent, document.getElementById('aiResDevice').textContent, API)">⚠️ See harmful components & health/environmental effects</a>
+
+            <div id="aiMultiDetections" style="display:none;margin-top:var(--sp-3);">
+              <p style="font:var(--text-h3);">Detected E-Waste</p>
+              <ul id="aiMultiList" style="font-size:13px;padding-left:18px;"></ul>
+              <button class="btn btn-secondary" onclick="addAllDetections()">Add all to E-Waste Card</button>
+            </div>
+
+            <div class="flex gap-2 mt-4">
+              <button id="aiConfirmBtn" class="btn btn-success" onclick="confirmAIResult()">Confirm — this is correct</button>
+              <button class="btn btn-tertiary" onclick="showAIManualCorrection()">Correct manually</button>
+            </div>
+
+            <div id="aiManualForm" style="display:none;margin-top:var(--sp-3);">
+              <div class="field"><label for="aiManualDevice">Correct device name</label><input id="aiManualDevice" /></div>
+              <div class="field"><label for="aiManualCategory">Correct category</label><input id="aiManualCategory" /></div>
+              <button class="btn btn-primary" onclick="confirmAIManual()">Confirm with correction</button>
+            </div>
+          </div>
+
+          <div id="aiSuccessBox" class="mt-4" style="display:none;"></div>
+        </section>
+      </div>
+      <section class="panel" id="nearestFacility">
+        <div class="panel-header"><h2>Find Nearest Collection / Recycling Facility</h2></div>
+        <p class="text-caption">Find a verified, active facility near you to drop off or arrange pickup of your e-waste.</p>
+        <button class="btn btn-primary btn-block mt-2" id="nearestLocateBtn" onclick="findNearestFacilities()">📍 Use My Location</button>
+        <div id="nearestError" style="color:var(--color-danger-700);font-size:13px;margin-top:var(--sp-2);"></div>
+        <div id="nearestResult" class="mt-4"></div>
+      </section>
+      </div>
+
+
+      <!-- ============================================================== -->
+      <!-- TAB 3: REQUEST DOORSTEP PICKUP                                 -->
+      <!-- ============================================================== -->
+      <div id="tabContent-pickup" class="citizen-tab-content" style="display:none;">
+      <section class="panel" id="request">
+        <div class="panel-header"><h2>Request Collection</h2></div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="requestId">Item ID</label><input id="requestId" placeholder="e.g. EW-2026-000001" /></div>
+            <div class="field"><label for="requestAddress">Pickup address</label><input id="requestAddress" placeholder="e.g. 12 Main St" /></div>
+            <div class="field"><label for="requestZone">Service area / zone</label><input id="requestZone" placeholder="e.g. Zone A" /></div>
+            <div class="field"><label for="requestDistrict">District</label><input id="requestDistrict" placeholder="e.g. Bhopal" /></div>
+            <div class="field"><label for="requestState">State</label><input id="requestState" placeholder="e.g. Madhya Pradesh" /></div>
+            <button class="btn btn-primary" onclick="requestCollection()">Request Pickup</button>
+            <div id="requestResult" class="mt-4"></div>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3);">Track My Collection Request</h3>
+            <div class="field"><label for="trackRequestId">Request ID</label><input id="trackRequestId" placeholder="e.g. CR-2026-000001" /></div>
+            <button class="btn btn-secondary" onclick="trackRequest()">Check Status</button>
+            <div id="trackRequestResult" class="mt-4"></div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+
+      <!-- ============================================================== -->
+      <!-- TAB 4: ECO-WALLET & WHISTLEBLOWER DUMP REPORT                  -->
+      <!-- ============================================================== -->
+      <div id="tabContent-wallet" class="citizen-tab-content" style="display:none;">
+      <section class="panel" id="wallet">
+        <div class="panel-header"><h2>My Wallet</h2></div>
+        <div class="sign-in-row flex gap-3" style="align-items:flex-end;">
+          <div class="field" style="margin-bottom:0;flex:1;min-width:200px;">
+            <label for="walletOwner">Owner ID</label>
+            <input id="walletOwner" placeholder="e.g. rahul123" />
+          </div>
+          <button class="btn btn-secondary" onclick="checkWallet()">Check Credits</button>
+          <button class="btn btn-tertiary" onclick="loadTransactions()">Show Transaction History</button>
+        </div>
+        <div id="walletResult" class="mt-4"></div>
+        <ul id="transactionsList" style="padding-left:18px;margin-top:var(--sp-2);font-size:13px;"></ul>
+      </section>
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Rewards</h2>
+          <button class="btn btn-secondary" onclick="loadRewards()">Load Available Rewards</button>
+        </div>
+        <div id="rewardsList" class="item-grid mt-4"></div>
+      </section>
+      <section class="panel" id="citizenWhistleblower">
+        <div class="panel-header">
+          <div>
+            <h2>📢 Report Illegal Open Dump &amp; Earn Swachh Karma</h2>
+            <span class="hint">Upload geo-tagged photo evidence of public garbage/bio-hazard dumps. Earn 50-100 Swachh Karma Coins redeemable for municipal fee discounts!</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="checkCitizenKarma()">💰 My Swachh Karma Balance</button>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="citWbWard">Ward / Municipal Zone</label><input id="citWbWard" value="Ward 24 (MP Nagar)" /></div>
+            <div class="field"><label for="citWbAddress">Location Landmark / Street Address</label><input id="citWbAddress" placeholder="e.g. Near Zone-II Community Park" /></div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="citWbCategory">Dump Waste Category</label>
+                <select id="citWbCategory">
+                  <option value="MUNICIPAL_MSW">🗑️ Municipal Mixed Garbage (24h Target)</option>
+                  <option value="BIO_MEDICAL_HAZARD">☣️ Bio-Medical / Sharps (6h Emergency Target)</option>
+                  <option value="E_WASTE_TOXIC">⚡ E-Waste / Battery Pile (6h Target)</option>
+                  <option value="CONSTRUCTION_DEMOLITION">🧱 Construction &amp; Demolition (24h Target)</option>
+                </select>
+              </div>
+              <div class="field"><label for="citWbEstKg">Estimated Waste Pile (Kg)</label><input id="citWbEstKg" type="number" value="150" /></div>
+            </div>
+            <div class="field"><label for="citWbDesc">Observations</label><textarea id="citWbDesc" rows="2" style="width:100%; border:var(--border); border-radius:var(--radius-md); padding:8px;">Visible unsegregated waste dumping causing blockage and sanitation hazard</textarea></div>
+            <div class="field" style="margin-bottom:var(--sp-3);">
+              <label><input type="checkbox" id="citWbAnon" /> Submit report anonymously (Whistleblower Protection)</label>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="submitCitizenDumpReport()">📢 Submit Incident &amp; Claim 50 Karma Coins</button>
+            <div id="citDumpReportResult" class="mt-3"></div>
+          </div>
+
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Green Swachh Karma Rewards</h3>
+            <div class="panel" style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); padding:var(--sp-4);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                  <div style="font-size:12px; color:var(--color-ink-500); text-transform:uppercase; font-weight:700;">Active Karma Balance</div>
+                  <div style="font-size:32px; font-weight:800; color:var(--color-primary-900);" id="citKarmaPoints">--</div>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:12px; color:var(--color-ink-500);">Rebate Value</div>
+                  <div style="font-size:24px; font-weight:700; color:var(--color-success-700);" id="citKarmaRebate">₹--</div>
+                </div>
+              </div>
+              <div style="font-size:12.5px; color:var(--color-ink-700); margin-top:8px;">
+                💡 <strong>1 Karma Coin = ₹1 Discount</strong> on your monthly Municipal Solid Waste (SWM) household user-fee!
+              </div>
+            </div>
+
+            <h4 style="font:var(--text-h3); margin-top:var(--sp-4); margin-bottom:var(--sp-2);">Redeem for Monthly SWM User-Fee Rebate</h4>
+            <div class="field"><label for="citRebateHhId">Household ID</label><input id="citRebateHhId" value="HH-BHOPAL-105" /></div>
+            <div class="field"><label for="citRebatePts">Coins to Redeem</label><input id="citRebatePts" type="number" value="50" min="10" /></div>
+            <button class="btn btn-secondary btn-block" onclick="redeemCitizenKarmaInteractive()">🏷️ Apply Fee Rebate Voucher</button>
+            <div id="citRebateResult" class="mt-2"></div>
+          </div>
+        </div>
+      </section>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+  // ==============================================================
+  // CITIZEN ZERO-SCROLL WORKSPACE TABS & DEMO FLOW
+  // ==============================================================
+
+  function switchCitizenTab(tabName, targetSectionId = null) {
+    document.querySelectorAll('.cit-tab-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tabName);
+    });
+
+    document.querySelectorAll('.citizen-tab-content').forEach(pane => {
+      pane.style.display = (pane.id === 'tabContent-' + tabName) ? 'block' : 'none';
+    });
+
+    if (targetSectionId) {
+      setTimeout(() => {
+        const el = document.getElementById(targetSectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+
+  function startCitizenDemo() {
+    // Fill Owner ID across all forms
+    if (document.getElementById("cardOwner")) document.getElementById("cardOwner").value = "rahul123";
+    if (document.getElementById("owner")) document.getElementById("owner").value = "rahul123";
+    if (document.getElementById("aiOwner")) document.getElementById("aiOwner").value = "rahul123";
+    if (document.getElementById("walletOwner")) document.getElementById("walletOwner").value = "rahul123";
+
+    switchCitizenTab('card');
+    loadCard();
+    checkWallet();
+
+    const toast = document.getElementById("citizenDemoToast");
+    if (toast) {
+      toast.style.display = "block";
+      setTimeout(() => { toast.style.display = "none"; }, 3500);
+    }
+  }
+</script>
+
+<script src="/assets/shared.js"></script>
+<script>
+  const API = ""; // same origin, backend serves this page too
+
+  async function checkCitizenKarma() {
+    const owner = document.getElementById("owner")?.value.trim() || document.getElementById("cardOwner")?.value.trim() || "CITIZEN-BHOPAL-77";
+    try {
+      const res = await fetch(`${API}/api/community/citizen/${owner}/rewards`);
+      if (!res.ok) return;
+      const data = await res.json();
+      document.getElementById("citKarmaPoints").textContent = `${data.currentBalance || 0} Coins`;
+      document.getElementById("citKarmaRebate").textContent = `₹${data.rebateValueINR || 0}`;
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  async function submitCitizenDumpReport() {
+    const ward = document.getElementById("citWbWard").value.trim();
+    const address = document.getElementById("citWbAddress").value.trim();
+    const wasteCategory = document.getElementById("citWbCategory").value;
+    const estimatedVolumeKg = parseFloat(document.getElementById("citWbEstKg").value) || 150;
+    const description = document.getElementById("citWbDesc").value.trim();
+    const isAnonymous = document.getElementById("citWbAnon").checked;
+    const citizenId = isAnonymous ? "CITIZEN-ANON" : (document.getElementById("owner")?.value.trim() || "CITIZEN-BHOPAL-77");
+
+    try {
+      const res = await fetch(`${API}/api/community/dump-reports`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ citizenId, ward, address, wasteCategory, estimatedVolumeKg, description, isAnonymous })
+      });
+      const data = await res.json();
+      const resBox = document.getElementById("citDumpReportResult");
+      if (res.ok) {
+        resBox.innerHTML = `
+          <div class="panel" style="background:var(--color-success-50); border:1px solid var(--color-success-200); padding:var(--sp-3);">
+            <strong style="color:var(--color-success-800);">✓ Incident ${data.reportId} Logged Successfully!</strong><br>
+            • Municipal SLA Target: <strong>${data.slaHours} Hours</strong><br>
+            • Green Karma Reward: <strong>+${data.karmaPointsAwarded} Coins Credited</strong><br>
+            • Status: <code>${data.status}</code> (Dispatched to Rapid Response Team)
+          </div>
+        `;
+        checkCitizenKarma();
+      } else {
+        resBox.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+      }
+    } catch (e) {
+      alert("Error: " + e.message);
+    }
+  }
+
+  async function redeemCitizenKarmaInteractive() {
+    const citizenId = document.getElementById("owner")?.value.trim() || "CITIZEN-BHOPAL-77";
+    const householdId = document.getElementById("citRebateHhId").value.trim();
+    const pointsToRedeem = parseInt(document.getElementById("citRebatePts").value, 10) || 50;
+
+    try {
+      const res = await fetch(`${API}/api/community/citizen/${citizenId}/redeem`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ householdId, pointsToRedeem, monthYear: "2026-09" })
+      });
+      const data = await res.json();
+      const resBox = document.getElementById("citRebateResult");
+      if (res.ok) {
+        resBox.innerHTML = `
+          <div class="panel" style="background:var(--color-success-50); border:1px solid var(--color-success-200); padding:var(--sp-3); font-size:12.5px;">
+            <strong style="color:var(--color-success-800);">✓ User-Fee Rebate Voucher Issued!</strong><br>
+            • Voucher ID: <code>${data.redemptionId}</code><br>
+            • Discount Applied: <strong>₹${data.discountAmountINR} off</strong> for ${data.householdId}<br>
+            • Remaining Karma: <strong>${data.remainingBalance} Coins</strong>
+          </div>
+        `;
+        checkCitizenKarma();
+      } else {
+        resBox.innerHTML = `<div class="alert alert-danger">${data.error}</div>`;
+      }
+    } catch (e) {
+      alert("Error: " + e.message);
+    }
+  }
+
+  setTimeout(checkCitizenKarma, 1500);
+
+  document.body.insertAdjacentHTML("beforeend", dsEducationModalHtml());
+
+  dsInitNotificationBell({
+    buttonId: "notifBell", dropdownId: "notifDropdown", listId: "notifList", dotId: "notifDot",
+    getRecipientId: () => document.getElementById("cardOwner").value.trim(),
+  });
+  document.getElementById("notifBellWrap").innerHTML = dsNotificationBellHtml({
+    buttonId: "notifBell", dropdownId: "notifDropdown", listId: "notifList", dotId: "notifDot",
+  });
+  // re-wire now that the markup exists
+  dsInitNotificationBell({
+    buttonId: "notifBell", dropdownId: "notifDropdown", listId: "notifList", dotId: "notifDot",
+    getRecipientId: () => document.getElementById("cardOwner").value.trim(),
+  });
+
+  async function loadCard() {
+    const owner = document.getElementById("cardOwner").value.trim();
+    const div = document.getElementById("cardResult");
+    if (!owner) return;
+    div.innerHTML = dsSkeletonCards(3);
+
+    try {
+      const res = await fetch(`${API}/api/users/${owner}/card`);
+      if (!res.ok) { div.innerHTML = dsErrorState({ title: "Couldn't load that card.", retry: "loadCard()" }); return; }
+      const data = await res.json();
+
+      document.getElementById("heroGreeting").textContent = `Hello, ${data.owner}`;
+      document.getElementById("heroItems").textContent = data.totalItems;
+      document.getElementById("heroCredits").textContent = data.credits;
+      const env = data.environmentalImpact || {};
+      document.getElementById("heroImpact").textContent = `${env.co2SavedKg ?? 0} kg`;
+
+      const itemCards = data.items.map((it) => {
+        const steps = ["REGISTERED", "BOOKED", "COLLECTED", "VERIFIED", "RECYCLED"];
+        const currentIndex = steps.indexOf(it.status);
+        const stepsHtml = steps.map((s, i) => `<div class="step ${i <= currentIndex ? "done" : ""}"><span class="dot"></span><span class="step-label">${s.charAt(0) + s.slice(1).toLowerCase()}</span></div>`).join("");
+        const b = it.creditBreakdown;
+        const creditNote = (it.creditsAwarded && b)
+          ? `<p class="text-caption">💰 ${it.creditsAwarded} credits (${b.base} base${b.hazardousBonus ? ` + ${b.hazardousBonus} hazardous` : ""}${b.preciousMetalBonus ? ` + ${b.preciousMetalBonus} metals${b.preciousMetalMatch ? ` [${b.preciousMetalMatch}]` : ""}` : ""})</p>`
+          : "";
+        return `<div class="item-card">
+          <div class="item-top">
+            <div><div class="item-device">${it.device}</div><div class="item-id">${it.id}</div></div>
+            ${dsBadge(it.status)}
+          </div>
+          <div class="item-progress">${stepsHtml}</div>
+          ${creditNote}
+          <a class="btn btn-tertiary" href="/track/${it.qrToken || ""}" target="_blank" style="align-self:flex-start;padding:6px 10px;">View Passport →</a>
+        </div>`;
+      }).join("");
+
+      div.innerHTML = `
+        <div class="card-grid mt-2" style="margin-bottom:var(--sp-4);">
+          <div class="stat-card"><div class="num">${data.totalItems}</div><div class="label">Registered</div></div>
+          <div class="stat-card"><div class="num">${data.recycledItems}</div><div class="label">Recycled</div></div>
+          <div class="stat-card"><div class="num">${data.pendingItems}</div><div class="label">Pending</div></div>
+          <div class="stat-card"><div class="num">${data.credits}</div><div class="label">Credits</div></div>
+        </div>
+        <div class="panel" style="background:var(--color-primary-50);border-color:var(--color-primary-100);margin-bottom:var(--sp-4);">
+          <span class="text-caption">🌍 Your impact: <strong>${env.co2SavedKg ?? 0} kg</strong> CO₂ avoided ·
+          <strong>${env.materialRecoveredKg ?? 0} kg</strong> material recovered
+          (estimated, from ${env.itemsRecycled ?? 0} recycled item(s))</span>
+        </div>
+        <div class="item-grid" id="userItemsGrid">${itemCards || dsEmptyState({ icon: "💻", title: "No items yet.", desc: "Register your first device below to get started." })}</div>
+      `;
+      dsEnhanceList("userItemsGrid", { pageSize: 4 });
+    } catch (err) {
+      div.innerHTML = dsErrorState({ retry: "loadCard()" });
+    }
+    loadNotifications(owner);
+  }
+
+  async function loadNotifications(owner) {
+    const box = document.getElementById("notificationsResult");
+    if (!box) return;
+    box.innerHTML = dsSkeletonRows(2);
+    try {
+      const notifications = await (await fetch(`${API}/api/notifications/${owner}`)).json();
+      box.innerHTML = notifications.length
+        ? `<ul style="list-style:none;padding:0;margin:0;">` + notifications.slice(0, 10).map(n => `
+            <li style="padding:var(--sp-2) 0;border-bottom:1px solid var(--color-ink-50);${n.read ? "color:var(--color-ink-500);" : "font-weight:600;"}">
+              ${n.message}
+              <span style="font-weight:normal;color:var(--color-ink-300);font-size:11px;display:block;"> ${dsFormatDate(n.timestamp)}</span>
+            </li>`).join("") + `</ul>`
+        : dsEmptyState({ icon: "🔔", title: "No notifications yet." });
+    } catch (err) {
+      box.innerHTML = dsErrorState({ desc: "Couldn't load notifications." });
+    }
+  }
+
+  function onRegisterCategoryChange() {
+    const category = document.getElementById("category").value;
+    const link = document.getElementById("registerLearnMore");
+    if (!category) { link.style.display = "none"; return; }
+    link.style.display = "inline-block";
+    // Show the educational pop-up right away — this is the point where
+    // it's most useful, before the person decides how to dispose of it.
+    dsShowEducationModal(category, document.getElementById("device").value, API);
+  }
+
+  // Populate the device-model datalist once on load, so the "Device
+  // model" field autocompletes against catalogued models.
+  (async function loadDeviceModelList() {
+    try {
+      const models = await (await fetch(`${API}/api/precious-metals/models`)).json();
+      document.getElementById("deviceModelList").innerHTML =
+        models.map((m) => `<option value="${m.name}">`).join("");
+    } catch (err) { /* non-critical — the field still works as free text */ }
+  })();
+
+  let metalEstimateTimer = null;
+  function onDeviceModelInput() {
+    clearTimeout(metalEstimateTimer);
+    const box = document.getElementById("metalEstimate");
+    const model = document.getElementById("deviceModel").value.trim();
+    const category = document.getElementById("category").value;
+    if (!model) { box.textContent = ""; return; }
+    // Debounce so we're not firing a request on every keystroke.
+    metalEstimateTimer = setTimeout(async () => {
+      try {
+        const params = new URLSearchParams({ model, ...(category ? { category } : {}) });
+        const est = await (await fetch(`${API}/api/precious-metals/estimate?${params}`)).json();
+        if (est.estimatedBonusCredits > 0) {
+          box.innerHTML = est.exactMatch
+            ? `💰 Matched "${est.matchedModel}" — est. +${est.estimatedBonusCredits} bonus credits for recoverable metals (~₹${est.estimatedValueINR}).`
+            : `💰 No exact match — using a "${est.matchedModel}" estimate: +${est.estimatedBonusCredits} bonus credits (~₹${est.estimatedValueINR}).`;
+        } else {
+          box.textContent = "No precious-metal bonus data for this model/category yet.";
+        }
+      } catch (err) {
+        box.textContent = "";
+      }
+    }, 400);
+  }
+
+  async function registerItem() {
+    const body = {
+      owner: document.getElementById("owner").value,
+      device: document.getElementById("device").value,
+      category: document.getElementById("category").value || undefined,
+      deviceModel: document.getElementById("deviceModel").value || undefined,
+      age: document.getElementById("age").value,
+      condition: document.getElementById("condition").value,
+    };
+    const res = await fetch(`${API}/api/items`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    const div = document.getElementById("registerResult");
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `
+      <div class="qr-box">
+        <img src="${data.qrCodeDataUrl}" width="120" height="120" />
+        <div>
+          <p><strong>Registered!</strong></p>
+          <p class="id-mono">${data.id}</p>
+          <p><a href="${data.trackUrl}" target="_blank">${data.trackUrl}</a></p>
+        </div>
+      </div>
+      <p class="text-caption mt-2">Copy this ID into "Request Collection" below to request pickup.</p>`;
+  }
+
+  async function requestCollection() {
+    const itemId = document.getElementById("requestId").value.trim();
+    const pickupAddress = document.getElementById("requestAddress").value.trim();
+    const serviceArea = document.getElementById("requestZone").value.trim();
+    const district = document.getElementById("requestDistrict").value.trim();
+    const state = document.getElementById("requestState").value.trim();
+    const res = await fetch(`${API}/api/collection-requests`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ itemId, pickupAddress: pickupAddress || undefined, serviceArea: serviceArea || undefined, district: district || undefined, state: state || undefined }),
+    });
+    const data = await res.json();
+    const div = document.getElementById("requestResult");
+    if (!res.ok) {
+      // A "no eligible collector right now" response still returns the
+      // saved request (id, status REQUESTED) — show that instead of
+      // just an error, since the request isn't lost.
+      if (data.request) {
+        div.innerHTML = `<p style="color:var(--color-warning-700)">${data.error}</p><p>Request ID: <strong>${data.request.id}</strong> ${dsBadge(data.request.status)} — copy this into "Track My Collection Request" to check later.</p>`;
+      } else {
+        div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`;
+      }
+      return;
+    }
+    div.innerHTML = `
+      <p class="badge badge-success"><span class="dot"></span>Pickup requested</p>
+      <p>Request ID: <strong>${data.request.id}</strong></p>
+      <p>Status: ${dsBadge(data.request.status)} — assigned to ${data.request.assignedCollector || "—"}</p>`;
+  }
+
+  async function trackRequest() {
+    const id = document.getElementById("trackRequestId").value.trim();
+    const div = document.getElementById("trackRequestResult");
+    if (!id) return;
+    const res = await fetch(`${API}/api/collection-requests/${id}`);
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    const historyList = (data.history || []).map((h) => `<li class="done"><div class="t-title">${h.previousStatus || "—"} → ${h.newStatus}</div><div class="t-meta">${dsFormatDate(h.timestamp)}${h.notes ? ` · ${h.notes}` : ""}</div></li>`).join("");
+    div.innerHTML = `
+      <p>Item: <span class="id-mono">${data.itemId}</span> | Status: ${dsBadge(data.status)} | Collector: ${data.assignedCollector || "—"}</p>
+      <ul class="timeline mt-2">${historyList}</ul>`;
+  }
+
+  async function checkWallet() {
+    const owner = document.getElementById("walletOwner").value.trim();
+    const res = await fetch(`${API}/api/wallet/${owner}`);
+    const data = await res.json();
+    document.getElementById("walletResult").innerHTML =
+      `<div class="card-grid">
+        <div class="stat-card"><div class="num">${data.balance}</div><div class="label">Balance</div></div>
+        <div class="stat-card"><div class="num">${data.totalEarned}</div><div class="label">Total Earned</div></div>
+        <div class="stat-card"><div class="num">${data.totalSpent}</div><div class="label">Total Spent</div></div>
+      </div>`;
+  }
+
+  async function loadTransactions() {
+    const owner = document.getElementById("walletOwner").value.trim();
+    const res = await fetch(`${API}/api/wallet/${owner}/transactions`);
+    const transactions = await res.json();
+    document.getElementById("transactionsList").innerHTML =
+      transactions.slice().reverse().map(t =>
+        `<li>${dsFormatDate(t.timestamp)}: ${t.type} ${t.amount >= 0 ? "+" : ""}${t.amount} — ${t.reason}</li>`
+      ).join("") || dsEmptyState({ title: "No transactions yet." });
+    dsEnhanceList("transactionsList", { pageSize: 5 });
+  }
+
+  async function loadRewards() {
+    const res = await fetch(`${API}/api/rewards`);
+    const rewards = await res.json();
+    document.getElementById("rewardsList").innerHTML = rewards.map(r => `
+      <div class="item-card">
+        <div class="item-top"><div class="item-device">${r.name}</div>${dsBadge("INFO", r.requiredCredits + " credits")}</div>
+        <p class="text-caption">${r.description || ""}</p>
+        <button class="btn btn-primary" onclick="claimReward('${r.id}')">Claim</button>
+      </div>`).join("") || dsEmptyState({ title: "No rewards available right now." });
+    dsEnhanceList("rewardsList", { pageSize: 4 });
+  }
+
+  async function claimReward(rewardId) {
+    const owner = document.getElementById("walletOwner").value.trim();
+    if (!owner) { alert("Enter your Owner ID in the wallet section first."); return; }
+    const res = await fetch(`${API}/api/rewards/${rewardId}/claim`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId: owner }),
+    });
+    const data = await res.json();
+    if (!res.ok) { alert(data.error); return; }
+    alert("Reward claimed!");
+    checkWallet();
+  }
+
+  // ---------------------------------------------------------------
+  // NEAREST FACILITY SECTION
+  // ---------------------------------------------------------------
+  function findNearestFacilities() {
+    const btn = document.getElementById("nearestLocateBtn");
+    const errBox = document.getElementById("nearestError");
+    const resultBox = document.getElementById("nearestResult");
+    const demoBtn = document.getElementById("nearestDemoBtn");
+    errBox.textContent = "";
+    if (demoBtn) demoBtn.style.display = "none";
+
+    if (!navigator.geolocation) {
+      errBox.textContent = "Your browser doesn't support location access. Use the Bhopal demo location instead.";
+      if (demoBtn) demoBtn.style.display = "block";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Locating…";
+    resultBox.innerHTML = dsSkeletonCards(3);
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        await loadNearestFacilities(latitude, longitude, btn, errBox, resultBox);
+      },
+      (geoError) => {
+        btn.disabled = false;
+        btn.textContent = "📍 Use My Location";
+        if (demoBtn) demoBtn.style.display = "block";
+        if (geoError.code === geoError.PERMISSION_DENIED) {
+          errBox.textContent = "Location access was denied. Allow Location permission for this site, then try again.";
+        } else if (geoError.code === geoError.POSITION_UNAVAILABLE) {
+          errBox.textContent = "Your device could not get a GPS fix. Turn on Location/GPS and try again.";
+        } else if (geoError.code === geoError.TIMEOUT) {
+          errBox.textContent = "GPS took too long to respond. Try again or use the Bhopal demo location.";
+        } else {
+          errBox.textContent = "Couldn't determine your location. Try again or use the Bhopal demo location.";
+        }
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 30000 }
+    );
+  }
+
+  async function loadNearestFacilities(latitude, longitude, btn, errBox, resultBox) {
+    try {
+      const res = await fetch(`${API}/api/collectors/nearest?lat=${encodeURIComponent(latitude)}&lng=${encodeURIComponent(longitude)}&limit=5`);
+      if (!res.ok) throw new Error("facility request failed");
+      const facilities = await res.json();
+      resultBox.innerHTML = facilities.map((f) => `
+        <div class="item-card">
+          <div class="item-top">
+            <div><div class="item-device">${f.name}</div><div class="item-id">${f.type === "RECYCLER" ? "Recycler" : "Collection Centre"} · ${f.distanceKm} km away</div></div>
+            ${dsBadge("ACTIVE")}
+          </div>
+          <p class="text-caption">${f.address || ""}${f.district ? ", " + f.district : ""}${f.state ? ", " + f.state : ""}</p>
+          ${f.contact?.phone ? `<p class="text-caption">📞 ${f.contact.phone}</p>` : ""}
+          <a class="btn btn-tertiary" style="align-self:flex-start;padding:6px 10px;" href="https://www.google.com/maps/dir/?api=1&destination=${f.latitude},${f.longitude}" target="_blank" rel="noopener">Get Directions →</a>
+        </div>`).join("") || dsEmptyState({ icon: "📍", title: "No active facilities found nearby.", desc: "No verified active facilities were returned for this location." });
+    } catch (err) {
+      resultBox.innerHTML = dsErrorState({ title: "Couldn't load nearby facilities.", retry: "findNearestFacilities()" });
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "📍 Use My Location";
+    }
+  }
+
+  function useBhopalDemoLocation() {
+    const btn = document.getElementById("nearestLocateBtn");
+    const errBox = document.getElementById("nearestError");
+    const resultBox = document.getElementById("nearestResult");
+    errBox.textContent = "Using the Bhopal demo location (23.2599, 77.4126).";
+    loadNearestFacilities(23.2599, 77.4126, btn, errBox, resultBox);
+  }
+
+  // ---------------------------------------------------------------
+  // AI IDENTIFY SECTION
+  // ---------------------------------------------------------------
+  let aiSelectedFile = null;
+  let aiLastPrediction = null; // { device, category, confidence, confidenceLevel, reason }
+
+  const ALLOWED_AI_TYPES = ["image/jpeg", "image/png", "image/webp", "image/heic"];
+  const AI_MAX_SIZE_BYTES = 5 * 1024 * 1024; // must match server MAX_IMAGE_SIZE_MB
+
+  document.getElementById("aiImageInput").addEventListener("change", () => {
+    const fileError = document.getElementById("aiFileError");
+    fileError.textContent = "";
+    const file = document.getElementById("aiImageInput").files[0];
+    if (!file) return;
+
+    if (!ALLOWED_AI_TYPES.includes(file.type)) {
+      fileError.textContent = "Please choose a JPG, PNG, WebP or HEIC image.";
+      document.getElementById("aiIdentifyBtn").disabled = true;
+      return;
+    }
+    if (file.size > AI_MAX_SIZE_BYTES) {
+      fileError.textContent = "That image is larger than 5MB. Please choose a smaller one.";
+      document.getElementById("aiIdentifyBtn").disabled = true;
+      return;
+    }
+
+    aiSelectedFile = file;
+    const preview = document.getElementById("aiPreview");
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = "block";
+    document.getElementById("aiIdentifyBtn").disabled = false;
+  });
+
+  async function identifyWithAI() {
+    const identifyError = document.getElementById("aiIdentifyError");
+    identifyError.textContent = "";
+
+    const owner = document.getElementById("aiOwner").value.trim();
+    if (!owner) {
+      identifyError.textContent = "Please enter an owner ID first.";
+      return;
+    }
+    if (!aiSelectedFile) return;
+
+    document.getElementById("aiLoading").style.display = "block";
+    document.getElementById("aiIdentifyBtn").disabled = true;
+
+    try {
+      const formData = new FormData();
+      formData.append("image", aiSelectedFile);
+
+      // multipart/form-data — the browser sets the correct Content-Type
+      // header (with boundary) automatically, so we don't set it here.
+      const res = await fetch(`${API}/api/v1/identify-ewaste`, {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        identifyError.textContent = data.error || "Identification failed. Please try again.";
+        return;
+      }
+
+      aiLastPrediction = data;
+      showAIPrediction(data);
+    } catch (err) {
+      identifyError.textContent = "Network error while identifying the image. Please try again.";
+    } finally {
+      document.getElementById("aiLoading").style.display = "none";
+      document.getElementById("aiIdentifyBtn").disabled = false;
+    }
+  }
+
+  function showAIPrediction(data) {
+    document.getElementById("aiResultBox").style.display = "block";
+    document.getElementById("aiResDevice").textContent = data.device;
+    if (document.getElementById("aiResDeviceTitle")) {
+      document.getElementById("aiResDeviceTitle").textContent = data.device;
+    }
+    document.getElementById("aiResCategory").textContent = data.category;
+    document.getElementById("aiResConfidence").textContent =
+      Math.round(data.confidence * 100) + "% (" + data.confidenceLevel + ")";
+    document.getElementById("aiResReason").textContent = data.reason || "";
+
+    // Condition Assessment & Grading
+    const cond = data.condition || {};
+    const gradeBadge = document.getElementById("aiGradeBadge");
+    if (gradeBadge) {
+      const grade = cond.grade || "GRADE_C";
+      gradeBadge.textContent = grade.replace("_", " ");
+      if (grade === "GRADE_A") {
+        gradeBadge.className = "badge badge-success";
+      } else if (grade === "GRADE_B") {
+        gradeBadge.className = "badge badge-primary";
+      } else {
+        gradeBadge.className = "badge badge-danger";
+      }
+    }
+    if (document.getElementById("aiScreenState")) document.getElementById("aiScreenState").textContent = cond.screen || "UNKNOWN";
+    if (document.getElementById("aiCasingState")) document.getElementById("aiCasingState").textContent = cond.casing || "UNKNOWN";
+    if (document.getElementById("aiBatteryState")) document.getElementById("aiBatteryState").textContent = cond.battery || "UNKNOWN";
+
+    // Swollen battery fire hazard warning
+    const batteryAlert = document.getElementById("aiBatteryHazardAlert");
+    if (batteryAlert) {
+      batteryAlert.style.display = data.isHazardousBattery || cond.battery === "SWOLLEN" ? "block" : "none";
+    }
+
+    // Lifecycle Outcome Recommendation
+    const outcome = data.recommendedOutcome || "RECYCLE";
+    if (document.getElementById("aiRecommendedOutcome")) {
+      document.getElementById("aiRecommendedOutcome").textContent = outcome;
+    }
+    const outcomeBadge = document.getElementById("aiOutcomeBadge");
+    if (outcomeBadge) {
+      if (outcome === "REFURBISH") {
+        outcomeBadge.className = "badge badge-success";
+        outcomeBadge.textContent = "CIRCULAR RESALE";
+      } else if (outcome === "HARVEST_PARTS") {
+        outcomeBadge.className = "badge badge-warning";
+        outcomeBadge.textContent = "PARTS HARVESTING";
+      } else {
+        outcomeBadge.className = "badge badge-neutral";
+        outcomeBadge.textContent = "RAW RECYCLING";
+      }
+    }
+    if (document.getElementById("aiRecommendationReason")) {
+      document.getElementById("aiRecommendationReason").textContent = data.recommendationReason || "";
+    }
+
+    // Precious Metals & Salvage Valuation
+    const metals = data.metalsGrams || { gold: 0, silver: 0, palladium: 0, copper: 0 };
+    if (document.getElementById("aiMetalGold")) document.getElementById("aiMetalGold").textContent = metals.gold ?? 0;
+    if (document.getElementById("aiMetalSilver")) document.getElementById("aiMetalSilver").textContent = metals.silver ?? 0;
+    if (document.getElementById("aiMetalPd")) document.getElementById("aiMetalPd").textContent = metals.palladium ?? 0;
+    if (document.getElementById("aiMetalCu")) document.getElementById("aiMetalCu").textContent = metals.copper ?? 0;
+
+    if (document.getElementById("aiSalvageValue")) {
+      document.getElementById("aiSalvageValue").textContent = `₹${(data.estimatedSalvageValueINR || 0).toLocaleString("en-IN")} Est. Value`;
+    }
+    if (document.getElementById("aiIntrinsicINR")) {
+      document.getElementById("aiIntrinsicINR").textContent = `₹${(data.intrinsicMetalValueINR || 0).toLocaleString("en-IN")}`;
+    }
+    if (document.getElementById("aiBonusCredits")) {
+      document.getElementById("aiBonusCredits").textContent = `+${data.preciousMetalBonus || 0} Bonus Credits`;
+    }
+
+    // Auto-fill condition field for convenience if user has not typed one
+    const condInput = document.getElementById("aiCondition");
+    if (condInput && !condInput.value) {
+      condInput.value = `${cond.grade ? cond.grade.replace('_', ' ') : 'Grade B'} - Screen: ${cond.screen || 'Intact'}, Casing: ${cond.casing || 'Normal'}`;
+    }
+
+    const learnMore = document.getElementById("aiLearnMore");
+    // Only bother the user with the pop-up when there's an actual category to
+    // teach them about — not on "Unclassified" results from a failed/low-confidence call.
+    if (data.category && data.category !== "Unclassified" && !data.apiError) {
+      learnMore.style.display = "inline-block";
+      dsShowEducationModal(data.category, data.device, API);
+    } else {
+      learnMore.style.display = "none";
+    }
+
+    const demoNote = document.getElementById("aiDemoNote");
+    if (data.demoMode) {
+      demoNote.style.display = "inline-flex";
+      demoNote.textContent = "Demo mode — no Gemini API key configured. Showing simulated inspection.";
+    } else if (data.apiError) {
+      demoNote.style.display = "inline-flex";
+      demoNote.textContent = "The AI service had a temporary issue — please double-check this result or try again.";
+    } else {
+      demoNote.style.display = "none";
+    }
+
+    const multiBox = document.getElementById("aiMultiDetections");
+    if (data.detections && data.detections.length > 1) {
+      multiBox.style.display = "block";
+      document.getElementById("aiMultiList").innerHTML = data.detections.map((d, i) =>
+        `<li>${d.device} — ${Math.round(d.confidence * 100)}% <span class="text-caption">(${d.category} · ${d.condition?.grade || 'Grade B'} · ${d.recommendedOutcome || 'Recycle'})</span></li>`
+      ).join("");
+    } else {
+      multiBox.style.display = "none";
+    }
+
+    const warning = document.getElementById("aiResWarning");
+    const confirmBtn = document.getElementById("aiConfirmBtn");
+
+    if (data.confidenceLevel === "high") {
+      warning.style.display = "none";
+      confirmBtn.style.display = "inline-flex";
+      confirmBtn.textContent = "Confirm — this is correct";
+    } else if (data.confidenceLevel === "medium") {
+      warning.style.display = "block";
+      warning.textContent = "Medium confidence — please double-check before confirming.";
+      confirmBtn.style.display = "inline-flex";
+      confirmBtn.textContent = "Confirm — this is correct";
+    } else {
+      warning.style.display = "block";
+      warning.textContent = "Low confidence — this is likely wrong. Manual correction is strongly recommended.";
+      confirmBtn.style.display = "inline-flex";
+      confirmBtn.textContent = "Use this prediction anyway";
+    }
+
+    document.getElementById("aiManualDevice").value = data.device;
+    document.getElementById("aiManualCategory").value = data.category;
+  }
+
+  function showAIManualCorrection() {
+    document.getElementById("aiManualForm").style.display = "block";
+  }
+
+  async function confirmAIResult() {
+    if (!aiLastPrediction) return;
+    await createRecordFromAI(aiLastPrediction.device);
+  }
+
+  async function confirmAIManual() {
+    const device = document.getElementById("aiManualDevice").value.trim();
+    if (!device) return;
+    await createRecordFromAI(device);
+  }
+
+  async function addAllDetections() {
+    if (!aiLastPrediction || !aiLastPrediction.detections) return;
+    for (const d of aiLastPrediction.detections) {
+      await createRecordFromAI(d.device, d);
+    }
+  }
+
+  // The ONLY place a record is created from this section — and only
+  // after an explicit Confirm click. This calls the EXISTING
+  // POST /api/items endpoint, the same one "Register a device" uses,
+  // preserving owner/age/condition and the existing QR/ID generation.
+  async function createRecordFromAI(device, specificDetection = null) {
+    const activeData = specificDetection || aiLastPrediction || {};
+    const body = {
+      owner: document.getElementById("aiOwner").value.trim(),
+      device,
+      deviceModel: activeData.device || device,
+      category: activeData.category || undefined,
+      age: document.getElementById("aiAge").value,
+      condition: document.getElementById("aiCondition").value || (activeData.condition?.grade ? `${activeData.condition.grade} condition` : undefined),
+      physicalGrade: activeData.condition?.grade || null,
+      lifecycleRecommendation: activeData.recommendedOutcome || null,
+      conditionAssessment: activeData.condition || null,
+    };
+
+    const res = await fetch(`${API}/api/items`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+
+    const successBox = document.getElementById("aiSuccessBox");
+    if (!res.ok) {
+      successBox.style.display = "block";
+      successBox.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`;
+      return;
+    }
+
+    document.getElementById("aiResultBox").style.display = "none";
+    successBox.style.display = "block";
+    successBox.innerHTML = `
+      <div class="qr-box">
+        <img src="${data.qrCodeDataUrl}" width="120" height="120" />
+        <div>
+          <p><strong>Registered!</strong></p>
+          <p class="id-mono">${data.id}</p>
+          <p><a href="${data.trackUrl}" target="_blank">${data.trackUrl}</a></p>
+        </div>
+      </div>`;
+  }
+
+  // Auto-load demo profile for evaluation
+  setTimeout(() => {
+    try { startCitizenDemo(); } catch (e) {}
+  }, 100);
+</script>
+
+<div id="citizenDemoToast" class="demo-toast">✓ Loaded demo profile for rahul123</div>
+</body>
+</html>

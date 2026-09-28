@@ -1,0 +1,67 @@
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+  command = "npm run build:netlify"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["data/**", "smartAutomation/**"]
+
+# Dynamic API Routes handled by Express Serverless Function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/api/:splat"
+  status = 200
+
+# Digital Product Passport Token Route
+[[redirects]]
+  from = "/track/:token"
+  to = "/track/track.html"
+  status = 200
+
+# Direct access to scan.html
+[[redirects]]
+  from = "/collector/scan"
+  to = "/collector/scan.html"
+  status = 200
+
+[[redirects]]
+  from = "/collector/scan.html"
+  to = "/collector/scan.html"
+  status = 200
+
+# Static Role Portals Clean URL Fallback
+[[redirects]]
+  from = "/user/*"
+  to = "/user/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/collector/*"
+  to = "/collector/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/government/*"
+  to = "/government/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/producer/*"
+  to = "/producer/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/municipal/*"
+  to = "/municipal/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/medical/*"
+  to = "/medical/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/demo/*"
+  to = "/demo/index.html"
+  status = 200

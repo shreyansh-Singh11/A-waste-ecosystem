@@ -1,0 +1,52 @@
+[
+  {
+    "workerId": "WORKER-MUNICIPAL-01",
+    "workerName": "Ramesh Kumar (Compactor Driver)",
+    "track": "MUNICIPAL_SWM",
+    "tetanusVaccineDate": "2025-06-15",
+    "hepatitisBVaccineDate": "2024-04-10",
+    "ppeCertificationDate": "2026-02-01",
+    "lastHealthCheckupDate": "2026-08-10",
+    "updatedAt": "2026-08-10T10:00:00.000Z"
+  },
+  {
+    "workerId": "WORKER-BMW-02",
+    "workerName": "Sunil Yadav (Bio-Medical Collector)",
+    "track": "BIO_MEDICAL",
+    "tetanusVaccineDate": "2026-01-20",
+    "hepatitisBVaccineDate": "2025-11-05",
+    "ppeCertificationDate": "2026-03-12",
+    "lastHealthCheckupDate": "2026-07-22",
+    "updatedAt": "2026-07-22T09:30:00.000Z"
+  },
+  {
+    "workerId": "WORKER-EXPIRY-DEMO",
+    "workerName": "Dinesh Malviya (MRF Sorter)",
+    "track": "MUNICIPAL_SWM",
+    "tetanusVaccineDate": "2021-02-10",
+    "hepatitisBVaccineDate": "2019-01-15",
+    "ppeCertificationDate": "2024-05-10",
+    "lastHealthCheckupDate": "2024-05-10",
+    "updatedAt": "2024-05-10T08:00:00.000Z"
+  },
+  {
+    "workerId": "WRK-PASS-TEST-SAFE",
+    "workerName": "Vikram Rathore",
+    "track": "MUNICIPAL_SWM",
+    "tetanusVaccineDate": "2025-08-01",
+    "hepatitisBVaccineDate": "2024-05-10",
+    "ppeCertificationDate": "2026-01-15",
+    "lastHealthCheckupDate": "2026-07-01",
+    "updatedAt": "2026-09-28T20:11:24.399Z"
+  },
+  {
+    "workerId": "WRK-PASS-TEST-EXP",
+    "workerName": "Mohan Lal",
+    "track": "BIO_MEDICAL",
+    "tetanusVaccineDate": "2020-01-01",
+    "hepatitisBVaccineDate": "2018-01-01",
+    "ppeCertificationDate": "2023-01-01",
+    "lastHealthCheckupDate": "2023-01-01",
+    "updatedAt": "2026-09-28T20:11:24.401Z"
+  }
+]

@@ -1,0 +1,1585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Bio-Medical Waste (BMW) Management Portal</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  .hero-panel {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-6);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+  .hero-panel .hero-greeting {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+  }
+  .hero-panel .hero-sub {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    max-width: 760px;
+    line-height: 1.5;
+  }
+  .hero-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--sp-4);
+    margin-top: var(--sp-5);
+  }
+  .hero-kpi {
+    background: var(--bg-surface);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+  }
+  .hero-kpi:hover {
+    border-color: rgba(14, 165, 233, 0.35);
+  }
+  .hero-kpi .kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+  }
+  .hero-kpi .kpi-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-top: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .bmw-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .bmw-yellow { background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(234, 179, 8, 0.4); }
+  .bmw-red { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+  .bmw-white { background: rgba(241, 245, 249, 0.12); color: #e2e8f0; border: 1px solid rgba(241, 245, 249, 0.3); }
+  .bmw-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); }
+  
+  html.light .hero-panel, [data-theme="light"] .hero-panel {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(240, 249, 255, 0.95) 100%);
+    border-color: rgba(14, 165, 233, 0.3);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  }
+  html.light .hero-panel .hero-greeting, [data-theme="light"] .hero-panel .hero-greeting {
+    color: #0f172a;
+  }
+  html.light .hero-panel .hero-sub, [data-theme="light"] .hero-panel .hero-sub {
+    color: #475569;
+  }
+  html.light .bmw-yellow, [data-theme="light"] .bmw-yellow { background: #fef9c3; color: #854d0e; border-color: #ca8a04; }
+  html.light .bmw-red, [data-theme="light"] .bmw-red { background: #fee2e2; color: #991b1b; border-color: #ef4444; }
+  html.light .bmw-white, [data-theme="light"] .bmw-white { background: #f1f5f9; color: #334155; border-color: #94a3b8; }
+  html.light .bmw-blue, [data-theme="light"] .bmw-blue { background: #e0f2fe; color: #075985; border-color: #0284c7; }
+  html.light .cert-box, [data-theme="light"] .cert-box {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(240, 253, 244, 0.95) 100%);
+    border-color: rgba(16, 185, 129, 0.35);
+  }
+
+  .cert-box {
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-5);
+    margin-top: var(--sp-4);
+  }
+  .timeline {
+    border-left: 2px solid var(--color-primary-500);
+    margin-left: var(--sp-3);
+    padding-left: var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+  }
+  .timeline-item {
+    position: relative;
+    background: var(--bg-surface);
+    padding: var(--sp-3) var(--sp-4);
+    border-radius: var(--radius-md);
+    border: var(--border);
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -23px;
+    top: 14px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-primary-500);
+  }
+  .timeline-time { font-size: 11px; color: var(--text-tertiary); }
+  .timeline-action { font-weight: 700; color: var(--text-primary); }
+  .alert-toast { display: none; padding: var(--sp-4); border-radius: var(--radius-md); margin-bottom: var(--sp-4); }
+
+  /* CPCB Rule 10 Dynamic Barcode Sticker */
+  .barcode-sticker {
+    background: #ffffff;
+    border: 2px solid #0f172a;
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    color: #0f172a;
+    margin-top: var(--sp-3);
+  }
+  .barcode-sticker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+  .barcode-stream-banner {
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .barcode-stream-YELLOW { background: #fef08a; color: #854d0e; border: 1px solid #facc15; }
+  .barcode-stream-RED { background: #fecaca; color: #991b1b; border: 1px solid #f87171; }
+  .barcode-stream-WHITE { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; }
+  .barcode-stream-BLUE { background: #bfdbfe; color: #1e40af; border: 1px solid #60a5fa; }
+  .barcode-container {
+    background: #ffffff;
+    padding: 10px 8px 6px;
+    border: 1px dashed #94a3b8;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .barcode-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 8px;
+    font-size: 11px;
+    margin-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+  }
+  .barcode-detail-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .barcode-detail-item span.lbl {
+    font-size: 9.5px;
+    text-transform: uppercase;
+    color: #64748b;
+    font-weight: 600;
+  }
+  .barcode-detail-item span.val {
+    font-weight: 700;
+    color: #0f172a;
+    font-family: var(--font-mono);
+  }
+
+  /* Operational Hardware Simulators */
+  .sim-card {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    margin-top: var(--sp-3);
+    position: relative;
+    overflow: hidden;
+  }
+  .sim-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .sim-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #38bdf8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .led-display {
+    background: #020617;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    color: #22c55e;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+    display: inline-block;
+  }
+  .weigh-bay {
+    display: flex;
+    gap: var(--sp-3);
+    align-items: center;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    margin: 10px 0;
+  }
+  .gauge-box {
+    background: rgba(0,0,0,0.3);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: 10px;
+    text-align: center;
+    flex: 1;
+  }
+  .radar-screen {
+    width: 100%;
+    height: 120px;
+    background: radial-gradient(circle, #064e3b 10%, #022c22 60%, #020617 100%);
+    border: 1px solid #059669;
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+    margin: 8px 0;
+  }
+  .radar-sweep {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    margin-top: -70px;
+    margin-left: -70px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(16, 185, 129, 0.4) 0deg, transparent 60deg, transparent 360deg);
+    animation: radarSpin 3s linear infinite;
+  }
+  @keyframes radarSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .radar-blip {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #34d399;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #34d399;
+    animation: blipPulse 1.5s infinite;
+  }
+  @keyframes blipPulse {
+    0% { transform: scale(0.8); opacity: 0.6; }
+    50% { transform: scale(1.4); opacity: 1; }
+    100% { transform: scale(0.8); opacity: 0.6; }
+  }
+  .seal-stamp {
+    border: 3px double #d97706;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f59e0b;
+    font-weight: 900;
+    font-size: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(-12deg);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+    animation: stampDrop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  @keyframes stampDrop {
+    from { transform: scale(2.2) rotate(-35deg); opacity: 0; }
+    to { transform: scale(1) rotate(-12deg); opacity: 1; }
+  }
+
+  /* Autopilot Global Floating Control Bar */
+  .autopilot-banner {
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.4);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-4) var(--sp-5);
+    margin-bottom: var(--sp-5);
+    box-shadow: 0 8px 30px rgba(79, 70, 229, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .autopilot-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .autopilot-step-pill {
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(129, 140, 248, 0.5);
+    color: #c7d2fe;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="brand">
+      <span class="mark">🏥</span>
+      <div><span class="name">CirculaSync</span><span class="sub">Bio-Medical BMW 2016</span></div>
+    </div>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin-bottom:var(--sp-2);">Source &amp; Transport</div>
+    <a class="nav-link active" href="#dashboard"><span class="nav-icon">📊</span> Overview &amp; KPIs</a>
+    <a class="nav-link" href="#manifest"><span class="nav-icon">🏷️</span> Color-Coded Manifest</a>
+    <a class="nav-link" href="#transport"><span class="nav-icon">🚑</span> GPS Transport Fleet</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">CBWTF Treatment</div>
+    <a class="nav-link" href="#arrival"><span class="nav-icon">⚖️</span> Facility Tare Arrival</a>
+    <a class="nav-link" href="#treatment"><span class="nav-icon">🔬</span> Autoclave / Sensors</a>
+    <a class="nav-link" href="#certificates"><span class="nav-icon">📜</span> Digital Certificates</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Safety &amp; Compliance</div>
+    <a class="nav-link" href="#training"><span class="nav-icon">💉</span> Staff PPE &amp; Hep-B</a>
+    <a class="nav-link" href="#audit"><span class="nav-icon">🔍</span> Chain of Custody</a>
+    <a class="nav-link" href="#whistleblower"><span class="nav-icon">📢</span> Whistleblower Report</a>
+    <div class="nav-section-label" style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-tertiary); padding:0 var(--sp-3); margin:var(--sp-2) 0;">Emergency Radar</div>
+    <a class="nav-link" href="/government#hazmatSection"><span class="nav-icon">☣️</span> Emergency HAZMAT</a>
+    <a class="nav-link" href="/government#workersSection"><span class="nav-icon">🩺</span> Worker Health Passes</a>
+    <div class="nav-footer">CirculaSync · CPCB Rule 10 Audited</div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-topbar">
+      <div class="title-block">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <h1>Bio-Medical Waste (BMW) Terminal</h1>
+          <span class="badge badge-success" style="font-size:11px; padding:2px 8px;"><span class="dot"></span>CPCB 2016</span>
+        </div>
+        <div class="meta">Color-Coded Segregation · Autoclave/Incineration Verification · Tamper-Proof Digital Certificates</div>
+      </div>
+      <div class="actions" style="display:flex; align-items:center; gap:var(--sp-2);">
+        <button id="soundToggleBtn" class="btn btn-secondary btn-sm" onclick="toggleSound()" title="Sound Effects">🔊 Sound ON</button>
+        <span class="system-pill" style="font-size:11px;"><span class="dot"></span> CPCB Rule 10 Verified</span>
+        <a class="btn btn-secondary btn-sm" href="/government#triTrackSummary">🏛️ Command Hub</a>
+        <a class="btn btn-primary btn-sm" href="/">← All Portals</a>
+      </div>
+    </header>
+
+    <main class="app-content">
+
+      <div id="toastBox" class="alert-toast"></div>
+
+      <!-- ── AUTOPILOT GLOBAL ECOSYSTEM SIMULATOR (ZERO MANUAL WORK) ── -->
+      <div class="autopilot-banner" id="autopilotBanner">
+        <div class="autopilot-title">
+          <span style="font-size:24px;">⚡</span>
+          <div>
+            <div style="font-weight:800; font-size:14px; color:#f8fafc; letter-spacing:0.3px;">SMART ECOSYSTEM AUTOPILOT &bull; LIVE SIMULATOR</div>
+            <div style="font-size:11.5px; color:#c7d2fe;">Automated end-to-end execution across Medical, Municipal, Vision Sorting &amp; Marketplaces</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:var(--sp-2); flex-wrap:wrap;">
+          <span class="autopilot-step-pill" id="autopilotStepLabel">IDLE / READY</span>
+          <button id="btnAutopilotRun" class="btn btn-primary btn-sm" onclick="toggleAutopilotSimulation()" style="background:linear-gradient(135deg, #4f46e5, #7c3aed); border:none; font-weight:700;">
+            ▶ Start Live Simulation
+          </button>
+          <select id="autopilotSpeed" style="background:#0f172a; color:#c7d2fe; border:1px solid #4338ca; padding:6px 10px; border-radius:6px; font-size:11px; font-weight:700;">
+            <option value="1">1x Speed (2.5s / step)</option>
+            <option value="2">2x Speed (1.2s / step)</option>
+            <option value="4">4x Turbo (0.6s / step)</option>
+          </select>
+          <button class="btn btn-secondary btn-sm" onclick="resetAutopilotSimulation()">↺ Reset</button>
+        </div>
+      </div>
+
+      <!-- ── Dashboard Section ── -->
+      <section class="panel hero-panel" id="dashboard">
+        <div class="hero-greeting">Hospital &amp; Treatment Facility Coordination</div>
+        <div class="hero-sub">Ensuring zero leakage of infectious bio-medical waste into municipal streams or unauthorized landfills.</div>
+        <div class="hero-kpis">
+          <div class="hero-kpi"><div class="kpi-label">Active Manifests</div><div class="kpi-value" id="kpiManifests">2</div></div>
+          <div class="hero-kpi"><div class="kpi-label">In-Transit Fleets</div><div class="kpi-value" id="kpiTransports">0</div></div>
+          <div class="hero-kpi"><div class="kpi-label">Treated Batches</div><div class="kpi-value" id="kpiTreatments">0</div></div>
+          <div class="hero-kpi"><div class="kpi-label">Certificates Issued</div><div class="kpi-value" id="kpiCerts">0</div></div>
+        </div>
+      </section>
+
+      <!-- ── 1. Create Manifest ── -->
+      <section class="panel" id="manifest">
+        <div class="panel-header">
+          <div>
+            <h2>1. Color-Coded Manifest Generation</h2>
+            <span class="hint">Segregation at source (Healthcare Facility / Hospital / Clinic)</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadManifests()">↻ Refresh</button>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="manHospital">Healthcare Facility ID</label><input id="manHospital" value="AIIMS-Bhopal-Hosp" /></div>
+            <div class="field">
+              <label for="manType">Bio-Medical Stream (Color Code)</label>
+              <select id="manType" onchange="updateColorCodePreview()">
+                <option value="YELLOW">🟡 Yellow — Anatomical, Soiled, Expired Drugs (Incineration / Deep Burial)</option>
+                <option value="RED">🔴 Red — Contaminated Recyclable Plastics, IV Bottles, Tubing (Autoclave + Shredder)</option>
+                <option value="WHITE">⚪ White (Translucent) — Needles, Scalpels, Blades (Puncture-Proof / Autoclave)</option>
+                <option value="BLUE">🔵 Blue — Glassware, Medicine Vials, Metallic Implants (Disinfection + Glass Recycler)</option>
+              </select>
+            </div>
+            <div class="field"><label for="manWeight">Bag Weight (Kg)</label><input id="manWeight" type="number" step="0.1" value="28.5" /></div>
+            <div class="field"><label for="manQr">Container QR Barcode Tag</label><input id="manQr" value="QR-BMW-AIIMS-Y04" /></div>
+            <button class="btn btn-primary btn-block" onclick="createManifest()">Generate Barcoded Manifest</button>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Active Bio-Waste Batches</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="manifestsTable">
+                <thead><tr><th>Batch Code</th><th>Facility</th><th>Stream</th><th>Weight</th><th>Status</th><th>Barcode</th></tr></thead>
+                <tbody><tr><td colspan="6" style="text-align:center;">Loading manifests...</td></tr></tbody>
+              </table>
+            </div>
+            <div id="manifestResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 2. Dedicated Fleet Transport ── -->
+      <section class="panel" id="transport">
+        <div class="panel-header">
+          <div>
+            <h2>2. Dedicated GPS Transport Dispatch</h2>
+            <span class="hint">Bio-medical waste must be transported in leak-proof, authorized vehicles only</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="trnBatch">Batch Code</label><input id="trnBatch" placeholder="e.g. MED-784210" value="MED-784210" /></div>
+            <div class="field"><label for="trnVehicle">Authorized BMW Vehicle Registration</label><input id="trnVehicle" value="MP-04-BMW-8810" /></div>
+            <div class="field"><label for="trnDriver">Trained Driver ID</label><input id="trnDriver" value="DRV-BMW-05" /></div>
+            <button class="btn btn-primary btn-block" onclick="assignTransport()">Assign Dedicated Transport</button>
+            <div id="transportResult" class="mt-3"></div>
+          </div>
+          <div style="background:var(--color-ink-50); padding:var(--sp-4); border-radius:var(--radius-md);">
+            <h3 style="font:var(--text-h3);">BMW Transport Safety Protocol</h3>
+            <ul style="font-size:13px; color:var(--color-ink-700); line-height:1.6; padding-left:20px; margin-top:var(--sp-2);">
+              <li><strong>Zero Mixing:</strong> Under no circumstances can bio-medical waste be combined with municipal trash.</li>
+              <li><strong>Transit Window:</strong> Waste must reach Common Bio-medical Waste Treatment Facility (CBWTF) within 48 hours.</li>
+              <li><strong>Spill Kits Onboard:</strong> Vehicle must carry sodium hypochlorite solution, PPE, and absorbent pads.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 3. Facility Arrival & Weighbridge ── -->
+      <section class="panel" id="arrival">
+        <div class="panel-header">
+          <div>
+            <h2>3. CBWTF Facility Weighbridge Arrival</h2>
+            <span class="hint">Weighbridge gross/tare reconciliation against hospital-declared weight</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="arrBatch">Batch Code</label><input id="arrBatch" value="MED-784210" /></div>
+            <div class="field"><label for="arrFacility">CBWTF Treatment Facility Code</label><input id="arrFacility" value="CBWTF-Bhopal-BioClean" /></div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="arrGross">Gross Weight (Kg)</label><input id="arrGross" type="number" value="2840" /></div>
+              <div class="field" style="flex:1;"><label for="arrTare">Tare Weight (Kg)</label><input id="arrTare" type="number" value="2800" /></div>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="recordFacilityArrival()">Record Facility Inward Receipt</button>
+            <div id="arrivalResult" class="mt-3"></div>
+          </div>
+          <div style="background:var(--color-ink-50); padding:var(--sp-4); border-radius:var(--radius-md);">
+            <div style="font-weight:600;">Reconciliation Verification:</div>
+            <p style="font-size:13px; color:var(--color-ink-700); margin-top:var(--sp-2);">
+              The system automatically calculates Net Weight = Gross &minus; Tare and flags any variance exceeding &plusmn;5% from the hospital manifest to prevent illicit diversion of recyclable plastic (IV tubes/syringes).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 4. Treatment Verification & Sensor Parameters ── -->
+      <section class="panel" id="treatment">
+        <div class="panel-header">
+          <div>
+            <h2>4. Treatment Verification &amp; Sensor Telemetry</h2>
+            <span class="hint">Validating decontamination temperature, pressure, and operational dwell time</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadTreatments()">↻ View Treatments</button>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="trtBatch">Batch Code</label><input id="trtBatch" value="MED-784210" /></div>
+            <div class="field"><label for="trtFacility">Operating CBWTF ID</label><input id="trtFacility" value="CBWTF-Bhopal-BioClean" /></div>
+            <div class="field">
+              <label for="trtMethod">Validated Treatment Method</label>
+              <select id="trtMethod">
+                <option value="INCINERATION">🔥 High-Temp Incineration (1050°C Secondary Chamber)</option>
+                <option value="AUTOCLAVE">💨 Steam Autoclave (121°C @ 15 psi, 60 mins)</option>
+                <option value="SHREDDER">✂️ Heavy-Duty Mutilation Shredder</option>
+                <option value="CHEMICAL">🧪 Chemical Disinfection (1% Sodium Hypochlorite)</option>
+              </select>
+            </div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="trtWeight">Processed Wt (Kg)</label><input id="trtWeight" type="number" value="40" /></div>
+              <div class="field" style="flex:1;"><label for="trtTemp">Temp (°C)</label><input id="trtTemp" type="number" value="1050" /></div>
+            </div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="trtPress">Pressure (Bar)</label><input id="trtPress" type="number" value="2.5" /></div>
+              <div class="field" style="flex:1;"><label for="trtDuration">Dwell Time (Mins)</label><input id="trtDuration" type="number" value="60" /></div>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="recordTreatment()">Log Certified Treatment Process</button>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Verified Treatment Logs</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="treatmentsTable">
+                <thead><tr><th>Treatment ID</th><th>Batch</th><th>Method</th><th>Temp</th><th>Status</th></tr></thead>
+                <tbody><tr><td colspan="5" style="text-align:center;">Loading treatments...</td></tr></tbody>
+              </table>
+            </div>
+            <div id="treatmentResult" class="mt-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 5. Digital Treatment Certificate ── -->
+      <section class="panel" id="certificates">
+        <div class="panel-header">
+          <div>
+            <h2>5. Issue Digital Treatment Certificate</h2>
+            <span class="hint">Tamper-evident legal compliance token returned to generating healthcare institution</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="certBatch">Treated Batch Code</label><input id="certBatch" value="MED-784210" /></div>
+            <div class="field"><label for="certTrtId">Treatment ID (from Step 4)</label><input id="certTrtId" placeholder="e.g. TRT-XXXXXX" /></div>
+            <button class="btn btn-primary btn-block" onclick="issueCertificate()">Mint Treatment Certificate</button>
+            <div id="certTokenBox" class="mt-3"></div>
+          </div>
+          <div>
+            <div id="certPreviewBox" class="cert-box" style="display:none; position:relative; overflow:hidden; border:2px solid #b45309; background:#fffbeb;">
+              <div class="seal-stamp" id="certSealStamp" style="position:absolute; right:15px; top:15px; background:radial-gradient(circle, #fef3c7, #fde68a);">
+                <div style="font-size:16px;">🛡️</div>
+                <div style="line-height:1.1; font-weight:900;">CPCB / SPCB</div>
+                <div style="font-size:7px; letter-spacing:0.5px;">AUTHENTICATED</div>
+              </div>
+              <div style="font-weight:800; color:#78350f; font-size:16px;">📜 SPCB/CPCB BIO-MEDICAL TREATMENT CERTIFICATE</div>
+              <div class="text-caption" style="color:#92400e; margin-top:2px;">Issued under Rule 13 of Bio-Medical Waste Management Rules, 2016</div>
+              <hr style="border:none; border-top:1px solid #d97706; margin:var(--sp-3) 0;" />
+              <div style="font-size:13px; line-height:1.8; max-width:75%; color:#1e293b;">
+                Certificate No: <strong id="cpCertCode" style="font-family:monospace; color:#0f172a;">—</strong><br>
+                Batch Reference: <strong id="cpBatchCode" style="font-family:monospace; color:#0f172a;">—</strong><br>
+                Treatment Verified: <span id="cpMethod" class="badge badge-success">COMPLIANT (1,050°C THERMAL)</span><br>
+                Date &amp; Time: <span id="cpIssuedAt">—</span><br>
+                Verification Hash: <code id="cpHash" style="font-size:10px; color:#4338ca; word-break:break-all;">0x8f3c...c92a</code>
+              </div>
+              <div class="mt-3 text-caption" style="color:#15803d; font-weight:600;">
+                ✓ Decontamination cycle passed laboratory microbiological standards. Safe for recycled plastic re-processing or inert landfill encapsulation.
+              </div>
+              <div class="mt-3 flex gap-2">
+                <button type="button" class="btn btn-secondary btn-sm" onclick="printCertificate()" style="font-size:11px;">🖨️ Print Certificate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 6. Staff Training & Occupational Health ── -->
+      <section class="panel" id="training">
+        <div class="panel-header">
+          <div>
+            <h2>6. Sanitation Worker Occupational Health &amp; PPE Logger</h2>
+            <span class="hint">Tracking worker vaccinations (Hepatitis B &amp; Tetanus) and PPE compliance</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadTraining()">↻ View Records</button>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="stfId">Worker / Staff ID</label><input id="stfId" value="WRK-SAN-204" /></div>
+            <div class="field"><label for="stfHospital">Hospital / Facility</label><input id="stfHospital" value="AIIMS-Bhopal-Hosp" /></div>
+            <div class="field">
+              <label for="stfType">Training &amp; Health Metric</label>
+              <select id="stfType">
+                <option value="Hepatitis B Complete 3-Dose Vaccination">💉 Hepatitis B 3-Dose Immunization Complete</option>
+                <option value="Tetanus Toxoid Annual Booster">💉 Tetanus Toxoid (TT) Annual Booster</option>
+                <option value="Heavy-Duty Puncture Proof PPE Protocol">🧤 Puncture-Resistant Gloves &amp; Goggles PPE Certification</option>
+                <option value="Needle-Stick Injury First-Response Drill">🩹 Needle-Stick Injury &amp; Post-Exposure Prophylaxis (PEP)</option>
+              </select>
+            </div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="stfDate">Completion Date</label><input id="stfDate" type="date" value="2026-09-24" /></div>
+              <div class="field" style="flex:1;"><label for="stfExpiry">Renewal Expiry</label><input id="stfExpiry" type="date" value="2027-09-24" /></div>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="logStaffTraining()">Log Health &amp; Training Record</button>
+            <div id="trainingResult" class="mt-3"></div>
+          </div>
+          <div>
+            <h3 style="font:var(--text-h3); margin-bottom:var(--sp-3);">Worker Immunization &amp; Safety Ledger</h3>
+            <div class="table-wrap">
+              <table class="ds-table" id="trainingTable">
+                <thead><tr><th>Staff ID</th><th>Facility</th><th>Certification</th><th>Expiry</th></tr></thead>
+                <tbody><tr><td colspan="4" style="text-align:center;">Loading training records...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── 7. Chain of Custody Audit ── -->
+      <section class="panel" id="audit">
+        <div class="panel-header">
+          <div>
+            <h2>7. Bio-Medical Waste Chain-of-Custody Audit</h2>
+            <span class="hint">Full timeline from hospital packaging to incinerator ash verification</span>
+          </div>
+        </div>
+        <div class="sign-in-row flex gap-3" style="align-items:flex-end;">
+          <div class="field" style="margin-bottom:0; flex:1;">
+            <label for="auditBatch">Enter Batch Code</label>
+            <input id="auditBatch" value="MED-784210" />
+          </div>
+          <button class="btn btn-primary" onclick="queryAuditTrail()">Audit Batch History</button>
+        </div>
+        <div id="auditTimelineResult" class="mt-4"></div>
+      </section>
+
+      <!-- ── 8. Whistleblower Report ── -->
+      <section class="panel" id="whistleblower">
+        <div class="panel-header">
+          <div>
+            <h2>8. Medical Waste Whistleblower Reporting</h2>
+            <span class="hint">Report illegal dumping or untreated bio-waste mixed into general trash</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div>
+            <div class="field"><label for="wbReporter">Reporter Name / Contact</label><input id="wbReporter" placeholder="e.g. Dr. Verma / 94250XXXXX" /></div>
+            <div class="field"><label for="wbDesc">Observation Details</label><textarea id="wbDesc" rows="3" placeholder="e.g. Red bags with syringes found in municipal open skip outside private clinic near MP Nagar"></textarea></div>
+            <div class="flex gap-2">
+              <div class="field" style="flex:1;"><label for="wbLat">GPS Latitude</label><input id="wbLat" value="23.2324" /></div>
+              <div class="field" style="flex:1;"><label for="wbLng">GPS Longitude</label><input id="wbLng" value="77.4385" /></div>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="submitWhistleblower()">Submit SPCB Alert</button>
+            <div id="whistleblowerResult" class="mt-3"></div>
+          </div>
+          <div style="background:var(--color-ink-50); padding:var(--sp-4); border-radius:var(--radius-md);">
+            <h3 style="font:var(--text-h3);">Whistleblower Grievance Log</h3>
+            <div class="table-wrap mt-2">
+              <table class="ds-table" id="reportsTable">
+                <thead><tr><th>Report ID</th><th>Reporter</th><th>Observation</th><th>Status</th></tr></thead>
+                <tbody><tr><td colspan="4" style="text-align:center;">Loading grievances...</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<script src="/assets/shared.js"></script>
+<script>
+  // ── Native Web Audio Synthesizer ──
+  let audioCtx = null;
+  let soundEnabled = true;
+  function initAudio() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+  }
+  function toggleSound() {
+    soundEnabled = !soundEnabled;
+    const btn = document.getElementById("soundToggleBtn");
+    if (btn) btn.textContent = soundEnabled ? "🔊 Sound ON" : "🔇 Sound OFF";
+  }
+  function playSound(type) {
+    if (!soundEnabled) return;
+    try {
+      initAudio();
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      if (type === 'beep' || type === 'scan') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, now);
+        osc.frequency.exponentialRampToValueAtTime(1760, now + 0.08);
+        gain.gain.setValueAtTime(0.15, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.08);
+      } else if (type === 'pneumatic') {
+        const bufferSize = audioCtx.sampleRate * 0.16;
+        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+        const noise = audioCtx.createBufferSource();
+        noise.buffer = buffer;
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.setValueAtTime(1200, now);
+        filter.Q.setValueAtTime(3.0, now);
+        const gain = audioCtx.createGain();
+        gain.gain.setValueAtTime(0.25, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.16);
+        noise.connect(filter);
+        filter.connect(gain);
+        gain.connect(audioCtx.destination);
+        noise.start(now);
+        noise.stop(now + 0.16);
+      } else if (type === 'stamp') {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(130, now);
+        osc.frequency.exponentialRampToValueAtTime(30, now + 0.18);
+        gain.gain.setValueAtTime(0.4, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.18);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.18);
+      } else if (type === 'success') {
+        [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(freq, now + i * 0.07);
+          gain.gain.setValueAtTime(0.12, now + i * 0.07);
+          gain.gain.exponentialRampToValueAtTime(0.01, now + i * 0.07 + 0.2);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start(now + i * 0.07);
+          osc.stop(now + i * 0.07 + 0.2);
+        });
+      }
+    } catch(e) { console.warn(e); }
+  }
+
+  // ── Autopilot Global Ecosystem Simulator Runner ──
+  let autopilotRunning = false;
+  let autopilotStep = 0;
+  let autopilotTimer = null;
+
+  function toggleAutopilotSimulation() {
+    if (autopilotRunning) {
+      pauseAutopilotSimulation();
+    } else {
+      startAutopilotSimulation();
+    }
+  }
+
+  function startAutopilotSimulation() {
+    autopilotRunning = true;
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "⏸ Pause Simulation";
+    runNextAutopilotStep();
+  }
+
+  function pauseAutopilotSimulation() {
+    autopilotRunning = false;
+    if (autopilotTimer) clearTimeout(autopilotTimer);
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "▶ Resume Simulation";
+    const label = document.getElementById("autopilotStepLabel");
+    if (label) label.textContent = "PAUSED (Step " + autopilotStep + "/8)";
+  }
+
+  function resetAutopilotSimulation() {
+    pauseAutopilotSimulation();
+    autopilotStep = 0;
+    const label = document.getElementById("autopilotStepLabel");
+    if (label) label.textContent = "IDLE / READY";
+    const btn = document.getElementById("btnAutopilotRun");
+    if (btn) btn.innerHTML = "▶ Start Live Simulation";
+  }
+
+  async function runNextAutopilotStep() {
+    if (!autopilotRunning) return;
+    autopilotStep = (autopilotStep % 8) + 1;
+    const speed = parseFloat(document.getElementById("autopilotSpeed")?.value) || 1;
+    const stepDuration = 2400 / speed;
+    const label = document.getElementById("autopilotStepLabel");
+
+    try {
+      if (autopilotStep === 1) {
+        if (label) label.textContent = "STEP 1/8: Generating CPCB Color Manifest...";
+        await createManifest();
+      } else if (autopilotStep === 2) {
+        if (label) label.textContent = "STEP 2/8: Assigning GPS Hazmat Transport Fleet...";
+        await assignTransport();
+      } else if (autopilotStep === 3) {
+        if (label) label.textContent = "STEP 3/8: Recording CBWTF Inward Weighbridge...";
+        await recordFacilityArrival();
+      } else if (autopilotStep === 4) {
+        if (label) label.textContent = "STEP 4/8: 1050°C Thermal Incineration Cycle...";
+        await recordTreatment();
+      } else if (autopilotStep === 5) {
+        if (label) label.textContent = "STEP 5/8: Minting Cryptographic Treatment Certificate...";
+        await issueCertificate();
+      } else if (autopilotStep === 6) {
+        if (label) label.textContent = "STEP 6/8: Doorstep QR Verification & Household Pickup...";
+        playSound("beep");
+      } else if (autopilotStep === 7) {
+        if (label) label.textContent = "STEP 7/8: AI Optical Sorting Quality Gate...";
+        playSound("pneumatic");
+      } else if (autopilotStep === 8) {
+        if (label) label.textContent = "STEP 8/8: Ecosystem Lifecycle Complete (100% Compliant)!";
+        playSound("success");
+      }
+    } catch (e) {
+      console.warn("Autopilot error:", e);
+    }
+
+    if (autopilotRunning) {
+      autopilotTimer = setTimeout(runNextAutopilotStep, stepDuration);
+    }
+  }
+
+  function showToast(msg, isError = false) {
+    const box = document.getElementById("toastBox");
+    box.style.display = "block";
+    box.style.background = isError ? "var(--color-danger-100)" : "var(--color-success-100)";
+    box.style.color = isError ? "var(--color-danger-700)" : "var(--color-success-700)";
+    box.textContent = msg;
+    setTimeout(() => { box.style.display = "none"; }, 5000);
+  }
+
+  function getStreamBadge(type) {
+    if (type === "YELLOW") return `<span class="bmw-badge bmw-yellow">🟡 Yellow</span>`;
+    if (type === "RED") return `<span class="bmw-badge bmw-red">🔴 Red</span>`;
+    if (type === "WHITE") return `<span class="bmw-badge bmw-white">⚪ White</span>`;
+    if (type === "BLUE") return `<span class="bmw-badge bmw-blue">🔵 Blue</span>`;
+    return `<span class="badge badge-neutral">${type}</span>`;
+  }
+
+  async function loadManifests() {
+    try {
+      const res = await fetch("/api/medical/manifests");
+      const list = await res.json();
+      document.getElementById("kpiManifests").textContent = list.length;
+
+      const tbody = document.querySelector("#manifestsTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No manifests found.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(m => `
+        <tr>
+          <td><strong>${m.batchCode}</strong></td>
+          <td>${m.hospitalId}</td>
+          <td>${getStreamBadge(m.wasteType)}</td>
+          <td>${m.weightKg} Kg</td>
+          <td><span class="badge badge-primary">${m.status}</span></td>
+          <td>
+            <button class="btn btn-secondary btn-sm" style="padding:2px 8px; font-size:11px;" onclick="viewBatchBarcode('${m.batchCode}', '${m.wasteType}', ${m.weightKg}, '${m.hospitalId}', '${m.qrTag || ''}', '${m.createdAt || ''}')">
+              🏷️ Barcode
+            </button>
+          </td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("manifestsTable", { pageSize: 5, placeholder: "Search manifests..." });
+
+      // If manifest result is empty, show literal barcode for latest manifest
+      if (!document.getElementById("manifestResult").innerHTML.trim() && list.length > 0) {
+        const latest = list[list.length - 1];
+        viewBatchBarcode(latest.batchCode, latest.wasteType, latest.weightKg, latest.hospitalId, latest.qrTag, latest.createdAt);
+      }
+    } catch (e) { console.error(e); }
+  }
+
+  // Pure SVG Literal 1D Barcode Generator (Code 39 standard - CPCB BMW Tracking)
+  function generateBarcodeSvg(rawText, { narrowWidth = 2, wideWidth = 5, height = 55, showText = true } = {}) {
+    const code39 = {
+      '0': '000110100', '1': '100100001', '2': '001100001', '3': '101100000',
+      '4': '000110001', '5': '100110000', '6': '001110000', '7': '000100101',
+      '8': '100100100', '9': '001100100', 'A': '100001001', 'B': '001001001',
+      'C': '101001000', 'D': '000011001', 'E': '100011000', 'F': '001011000',
+      'G': '000001101', 'H': '100001100', 'I': '001001100', 'J': '000011100',
+      'K': '100000011', 'L': '001000011', 'M': '101000010', 'N': '000010011',
+      'O': '100010010', 'P': '001010010', 'Q': '000000111', 'R': '100000110',
+      'S': '001000110', 'T': '000010110', 'U': '110000001', 'V': '011000001',
+      'W': '111000000', 'X': '010010001', 'Y': '110010000', 'Z': '011010000',
+      '-': '010000101', '.': '110000100', ' ': '011000100', '$': '010101000',
+      '/': '010100010', '+': '010001010', '%': '000101010', '*': '010010100'
+    };
+    const clean = String(rawText).toUpperCase().replace(/[^0-9A-Z\-. $/+%]/g, '');
+    const str = '*' + clean + '*';
+    let x = 12; // left quiet zone
+    const rects = [];
+    for (let c = 0; c < str.length; c++) {
+      const char = str[c];
+      const pat = code39[char] || code39['*'];
+      for (let i = 0; i < 9; i++) {
+        const isBar = (i % 2 === 0);
+        const isWide = (pat[i] === '1');
+        const w = isWide ? wideWidth : narrowWidth;
+        if (isBar) {
+          rects.push(`<rect x="${x}" y="4" width="${w}" height="${height}" fill="#000000" />`);
+        }
+        x += w;
+      }
+      x += narrowWidth; // inter-character space
+    }
+    x += 10; // right quiet zone
+    const totalWidth = x;
+    const totalHeight = height + (showText ? 24 : 8);
+    const textSvg = showText
+      ? `<text x="${totalWidth / 2}" y="${height + 18}" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="13" font-weight="bold" letter-spacing="2" fill="#000000">* ${clean} *</text>`
+      : '';
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${totalWidth} ${totalHeight}" width="100%" height="${totalHeight}" style="max-width:${totalWidth}px; display:block; margin:0 auto; background:#ffffff;">${rects.join('')}${textSvg}</svg>`;
+  }
+
+  function renderBarcodeSticker({ batchCode, wasteType, colorCode, weightKg, hospitalId, qrTag, generatedAt }) {
+    const streamName = wasteType || "YELLOW";
+    const streamBadge = {
+      YELLOW: "🟡 Yellow — Incineration / Deep Burial",
+      RED: "🔴 Red — Autoclave + Shredder (Recyclable Plastic)",
+      WHITE: "⚪ White — Puncture-Proof Sharps & Needles",
+      BLUE: "🔵 Blue — Disinfected Glassware & Implants"
+    }[streamName] || colorCode || streamName;
+
+    const barcodeSvg = generateBarcodeSvg(batchCode || "MED-784210", { height: 50, narrowWidth: 2, wideWidth: 4.5 });
+    const ts = generatedAt ? new Date(generatedAt).toLocaleString() : new Date().toLocaleString();
+
+    return `
+      <div class="barcode-sticker" id="barcodeLabel_${batchCode}">
+        <div class="barcode-sticker-header">
+          <div>
+            <div style="font-weight:800; font-size:12px; letter-spacing:0.5px; color:#0f172a;">
+              ☣️ CPCB BIO-MEDICAL WASTE TRACKING BARCODE
+            </div>
+            <div style="font-size:10px; color:#64748b;">Official Color-Coded Bag Tag &bull; Rule 10, BMW Rules 2016</div>
+          </div>
+          <span class="barcode-stream-banner barcode-stream-${streamName}">
+            ${streamName} STREAM
+          </span>
+        </div>
+
+        <div style="font-size:11px; margin-bottom:6px; color:#334155; font-weight:600;">
+          Category: <span style="font-weight:700; color:#0f172a;">${streamBadge}</span>
+        </div>
+
+        <div class="barcode-container">
+          ${barcodeSvg}
+        </div>
+
+        <div class="barcode-details-grid">
+          <div class="barcode-detail-item">
+            <span class="lbl">Facility ID</span>
+            <span class="val">${hospitalId || 'AIIMS-Bhopal-Hosp'}</span>
+          </div>
+          <div class="barcode-detail-item">
+            <span class="lbl">Bag Weight</span>
+            <span class="val">${weightKg} Kg</span>
+          </div>
+          <div class="barcode-detail-item">
+            <span class="lbl">Container Tag</span>
+            <span class="val">${qrTag || 'QR-BMW-AIIMS-Y04'}</span>
+          </div>
+          <div class="barcode-detail-item">
+            <span class="lbl">Generated</span>
+            <span class="val" style="font-size:10px;">${ts}</span>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; padding-top:8px; border-top:1px dashed #cbd5e1;">
+          <div style="font-size:10.5px; color:#15803d; font-weight:600;">
+            ✓ Literal barcode registered for GPS fleet scanning
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="printBarcodeSticker('${batchCode}')" style="padding:2px 8px; font-size:11px;">
+            🖨️ Print Label
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function viewBatchBarcode(batchCode, wasteType, weightKg, hospitalId, qrTag, createdAt) {
+    document.getElementById("manifestResult").innerHTML = `
+      <div class="alert alert-info" style="font-size:12px; margin-bottom:10px;">
+        Showing Literal Barcode Label for Manifest Batch: <strong>${batchCode}</strong>
+      </div>
+      ${renderBarcodeSticker({
+        batchCode,
+        wasteType,
+        colorCode: wasteType,
+        weightKg,
+        hospitalId,
+        qrTag,
+        generatedAt: createdAt || new Date().toISOString()
+      })}
+    `;
+    document.getElementById("manifestResult").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function printBarcodeSticker(batchCode) {
+    const el = document.getElementById("barcodeLabel_" + batchCode) || document.querySelector(".barcode-sticker");
+    if (!el) return window.print();
+    const win = window.open("", "_blank", "width=600,height=400");
+    win.document.write(`
+      <html><head><title>Print Barcode Tag - ${batchCode}</title>
+      <style>
+        body { font-family: system-ui, sans-serif; padding: 20px; display:flex; justify-content:center; }
+        .barcode-sticker { width: 420px; border: 2px solid #000; padding: 16px; border-radius: 6px; }
+        .barcode-sticker-header { display: flex; justify-content: space-between; border-bottom: 2px solid #000; padding-bottom: 6px; margin-bottom: 8px; }
+        .barcode-container { text-align: center; margin: 10px 0; }
+        .barcode-details-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 11px; border-top: 1px solid #ccc; padding-top: 6px; }
+        .barcode-stream-banner { font-weight: bold; border: 1px solid #000; padding: 2px 6px; border-radius: 4px; }
+        button { display: none; }
+      </style>
+      </head><body>
+      ${el.outerHTML}
+      <script>window.onload = function() { window.print(); window.close(); }<\\/script>
+      </body></html>
+    `);
+    win.document.close();
+  }
+
+  async function createManifest() {
+    const hospitalId = document.getElementById("manHospital").value.trim();
+    const wasteType = document.getElementById("manType").value;
+    const weightKg = parseFloat(document.getElementById("manWeight").value);
+    const qrTag = document.getElementById("manQr").value.trim();
+    const colorCode = document.getElementById("manType").selectedOptions[0].text;
+
+    try {
+      const res = await fetch("/api/medical/manifests", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ hospitalId, wasteType, colorCode, weightKg, qrTag })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Manifest created! Batch Code: ${data.batchCode}`);
+      document.getElementById("trnBatch").value = data.batchCode;
+      document.getElementById("arrBatch").value = data.batchCode;
+      document.getElementById("trtBatch").value = data.batchCode;
+      document.getElementById("certBatch").value = data.batchCode;
+      document.getElementById("auditBatch").value = data.batchCode;
+      document.getElementById("manifestResult").innerHTML = `
+        <div class="alert alert-success" style="font-size:12px; margin-bottom:10px;">
+          ✓ Color-Coded Manifest <strong>${data.batchCode}</strong> Registered! Literal CPCB Barcode Label generated below:
+        </div>
+        ${renderBarcodeSticker({
+          batchCode: data.batchCode,
+          wasteType,
+          colorCode,
+          weightKg,
+          hospitalId,
+          qrTag,
+          generatedAt: new Date().toISOString()
+        })}`;
+      loadManifests();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  let transitTimerInterval = null;
+  async function assignTransport() {
+    const batchCode = document.getElementById("trnBatch").value.trim();
+    const vehicleId = document.getElementById("trnVehicle").value.trim();
+    const driverId = document.getElementById("trnDriver").value.trim();
+
+    try {
+      playSound("pneumatic");
+      const res = await fetch("/api/medical/transport/assign", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ batchCode, vehicleId, driverId })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("beep");
+      showToast(`Transport assigned! Transit ID: ${data.transportId}`);
+
+      let secondsRemaining = 48 * 3600;
+      if (transitTimerInterval) clearInterval(transitTimerInterval);
+
+      document.getElementById("transportResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>📡</span> GPS GEOTRACKING ACTIVE &bull; FLEET ${vehicleId}
+            </div>
+            <span class="badge badge-success" style="animation:pulse 1.5s infinite;">● LIVE TELEMETRY</span>
+          </div>
+          <div class="radar-screen">
+            <div class="radar-sweep"></div>
+            <div class="radar-blip" style="top:42%; left:48%;"></div>
+            <div class="radar-blip" style="top:65%; left:75%; background:#38bdf8; box-shadow:0 0 10px #38bdf8;"></div>
+            <div style="position:absolute; bottom:6px; left:8px; font-size:10px; font-family:monospace; color:#34d399;">
+              LAT: 23.2599° N &bull; LNG: 77.4126° E &bull; SPEED: 42 km/h
+            </div>
+            <div style="position:absolute; top:6px; right:8px; font-size:10px; font-family:monospace; color:#94a3b8;">
+              ENCRYPTED CELLULAR GSM LINK #4
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-top:8px; font-size:11px;">
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">TRANSIT ID</div>
+              <div style="color:#f8fafc; font-weight:700; font-family:monospace;">${data.transportId}</div>
+            </div>
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">DRIVER BADGE</div>
+              <div style="color:#f8fafc; font-weight:700;">${driverId}</div>
+            </div>
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <div style="color:#64748b; font-size:10px;">CPCB TRANSIT WINDOW</div>
+              <div style="color:#38bdf8; font-weight:700; font-family:monospace;" id="cpcbTimer">47h 59m 59s</div>
+            </div>
+          </div>
+          <div style="margin-top:8px; font-size:11px; color:#94a3b8; display:flex; justify-content:space-between; align-items:center;">
+            <span>Route: <strong>AIIMS Hospital Bay 4</strong> ➔ <strong>CBWTF BioClean Plant</strong> (18.4 Km)</span>
+            <span style="color:#22c55e; font-weight:600;">✓ In-Transit Barcode Locked</span>
+          </div>
+        </div>`;
+
+      transitTimerInterval = setInterval(() => {
+        secondsRemaining--;
+        if (secondsRemaining < 0) { clearInterval(transitTimerInterval); return; }
+        const h = Math.floor(secondsRemaining / 3600);
+        const m = Math.floor((secondsRemaining % 3600) / 60);
+        const s = secondsRemaining % 60;
+        const el = document.getElementById("cpcbTimer");
+        if (el) el.textContent = `${h}h ${m < 10 ? '0' : ''}${m}m ${s < 10 ? '0' : ''}${s}s`;
+      }, 1000);
+
+      loadManifests();
+      loadTransportsCount();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function loadTransportsCount() {
+    try {
+      const res = await fetch("/api/medical/transports");
+      const list = await res.json();
+      document.getElementById("kpiTransports").textContent = list.length;
+    } catch (e) { console.error(e); }
+  }
+
+  async function recordFacilityArrival() {
+    const batchCode = document.getElementById("arrBatch").value.trim();
+    const facilityId = document.getElementById("arrFacility").value.trim();
+    const grossWeightKg = parseFloat(document.getElementById("arrGross").value);
+    const tareWeightKg = parseFloat(document.getElementById("arrTare").value);
+
+    try {
+      playSound("stamp");
+      const res = await fetch("/api/medical/facility/arrival", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ batchCode, facilityId, grossWeightKg, tareWeightKg })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("beep");
+      showToast(`Weighbridge inward logged! Net: ${data.netWeightKg} Kg`);
+      document.getElementById("arrivalResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>⚖️</span> CBWTF INWARD AUTOMATED WEIGHBRIDGE BAY #01
+            </div>
+            <span class="badge badge-success">✓ OIML R76 CERTIFIED</span>
+          </div>
+          <div class="weigh-bay">
+            <div style="flex:1;">
+              <div style="font-size:10px; color:#94a3b8; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Gross Loaded Vehicle</div>
+              <div class="led-display" id="dispGross" style="font-size:17px; color:#38bdf8; text-shadow:0 0 10px rgba(56,189,248,0.5);">${grossWeightKg} <span style="font-size:11px;">Kg</span></div>
+            </div>
+            <div style="font-size:22px; color:#64748b; font-weight:900;">&minus;</div>
+            <div style="flex:1;">
+              <div style="font-size:10px; color:#94a3b8; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px;">Tare Empty Vehicle</div>
+              <div class="led-display" id="dispTare" style="font-size:17px; color:#f59e0b; text-shadow:0 0 10px rgba(245,158,11,0.5);">${tareWeightKg} <span style="font-size:11px;">Kg</span></div>
+            </div>
+            <div style="font-size:22px; color:#64748b; font-weight:900;">=</div>
+            <div style="flex:1.2;">
+              <div style="font-size:10px; color:#86efac; margin-bottom:4px; text-transform:uppercase; letter-spacing:0.5px; font-weight:700;">Verified Net Waste</div>
+              <div class="led-display" id="dispNet" style="font-size:20px; color:#22c55e; border-color:#22c55e;">${data.netWeightKg} <span style="font-size:11px;">Kg</span></div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:8px; font-size:11px;">
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <span style="color:#64748b;">Inward Receipt ID:</span> <strong style="color:#f8fafc; font-family:monospace;">${data.receiptId}</strong>
+            </div>
+            <div style="background:#020617; padding:6px 8px; border-radius:4px; border:1px solid #1e293b;">
+              <span style="color:#64748b;">Hospital Manifest Variance:</span> <strong style="color:#22c55e;">0.00% (&plusmn;5% Max Limit) &bull; PASS</strong>
+            </div>
+          </div>
+          <div style="margin-top:8px; font-size:11px; color:#38bdf8; display:flex; justify-content:space-between; align-items:center;">
+            <span>SPCB Central Server Handshake: <strong>ACKNOWLEDGED</strong></span>
+            <span style="color:#22c55e; font-weight:700;">✓ Seal Tamper Check: PASSED</span>
+          </div>
+        </div>`;
+      loadManifests();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function loadTreatments() {
+    try {
+      const res = await fetch("/api/medical/treatments");
+      const list = await res.json();
+      document.getElementById("kpiTreatments").textContent = list.length;
+
+      const tbody = document.querySelector("#treatmentsTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;">No treatment records.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(t => `
+        <tr>
+          <td><strong>${t.treatmentId}</strong></td>
+          <td>${t.batchCode}</td>
+          <td>${t.method}</td>
+          <td>${t.temperatureC}°C</td>
+          <td><span class="badge badge-success">${t.status}</span></td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("treatmentsTable", { pageSize: 5, placeholder: "Search treatments..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function recordTreatment() {
+    const batchCode = document.getElementById("trtBatch").value.trim();
+    const facilityId = document.getElementById("trtFacility").value.trim();
+    const method = document.getElementById("trtMethod").value;
+    const weightProcessedKg = parseFloat(document.getElementById("trtWeight").value);
+    const temperatureC = parseFloat(document.getElementById("trtTemp").value);
+    const pressureBar = parseFloat(document.getElementById("trtPress").value);
+    const durationMinutes = parseFloat(document.getElementById("trtDuration").value);
+
+    try {
+      playSound("pneumatic");
+      const res = await fetch("/api/medical/treatment", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ batchCode, facilityId, method, weightProcessedKg, temperatureC, pressureBar, durationMinutes })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      playSound("beep");
+      showToast(`Treatment verified! ID: ${data.treatmentId}`);
+      document.getElementById("certTrtId").value = data.treatmentId;
+      document.getElementById("treatmentResult").innerHTML = `
+        <div class="sim-card">
+          <div class="sim-header">
+            <div class="sim-title">
+              <span>🔥</span> SCADA THERMAL DECONTAMINATION &bull; BATCH ${batchCode}
+            </div>
+            <span class="badge badge-success">● PLC ACTIVE</span>
+          </div>
+          <div style="display:flex; gap:12px; margin-bottom:10px;">
+            <!-- Temp Gauge -->
+            <div class="gauge-box">
+              <div style="font-size:10px; color:#94a3b8; margin-bottom:4px; font-weight:700;">INCINERATOR / AUTOCLAVE TEMP</div>
+              <div style="position:relative; width:130px; height:80px; margin:0 auto; overflow:hidden;">
+                <svg viewBox="0 0 100 60" width="130" height="78">
+                  <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#1e293b" stroke-width="10" stroke-linecap="round" />
+                  <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="url(#tempGrad)" stroke-width="10" stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="15" />
+                  <defs>
+                    <linearGradient id="tempGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#38bdf8" />
+                      <stop offset="50%" stop-color="#f59e0b" />
+                      <stop offset="100%" stop-color="#ef4444" />
+                    </linearGradient>
+                  </defs>
+                  <g style="transform-origin: 50px 50px; transform: rotate(${Math.min(90, Math.max(-90, -90 + (temperatureC / 1200) * 180))}deg); transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                    <line x1="50" y1="50" x2="50" y2="16" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="50" cy="50" r="4" fill="#ef4444" />
+                  </g>
+                </svg>
+              </div>
+              <div style="font-family:monospace; font-weight:900; font-size:18px; color:#ef4444; text-shadow:0 0 10px rgba(239,68,68,0.5);">
+                ${temperatureC} <span style="font-size:12px;">°C</span>
+              </div>
+              <div style="font-size:10px; color:#64748b;">Min Required: 1050°C (Sec. Chamber)</div>
+            </div>
+
+            <!-- Pressure Gauge -->
+            <div class="gauge-box">
+              <div style="font-size:10px; color:#94a3b8; margin-bottom:4px; font-weight:700;">VESSEL RETORT PRESSURE</div>
+              <div style="position:relative; width:130px; height:80px; margin:0 auto; overflow:hidden;">
+                <svg viewBox="0 0 100 60" width="130" height="78">
+                  <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#1e293b" stroke-width="10" stroke-linecap="round" />
+                  <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" stroke-dasharray="126" stroke-dashoffset="40" />
+                  <g style="transform-origin: 50px 50px; transform: rotate(${Math.min(90, Math.max(-90, -90 + (pressureBar / 5) * 180))}deg); transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                    <line x1="50" y1="50" x2="50" y2="16" stroke="#f8fafc" stroke-width="2.5" stroke-linecap="round" />
+                    <circle cx="50" cy="50" r="4" fill="#38bdf8" />
+                  </g>
+                </svg>
+              </div>
+              <div style="font-family:monospace; font-weight:900; font-size:18px; color:#38bdf8; text-shadow:0 0 10px rgba(56,189,248,0.5);">
+                ${pressureBar} <span style="font-size:12px;">Bar</span>
+              </div>
+              <div style="font-size:10px; color:#64748b;">Target Range: 2.1 &ndash; 3.0 Bar</div>
+            </div>
+          </div>
+
+          <!-- Dwell Time Progress -->
+          <div style="background:#020617; padding:8px 10px; border-radius:4px; border:1px solid #1e293b; margin-bottom:8px;">
+            <div style="display:flex; justify-content:space-between; font-size:11px; margin-bottom:4px;">
+              <span style="color:#94a3b8;">Continuous Thermal Dwell Cycle:</span>
+              <span style="color:#22c55e; font-weight:700;">${durationMinutes} / ${durationMinutes} Mins COMPLETED</span>
+            </div>
+            <div style="height:6px; background:#1e293b; border-radius:3px; overflow:hidden;">
+              <div style="width:100%; height:100%; background:linear-gradient(90deg, #38bdf8, #22c55e);"></div>
+            </div>
+          </div>
+
+          <div style="font-size:11px; color:#94a3b8; display:flex; justify-content:space-between; align-items:center;">
+            <span>Treatment Process ID: <strong style="color:#f8fafc; font-family:monospace;">${data.treatmentId}</strong></span>
+            <span style="color:#22c55e; font-weight:600;">✓ Biological Indicator (Bacillus stearothermophilus) Inactivated</span>
+          </div>
+        </div>`;
+      loadTreatments();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function issueCertificate() {
+    const batchCode = document.getElementById("certBatch").value.trim();
+    const treatmentId = document.getElementById("certTrtId").value.trim();
+    if (!batchCode || !treatmentId) return alert("Please fill batch code and treatment ID.");
+
+    try {
+      playSound("stamp");
+      const res = await fetch("/api/medical/certificates", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ batchCode, treatmentId })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+
+      // Cryptographic hash simulation
+      const cryptoHash = '0x' + Array.from({length: 40}, () => Math.floor(Math.random()*16).toString(16)).join('');
+
+      document.getElementById("certTokenBox").innerHTML = `
+        <div class="sim-card" style="padding:12px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+            <span style="font-weight:800; font-size:11.5px; color:#38bdf8;">⚡ CRYPTOGRAPHIC PROOF ANCHORED</span>
+            <span class="badge badge-success" style="font-size:10px;">SHA-256 IMMUTABLE</span>
+          </div>
+          <div style="background:#020617; border:1px solid #1e293b; border-radius:4px; padding:6px 10px; font-family:monospace; font-size:11px; color:#22c55e; word-break:break-all;">
+            CERT: ${data.certificateCode} &bull; ${cryptoHash}
+          </div>
+          <div style="margin-top:6px; font-size:10.5px; color:#94a3b8;">
+            Proof recorded to CPCB/SPCB bio-medical regulatory audit log.
+          </div>
+        </div>`;
+
+      setTimeout(() => { playSound("success"); }, 200);
+
+      document.getElementById("certPreviewBox").style.display = "block";
+      document.getElementById("cpCertCode").textContent = data.certificateCode;
+      document.getElementById("cpBatchCode").textContent = batchCode;
+      document.getElementById("cpIssuedAt").textContent = new Date(data.issuedAt).toLocaleString();
+      const hashEl = document.getElementById("cpHash");
+      if (hashEl) hashEl.textContent = cryptoHash;
+
+      // Trigger seal stamp drop animation
+      const seal = document.getElementById("certSealStamp");
+      if (seal) {
+        seal.style.animation = 'none';
+        seal.offsetHeight; /* trigger reflow */
+        seal.style.animation = 'stampDrop 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+      }
+
+      showToast(`Certificate minted! Code: ${data.certificateCode}`);
+      loadCertsCount();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  function printCertificate() {
+    const el = document.getElementById("certPreviewBox");
+    if (!el) return window.print();
+    const win = window.open("", "_blank", "width=700,height=500");
+    win.document.write(`
+      <html><head><title>Print Bio-Medical Certificate</title>
+      <style>
+        body { font-family: system-ui, sans-serif; padding: 30px; display:flex; justify-content:center; }
+        .cert-box { width: 560px; border: 2px solid #b45309; padding: 24px; border-radius: 8px; background: #fffbeb; position: relative; }
+        .seal-stamp { position: absolute; right: 20px; top: 20px; border: 3px double #d97706; border-radius: 50%; width: 80px; height: 80px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #f59e0b; font-weight: bold; text-align: center; font-size: 8px; transform: rotate(-10deg); }
+        button { display: none; }
+      </style>
+      </head><body>
+      ${el.outerHTML}
+      <script>window.onload = function() { window.print(); window.close(); }<\\/script>
+      </body></html>
+    `);
+    win.document.close();
+  }
+
+  async function loadCertsCount() {
+    try {
+      const res = await fetch("/api/medical/certificates");
+      const list = await res.json();
+      document.getElementById("kpiCerts").textContent = list.length;
+    } catch (e) { console.error(e); }
+  }
+
+  async function loadTraining() {
+    try {
+      const res = await fetch("/api/medical/training");
+      const list = await res.json();
+      const tbody = document.querySelector("#trainingTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;">No training records.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(t => `
+        <tr>
+          <td><strong>${t.staffId}</strong></td>
+          <td>${t.hospitalId}</td>
+          <td>${t.trainingType}</td>
+          <td>${t.expiryDate || 'N/A'}</td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("trainingTable", { pageSize: 5, placeholder: "Search training records..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function logStaffTraining() {
+    const staffId = document.getElementById("stfId").value.trim();
+    const hospitalId = document.getElementById("stfHospital").value.trim();
+    const trainingType = document.getElementById("stfType").value;
+    const completionDate = document.getElementById("stfDate").value;
+    const expiryDate = document.getElementById("stfExpiry").value;
+
+    try {
+      const res = await fetch("/api/medical/training", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ staffId, hospitalId, trainingType, completionDate, expiryDate })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Training record logged! ID: ${data.trainingId}`);
+      document.getElementById("trainingResult").innerHTML = `
+        <div class="alert alert-success" style="font-size:12px;">
+          ✓ Record <strong>${data.trainingId}</strong> preserved in compliance registry.
+        </div>`;
+      loadTraining();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function queryAuditTrail() {
+    const batchCode = document.getElementById("auditBatch").value.trim();
+    if (!batchCode) return alert("Please enter batch code.");
+
+    try {
+      const res = await fetch(`/api/medical/audit/${encodeURIComponent(batchCode)}`);
+      const logs = await res.json();
+      const wrap = document.getElementById("auditTimelineResult");
+      if (!logs.length) {
+        wrap.innerHTML = `<div class="alert alert-info">No audit logs found for Batch: ${batchCode}</div>`;
+        return;
+      }
+      wrap.innerHTML = `
+        <div class="timeline">
+          ${logs.map(log => `
+            <div class="timeline-item">
+              <div class="timeline-time">${new Date(log.timestamp).toLocaleString()} &bull; Actor: <strong>${log.actorId}</strong></div>
+              <div class="timeline-action">${log.action}</div>
+              <div style="font-size:12px; color:var(--color-ink-700); margin-top:2px;">
+                Entity: <code>${log.entityId}</code> | Details: ${JSON.stringify(log.details || {})}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      `;
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  async function loadReports() {
+    try {
+      const res = await fetch("/api/medical/reports");
+      const list = await res.json();
+      const tbody = document.querySelector("#reportsTable tbody");
+      if (!list.length) {
+        tbody.innerHTML = `<tr><td colspan="4" style="text-align:center;">No reports recorded.</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = list.map(r => `
+        <tr>
+          <td><strong>${r.reportId}</strong></td>
+          <td>${r.reporterId}</td>
+          <td>${r.description || 'Illegal disposal reported'}</td>
+          <td><span class="badge badge-warning">${r.status}</span></td>
+        </tr>
+      `).join("");
+      dsEnhanceTable("reportsTable", { pageSize: 5, placeholder: "Search reports..." });
+    } catch (e) { console.error(e); }
+  }
+
+  async function submitWhistleblower() {
+    const reporterId = document.getElementById("wbReporter").value.trim();
+    const description = document.getElementById("wbDesc").value.trim();
+    const gpsLat = parseFloat(document.getElementById("wbLat").value);
+    const gpsLng = parseFloat(document.getElementById("wbLng").value);
+    if (!reporterId || !description) return alert("Please fill reporter name and description.");
+
+    try {
+      const res = await fetch("/api/medical/report", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reporterId, description, gpsLat, gpsLng })
+      });
+      const data = await res.json();
+      if (data.error) throw new Error(data.error);
+      showToast(`Whistleblower alert filed! ID: ${data.reportId}`);
+      document.getElementById("whistleblowerResult").innerHTML = `
+        <div class="alert alert-success" style="font-size:12px;">
+          ✓ Direct priority notification dispatched to CPCB &amp; SPCB. ID: <strong>${data.reportId}</strong>
+        </div>`;
+      document.getElementById("wbDesc").value = "";
+      loadReports();
+    } catch (e) { showToast(e.message, true); }
+  }
+
+  // Initial load
+  loadManifests();
+  loadTransportsCount();
+  loadTreatments();
+  loadCertsCount();
+  loadTraining();
+  loadReports();
+</script>
+
+</body>
+</html>

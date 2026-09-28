@@ -1,0 +1,27 @@
+[
+  {
+    "id": "EPR-CERT-2026-000001",
+    "itemId": "EW-2026-000001",
+    "device": "Dell Laptop",
+    "category": "Laptop",
+    "weightKg": 2,
+    "recyclerId": "COL-01",
+    "recycledAt": "2026-09-25T20:17:37.974Z",
+    "environmentalImpact": {
+      "category": "Laptop",
+      "co2SavedKg": 240,
+      "materialRecoveredKg": 9,
+      "hazardousHandled": false,
+      "estimated": true,
+      "methodology": "Estimated from category baseline for \"Laptop\", scaled by verified weight (2kg)."
+    },
+    "priceINR": 60,
+    "pricePerKgINR": 30,
+    "status": "SOLD",
+    "purchasedBy": "PROD-001",
+    "purchasedAt": "2026-09-25T20:17:37.986Z",
+    "obligationId": "OBL-2026-001",
+    "generatedAt": "2026-09-25T20:17:37.974Z",
+    "verificationHash": "sha256:6079f3dd13a793393cdabe20d2ff4e042de71d39e3af72581af6a7d4d0e0bde7"
+  }
+]

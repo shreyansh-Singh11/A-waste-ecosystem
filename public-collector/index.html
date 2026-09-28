@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Collector & Recycler Operations</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  .scan-hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.16) 0%, rgba(6, 95, 70, 0.28) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-5) var(--sp-6);
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: var(--transition-bounce);
+    box-shadow: 0 4px 20px -4px rgba(16, 185, 129, 0.2);
+    margin-bottom: var(--sp-6);
+    position: relative;
+    overflow: hidden;
+  }
+  .scan-hero-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.6), transparent);
+  }
+  .scan-hero-cta:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-primary-400);
+    box-shadow: 0 8px 30px -4px rgba(16, 185, 129, 0.35);
+  }
+  .scan-hero-cta .cta-left {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+  }
+  .scan-hero-cta .cta-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--color-primary-500);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+    flex-shrink: 0;
+  }
+  .scan-hero-cta .cta-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+  }
+  .scan-hero-cta .cta-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+  }
+  .scan-hero-cta .cta-btn-badge {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #a7f3d0;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    font-size: 0.825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  html.light .scan-hero-cta, [data-theme="light"] .scan-hero-cta {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(240, 253, 244, 0.95) 100%);
+    border-color: rgba(16, 185, 129, 0.35);
+    box-shadow: 0 4px 20px -4px rgba(16, 185, 129, 0.1);
+  }
+  html.light .scan-hero-cta .cta-title, [data-theme="light"] .scan-hero-cta .cta-title {
+    color: #064e3b;
+  }
+  html.light .scan-hero-cta .cta-subtitle, [data-theme="light"] .scan-hero-cta .cta-subtitle {
+    color: #065f46;
+  }
+  html.light .scan-hero-cta .cta-btn-badge, [data-theme="light"] .scan-hero-cta .cta-btn-badge {
+    background: #047857;
+    border-color: #047857;
+    color: #ffffff;
+  }
+  @media (max-width: 640px) {
+    .scan-hero-cta { flex-direction: column; align-items: flex-start; gap: var(--sp-3); padding: var(--sp-4); }
+    .scan-hero-cta .cta-btn-badge { align-self: flex-end; }
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="app-shell">
+  <nav class="app-nav">
+    <div class="brand">
+      <span class="mark">⚡</span>
+      <div>
+        <span class="name">CirculaSync</span>
+        <span class="sub">Collector & Recycler</span>
+      </div>
+    </div>
+    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); padding: 0 var(--sp-3); margin-bottom: var(--sp-2);">Navigation</div>
+    <a class="nav-link active" href="#top"><span class="nav-icon">📊</span> Overview & ID</a>
+    <a class="nav-link" href="#pickups"><span class="nav-icon">📦</span> Assigned Pickups</a>
+    <a class="nav-link" href="#route"><span class="nav-icon">🗺️</span> Driver Dispatch Route</a>
+    <a class="nav-link" href="/collector/scan.html"><span class="nav-icon">📷</span> Scan Intake QR</a>
+    <a class="nav-link" href="#facility"><span class="nav-icon">🏭</span> Facility Stage Custody</a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.08); margin: var(--sp-3) var(--sp-3);"></div>
+    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-tertiary); padding: 0 var(--sp-3); margin-bottom: var(--sp-2);">Circularity B2B</div>
+    <a class="nav-link" href="#grading"><span class="nav-icon">🔍</span> SSQI Device Grading</a>
+    <a class="nav-link" href="#harvest"><span class="nav-icon">🔧</span> Right-to-Repair Harvest</a>
+    <a class="nav-link" href="#auction"><span class="nav-icon">🔨</span> B2B Reverse Auction</a>
+    <a class="nav-link" href="#settlement"><span class="nav-icon">💸</span> Instant UPI Payout</a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.08); margin: var(--sp-3) var(--sp-3);"></div>
+    <a class="nav-link" href="/government#snakeSection"><span class="nav-icon">🐍</span> Snake Dispatch Route</a>
+    <a class="nav-link" href="/government#offlineSection"><span class="nav-icon">📲</span> PWA Offline Queue</a>
+    <div class="nav-footer">CirculaSync v2.4 · Madhya Pradesh Hub</div>
+  </nav>
+
+  <div class="app-main">
+    <header class="app-topbar" id="top">
+      <div class="title-block">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <h1>Collector & Recycler Terminal</h1>
+          <span class="badge badge-success" style="font-size: 11px; padding: 2px 8px;"><span class="dot"></span>ACTIVE DISPATCH</span>
+        </div>
+        <div class="meta">AI Turn-by-Turn Route Optimization · SSQI Device Grading · B2B English Auction</div>
+      </div>
+      <div style="display: flex; gap: var(--sp-2);">
+        <a class="btn btn-secondary btn-sm" href="/collector/scan.html">📷 Quick Scan</a>
+        <button class="btn btn-primary btn-sm" onclick="loadDriverRoute(); loadAssigned();">↻ Sync Route</button>
+      </div>
+    </header>
+
+    <main class="app-content">
+
+      <!-- Scanner CTA Banner -->
+      <a class="scan-hero-cta" href="/collector/scan.html">
+        <div class="cta-left">
+          <div class="cta-icon">📷</div>
+          <div>
+            <div class="cta-title">Scan Physical QR Code for Intake</div>
+            <div class="cta-subtitle">Instantly verify citizen E-Waste Card, flag battery hazard, and transition item to COLLECTED stage</div>
+          </div>
+        </div>
+        <div class="cta-btn-badge">
+          Open Camera Scanner &rarr;
+        </div>
+      </a>
+
+      <!-- Collector Identity / Capacity Section -->
+      <section class="panel" id="centre">
+        <div class="panel-header">
+          <div>
+            <h2>Collector Identity & Hub Capacity</h2>
+            <span class="hint">Active collection depot identity, load utilization threshold, and assigned service areas</span>
+          </div>
+        </div>
+        <div class="sign-in-row flex gap-3" style="align-items:flex-end; flex-wrap: wrap;">
+          <div class="field" style="margin-bottom:0; flex:1; min-width:220px;">
+            <label for="collectorId">Collector / Operator ID</label>
+            <input id="collectorId" placeholder="e.g. COL-01" value="COL-01" onkeydown="if(event.key==='Enter'){loadCentre();loadAssigned();}" />
+          </div>
+          <div style="display: flex; gap: var(--sp-2); align-items: flex-end; flex-wrap: wrap;">
+            <button class="btn btn-secondary" onclick="loadCentre()">Load Capacity</button>
+            <button class="btn btn-primary" onclick="loadAssigned()">Load Assigned Items</button>
+          </div>
+        </div>
+        <div id="centreResult" class="mt-4"></div>
+      </section>
+
+      <!-- Assigned Items Table -->
+      <section class="panel" id="pickups">
+        <div class="panel-header" style="justify-content: space-between; align-items: center;">
+          <div>
+            <h2>Assigned Pickup Requests</h2>
+            <span class="hint">Pending citizen consignments assigned to this collector depot for route sequencing</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadAssigned()">↻ Refresh Items</button>
+        </div>
+        <div class="table-wrap"><table class="ds-table" id="assignedTable"></table></div>
+      </section>
+
+      <!-- Driver Route Section -->
+      <section class="panel" id="route">
+        <div class="panel-header" style="flex-wrap: wrap; gap: var(--sp-2); justify-content: space-between;">
+          <div>
+            <h2>Optimized Collection Route (Driver Dispatch)</h2>
+            <span class="hint">Travelling Salesperson Problem (TSP) shortest sequence · Priority-weighted routing</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadDriverRoute()">↻ Recalculate TSP Route</button>
+        </div>
+
+        <div id="routeDriverSummary" class="kpi-grid mb-4" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));">
+          <div class="stat-card"><div class="label">Total Stops</div><div class="num" id="driverStopsCount">—</div></div>
+          <div class="stat-card"><div class="label">Total Distance</div><div class="num" id="driverDistKm">—</div></div>
+          <div class="stat-card"><div class="label">Est. Duration</div><div class="num" id="driverDuration">—</div></div>
+          <div class="stat-card"><div class="label">Distance Saved</div><div class="num" id="driverKmSaved" style="color:var(--color-primary-400);">—</div></div>
+        </div>
+
+        <div id="driverRouteList">
+          <div class="skeleton skeleton-row"></div>
+        </div>
+      </section>
+
+      <!-- Notifications -->
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <h2>Operations Feed & Dispatch Alerts</h2>
+            <span class="hint">Real-time status events, route updates, and citizen handoff alerts</span>
+          </div>
+        </div>
+        <div id="collectorNotifications"></div>
+      </section>
+
+      <!-- Facility Stages -->
+      <section class="panel" id="facility">
+        <div class="panel-header">
+          <div>
+            <h2>Facility: Advance Item Lifecycle Stage</h2>
+            <span class="hint">Sequential custody transfer. Strict cryptographic transition enforcement.</span>
+          </div>
+        </div>
+        <p class="text-caption" style="margin-bottom: var(--sp-4);">
+          <strong>Validation Rule:</strong> <span class="badge badge-neutral" style="font-family: var(--font-mono);">COLLECTED</span> can only be established via physical QR scan. Subsequent phases (RECEIVED &rarr; SORTED &rarr; PROCESSING &rarr; RECYCLED) require verifiable custodial progression.
+        </p>
+        <div class="grid-2">
+          <div class="field"><label for="itemId">Item ID</label><input id="itemId" placeholder="e.g. EW-2026-000001" /></div>
+          <div class="field"><label for="statusSelect">Target Stage</label>
+            <select id="statusSelect">
+              <option value="RECEIVED">RECEIVED (at facility depot)</option>
+              <option value="SORTED">SORTED (categorized by material)</option>
+              <option value="PROCESSING">PROCESSING (dismantling / decontamination)</option>
+              <option value="RECYCLED">RECYCLED (closed-loop complete)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="outcomeSelect">Outcome Category (Required when finalizing stage to RECYCLED)</label>
+          <select id="outcomeSelect">
+            <option value="">— select final circular destination —</option>
+            <option value="Reused">Reused (Direct 2nd Life)</option>
+            <option value="Refurbished">Refurbished (Repaired Componentry)</option>
+            <option value="Recycled">Recycled (Raw Element Smelting)</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" onclick="updateStatus()">Update Stage Custody</button>
+        <div id="updateResult" class="mt-4"></div>
+      </section>
+
+      <!-- ===== B2B REVERSE AUCTION ENGINE (Phase 2) ===== -->
+
+      <!-- SSQI Device Grading -->
+      <section class="panel" id="grading">
+        <div class="panel-header">
+          <div>
+            <h2>🔍 SSQI Device Quality Grading (Tier A / B / C)</h2>
+            <span class="hint">Automated assessment algorithm with Li-Ion thermal runaway & safety triage</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label for="gradeItemId">Item ID</label><input id="gradeItemId" placeholder="e.g. EW-2026-000001" /></div>
+          <div class="field"><label for="gradeCategory">Equipment Category</label>
+            <select id="gradeCategory"><option>Laptop</option><option>Smartphone</option><option>Computing Device</option><option>Consumer Electronics</option><option>Battery / Power</option><option>Monitor</option></select>
+          </div>
+          <div class="field"><label for="gradeScreen">Display Condition</label>
+            <select id="gradeScreen"><option>Good</option><option>Cracked</option><option>Broken</option></select>
+          </div>
+          <div class="field"><label for="gradeCasing">Chassis / Enclosure Integrity</label>
+            <select id="gradeCasing"><option>Good</option><option>Dented</option><option>Damaged</option></select>
+          </div>
+          <div class="field"><label for="gradeBattery">Battery Chemical State</label>
+            <select id="gradeBattery"><option>Normal</option><option>Degraded</option><option>Bloated</option></select>
+          </div>
+          <div class="field"><label for="gradeBoots">POST / Motherboard Boots Reliably?</label>
+            <select id="gradeBoots"><option value="true">Yes (Passes Power Test)</option><option value="false">No (Dead / Corroded)</option></select>
+          </div>
+        </div>
+        <button class="btn btn-primary" onclick="runGrading()">Execute Grading Audit</button>
+        <div id="gradeResult" class="mt-4"></div>
+      </section>
+
+      <!-- Right to Repair Harvest -->
+      <section class="panel" id="harvest">
+        <div class="panel-header">
+          <div>
+            <h2>🔧 Right-to-Repair Harvest Valuation</h2>
+            <span class="hint">Estimate recoverable component residual market value (RAM, SSD, Display, Copper, Gold)</span>
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="field"><label for="harvestCategory">Category</label>
+            <select id="harvestCategory"><option>Laptop</option><option>Smartphone</option><option>Computing Device</option><option>Consumer Electronics</option></select>
+          </div>
+          <div class="field"><label for="harvestWeight">Gross Weight (kg)</label><input id="harvestWeight" type="number" step="0.1" placeholder="e.g. 2.1" /></div>
+        </div>
+        <button class="btn btn-secondary" onclick="runHarvest()">Calculate Harvest Value</button>
+        <div id="harvestResult" class="mt-4"></div>
+      </section>
+
+      <!-- Reverse Auction -->
+      <section class="panel" id="auction">
+        <div class="panel-header" style="justify-content: space-between; align-items: center;">
+          <div>
+            <h2>🔨 B2B Reverse Auction — Live Marketplace Lots</h2>
+            <span class="hint">Direct kabadiwala-to-certified-smelter lot creation · Dynamic upward bidding</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="loadOpenAuctions()">↻ Refresh Lots</button>
+        </div>
+
+        <details style="background: var(--color-surface); border: var(--border); border-radius: var(--radius-lg); padding: var(--sp-4); margin-bottom: var(--sp-4);">
+          <summary style="cursor:pointer;font-weight:600;font-size:0.95rem;color:var(--text-primary);display:flex;align-items:center;gap:8px;">
+            <span>➕ Create New Certified Auction Lot</span>
+          </summary>
+          <div class="mt-4" style="border-top:1px solid rgba(255,255,255,0.08); padding-top:var(--sp-4);">
+            <div class="grid-2">
+              <div class="field"><label for="lotSellerId">Kabadiwala / Aggregator ID</label><input id="lotSellerId" placeholder="e.g. KBD-01" /></div>
+              <div class="field"><label for="lotReservePrice">Reserve Baseline Price (₹)</label><input id="lotReservePrice" type="number" placeholder="e.g. 500" /></div>
+              <div class="field"><label for="lotItemIds">Item IDs (comma-separated)</label><input id="lotItemIds" placeholder="e.g. EW-2026-000001, EW-2026-000002" /></div>
+              <div class="field"><label for="lotCategories">Categories (comma-separated)</label><input id="lotCategories" placeholder="e.g. Laptop, Smartphone" /></div>
+              <div class="field"><label for="lotWeights">Weights in kg (comma-separated)</label><input id="lotWeights" placeholder="e.g. 2.1, 0.2" /></div>
+            </div>
+            <button class="btn btn-primary mt-2" onclick="createLot()">Publish Lot & Start 4h Auction</button>
+          </div>
+        </details>
+        <div id="lotCreateResult" class="mt-2"></div>
+
+        <h3 class="mt-4" style="font-size: 1.05rem; margin-bottom: var(--sp-3);">Active Auction Lots</h3>
+        <div id="openAuctionsGrid" class="mt-2"></div>
+
+        <details style="background: var(--color-surface); border: var(--border); border-radius: var(--radius-lg); padding: var(--sp-4); margin-top: var(--sp-5);">
+          <summary style="cursor:pointer;font-weight:600;font-size:0.95rem;color:var(--text-primary);display:flex;align-items:center;gap:8px;">
+            <span>📊 Submit Verified Smelter Bid</span>
+          </summary>
+          <div class="mt-4" style="border-top:1px solid rgba(255,255,255,0.08); padding-top:var(--sp-4);">
+            <div class="grid-2">
+              <div class="field"><label for="bidLotId">Lot ID</label><input id="bidLotId" placeholder="Paste lot ID" /></div>
+              <div class="field"><label for="bidBidderId">Certified Recycler / Bidder ID</label><input id="bidBidderId" placeholder="e.g. RECYC-A" /></div>
+              <div class="field"><label for="bidPrice">Bid Price (₹/kg)</label><input id="bidPrice" type="number" step="1" placeholder="e.g. 75" /></div>
+            </div>
+            <button class="btn btn-primary mt-2" onclick="placeBid()">Place Competitive Bid</button>
+            <div id="bidResult" class="mt-2"></div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Instant UPI Settlement -->
+      <section class="panel" id="settlement">
+        <div class="panel-header">
+          <div>
+            <h2>💸 Instant Digital UPI Settlement</h2>
+            <span class="hint">Post-weighbridge automated smart contract disbursement to informal collector VPA</span>
+          </div>
+        </div>
+        <p class="text-caption" style="margin-bottom: var(--sp-4);">Automated escrow release upon joint gross tare weight calibration and cryptographic signature exchange.</p>
+        <div class="grid-2">
+          <div class="field"><label for="settleLotId">Lot ID (must be in CLOSED status)</label><input id="settleLotId" placeholder="Lot ID" /></div>
+          <div class="field"><label for="settleWeight">Weighbridge Verified Weight (kg)</label><input id="settleWeight" type="number" step="0.01" placeholder="Tare weighbridge reading" /></div>
+          <div class="field"><label for="settleUpi">Kabadiwala UPI VPA</label><input id="settleUpi" placeholder="e.g. kabadiwala@upi" /></div>
+        </div>
+        <button class="btn btn-primary" onclick="runSettlement()">Release UPI Payout</button>
+        <div id="settleResult" class="mt-4"></div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a class="active" href="#top"><span class="nav-icon">📊</span>Dashboard</a>
+  <a href="#pickups"><span class="nav-icon">📦</span>Pickups</a>
+  <a href="/collector/scan.html"><span class="nav-icon">📷</span>Scan</a>
+  <a href="#grading"><span class="nav-icon">🔍</span>Grade</a>
+  <a href="#auction"><span class="nav-icon">🔨</span>Auction</a>
+</div>
+
+<script src="/assets/shared.js"></script>
+<script>
+  const API = "";
+
+  async function loadCentre() {
+    const id = document.getElementById("collectorId").value.trim() || "COL-01";
+    const div = document.getElementById("centreResult");
+    div.innerHTML = dsSkeletonRows(2);
+    try {
+      const res = await fetch(`${API}/api/collectors/${id}`);
+      const c = await res.json();
+      if (!res.ok) { div.innerHTML = dsErrorState({ title: c.error || "Failed to load collector capacity", desc: "" }); return; }
+      const pct = c.capacity ? Math.round((c.assignedCount / c.capacity) * 100) : 0;
+      div.innerHTML = `
+        <div class="card-grid">
+          <div class="stat-card"><div class="num">${c.name}</div><div class="label">${c.type}</div></div>
+          <div class="stat-card"><div class="num">${pct}%</div><div class="label">Capacity Used</div></div>
+          <div class="stat-card"><div class="num">${dsBadge(c.operatingStatus)}</div><div class="label">Status</div></div>
+          <div class="stat-card"><div class="num">${dsBadge(c.verificationStatus)}</div><div class="label">Verification</div></div>
+        </div>
+        <p class="text-caption mt-2">Load: ${c.assignedCount} / ${c.capacity}${pct >= 90 ? " · ⚠️ near capacity" : ""} · Service area: ${(c.serviceArea || []).join(", ") || "any"}</p>`;
+      loadCollectorNotifications(id);
+    } catch (err) {
+      div.innerHTML = dsErrorState({ title: "Failed to load centre", desc: err.message, retry: "loadCentre()" });
+    }
+  }
+
+  async function loadCollectorNotifications(id) {
+    const box = document.getElementById("collectorNotifications");
+    if (!box) return;
+    box.innerHTML = dsSkeletonRows(2);
+    try {
+      const notifications = await (await fetch(`${API}/api/notifications/${id}`)).json();
+      box.innerHTML = notifications && notifications.length
+        ? `<ul style="list-style:none;padding:0;margin:0;">` + notifications.slice(0, 10).map(n => `
+            <li style="padding:var(--sp-2) 0;border-bottom:1px solid var(--color-ink-50);${n.read ? "color:var(--color-ink-500);" : "font-weight:600;"}">
+              ${n.message}
+              <span style="font-weight:normal;color:var(--color-ink-300);font-size:11px;display:block;">${dsFormatDate(n.timestamp)}</span>
+            </li>`).join("") + `</ul>`
+        : dsEmptyState({ icon: "🔔", title: "No notifications yet." });
+    } catch (err) {
+      box.innerHTML = dsEmptyState({ icon: "🔔", title: "No notifications yet." });
+    }
+  }
+
+  async function loadAssigned() {
+    const id = document.getElementById("collectorId").value.trim() || "COL-01";
+    const table = document.getElementById("assignedTable");
+    table.innerHTML = dsSkeletonRows(2);
+    try {
+      const res = await fetch(`${API}/api/collector/${id}/items`);
+      const items = await res.json();
+      if (!items || !items.length) {
+        table.innerHTML = `<tr><td>${dsEmptyState({ icon: "📦", title: "No items assigned." })}</td></tr>`;
+        return;
+      }
+      table.innerHTML = "<thead><tr><th>Item</th><th>Device</th><th>Status</th></tr></thead><tbody>" +
+        items.map(it => `<tr><td class="id-mono">${it.id}</td><td>${it.device}</td><td>${dsBadge(it.status)}</td></tr>`).join("") +
+        "</tbody>";
+      dsEnhanceTable("assignedTable", { pageSize: 6, placeholder: "Search assigned items..." });
+      loadDriverRoute();
+    } catch (err) {
+      table.innerHTML = `<tr><td>${dsErrorState({ title: "Failed to load assigned items", desc: err.message, retry: "loadAssigned()" })}</td></tr>`;
+    }
+  }
+
+  async function loadDriverRoute() {
+    const id = document.getElementById("collectorId").value.trim() || "COL-01";
+    const list = document.getElementById("driverRouteList");
+    try {
+      const res = await fetch(`${API}/api/collectors/${id}/route`);
+      if (!res.ok) throw new Error("Could not load route");
+      const route = await res.json();
+
+      document.getElementById("driverStopsCount").textContent = route.totalStops;
+      document.getElementById("driverDistKm").textContent = `${route.totalDistanceKm} km`;
+      document.getElementById("driverDuration").textContent = `~${route.estimatedDurationMinutes} mins`;
+      document.getElementById("driverKmSaved").textContent = `${route.kmSaved} km (${route.fuelSavedLitres}L saved)`;
+
+      if (!route.stops || route.stops.length === 0) {
+        list.innerHTML = dsEmptyState({ icon: "🗺️", title: "No active pickups on route", desc: "No assigned collection requests currently pending for this collector." });
+        return;
+      }
+
+      list.innerHTML = `
+        <div style="background: var(--color-primary-50); border: 1px solid var(--color-primary-100); border-radius: var(--radius-md); padding: var(--sp-3); margin-bottom: var(--sp-4);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--sp-2);">
+            <div><strong>Starting Facility / Depot:</strong> ${route.depot.name} (${route.depot.address})</div>
+            <span class="badge badge-success"><span class="dot"></span>OPTIMIZED TSP</span>
+          </div>
+        </div>
+        <div id="routeStopsContainer" style="display:grid; gap:var(--sp-3);">
+          ${route.stops.map(s => {
+            const isHigh = s.priority && s.priority.level === "HIGH";
+            return `
+              <div style="background:var(--color-surface); border:var(--border); border-radius:var(--radius-md); padding:var(--sp-4); box-shadow:var(--shadow-sm); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--sp-3);">
+                <div style="display:flex; align-items:center; gap:var(--sp-3);">
+                  <div style="width:36px; height:36px; border-radius:50%; background:${isHigh ? 'var(--color-danger-700)' : 'var(--color-primary-600)'}; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">
+                    ${s.stopNumber}
+                  </div>
+                  <div>
+                    <div style="font-weight:600; font-size:15px;">${s.pickupAddress}</div>
+                    <div style="font:var(--text-caption); color:var(--color-ink-500); margin-top:2px;">
+                      Request: <span class="id-mono">${s.id}</span> · Item: <span class="id-mono">${s.itemId}</span> · ${s.serviceArea}
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:var(--sp-3);">
+                  <div style="text-align:right;">
+                    <div><span class="badge ${isHigh ? 'badge-danger' : 'badge-info'}">${s.priority ? s.priority.level : 'NORMAL'}</span></div>
+                    <div style="font:var(--text-caption); color:var(--color-ink-500); margin-top:2px;">+${s.distanceFromPreviousKm} km</div>
+                  </div>
+                  <a class="btn btn-primary btn-sm" target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=${s.latitude},${s.longitude}">
+                    📍 Navigate
+                  </a>
+                </div>
+              </div>
+            `;
+          }).join("")}
+        </div>
+        <div style="background:var(--color-ink-50); border:1px dashed var(--color-ink-300); border-radius:var(--radius-md); padding:var(--sp-3); text-align:center; font-size:13px; color:var(--color-ink-700); margin-top:var(--sp-3);">
+          🏁 Final Destination: Return to ${route.depot.name} (+${route.stops[route.stops.length - 1]?.distanceToDepotKm || route.returnLegDistanceKm || 0} km) — Unload & Handover to Facility Intake
+        </div>
+      `;
+      dsEnhanceList("routeStopsContainer", { pageSize: 3 });
+    } catch (err) {
+      list.innerHTML = dsErrorState({ title: "Failed to load route", desc: err.message, retry: "loadDriverRoute()" });
+    }
+  }
+
+  async function updateStatus() {
+    const id = document.getElementById("itemId").value.trim();
+    const div = document.getElementById("updateResult");
+    if (!id) {
+      div.innerHTML = `<p style="color:var(--color-danger-700)">Please enter an Item ID.</p>`;
+      return;
+    }
+    const status = document.getElementById("statusSelect").value;
+    const outcome = document.getElementById("outcomeSelect").value;
+    const changedBy = document.getElementById("collectorId").value.trim() || "COL-01";
+    div.innerHTML = dsSkeletonRows(1);
+    try {
+      const res = await fetch(`${API}/api/items/${id}/status`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status, outcome: outcome || undefined, changedBy }),
+      });
+      const data = await res.json();
+      if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+      const item = data.item || data;
+      div.innerHTML = `
+        <p class="badge badge-success"><span class="dot"></span>Stage updated</p>
+        <p>${item.device || "Item"} <span class="id-mono">${item.id || id}</span> is now ${dsBadge(item.status || status)}</p>
+        ${item.creditsAwarded ? `<p class="text-caption">${item.creditsAwarded} credits awarded to the owner.</p>` : ""}
+        ${item.environmentalImpact ? `<p class="text-caption">Estimated impact: ${item.environmentalImpact.co2SavedKg} kg CO₂ avoided, ${item.environmentalImpact.materialRecoveredKg} kg material recovered.</p>` : ""}`;
+      loadAssigned();
+    } catch (err) {
+      div.innerHTML = `<p style="color:var(--color-danger-700)">${err.message}</p>`;
+    }
+  }
+
+  // ============================================================
+  // B2B REVERSE AUCTION FUNCTIONS (Phase 2)
+  // ============================================================
+
+  function gradeBadge(grade) {
+    const colors = { A: "badge-success", B: "badge-warning", C: "badge-danger" };
+    return `<span class="badge ${colors[grade] || 'badge-info'}">${grade}</span>`;
+  }
+
+  async function runGrading() {
+    const div = document.getElementById("gradeResult");
+    const body = {
+      itemId: document.getElementById("gradeItemId").value.trim(),
+      category: document.getElementById("gradeCategory").value,
+      screenCondition: document.getElementById("gradeScreen").value,
+      casingCondition: document.getElementById("gradeCasing").value,
+      batteryState: document.getElementById("gradeBattery").value,
+      bootsReliably: document.getElementById("gradeBoots").value === "true",
+    };
+    if (!body.itemId) { div.innerHTML = `<p style="color:var(--color-danger-700)">Item ID required</p>`; return; }
+    div.innerHTML = dsSkeletonRows(2);
+    const res = await fetch(`${API}/api/auction/grade`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `
+      <div class="card-grid">
+        <div class="stat-card"><div class="num">${gradeBadge(data.grade)}</div><div class="label">Grade</div></div>
+        <div class="stat-card"><div class="num">${data.liIonHazard ? '🔥 YES' : '✅ No'}</div><div class="label">Li-Ion Hazard</div></div>
+        ${data.quarantineTag ? `<div class="stat-card"><div class="num" style="color:var(--color-danger-700);font-size:13px;">${data.quarantineTag}</div><div class="label">Quarantine Tag</div></div>` : ''}
+      </div>
+      <p class="mt-2" style="background:var(--color-ink-50);padding:var(--sp-3);border-radius:var(--radius-md);font-size:14px;">
+        <strong>Recommendation:</strong> ${data.recommendation}
+      </p>`;
+  }
+
+  async function runHarvest() {
+    const div = document.getElementById("harvestResult");
+    const body = {
+      category: document.getElementById("harvestCategory").value,
+      weightKg: parseFloat(document.getElementById("harvestWeight").value) || undefined,
+    };
+    div.innerHTML = dsSkeletonRows(2);
+    const res = await fetch(`${API}/api/auction/harvest-value`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `
+      <div class="card-grid mb-2">
+        <div class="stat-card"><div class="num">₹${data.totalRecoverableValue}</div><div class="label">Total Value</div></div>
+        <div class="stat-card"><div class="num">${data.harvestViable ? '✅ Viable' : '❌ Not Viable'}</div><div class="label">Harvest Decision</div></div>
+      </div>
+      <div class="table-wrap"><table class="ds-table">
+        <thead><tr><th>Component</th><th>Est. Value (₹)</th></tr></thead>
+        <tbody>${data.components.map(c => `<tr><td>${c.component}</td><td style="text-align:right;">₹${c.estimatedValueINR}</td></tr>`).join('')}</tbody>
+      </table></div>`;
+  }
+
+  async function createLot() {
+    const div = document.getElementById("lotCreateResult");
+    const ids = document.getElementById("lotItemIds").value.split(",").map(s => s.trim()).filter(Boolean);
+    const cats = document.getElementById("lotCategories").value.split(",").map(s => s.trim());
+    const weights = document.getElementById("lotWeights").value.split(",").map(s => parseFloat(s.trim()) || 0);
+    const items = ids.map((id, i) => ({ itemId: id, category: cats[i] || cats[0] || "E-Waste", weightKg: weights[i] || 0 }));
+    const body = {
+      sellerId: document.getElementById("lotSellerId").value.trim(),
+      items,
+      reservePrice: parseFloat(document.getElementById("lotReservePrice").value) || 0,
+    };
+    if (!body.sellerId || !items.length) { div.innerHTML = `<p style="color:var(--color-danger-700)">Seller ID and items required</p>`; return; }
+    const res = await fetch(`${API}/api/auction/lots`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `<p class="badge badge-success"><span class="dot"></span>Lot created! ID: <span class="id-mono">${data.lotId}</span> — Ends at ${new Date(data.endsAt).toLocaleTimeString()}</p>`;
+    loadOpenAuctions();
+  }
+
+  function formatCountdown(endsAt) {
+    const diff = new Date(endsAt) - Date.now();
+    if (diff <= 0) return '<span style="color:var(--color-danger-700);">EXPIRED</span>';
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    return `${h}h ${m}m ${s}s`;
+  }
+
+  async function loadOpenAuctions() {
+    const grid = document.getElementById("openAuctionsGrid");
+    grid.innerHTML = dsSkeletonRows(3);
+    const lots = await (await fetch(`${API}/api/auction/lots`)).json();
+    if (!lots.length) { grid.innerHTML = dsEmptyState({ icon: "🔨", title: "No auction lots yet", desc: "Create your first lot above." }); return; }
+    grid.innerHTML = lots.map(l => `
+      <div style="background:var(--color-surface);border:var(--border);border-radius:var(--radius-md);padding:var(--sp-4);margin-bottom:var(--sp-3);box-shadow:var(--shadow-sm);">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--sp-2);margin-bottom:var(--sp-2);">
+          <div><strong>Lot</strong> <span class="id-mono">${l.lotId.slice(0,8)}…</span>
+            <span class="badge ${l.status === 'OPEN' ? 'badge-success' : l.status === 'CLOSED' ? 'badge-warning' : l.status === 'SETTLED' ? 'badge-info' : 'badge-danger'}">${l.status}</span></div>
+          <div style="font-size:13px;color:var(--color-ink-600);">Seller: ${l.sellerId}</div>
+        </div>
+        <div class="card-grid" style="grid-template-columns:repeat(auto-fit, minmax(100px,1fr));">
+          <div class="stat-card"><div class="num">${l.totalWeightKg} kg</div><div class="label">Total Weight</div></div>
+          <div class="stat-card"><div class="num">₹${l.indicativePriceBand.low}–${l.indicativePriceBand.high}</div><div class="label">Price Band</div></div>
+          <div class="stat-card"><div class="num">${l.totalBids || 0}</div><div class="label">Bids</div></div>
+          <div class="stat-card"><div class="num">₹${l.topBidPrice || 0}</div><div class="label">Top Bid</div></div>
+          <div class="stat-card"><div class="num countdown" data-ends="${l.endsAt}">${formatCountdown(l.endsAt)}</div><div class="label">Time Left</div></div>
+        </div>
+        <div style="font-size:12px;color:var(--color-ink-500);margin-top:var(--sp-2);">
+          Items: ${l.items.map(i => `${i.category} (${i.weightKg}kg)`).join(', ')}
+          ${l.status === 'OPEN' ? `<button class="btn btn-sm btn-secondary" style="margin-left:var(--sp-3);" onclick="closeAuction('${l.lotId}')">Close Auction Now</button>` : ''}
+        </div>
+      </div>
+    `).join('');
+    dsEnhanceList("openAuctionsGrid", { pageSize: 3 });
+  }
+
+  async function closeAuction(lotId) {
+    const res = await fetch(`${API}/api/auction/close`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ lotId }) });
+    const data = await res.json();
+    if (!res.ok) { alert(data.error); return; }
+    alert(`Auction closed! Winner: ${data.winnerId || 'none'}, Final price: ₹${data.finalPrice}`);
+    loadOpenAuctions();
+  }
+
+  async function placeBid() {
+    const div = document.getElementById("bidResult");
+    const body = {
+      lotId: document.getElementById("bidLotId").value.trim(),
+      bidderId: document.getElementById("bidBidderId").value.trim(),
+      bidPricePerKg: parseFloat(document.getElementById("bidPrice").value) || 0,
+    };
+    if (!body.lotId || !body.bidderId) { div.innerHTML = `<p style="color:var(--color-danger-700)">All fields required</p>`; return; }
+    const res = await fetch(`${API}/api/auction/bids`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `<p class="badge badge-success"><span class="dot"></span>Bid placed! Leading bid: ₹${data.currentLeadingBid} (${data.totalBids} total bids)</p>`;
+    loadOpenAuctions();
+  }
+
+  async function runSettlement() {
+    const div = document.getElementById("settleResult");
+    const body = {
+      lotId: document.getElementById("settleLotId").value.trim(),
+      verifiedWeightKg: parseFloat(document.getElementById("settleWeight").value) || 0,
+      upiVpa: document.getElementById("settleUpi").value.trim(),
+    };
+    if (!body.lotId || !body.upiVpa) { div.innerHTML = `<p style="color:var(--color-danger-700)">Lot ID and UPI VPA required</p>`; return; }
+    div.innerHTML = dsSkeletonRows(1);
+    const res = await fetch(`${API}/api/auction/settle`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    const data = await res.json();
+    if (!res.ok) { div.innerHTML = `<p style="color:var(--color-danger-700)">${data.error}</p>`; return; }
+    div.innerHTML = `
+      <div style="background:linear-gradient(135deg, #0d9488 0%, #065f46 100%);color:#fff;border-radius:var(--radius-lg);padding:var(--sp-6);text-align:center;">
+        <div style="font-size:40px;margin-bottom:var(--sp-2);">✅</div>
+        <h3>Payment Settled via UPI!</h3>
+        <div style="font-size:28px;font-weight:700;margin:var(--sp-3) 0;">₹${data.payoutAmount}</div>
+        <div style="font-size:14px;opacity:0.9;">
+          Verified Weight: ${data.verifiedWeightKg} kg · Rate: ₹${data.pricePerKg}/kg<br>
+          UPI VPA: ${data.upiVpa}<br>
+          Settlement ID: <span class="id-mono" style="color:#fff;">${data.settlementId.slice(0,12)}…</span>
+        </div>
+      </div>`;
+    loadOpenAuctions();
+  }
+
+  // Live countdown ticker — updates every second
+  setInterval(() => {
+    document.querySelectorAll('.countdown').forEach(el => {
+      const ends = el.dataset.ends;
+      if (ends) el.innerHTML = formatCountdown(ends);
+    });
+  }, 1000);
+
+  // Load initial data on page load
+  window.addEventListener("DOMContentLoaded", () => {
+    loadCentre();
+    loadAssigned();
+    loadDriverRoute();
+    loadOpenAuctions();
+  });
+</script>
+
+</body>
+</html>

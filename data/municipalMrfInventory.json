@@ -1,0 +1,706 @@
+[
+  {
+    "sortingId": "SRT-001",
+    "facilityId": "MRF-Bhopal-Central",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 340
+      },
+      {
+        "type": "HDPE_CONTAINERS",
+        "weightKg": 210
+      },
+      {
+        "type": "CARDBOARD_PAPER",
+        "weightKg": 580
+      },
+      {
+        "type": "SCRAP_METAL",
+        "weightKg": 160
+      },
+      {
+        "type": "ORGANIC_COMPOSTABLE",
+        "weightKg": 1250
+      }
+    ],
+    "totalSortedKg": 2540,
+    "timestamp": "2026-09-24T05:30:00.000Z"
+  },
+  {
+    "sortingId": "2b9dfdce-545c-4ee2-9eab-8bb47a9bc781",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-24T18:09:25.300Z"
+  },
+  {
+    "sortingId": "48875922-09b1-48d1-b757-41f71d6629ef",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-24T18:40:39.587Z"
+  },
+  {
+    "sortingId": "2fa2493c-988e-4637-b3bf-dde8f8b52dbb",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T04:34:15.391Z"
+  },
+  {
+    "sortingId": "54821502-31ad-4e2a-a3c7-01619773d8ae",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T04:38:28.630Z"
+  },
+  {
+    "sortingId": "c886265d-d327-49e7-afc8-9632a5c57905",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T09:24:24.777Z"
+  },
+  {
+    "sortingId": "6ce67156-ddad-43bc-914f-8a8e2e531c74",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T09:47:57.831Z"
+  },
+  {
+    "sortingId": "0e314231-c3fc-4f18-b359-fc1454f2aab6",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T10:07:50.468Z"
+  },
+  {
+    "sortingId": "bda4ea12-4be1-4efc-8f71-44853e18b52b",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T10:10:40.363Z"
+  },
+  {
+    "sortingId": "50bff543-0be2-4e08-b752-382869463613",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T10:43:44.245Z"
+  },
+  {
+    "sortingId": "ce0a3b3e-04cc-47fd-8598-96324e5f5734",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T11:02:27.156Z"
+  },
+  {
+    "sortingId": "b3b913b1-dea5-41d8-b0b5-1187d8d6a58b",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T11:02:57.582Z"
+  },
+  {
+    "sortingId": "b2c6dd3b-e9ab-454a-a7f3-0405b0a9842b",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T11:06:22.203Z"
+  },
+  {
+    "sortingId": "2570f291-9ae9-4e8b-96d4-eafd1786a24e",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T11:08:39.300Z"
+  },
+  {
+    "sortingId": "276df868-8731-41ff-847a-70fd8094f2d9",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T19:22:43.480Z"
+  },
+  {
+    "sortingId": "8bd94671-a62e-472c-bac8-ac634c495d8e",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T20:00:51.560Z"
+  },
+  {
+    "sortingId": "955f2f2a-c9e9-4171-b12a-ac62034c9b49",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T20:07:14.213Z"
+  },
+  {
+    "sortingId": "6c852e22-4d9b-4818-83cc-9da0f07742f4",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T20:17:38.478Z"
+  },
+  {
+    "sortingId": "74f7429d-a882-4ce7-8654-b21b552ab1de",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-25T20:23:21.308Z"
+  },
+  {
+    "sortingId": "b3c7d5a6-0187-40dc-b91c-d6dce4a02c77",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T06:51:55.670Z"
+  },
+  {
+    "sortingId": "57c06a6b-5775-4c66-a5f2-9858e3a90b82",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T10:03:25.741Z"
+  },
+  {
+    "sortingId": "9d443c72-9075-4459-a816-b6130cdf80d3",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T10:11:17.478Z"
+  },
+  {
+    "sortingId": "38bc6efe-2db6-434c-b363-c46e51cb78db",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T10:41:13.481Z"
+  },
+  {
+    "sortingId": "73623374-1ff9-41e2-abb3-913b19b62e9d",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T10:49:49.833Z"
+  },
+  {
+    "sortingId": "c7e6560e-38bc-44f2-b29a-1b095a2f86ce",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T10:50:47.227Z"
+  },
+  {
+    "sortingId": "3493b18d-d6ec-493c-9fa6-18e6efe02158",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T11:15:39.172Z"
+  },
+  {
+    "sortingId": "94a3be75-bac5-42d9-a675-be37dc6e5ca6",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T12:57:03.283Z"
+  },
+  {
+    "sortingId": "80fbac87-e18f-45a8-aba0-da211af2e477",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-26T13:03:00.855Z"
+  },
+  {
+    "sortingId": "e250fde8-29dc-46dd-8872-081e8a21a427",
+    "facilityId": "MRF-Bhopal-Central",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 150
+      },
+      {
+        "type": "HDPE_CONTAINERS",
+        "weightKg": 95
+      },
+      {
+        "type": "CARDBOARD_PAPER",
+        "weightKg": 280
+      },
+      {
+        "type": "SCRAP_METAL",
+        "weightKg": 65
+      },
+      {
+        "type": "ORGANIC_COMPOSTABLE",
+        "weightKg": 600
+      }
+    ],
+    "totalSortedKg": 1190,
+    "sortedAt": "2026-09-26T15:56:52.835Z"
+  },
+  {
+    "sortingId": "4a395bc0-195c-43d4-87a4-ae751068eb9f",
+    "facilityId": "MRF-Bhopal-Central",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 150
+      },
+      {
+        "type": "HDPE_CONTAINERS",
+        "weightKg": 95
+      },
+      {
+        "type": "CARDBOARD_PAPER",
+        "weightKg": 280
+      },
+      {
+        "type": "SCRAP_METAL",
+        "weightKg": 65
+      },
+      {
+        "type": "ORGANIC_COMPOSTABLE",
+        "weightKg": 600
+      }
+    ],
+    "totalSortedKg": 1190,
+    "sortedAt": "2026-09-26T15:57:17.851Z"
+  },
+  {
+    "sortingId": "2fe2f357-b86d-4e99-81c0-5704e31af166",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T14:11:45.112Z"
+  },
+  {
+    "sortingId": "c45955fe-ee97-4fe2-be80-623c03d7d180",
+    "facilityId": "MRF-Bhopal-Central",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 150
+      },
+      {
+        "type": "HDPE_CONTAINERS",
+        "weightKg": 95
+      },
+      {
+        "type": "CARDBOARD_PAPER",
+        "weightKg": 280
+      },
+      {
+        "type": "SCRAP_METAL",
+        "weightKg": 65
+      },
+      {
+        "type": "ORGANIC_COMPOSTABLE",
+        "weightKg": 600
+      }
+    ],
+    "totalSortedKg": 1190,
+    "sortedAt": "2026-09-28T15:23:35.285Z"
+  },
+  {
+    "sortingId": "50a97e72-5783-4a6e-8615-e9f1b4078da9",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T15:26:42.685Z"
+  },
+  {
+    "sortingId": "895bf081-fc70-4266-b8a5-a30b16d9f3b9",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T17:07:27.269Z"
+  },
+  {
+    "sortingId": "a7c4119b-692f-4d62-b79c-1e412aeef021",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T17:07:33.710Z"
+  },
+  {
+    "sortingId": "2cbed51b-cee7-4da9-b434-0595a2e786b5",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T17:50:20.772Z"
+  },
+  {
+    "sortingId": "e04cd877-ac1d-494c-bee9-a143a411ee76",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T17:50:37.001Z"
+  },
+  {
+    "sortingId": "5d989d7c-3238-4313-941d-2ccf4ce4eae3",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T19:57:14.969Z"
+  },
+  {
+    "sortingId": "3450993c-c1f3-44a1-80a2-987b9a6ad813",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T20:10:58.918Z"
+  },
+  {
+    "sortingId": "2990c643-68a0-4d36-be7c-af723653a3cd",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T20:11:06.511Z"
+  },
+  {
+    "sortingId": "3ccd8993-55e4-4424-9c43-82074f781035",
+    "facilityId": "MRF-TEST-CENTRAL",
+    "materials": [
+      {
+        "type": "PET_BOTTLES",
+        "weightKg": 200
+      },
+      {
+        "type": "CARDBOARD",
+        "weightKg": 300
+      }
+    ],
+    "totalSortedKg": 500,
+    "sortedAt": "2026-09-28T20:11:34.880Z"
+  }
+]

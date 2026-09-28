@@ -1,0 +1,19 @@
+{
+  "iPhone 8": { "category": "Smartphone", "metalsGrams": { "gold": 0.034, "silver": 0.34, "palladium": 0.015, "copper": 16 } },
+  "iPhone 12": { "category": "Smartphone", "metalsGrams": { "gold": 0.034, "silver": 0.34, "palladium": 0.015, "copper": 15 } },
+  "iPhone 13": { "category": "Smartphone", "metalsGrams": { "gold": 0.032, "silver": 0.32, "palladium": 0.014, "copper": 15 } },
+  "Samsung Galaxy S21": { "category": "Smartphone", "metalsGrams": { "gold": 0.03, "silver": 0.3, "palladium": 0.01, "copper": 14 } },
+  "Redmi Note 10": { "category": "Smartphone", "metalsGrams": { "gold": 0.025, "silver": 0.25, "palladium": 0.01, "copper": 13 } },
+  "Dell Latitude E5470": { "category": "Laptop", "metalsGrams": { "gold": 0.24, "silver": 0.71, "palladium": 0.13, "copper": 200 } },
+  "HP Pavilion 15": { "category": "Laptop", "metalsGrams": { "gold": 0.22, "silver": 0.65, "palladium": 0.12, "copper": 180 } },
+  "Lenovo ThinkPad T480": { "category": "Laptop", "metalsGrams": { "gold": 0.25, "silver": 0.72, "palladium": 0.14, "copper": 210 } },
+  "Dell OptiPlex 3070": { "category": "Computing Device", "metalsGrams": { "gold": 0.3, "silver": 1.0, "palladium": 0.2, "copper": 500 } },
+  "Samsung 24-inch LED Monitor": { "category": "Monitor", "metalsGrams": { "gold": 0.02, "silver": 0.1, "palladium": 0.01, "copper": 50 } },
+  "LG Double-Door Refrigerator": { "category": "Large Household Appliance", "metalsGrams": { "gold": 0, "silver": 0, "palladium": 0, "copper": 1500 } },
+
+  "Generic Smartphone": { "category": "Smartphone", "metalsGrams": { "gold": 0.025, "silver": 0.25, "palladium": 0.01, "copper": 13 } },
+  "Generic Laptop": { "category": "Laptop", "metalsGrams": { "gold": 0.2, "silver": 0.6, "palladium": 0.1, "copper": 180 } },
+  "Generic Desktop": { "category": "Computing Device", "metalsGrams": { "gold": 0.25, "silver": 0.8, "palladium": 0.15, "copper": 400 } },
+  "Generic Monitor": { "category": "Monitor", "metalsGrams": { "gold": 0.015, "silver": 0.08, "palladium": 0.008, "copper": 40 } },
+  "Generic Battery": { "category": "Battery / Power", "metalsGrams": { "gold": 0, "silver": 0, "palladium": 0, "copper": 2 } }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "COL-01",
+    "name": "Green Recyclers, Zone A",
+    "type": "RECYCLER",
+    "address": "Zone A",
+    "latitude": 23.2325,
+    "longitude": 77.431,
+    "serviceArea": [
+      "Zone A"
+    ],
+    "capacity": 10,
+    "assignedCount": 0,
+    "operatingStatus": "ACTIVE",
+    "verificationStatus": "VERIFIED",
+    "acceptedCategories": [
+      "Computing Device",
+      "Smartphone",
+      "Laptop",
+      "Battery / Power"
+    ],
+    "contact": {}
+  }
+]

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CirculaSync — Digital Circular Product Passport</title>
+<script src="/assets/shared.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/design-system-v2.css" />
+<link rel="stylesheet" href="/assets/design-system.css" />
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+  #circulasync-global-header { width: 100%; }
+  .passport-wrap {
+    max-width: 680px;
+    width: 100%;
+    padding: var(--sp-6) var(--sp-4);
+  }
+  .passport-header {
+    text-align: center;
+    margin-bottom: var(--sp-6);
+  }
+  .passport-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .passport-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-top: var(--sp-2);
+  }
+  .passport-id {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: var(--sp-2);
+  }
+  .passport-stamp { margin-top: var(--sp-4); }
+  .facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: var(--sp-3);
+    margin-top: var(--sp-4);
+  }
+  .fact-box {
+    background: rgba(0,0,0,0.3);
+    border: var(--border);
+    border-radius: var(--radius-md);
+    padding: 12px;
+  }
+  .facts-grid .fact-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-tertiary);
+  }
+  .facts-grid .fact-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 3px;
+    font-family: var(--font-mono);
+  }
+  .passport-cert-card {
+    background: var(--bg-surface);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: var(--radius-xl);
+    padding: var(--sp-6);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: hidden;
+  }
+  .passport-cert-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.8), transparent);
+  }
+  html.light .passport-title, [data-theme="light"] .passport-title {
+    color: #0f172a;
+  }
+  html.light .fact-box, [data-theme="light"] .fact-box {
+    background: #f8fafc;
+    border-color: rgba(15, 23, 42, 0.09);
+  }
+  html.light .passport-cert-card, [data-theme="light"] .passport-cert-card {
+    background: #ffffff;
+    border-color: rgba(16, 185, 129, 0.35);
+    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+  }
+</style>
+</head>
+<body class="theme-glassmorphism">
+
+<div class="passport-wrap">
+  <div class="passport-header">
+    <div class="passport-eyebrow">
+      <span>⚡</span> Official Digital Product Passport · Verified by CPCB
+    </div>
+  </div>
+
+  <div id="loading" class="panel"><div class="state-block" id="loadingSkeleton">Loading circular ledger…</div></div>
+  <div id="content"></div>
+</div>
+
+<script src="/assets/shared.js"></script>
+<script>
+  document.getElementById("loadingSkeleton").innerHTML = dsSkeletonRows(4);
+
+  // The token is the last part of this page's own URL: /track/<token>
+  const token = window.location.pathname.split("/").pop();
+
+  async function loadItem() {
+    const loading = document.getElementById("loading");
+    const content = document.getElementById("content");
+
+    try {
+      const res = await fetch(`/api/track/${token}`);
+      const data = await res.json();
+      loading.style.display = "none";
+
+      if (!res.ok) {
+        content.innerHTML = `<div class="panel">${dsErrorState({ title: "Invalid or Inactive QR Code", desc: data.error })}</div>`;
+        return;
+      }
+
+      const journeyHtml = (data.journey || [])
+        .map((stage) => `<li class="${stage.done ? "done" : "pending"}"><div class="t-title">${stage.label}</div></li>`)
+        .join("");
+
+      const historyHtml = (data.history || [])
+        .map((h, i, arr) => `
+          <li class="${i === arr.length - 1 ? "current" : "done"}">
+            <div class="t-title">${h.newStatus.replace(/_/g, " ")}</div>
+            <div class="t-meta">${dsFormatDate(h.timestamp)} · Updated by ${h.changedBy}${h.notes ? ` · ${h.notes}` : ""}</div>
+          </li>
+        `).join("");
+
+      const impact = data.environmentalImpact;
+      const impactHtml = impact ? `
+        <section class="panel mt-6">
+          <div class="panel-header">
+            <div>
+              <h2>Environmental Impact Contribution</h2>
+              <span class="hint">Lifecycle carbon reduction and material recovery ledger</span>
+            </div>
+          </div>
+          <div class="kpi-grid">
+            <div class="kpi-card accent-emerald"><div class="kpi-label">CO₂ Avoided</div><div class="kpi-value">${impact.co2SavedKg} kg</div></div>
+            <div class="kpi-card accent-cyan"><div class="kpi-label">Material Recovered</div><div class="kpi-value">${impact.materialRecoveredKg} kg</div></div>
+            ${impact.hazardousHandled ? `<div class="kpi-card"><div class="kpi-label">Hazardous Safety</div><div class="kpi-value" style="font-size:18px; color:var(--color-primary-400);">✓ Isolated & Treated</div></div>` : ""}
+          </div>
+          <p class="text-caption mt-4">Estimated figures based on category formulas verified by Central Pollution Control Board (CPCB).</p>
+        </section>
+      ` : "";
+
+      const isRecycled = data.status === "RECYCLED";
+
+      content.innerHTML = `
+        <section class="passport-cert-card">
+          <div class="passport-header">
+            <div class="passport-title">${data.device}</div>
+            <div class="passport-id">${data.id}${data.owner ? ` · Registered Owner: ${data.owner}` : ""}</div>
+            <div class="passport-stamp">
+              <span class="badge ${isRecycled ? "badge-success" : "badge-warning"}" style="font-size:13px;padding:6px 18px;">
+                <span class="dot"></span>${data.status}${isRecycled ? " ✓ VERIFIED RECYCLED" : ""}
+              </span>
+            </div>
+          </div>
+          <div class="facts-grid">
+            <div class="fact-box"><div class="fact-label">Category</div><div class="fact-value">${data.category || "—"}</div></div>
+            <div class="fact-box"><div class="fact-label">Registered</div><div class="fact-value" style="font-size:12px;">${dsFormatDate(data.registeredAt)}</div></div>
+            <div class="fact-box"><div class="fact-label">Weight</div><div class="fact-value">${data.weightKg ? data.weightKg + " kg" : "—"}</div></div>
+            ${data.creditsAwarded ? `<div class="fact-box"><div class="fact-label">Karma Credits</div><div class="fact-value" style="color:var(--color-primary-400);">${data.creditsAwarded}</div></div>` : ""}
+          </div>
+          <h3 style="font-size:1.05rem; margin-top:var(--sp-6); margin-bottom:var(--sp-3);">Circular Lifecycle Journey</h3>
+          <ul class="timeline mt-2">${journeyHtml}</ul>
+          
+          <div style="margin-top:var(--sp-6); text-align:center;">
+            <button class="btn btn-secondary btn-sm" onclick="window.print()">🖨️ Print / Save Passport PDF</button>
+          </div>
+        </section>
+        ${impactHtml}
+        <section class="panel mt-6">
+          <div class="panel-header">
+            <div>
+              <h2>Custodial Audit Timeline</h2>
+              <span class="hint">Chronological stage transitions and operator digital signatures</span>
+            </div>
+          </div>
+          <ul class="timeline">${historyHtml || `<li>${dsEmptyState({ title: "No history yet." })}</li>`}</ul>
+        </section>
+      `;
+    } catch (err) {
+      loading.style.display = "none";
+      content.innerHTML = `<div class="panel">${dsErrorState({ title: "Invalid or Inactive QR Code", desc: "Please check the code and try again." })}</div>`;
+    }
+  }
+
+  loadItem();
+</script>
+
+</body>
+</html>

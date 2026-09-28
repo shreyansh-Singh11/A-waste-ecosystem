@@ -1,0 +1,34 @@
+[
+  {
+    "flagId": "bedb7dd0-782d-4322-b206-683685265565",
+    "track": "MEDICAL",
+    "ruleCode": "STALE_MANIFEST",
+    "severity": "HIGH",
+    "entityId": "med-rec-001",
+    "message": "BMW manifest MED-784210 stuck in COLLECTED for 24+ hours — potential unsafe storage",
+    "status": "RESOLVED",
+    "detectedAt": "2026-09-25T09:19:37.500Z",
+    "resolution": "Test resolution verified by officer",
+    "resolvedAt": "2026-09-28T20:11:24.509Z"
+  },
+  {
+    "flagId": "fa7db037-6634-494f-848a-c11fc01d8d23",
+    "track": "MEDICAL",
+    "ruleCode": "STALE_MANIFEST",
+    "severity": "HIGH",
+    "entityId": "med-rec-002",
+    "message": "BMW manifest MED-784211 stuck in COLLECTED for 24+ hours — potential unsafe storage",
+    "status": "OPEN",
+    "detectedAt": "2026-09-25T09:19:37.500Z"
+  },
+  {
+    "flagId": "e078b2b3-cef9-43ab-ac83-80a108cc630c",
+    "track": "MUNICIPAL",
+    "ruleCode": "EMPTY_SHIFT",
+    "severity": "MEDIUM",
+    "entityId": "f28cfe5a-0fac-4a38-933d-bd19696e280b",
+    "message": "Shift f28cfe5a… has 0 pickups after 2+ hours",
+    "status": "OPEN",
+    "detectedAt": "2026-09-28T20:10:46.950Z"
+  }
+]

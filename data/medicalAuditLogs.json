@@ -1,0 +1,2914 @@
+[
+  {
+    "id": "505aa2de-8d79-4b5c-8b18-32b019b82756",
+    "action": "CREATE_MANIFEST",
+    "entityId": "b7f26004-6143-4759-ba0a-ffc59967a501",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-24T18:09:09.973Z",
+    "details": {
+      "batchCode": "MED-CA05AD",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "898d0927-5959-4240-86d5-713e6bdb0667",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "0485f732-3f67-452c-bbb4-302ab6a980eb",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-24T18:09:09.977Z",
+    "details": {
+      "batchCode": "MED-CA05AD",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "6227b753-cd09-48eb-b5dc-f50a7e0f48d5",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-A28597",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:09:09.981Z",
+    "details": {
+      "batchCode": "MED-CA05AD",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "8a878331-53bc-49f3-bbe6-aba869ad1474",
+    "action": "RECORD_TREATMENT",
+    "entityId": "7c8500ab-dc6c-42a7-8d34-b5804706038f",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:09:09.985Z",
+    "details": {
+      "batchCode": "MED-CA05AD",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "692bfaaa-c9c6-4798-bdf7-0bf544f75e1c",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "46a343a2-c88f-40a0-974a-ccda4f981c2e",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-24T18:09:09.987Z",
+    "details": {
+      "batchCode": "MED-CA05AD",
+      "treatmentId": "TRT-62FA4B",
+      "certificateCode": "CERT-708FC4"
+    }
+  },
+  {
+    "id": "b12bc36f-b928-4366-b7f3-5dac12b7f72e",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "ceddf1ab-e575-4213-8243-d3b2c65488a0",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-24T18:09:09.989Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "da61844a-f574-4932-8163-4f06ead385cc",
+    "action": "CREATE_MANIFEST",
+    "entityId": "600012b7-2a15-4154-858e-ef6cb6b79b6f",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-24T18:09:25.309Z",
+    "details": {
+      "batchCode": "MED-72A68C",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "94cf150a-862e-4110-8629-535d742758ab",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "88d12c2d-63b2-42b2-9718-b03007500036",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-24T18:09:25.312Z",
+    "details": {
+      "batchCode": "MED-72A68C",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "10efbb0f-650e-46b2-b674-f48effe065e9",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-BE6B96",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:09:25.315Z",
+    "details": {
+      "batchCode": "MED-72A68C",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "084ba0c5-4e24-47ee-a61d-9ccec3be5208",
+    "action": "RECORD_TREATMENT",
+    "entityId": "ac74beaa-31b2-452e-8ac2-c5650132184a",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:09:25.319Z",
+    "details": {
+      "batchCode": "MED-72A68C",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "9661f31d-a64f-4667-bb0a-ee19a9fc191f",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "592fe0ec-252d-41ee-8a85-870046127849",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-24T18:09:25.322Z",
+    "details": {
+      "batchCode": "MED-72A68C",
+      "treatmentId": "TRT-BC9A9D",
+      "certificateCode": "CERT-1AC2CB"
+    }
+  },
+  {
+    "id": "5d059fae-4dab-4c98-99d9-c1c62e80f19e",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "2c210340-85ef-418f-8c86-7656a0d50178",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-24T18:09:25.325Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "64d12466-d242-44db-9868-969a62aea29b",
+    "action": "CREATE_MANIFEST",
+    "entityId": "b03b8271-f2ec-4df2-bd68-b4d11be7f5e5",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-24T18:40:39.596Z",
+    "details": {
+      "batchCode": "MED-0CB2AA",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "d289ebaa-c6e7-4ea6-ad71-9311635780be",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "7869e422-4041-411f-8d47-9ff98713b2d2",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-24T18:40:39.600Z",
+    "details": {
+      "batchCode": "MED-0CB2AA",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "1c9aae4b-fcee-4d47-b964-398b8fb1c669",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-CD86D8",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:40:39.604Z",
+    "details": {
+      "batchCode": "MED-0CB2AA",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "0323ae5c-3584-43ae-83f9-4d8466ed8f5c",
+    "action": "RECORD_TREATMENT",
+    "entityId": "3c63ce24-6352-4146-af6e-7b58a972ef81",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-24T18:40:39.607Z",
+    "details": {
+      "batchCode": "MED-0CB2AA",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "a6cb70e0-2c7a-4941-a49e-646aadf4e0a9",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "c8479b26-84a9-4910-ac7b-4b800f0f06ad",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-24T18:40:39.611Z",
+    "details": {
+      "batchCode": "MED-0CB2AA",
+      "treatmentId": "TRT-F706C7",
+      "certificateCode": "CERT-BA0EE7"
+    }
+  },
+  {
+    "id": "d828fbc3-3e0f-4673-9625-fee352aa22b7",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "35fdbb5b-34d4-4112-9ed4-b657084292e1",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-24T18:40:39.614Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "35d810de-ba56-49a5-bf51-0de32a766228",
+    "action": "CREATE_MANIFEST",
+    "entityId": "3b785b79-7619-46a1-9dde-eaf07565659c",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T04:34:15.400Z",
+    "details": {
+      "batchCode": "MED-5CE6E5",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "fa0aaae6-55ef-414a-be3c-e37991fda265",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "51ce1297-6ba9-4393-abcb-6ddd250f1bcd",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T04:34:15.404Z",
+    "details": {
+      "batchCode": "MED-5CE6E5",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "71efdae3-d5b5-454a-bdb9-06a0a71a6d63",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-F7611C",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T04:34:15.406Z",
+    "details": {
+      "batchCode": "MED-5CE6E5",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "00b44603-1055-4ace-960b-fae5a9767e3a",
+    "action": "RECORD_TREATMENT",
+    "entityId": "ac4ede93-bb9e-4043-9401-5e84843ecba1",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T04:34:15.409Z",
+    "details": {
+      "batchCode": "MED-5CE6E5",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "b3411400-cdd6-4b13-9395-590636bb88a6",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "639dbb3a-d13a-4601-9945-e121ed4f2561",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T04:34:15.412Z",
+    "details": {
+      "batchCode": "MED-5CE6E5",
+      "treatmentId": "TRT-769F9F",
+      "certificateCode": "CERT-09F150"
+    }
+  },
+  {
+    "id": "8ad606bf-cc9f-41bd-bfac-39e975d92ea0",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "9b4fbc8a-2909-4c37-af7a-d35eb53acfe4",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T04:34:15.417Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "074323e1-918f-4eed-b6f8-5e7c245adcd9",
+    "action": "CREATE_MANIFEST",
+    "entityId": "07723a46-d971-4502-ac40-13549975e2b2",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T04:38:28.642Z",
+    "details": {
+      "batchCode": "MED-4BD707",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "8a936ce4-9f79-4333-a435-20cb39c2d823",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "7c5a1a88-d3f4-441b-9d1d-f07b7f241a9c",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T04:38:28.653Z",
+    "details": {
+      "batchCode": "MED-4BD707",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "474e29c3-08a6-4056-b5a6-571e7ecec823",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-61477A",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T04:38:28.658Z",
+    "details": {
+      "batchCode": "MED-4BD707",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "e81726bd-f97c-4abb-9ca9-2ea132b69bcf",
+    "action": "RECORD_TREATMENT",
+    "entityId": "ee552755-c04e-43a9-aa58-d6dce9180e31",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T04:38:28.665Z",
+    "details": {
+      "batchCode": "MED-4BD707",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "571af3c7-1c95-4564-831f-0272b9191795",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "0e902877-c980-4b96-a24d-aa6bb2c216ca",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T04:38:28.670Z",
+    "details": {
+      "batchCode": "MED-4BD707",
+      "treatmentId": "TRT-73922B",
+      "certificateCode": "CERT-E8876C"
+    }
+  },
+  {
+    "id": "17173e9d-cf3b-4ad6-90c8-b05831bf127d",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "8a28fd3a-a5bb-4fb3-ab36-05ea8c0c7edc",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T04:38:28.672Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "575a2595-cd6f-4a07-bbca-5d8327ddefbb",
+    "action": "CREATE_MANIFEST",
+    "entityId": "39a16eac-c50c-4421-bf19-fb5f6f964e3d",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T09:24:24.784Z",
+    "details": {
+      "batchCode": "MED-B84878",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "2f71b60f-4d53-4050-b544-93d3f43c66d3",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "0f5a7a8d-ee33-44c2-bae1-0c547e9420d4",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T09:24:24.786Z",
+    "details": {
+      "batchCode": "MED-B84878",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "fb424c56-c9cd-4374-a353-0560aa85594b",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-412557",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T09:24:24.791Z",
+    "details": {
+      "batchCode": "MED-B84878",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "9c52babe-daea-4d60-bad1-de072898e2cc",
+    "action": "RECORD_TREATMENT",
+    "entityId": "87a393b3-46f3-4da5-a688-64bc4b3a5fe3",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T09:24:24.794Z",
+    "details": {
+      "batchCode": "MED-B84878",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "c27f4f91-f1d5-4256-ab64-d7e4d91c58a4",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "b7097dc0-4779-4c90-9b11-65367aa404b3",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T09:24:24.796Z",
+    "details": {
+      "batchCode": "MED-B84878",
+      "treatmentId": "TRT-E00CD9",
+      "certificateCode": "CERT-B3710D"
+    }
+  },
+  {
+    "id": "b732ec16-4037-4be7-942c-d51c64ed9d81",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "9e06dc24-3be6-4ceb-92c0-dfbfcad133df",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T09:24:24.798Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "e87f81fa-a923-42fa-b059-23f0031fe279",
+    "action": "CREATE_MANIFEST",
+    "entityId": "b538688d-464a-4958-bf52-0db9348ae68c",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T09:47:57.841Z",
+    "details": {
+      "batchCode": "MED-51D888",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "19730090-2d2e-4436-be57-15ef7d2b8434",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "a828a992-9ea1-4adb-b675-70de095e1369",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T09:47:57.845Z",
+    "details": {
+      "batchCode": "MED-51D888",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "0857961c-9f94-4b6a-a78a-779472d304cb",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-C7F691",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T09:47:57.849Z",
+    "details": {
+      "batchCode": "MED-51D888",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "950b7004-7b5a-45d7-9e0b-0c3b6a90a154",
+    "action": "RECORD_TREATMENT",
+    "entityId": "a1b7ea2c-cf9b-4860-b956-c43f6c81df4c",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T09:47:57.853Z",
+    "details": {
+      "batchCode": "MED-51D888",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "9c1ac366-25d3-413e-994e-c91fbe128dcf",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "8ffd2e02-91e9-4059-aa9a-b61b186c35ad",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T09:47:57.858Z",
+    "details": {
+      "batchCode": "MED-51D888",
+      "treatmentId": "TRT-49D586",
+      "certificateCode": "CERT-760C00"
+    }
+  },
+  {
+    "id": "f0e53ade-296d-41d9-aa31-ee44b7dc38a5",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "2df0df05-e9b6-4bd9-be43-334795745f4b",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T09:47:57.860Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "7de7d101-9043-474b-ae5e-516a612ecc0c",
+    "action": "CREATE_MANIFEST",
+    "entityId": "06f80ec5-12c5-489c-80fa-0c56df55067d",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T10:07:50.478Z",
+    "details": {
+      "batchCode": "MED-96B5E6",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "f4133557-cbfb-42d7-bb9a-db8f66dfcce5",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "575d1480-eb4d-494e-8cf9-45f5487813a2",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T10:07:50.481Z",
+    "details": {
+      "batchCode": "MED-96B5E6",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "a83ce5b7-8ad7-4f04-adef-953b5359c711",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-38D88F",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:07:50.485Z",
+    "details": {
+      "batchCode": "MED-96B5E6",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "280ce499-65cf-402c-9263-e0f30c068c90",
+    "action": "RECORD_TREATMENT",
+    "entityId": "1da55616-8daa-4ee3-81e2-16caca816c92",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:07:50.490Z",
+    "details": {
+      "batchCode": "MED-96B5E6",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "25229c8b-dde6-4116-849d-14e917535384",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "6669c8e3-0e36-4867-b541-d6da74ad1661",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T10:07:50.494Z",
+    "details": {
+      "batchCode": "MED-96B5E6",
+      "treatmentId": "TRT-9193E8",
+      "certificateCode": "CERT-1FAD1E"
+    }
+  },
+  {
+    "id": "d4a6fa02-6c5b-4702-9acb-bd07256d3c3d",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "59a80879-7955-43dc-858d-b109b0791676",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T10:07:50.496Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "c085fe46-ca21-48be-8ba4-f05560730220",
+    "action": "CREATE_MANIFEST",
+    "entityId": "a823fd49-3c0e-436e-b6d7-39deb81698b2",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T10:10:40.385Z",
+    "details": {
+      "batchCode": "MED-C0B4B3",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "c7cf7bf1-ba21-45de-9420-4a3b6fe5ba95",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "3776593d-c810-4a76-8912-80a7be079451",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T10:10:40.394Z",
+    "details": {
+      "batchCode": "MED-C0B4B3",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "0cc2b3bf-7f83-4fd1-8b87-4129a2e3197c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-C14447",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:10:40.401Z",
+    "details": {
+      "batchCode": "MED-C0B4B3",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "e7cd031d-3390-4d3e-8c94-a9400329a3b1",
+    "action": "RECORD_TREATMENT",
+    "entityId": "4b982ecf-6fb8-4914-ad45-06c444a09faf",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:10:40.410Z",
+    "details": {
+      "batchCode": "MED-C0B4B3",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "7cd366e3-b995-4cb0-be71-a7ffd8210e62",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "aeb0b9c0-f090-40db-9f13-a7073880d76e",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T10:10:40.417Z",
+    "details": {
+      "batchCode": "MED-C0B4B3",
+      "treatmentId": "TRT-A31606",
+      "certificateCode": "CERT-89BD48"
+    }
+  },
+  {
+    "id": "379cb1dd-651f-4b43-b448-27010d71257a",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "7a282375-dedc-436a-9327-43e033c3503f",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T10:10:40.424Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "8dfd2d17-b791-4f89-8bf6-3f4d0a3d25df",
+    "action": "CREATE_MANIFEST",
+    "entityId": "22fa28dc-a68f-427d-987d-9fd6189c058d",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T10:43:44.260Z",
+    "details": {
+      "batchCode": "MED-6EC82B",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "56768662-a274-4168-a335-282a96e0f343",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "30a054ec-d947-42b1-954a-b2098981d542",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T10:43:44.265Z",
+    "details": {
+      "batchCode": "MED-6EC82B",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "0acf4e66-3d0f-42d3-afef-a4ace73af40a",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-4951A0",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:43:44.273Z",
+    "details": {
+      "batchCode": "MED-6EC82B",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "eff22a09-15f6-45d6-9a2a-382852a5efbb",
+    "action": "RECORD_TREATMENT",
+    "entityId": "2acfeeb4-156f-4ebf-aeab-50d543dd6727",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T10:43:44.278Z",
+    "details": {
+      "batchCode": "MED-6EC82B",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "4b2e5c14-0fe3-41b8-b082-6d6a63227fd5",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "2e0dd7c2-e83f-4920-ab7b-280645ba355b",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T10:43:44.284Z",
+    "details": {
+      "batchCode": "MED-6EC82B",
+      "treatmentId": "TRT-337868",
+      "certificateCode": "CERT-13E307"
+    }
+  },
+  {
+    "id": "764fd1a5-4cfc-4271-97e4-dff8480de4a3",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "5201011d-daa2-4fdc-a66f-fed5dda15734",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T10:43:44.288Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "b665b6b6-c673-4214-b3a5-ce514dd2976e",
+    "action": "CREATE_MANIFEST",
+    "entityId": "eb85d6f8-9f3a-42f5-9af8-9cfcd8707dae",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T11:02:27.167Z",
+    "details": {
+      "batchCode": "MED-42DCC2",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "814e50af-470d-4dbf-89a7-1ec0422a8bb3",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "5b5e9380-ca5a-4f27-9a19-f3a884b1fe33",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T11:02:27.171Z",
+    "details": {
+      "batchCode": "MED-42DCC2",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "938bdf9e-490f-43fb-b791-ee1b12a9e78d",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-EC412B",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:02:27.175Z",
+    "details": {
+      "batchCode": "MED-42DCC2",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "9561c77c-9292-4e69-a49b-9e6929e312fe",
+    "action": "RECORD_TREATMENT",
+    "entityId": "adefa82b-47e4-4448-9084-6c8dc52ab5e9",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:02:27.178Z",
+    "details": {
+      "batchCode": "MED-42DCC2",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "6b3d94f1-6bbc-426f-aedf-3951fb4ed8b0",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "4256753b-3770-4d41-84d3-ed9e734f0f37",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T11:02:27.183Z",
+    "details": {
+      "batchCode": "MED-42DCC2",
+      "treatmentId": "TRT-7FDC41",
+      "certificateCode": "CERT-78E898"
+    }
+  },
+  {
+    "id": "b903d922-ef8a-4494-a9b5-14578a41815d",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "7959defe-4405-41ea-8a2e-e96ace183cf0",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T11:02:27.186Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "fb8415e5-3fa4-4589-8261-066c7402ef36",
+    "action": "CREATE_MANIFEST",
+    "entityId": "c9bf64e4-7013-4d50-8853-533020f3240e",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T11:02:57.593Z",
+    "details": {
+      "batchCode": "MED-95502A",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "d30098a8-3350-4cb6-ac92-b41492d634ef",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "dc929004-be87-4052-8a5a-5994be2ea795",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T11:02:57.599Z",
+    "details": {
+      "batchCode": "MED-95502A",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "85f8df38-a072-4fc1-9f46-efe88973f88e",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-65B9A0",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:02:57.602Z",
+    "details": {
+      "batchCode": "MED-95502A",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "4fa8202a-7bbd-4a4e-8a9f-f25a7b250ccd",
+    "action": "RECORD_TREATMENT",
+    "entityId": "50e989fe-dfef-4bf5-bfc2-63ecade851d1",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:02:57.606Z",
+    "details": {
+      "batchCode": "MED-95502A",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "f2a252d1-303f-407e-9830-0598e150a710",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "6e5a2ced-d38d-45b6-82eb-9b1d223e24f3",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T11:02:57.610Z",
+    "details": {
+      "batchCode": "MED-95502A",
+      "treatmentId": "TRT-6B1A65",
+      "certificateCode": "CERT-E096DB"
+    }
+  },
+  {
+    "id": "f904cd31-0d81-49bf-872b-46e571d70a69",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "95fb61c6-4231-43cb-b244-f4d9c877937e",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T11:02:57.613Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "3b834ee5-6872-4e59-914b-ef058c60b11b",
+    "action": "CREATE_MANIFEST",
+    "entityId": "fd6c9407-2a1b-4896-8ed0-520e6f0f0801",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T11:06:22.222Z",
+    "details": {
+      "batchCode": "MED-489BAA",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "86c006cc-c4fa-4785-a9b6-2b370fe18d96",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "b5badb6a-314a-4e4a-8fa7-024bafdcd9fb",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T11:06:22.228Z",
+    "details": {
+      "batchCode": "MED-489BAA",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "64f942fa-3c4e-4911-b313-5fb9687726b8",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-F9220D",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:06:22.233Z",
+    "details": {
+      "batchCode": "MED-489BAA",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "aa37445f-e536-4068-b037-94226811d8f5",
+    "action": "RECORD_TREATMENT",
+    "entityId": "c8745b31-65ad-44f9-a3d4-123f7e5ad4c8",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:06:22.240Z",
+    "details": {
+      "batchCode": "MED-489BAA",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "384d5c9a-0e06-45ee-9cf1-af83e2920a8e",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "48d595d4-7305-48ff-9acb-0c27b60e5491",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T11:06:22.245Z",
+    "details": {
+      "batchCode": "MED-489BAA",
+      "treatmentId": "TRT-939F3C",
+      "certificateCode": "CERT-6BF1B6"
+    }
+  },
+  {
+    "id": "9185187d-d4c7-45fd-ba87-c03c2ddd95f3",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "7902fc42-a2ad-4c42-a329-be726f2b0a86",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T11:06:22.250Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "92fe40b1-268f-445c-b0fe-df635a7768f8",
+    "action": "CREATE_MANIFEST",
+    "entityId": "9b0b4a17-6421-4471-adca-a53fba4ef047",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T11:08:39.316Z",
+    "details": {
+      "batchCode": "MED-5A6C22",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "faceca40-4a88-409b-8f40-c5c3c51b2a2c",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "4c4ac088-5570-4d22-bc8f-ab91febe6137",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T11:08:39.324Z",
+    "details": {
+      "batchCode": "MED-5A6C22",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "87548883-92b8-4cba-b93f-bd3f4765d388",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-8FADC2",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:08:39.330Z",
+    "details": {
+      "batchCode": "MED-5A6C22",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "75a9dd57-f4f1-4345-ac6d-0853a2b0d403",
+    "action": "RECORD_TREATMENT",
+    "entityId": "8cd9aa65-65ca-4d8a-b91d-eefb3139c6ef",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T11:08:39.336Z",
+    "details": {
+      "batchCode": "MED-5A6C22",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "d4d09a8c-61e2-4e8c-849c-8bd5d2a053e0",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "c63e0581-0f7c-409b-9584-680e1f595aa1",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T11:08:39.343Z",
+    "details": {
+      "batchCode": "MED-5A6C22",
+      "treatmentId": "TRT-DF7411",
+      "certificateCode": "CERT-6B9D1C"
+    }
+  },
+  {
+    "id": "f0488b63-1715-46be-97ea-1d97a69e8205",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "73c43776-944b-46bf-a835-a6df0f2883d6",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T11:08:39.347Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "7e8fc6b8-2ad6-4115-8e01-25f9dc549ae8",
+    "action": "CREATE_MANIFEST",
+    "entityId": "ee2a2e73-d0ca-4c62-a1c5-12316465a1c1",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T19:22:43.490Z",
+    "details": {
+      "batchCode": "MED-A59F5E",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "2b788002-5864-47ec-bb76-428a4e268ad7",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "226e63d0-1055-443f-8c83-9b0ce45a01dc",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T19:22:43.494Z",
+    "details": {
+      "batchCode": "MED-A59F5E",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "cbd941c9-e543-44cb-895b-d5e54dca386c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-DD01FD",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T19:22:43.498Z",
+    "details": {
+      "batchCode": "MED-A59F5E",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "35cbd568-d73e-49a2-a802-0f312d0f1fbe",
+    "action": "RECORD_TREATMENT",
+    "entityId": "7427d800-8469-4c38-adaa-8847c4cf4503",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T19:22:43.502Z",
+    "details": {
+      "batchCode": "MED-A59F5E",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "30511b52-4142-48a1-9bf2-9038ff7417c7",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "0ed3b6c1-f6a0-4df0-8d54-d1c06573c68d",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T19:22:43.505Z",
+    "details": {
+      "batchCode": "MED-A59F5E",
+      "treatmentId": "TRT-400284",
+      "certificateCode": "CERT-F6FAE1"
+    }
+  },
+  {
+    "id": "2e11a6d1-0858-49e6-8b05-9c816ff408b0",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "89a6ff41-83ed-4d9a-a415-7040c01b1618",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T19:22:43.508Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "1e9ffd87-b993-463c-b46c-1c78b82b3c48",
+    "action": "CREATE_MANIFEST",
+    "entityId": "ad95cd45-0acf-4be0-9f58-9bbec6f3ef4e",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T20:00:51.570Z",
+    "details": {
+      "batchCode": "MED-DA2081",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "3316d60e-9d1c-4580-9398-5d391660c07b",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "4323188c-f84d-4722-b521-d4dc5e52ece7",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T20:00:51.573Z",
+    "details": {
+      "batchCode": "MED-DA2081",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "ceebf87d-999c-41c7-b0ea-b19a1dfed026",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-38A5A2",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:00:51.576Z",
+    "details": {
+      "batchCode": "MED-DA2081",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "b5a45c5f-3895-48b6-b44a-4504099f376d",
+    "action": "RECORD_TREATMENT",
+    "entityId": "b05fa54f-eac7-458c-8816-ee1f4e554c33",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:00:51.579Z",
+    "details": {
+      "batchCode": "MED-DA2081",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "6921c10a-5c9c-47e6-b601-69a1891195d5",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "e6330248-55a6-409a-9bac-2a6fa424bf41",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T20:00:51.582Z",
+    "details": {
+      "batchCode": "MED-DA2081",
+      "treatmentId": "TRT-5FB6EC",
+      "certificateCode": "CERT-12132C"
+    }
+  },
+  {
+    "id": "1afdc06e-3e76-48b7-952f-60f70a459224",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "6138b536-d634-4fd3-9d95-633fef0152ce",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T20:00:51.584Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "0836d52c-bc2d-4a86-acb0-037dd08c882f",
+    "action": "CREATE_MANIFEST",
+    "entityId": "28d94b0d-f78c-417d-999f-3381320d7d91",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T20:07:14.222Z",
+    "details": {
+      "batchCode": "MED-972EB4",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "53b816cf-7489-4c63-a4c7-55388b20b0de",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "f85cb240-8fc1-4dd2-84af-0d126ba3213e",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T20:07:14.225Z",
+    "details": {
+      "batchCode": "MED-972EB4",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "0b64f66d-d34f-414d-aa23-e293021f21bc",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-66AE2B",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:07:14.228Z",
+    "details": {
+      "batchCode": "MED-972EB4",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "0ba48cac-c267-4b8f-abf4-493a5418c692",
+    "action": "RECORD_TREATMENT",
+    "entityId": "e1cd8dfc-88ae-42f0-8285-efa243870817",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:07:14.232Z",
+    "details": {
+      "batchCode": "MED-972EB4",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "360e594d-c973-4029-b657-170e0a323c6e",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "f0033446-aa27-4b89-a0c5-a99abd643749",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T20:07:14.235Z",
+    "details": {
+      "batchCode": "MED-972EB4",
+      "treatmentId": "TRT-E7CE7F",
+      "certificateCode": "CERT-EAEB49"
+    }
+  },
+  {
+    "id": "245c4e21-1898-4bb8-8719-1f319c7cbbc6",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "36025a89-ec7e-46aa-9cab-9def13397d85",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T20:07:14.236Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "9ccf4c3f-4c8b-45e4-acb0-d0a4fb2d2b02",
+    "action": "CREATE_MANIFEST",
+    "entityId": "9dd49391-a1ba-4183-94ab-e0674a8cf469",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T20:17:38.490Z",
+    "details": {
+      "batchCode": "MED-9C7589",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "9f7172f7-dbc0-4e4f-84ad-1156f92a7c72",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "89462ca5-04f7-4f5b-b239-644b589fdcf5",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T20:17:38.494Z",
+    "details": {
+      "batchCode": "MED-9C7589",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "e7407952-5a9e-4a5c-b666-248e83341d64",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-1CCD0F",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:17:38.498Z",
+    "details": {
+      "batchCode": "MED-9C7589",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "95712269-d5be-4805-9802-2e8d1894be05",
+    "action": "RECORD_TREATMENT",
+    "entityId": "7a89ea56-cc8c-4e9b-84d4-d0063fa4c568",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:17:38.501Z",
+    "details": {
+      "batchCode": "MED-9C7589",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "ed2fc0fa-d927-44ed-b482-317a0b7b4f37",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "66bb9c60-4408-4337-b644-99944f9eeb8e",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T20:17:38.506Z",
+    "details": {
+      "batchCode": "MED-9C7589",
+      "treatmentId": "TRT-04F923",
+      "certificateCode": "CERT-CCE6D7"
+    }
+  },
+  {
+    "id": "a4caf422-c0e5-41d5-bde5-1477cc4d8442",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "e9a38489-8c1c-48f9-af95-b5d5df78f7d8",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T20:17:38.508Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "e2fe053e-b743-455d-9dc4-588fdd9d34d1",
+    "action": "CREATE_MANIFEST",
+    "entityId": "67019351-f890-494f-88ca-913b43b64292",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-25T20:23:21.319Z",
+    "details": {
+      "batchCode": "MED-4F2C43",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "75591d1a-733e-4ea1-b123-d0275106863f",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "b0e5f4b5-8328-46d9-b0ed-9667ecfd70fe",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-25T20:23:21.323Z",
+    "details": {
+      "batchCode": "MED-4F2C43",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "86a21e0e-f00d-477e-8608-88ef291a1a95",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-60C83A",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:23:21.327Z",
+    "details": {
+      "batchCode": "MED-4F2C43",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "5f86e9b7-fcef-4fe6-8981-5b29b92823ba",
+    "action": "RECORD_TREATMENT",
+    "entityId": "d426965c-8430-4622-8a1f-312fee621db9",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-25T20:23:21.330Z",
+    "details": {
+      "batchCode": "MED-4F2C43",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "f3081269-fb27-459f-bbc9-b05b482575ce",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "c8742253-00cb-4c23-b726-f15758a7bcb0",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-25T20:23:21.335Z",
+    "details": {
+      "batchCode": "MED-4F2C43",
+      "treatmentId": "TRT-3451C6",
+      "certificateCode": "CERT-FD9CEC"
+    }
+  },
+  {
+    "id": "fde3f435-470a-4363-beae-b804af710796",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "f49aaa09-2ae8-41ab-8774-bc19620da644",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-25T20:23:21.337Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "f935dee1-d46a-49e9-beb8-5fbb8aebbd4f",
+    "action": "CREATE_MANIFEST",
+    "entityId": "d49b649a-6e4f-4028-8bc0-dc84f50912f4",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T06:51:55.683Z",
+    "details": {
+      "batchCode": "MED-C90CE0",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "9fbccde1-1e5a-4b33-9e64-f422b2de15b6",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "b4544e14-8ef8-4197-a76a-f9a5004c25af",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T06:51:55.687Z",
+    "details": {
+      "batchCode": "MED-C90CE0",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "e0558726-f621-4d19-a86e-fee6aacae25c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-86714D",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T06:51:55.692Z",
+    "details": {
+      "batchCode": "MED-C90CE0",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "dc5afe71-9ba6-42e3-a6ce-74c2886d332a",
+    "action": "RECORD_TREATMENT",
+    "entityId": "21a57c74-c457-4e1d-9ae5-ccffe884e2b6",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T06:51:55.696Z",
+    "details": {
+      "batchCode": "MED-C90CE0",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "46194b88-6f89-4607-ab86-2c6c36299fb9",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "b4b5caad-55a7-4394-bc09-7f8c2de213ff",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T06:51:55.700Z",
+    "details": {
+      "batchCode": "MED-C90CE0",
+      "treatmentId": "TRT-2DDEE4",
+      "certificateCode": "CERT-1D784C"
+    }
+  },
+  {
+    "id": "65b0b2d6-4f2e-412d-bded-737fc303dbb9",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "fd163e32-d602-45b9-95c1-4477a9b91ec8",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T06:51:55.702Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "ea50ede4-898f-4d19-85fb-04c1804b64be",
+    "action": "CREATE_MANIFEST",
+    "entityId": "d37a317c-14dd-4b75-9830-b16e49fc0997",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T10:03:25.751Z",
+    "details": {
+      "batchCode": "MED-E7C0D6",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "4bd7f1cc-e8ac-45c2-8bb1-59abfc1fc46d",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "844ad668-8fdc-45d1-b57e-11fa46502797",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T10:03:25.755Z",
+    "details": {
+      "batchCode": "MED-E7C0D6",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "472e2ef2-3975-408b-a4ba-db7f3d28536c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-11B38B",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:03:25.758Z",
+    "details": {
+      "batchCode": "MED-E7C0D6",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "dc0d39ba-b2c6-4b73-8ef4-67fdc0c7700d",
+    "action": "RECORD_TREATMENT",
+    "entityId": "e2e9d315-6fef-4387-af75-f4e2e97502e6",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:03:25.762Z",
+    "details": {
+      "batchCode": "MED-E7C0D6",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "89dd5be2-8fcf-4af1-b380-9ef192fe18a2",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "5322f1bc-ec16-4853-a8db-7acf278bb726",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T10:03:25.766Z",
+    "details": {
+      "batchCode": "MED-E7C0D6",
+      "treatmentId": "TRT-3B4497",
+      "certificateCode": "CERT-985074"
+    }
+  },
+  {
+    "id": "a9eea367-f09b-4e2a-9770-eea9ef5b253f",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "a2857e9f-9c56-4a6c-b123-b49bf3d682f8",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T10:03:25.769Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "0d0c3747-ee45-4394-82b6-1c0632ed07f2",
+    "action": "CREATE_MANIFEST",
+    "entityId": "a532346e-f67a-4a68-907f-ab62cbfbe3bc",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T10:11:17.490Z",
+    "details": {
+      "batchCode": "MED-FEE836",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "04fb5363-d230-46f5-a2da-2e927a3437ea",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "baf6cb39-8bbd-4fd2-ad74-c5768c6620f8",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T10:11:17.493Z",
+    "details": {
+      "batchCode": "MED-FEE836",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "4c2f2521-72fc-4924-9531-acc612cde61d",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-7CBB8F",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:11:17.498Z",
+    "details": {
+      "batchCode": "MED-FEE836",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "e0f65d93-50c4-4a5e-a3f1-c7f54c60e500",
+    "action": "RECORD_TREATMENT",
+    "entityId": "1b1e9327-6953-466f-8156-c605a579cfb6",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:11:17.501Z",
+    "details": {
+      "batchCode": "MED-FEE836",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "9738faa9-4510-4889-8359-70c3c66fd2a9",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "cae929bc-58f7-4ea7-81a8-aa4bb9f9900c",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T10:11:17.505Z",
+    "details": {
+      "batchCode": "MED-FEE836",
+      "treatmentId": "TRT-F9159B",
+      "certificateCode": "CERT-61C136"
+    }
+  },
+  {
+    "id": "d05a075e-ca5c-40f1-b808-824b826e0dbd",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "dce5dfdc-842d-421e-8f48-72b3975988c4",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T10:11:17.507Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "dcfe17cd-4e76-4778-a897-f369efe71805",
+    "action": "CREATE_MANIFEST",
+    "entityId": "1c9f36f1-9a57-4c57-85d1-f500e37e2ad6",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T10:41:13.493Z",
+    "details": {
+      "batchCode": "MED-EFF916",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "2c9e3782-7d21-44f5-9b67-89f9fbb87c28",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "c32c6d64-8a16-4f21-af06-8a1f9c11ccb3",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T10:41:13.499Z",
+    "details": {
+      "batchCode": "MED-EFF916",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "82011385-7c6f-45a5-9f02-3fc522d763d0",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-3CC54F",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:41:13.504Z",
+    "details": {
+      "batchCode": "MED-EFF916",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "585c4270-c096-446f-9f49-ac6ce69bb6e8",
+    "action": "RECORD_TREATMENT",
+    "entityId": "99020165-a0d4-4b9d-91ef-32a61ca18845",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:41:13.507Z",
+    "details": {
+      "batchCode": "MED-EFF916",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "c67f1b10-c1e0-4a50-a9f4-f0c911b4f864",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "1d6ada64-90df-48ac-be50-59971fd0ff42",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T10:41:13.511Z",
+    "details": {
+      "batchCode": "MED-EFF916",
+      "treatmentId": "TRT-3EFDFD",
+      "certificateCode": "CERT-9959FA"
+    }
+  },
+  {
+    "id": "a226e8d2-a077-43f1-a344-6111a5d32c3c",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "2f0f61ae-b10a-478d-a1e6-b7dac8a43550",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T10:41:13.513Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "7a72a136-5ba1-4def-9b07-8a0c642cc501",
+    "action": "CREATE_MANIFEST",
+    "entityId": "05fe6ae8-ed14-4615-8166-df29a65fb1a9",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T10:49:49.844Z",
+    "details": {
+      "batchCode": "MED-921A7E",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "1b55e7e5-9f1a-4b27-a804-fcbe55ca3e39",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "fda70cf4-37b6-4ff8-b8d1-ae5707abe0c9",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T10:49:49.850Z",
+    "details": {
+      "batchCode": "MED-921A7E",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "ef13f42f-cc45-4eab-899f-ae9d74e3f4d1",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-CFE135",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:49:49.853Z",
+    "details": {
+      "batchCode": "MED-921A7E",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "547bd1a6-cf3f-47d6-952c-5ee6cbbed218",
+    "action": "RECORD_TREATMENT",
+    "entityId": "53d3ba19-923e-44e9-8cf3-045e86361319",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:49:49.857Z",
+    "details": {
+      "batchCode": "MED-921A7E",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "7dd508a6-557c-46ed-a74a-214969780a88",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "5c893021-01ad-4079-a4a2-9ea4ebd09add",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T10:49:49.862Z",
+    "details": {
+      "batchCode": "MED-921A7E",
+      "treatmentId": "TRT-165954",
+      "certificateCode": "CERT-DDE4FF"
+    }
+  },
+  {
+    "id": "c174c915-6fe3-487b-a8f8-b2e82a680128",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "e9a43104-e7a9-4a29-aa42-316553e30124",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T10:49:49.865Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "c00c0a51-e51a-4701-940d-3942a1527677",
+    "action": "CREATE_MANIFEST",
+    "entityId": "9a35e128-b246-4405-8039-974a974504de",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T10:50:47.240Z",
+    "details": {
+      "batchCode": "MED-F1782B",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "079d5cb3-73a7-427b-abb2-1077c928d0ab",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "79a292aa-4cb5-4468-83e0-62fc921d26c5",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T10:50:47.243Z",
+    "details": {
+      "batchCode": "MED-F1782B",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "6abbfb75-ab46-4a1f-80e0-ddfec2260613",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-B41650",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:50:47.247Z",
+    "details": {
+      "batchCode": "MED-F1782B",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "318a8286-2e8d-49c7-898e-a4ecf3479d96",
+    "action": "RECORD_TREATMENT",
+    "entityId": "53c43ac1-72d9-4318-8825-61a06b1829f6",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T10:50:47.251Z",
+    "details": {
+      "batchCode": "MED-F1782B",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "5cbb537d-5a42-498c-9ff6-d9167a80d54e",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "6da51477-28e5-4235-b1a8-4d7ce8cb90e2",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T10:50:47.255Z",
+    "details": {
+      "batchCode": "MED-F1782B",
+      "treatmentId": "TRT-F611BA",
+      "certificateCode": "CERT-A64A7D"
+    }
+  },
+  {
+    "id": "961e2259-4f93-4ce1-9b54-5672376c52b9",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "cb0cd5ae-5a61-4c8e-9aab-986690efec23",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T10:50:47.257Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "9d14becb-6673-460b-b2c8-5419bf38e74f",
+    "action": "CREATE_MANIFEST",
+    "entityId": "ef685999-687d-40b2-a280-9f96ddcd772e",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T11:15:39.182Z",
+    "details": {
+      "batchCode": "MED-B48889",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "197e97ad-8aa3-4c66-a4b7-fea318edca8d",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "e10b9e08-807b-4147-af86-cc562d0c0f84",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T11:15:39.185Z",
+    "details": {
+      "batchCode": "MED-B48889",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "9b88b7a4-20e8-4529-9abd-412d1d063a4a",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-88AF52",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T11:15:39.190Z",
+    "details": {
+      "batchCode": "MED-B48889",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "b4128933-8548-4f9f-a781-088ed0eac892",
+    "action": "RECORD_TREATMENT",
+    "entityId": "d4700b65-fc8f-4959-b4e6-a3074eabe1ab",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T11:15:39.193Z",
+    "details": {
+      "batchCode": "MED-B48889",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "f017d737-d20e-480c-94bb-7578e8883ac1",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "d6999003-bc42-4f3e-a343-739ef0836cfc",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T11:15:39.198Z",
+    "details": {
+      "batchCode": "MED-B48889",
+      "treatmentId": "TRT-1CFDBF",
+      "certificateCode": "CERT-8BFD71"
+    }
+  },
+  {
+    "id": "a6460d26-4acd-42da-b0b5-d1d1fc684452",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "9ce1940a-17b8-4080-8b34-afa67d08fbc4",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T11:15:39.200Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "67c161dd-8ba7-4c09-a4bd-4c6b6c1cbf45",
+    "action": "CREATE_MANIFEST",
+    "entityId": "d9e63395-4521-401b-ad32-c3244a3e3259",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T12:57:03.294Z",
+    "details": {
+      "batchCode": "MED-88FC4F",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "26ecfb01-c2b6-4935-bd2a-ac24de17c9aa",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "b7d90615-06c0-47e3-af17-1f4685697b67",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T12:57:03.298Z",
+    "details": {
+      "batchCode": "MED-88FC4F",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "d933dace-b9e8-4090-a9b0-9d88992f6478",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-D96263",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T12:57:03.301Z",
+    "details": {
+      "batchCode": "MED-88FC4F",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "7feecb53-06a5-4922-9e74-40719225c7f4",
+    "action": "RECORD_TREATMENT",
+    "entityId": "3bb35b85-1d5b-4187-a4a9-5a779c2ee109",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T12:57:03.304Z",
+    "details": {
+      "batchCode": "MED-88FC4F",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "f7d47da6-fbe9-4314-8bdb-f2adf01f73cb",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "6f0a01c7-83d6-4bcb-a878-d0ed5b57177a",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T12:57:03.307Z",
+    "details": {
+      "batchCode": "MED-88FC4F",
+      "treatmentId": "TRT-75FF42",
+      "certificateCode": "CERT-F84112"
+    }
+  },
+  {
+    "id": "6f389b8e-1a72-4a9d-bf5d-38a0e115370f",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "d80fda16-d9f2-47a2-964f-6526a5866c95",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T12:57:03.309Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "be6cde63-8f0f-44a5-ac87-d18c8cb18311",
+    "action": "CREATE_MANIFEST",
+    "entityId": "178bc71e-3c47-4dff-bd08-0f145fc025b4",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-26T13:03:00.874Z",
+    "details": {
+      "batchCode": "MED-D5B082",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "3a5f4c47-06e2-4e7e-ae5a-67c86723dd7a",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "b34bd378-d1bd-48b1-9fb7-7924361544b9",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-26T13:03:00.881Z",
+    "details": {
+      "batchCode": "MED-D5B082",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "6dea0c71-88e5-4747-8aaf-985355d96613",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-31DA74",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T13:03:00.887Z",
+    "details": {
+      "batchCode": "MED-D5B082",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "923af333-0f93-40bf-bcf9-7baa42bc4857",
+    "action": "RECORD_TREATMENT",
+    "entityId": "17f5251d-e049-4298-aa9d-4ee0fd1cc5eb",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-26T13:03:00.891Z",
+    "details": {
+      "batchCode": "MED-D5B082",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "11a722c6-636e-4e58-9dce-3bde2adcd014",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "eab30f6e-88bb-426b-aa23-e1feb5552b11",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T13:03:00.895Z",
+    "details": {
+      "batchCode": "MED-D5B082",
+      "treatmentId": "TRT-C33F23",
+      "certificateCode": "CERT-7102E3"
+    }
+  },
+  {
+    "id": "76b6e923-0606-45a0-801d-741ff9ca0f26",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "da482802-d513-4478-811f-36981c41819b",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-26T13:03:00.899Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "8eae7e19-b87a-4185-aaaa-842bc9c0569f",
+    "action": "CREATE_MANIFEST",
+    "entityId": "c06b4817-6b93-4d37-81ca-fa0119f16a73",
+    "actorId": "AIIMS-Bhopal-Hosp",
+    "timestamp": "2026-09-26T16:03:56.545Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "wasteType": "YELLOW",
+      "weightKg": 28.5
+    }
+  },
+  {
+    "id": "60f5242f-b3c2-42ed-ac72-bbd92ea1956e",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "0dc0d6af-e1d7-41cf-9989-5e5f76808230",
+    "actorId": "DRV-BMW-05",
+    "timestamp": "2026-09-26T16:12:28.358Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "vehicleId": "MP-04-BMW-8810"
+    }
+  },
+  {
+    "id": "518cb995-640b-417e-a165-69f26ba2b84c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-C14C1F",
+    "actorId": "CBWTF-Bhopal-BioClean",
+    "timestamp": "2026-09-26T16:12:39.739Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "grossWeightKg": 2840,
+      "tareWeightKg": 2800,
+      "netWeightKg": 40
+    }
+  },
+  {
+    "id": "8b797a6d-b4d0-4758-9c3f-5a78c157e666",
+    "action": "RECORD_TREATMENT",
+    "entityId": "3230e42a-aaed-4377-9da4-43fa2bbf0a89",
+    "actorId": "CBWTF-Bhopal-BioClean",
+    "timestamp": "2026-09-26T16:13:07.217Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "method": "INCINERATION",
+      "weightProcessedKg": 40
+    }
+  },
+  {
+    "id": "e0d10c42-2b99-4212-b837-3d0dd06993bf",
+    "action": "RECORD_TREATMENT",
+    "entityId": "904d8f36-bfb8-4c31-8846-6b07070ecbf9",
+    "actorId": "CBWTF-Bhopal-BioClean",
+    "timestamp": "2026-09-26T16:14:26.542Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "method": "INCINERATION",
+      "weightProcessedKg": 40
+    }
+  },
+  {
+    "id": "47ab2201-f68b-4fee-a3fa-46f34ff44977",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "1c33fc83-e743-49b6-8b63-2a453d271e6d",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-26T16:14:29.978Z",
+    "details": {
+      "batchCode": "MED-8E09D3",
+      "treatmentId": "TRT-AE9564",
+      "certificateCode": "CERT-461C6C"
+    }
+  },
+  {
+    "id": "967de7da-33f0-4429-b8e3-10f7001feb9d",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "3b3c8389-8e95-4622-8e3c-25f404c44902",
+    "actorId": "WRK-SAN-204",
+    "timestamp": "2026-09-26T16:14:34.097Z",
+    "details": {
+      "hospitalId": "AIIMS-Bhopal-Hosp",
+      "trainingType": "Hepatitis B Complete 3-Dose Vaccination"
+    }
+  },
+  {
+    "id": "34246911-e271-49eb-88a2-a3e7e2245779",
+    "action": "CREATE_MANIFEST",
+    "entityId": "6cc6a7f3-28c6-4c09-b5ca-c0bfd06e4db5",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T14:06:40.714Z",
+    "details": {
+      "batchCode": "MED-4BDEF1",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "917de431-2c96-4062-9239-134939d874a1",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "5f0fa966-9b61-48bd-9600-609d28cd5882",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T14:06:40.719Z",
+    "details": {
+      "batchCode": "MED-4BDEF1",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "19bb9c1d-7ffe-43a4-a2a2-361ab16ab272",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-F041FF",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T14:06:40.723Z",
+    "details": {
+      "batchCode": "MED-4BDEF1",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "1b7d2fe3-f40a-4ea7-b677-24fcca66cc58",
+    "action": "RECORD_TREATMENT",
+    "entityId": "5c646983-9f68-4506-865c-7557f42b9d56",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T14:06:40.731Z",
+    "details": {
+      "batchCode": "MED-4BDEF1",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "1bf36093-0b91-45c7-bb36-b778b62e7f13",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "a8bd40e2-f776-42f6-a098-1e4b89ec9a20",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T14:06:40.736Z",
+    "details": {
+      "batchCode": "MED-4BDEF1",
+      "treatmentId": "TRT-4A4576",
+      "certificateCode": "CERT-A711C4"
+    }
+  },
+  {
+    "id": "8fe7fb2d-355e-4f52-97b1-92f9996d67b8",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "23fa29e9-25f3-4f38-8675-c19ada6afb05",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T14:06:40.739Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "27650652-c54f-490b-8dd5-465baec70751",
+    "action": "CREATE_MANIFEST",
+    "entityId": "90a97148-89da-463b-98c9-b78e04fc32ac",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T14:11:45.126Z",
+    "details": {
+      "batchCode": "MED-BDBDC6",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "1e04afc6-62d1-4869-8c2e-7d736e65f75f",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "1eaad39f-5d8a-447b-ae22-97bd6b5350d8",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T14:11:45.133Z",
+    "details": {
+      "batchCode": "MED-BDBDC6",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "dcb7af81-f516-4517-a068-14b4f98bbf5b",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-F62427",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T14:11:45.140Z",
+    "details": {
+      "batchCode": "MED-BDBDC6",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "ea79fe94-5c0f-40ab-b094-949923072c9b",
+    "action": "RECORD_TREATMENT",
+    "entityId": "b004bb1e-7c66-45f1-8ac5-a46d8ac951f4",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T14:11:45.148Z",
+    "details": {
+      "batchCode": "MED-BDBDC6",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "2d08771a-5919-46a7-a900-6a90698cb590",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "ec83cb9b-ac58-4fe2-a902-71a7336a3cab",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T14:11:45.155Z",
+    "details": {
+      "batchCode": "MED-BDBDC6",
+      "treatmentId": "TRT-2E912A",
+      "certificateCode": "CERT-8B71EF"
+    }
+  },
+  {
+    "id": "32e9dd98-48af-443f-81b1-3593a38bd4f9",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "55757509-4239-4aec-9b3d-97c2119dd3d0",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T14:11:45.157Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "4f97afa4-62a6-483e-a575-3c8cb0087d63",
+    "action": "CREATE_MANIFEST",
+    "entityId": "4ba341fd-8587-47c6-8109-947ffbb350e1",
+    "actorId": "AIIMS-Bhopal-Hosp",
+    "timestamp": "2026-09-28T15:24:02.470Z",
+    "details": {
+      "batchCode": "MED-C9FEED",
+      "wasteType": "YELLOW",
+      "weightKg": 28.5
+    }
+  },
+  {
+    "id": "313cd6af-8faf-43aa-9302-d9834fc5cfac",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "7ba59db6-ca55-47b5-b448-e02a3e05ce72",
+    "actorId": "DRV-BMW-05",
+    "timestamp": "2026-09-28T15:24:05.232Z",
+    "details": {
+      "batchCode": "MED-C9FEED",
+      "vehicleId": "MP-04-BMW-8810"
+    }
+  },
+  {
+    "id": "63b76c43-36e8-43d6-b8e0-1117c8fc1d29",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-B2EF7B",
+    "actorId": "CBWTF-Bhopal-BioClean",
+    "timestamp": "2026-09-28T15:24:19.543Z",
+    "details": {
+      "batchCode": "MED-C9FEED",
+      "grossWeightKg": 2840,
+      "tareWeightKg": 2800,
+      "netWeightKg": 40
+    }
+  },
+  {
+    "id": "a680f7a7-68dc-414d-8e7a-cd1892736e43",
+    "action": "RECORD_TREATMENT",
+    "entityId": "74c4c8ad-7e47-41e7-a7bc-c370627d6742",
+    "actorId": "CBWTF-Bhopal-BioClean",
+    "timestamp": "2026-09-28T15:24:21.898Z",
+    "details": {
+      "batchCode": "MED-C9FEED",
+      "method": "INCINERATION",
+      "weightProcessedKg": 40
+    }
+  },
+  {
+    "id": "9a80b8c4-9fd6-4183-95de-12b3e8031fbc",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "7a0057eb-ccef-462c-8ef7-92206ac502b8",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T15:24:24.202Z",
+    "details": {
+      "batchCode": "MED-C9FEED",
+      "treatmentId": "TRT-A372C1",
+      "certificateCode": "CERT-999E31"
+    }
+  },
+  {
+    "id": "62c3c332-0c75-4121-be02-eda687948b6c",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "e6230bd9-c3e2-4370-abb6-7555f8ecd5ec",
+    "actorId": "WRK-SAN-204",
+    "timestamp": "2026-09-28T15:24:31.435Z",
+    "details": {
+      "hospitalId": "AIIMS-Bhopal-Hosp",
+      "trainingType": "Hepatitis B Complete 3-Dose Vaccination"
+    }
+  },
+  {
+    "id": "43fb0c5b-6ec5-41e4-bdae-60b822ed5d47",
+    "action": "CREATE_MANIFEST",
+    "entityId": "abe408d0-5695-4c88-a270-8b1b787b81b0",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T15:26:42.699Z",
+    "details": {
+      "batchCode": "MED-583545",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "cb01d16a-571e-481e-9516-85a5c0f99e34",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "cda8f34e-0f52-4412-af73-5f47c574680c",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T15:26:42.703Z",
+    "details": {
+      "batchCode": "MED-583545",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "6eaf4271-59a1-4c01-88a3-72b046ab7093",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-6D8311",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T15:26:42.707Z",
+    "details": {
+      "batchCode": "MED-583545",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "1eddc7a8-2c10-4e54-ab9e-8ada489ebaf8",
+    "action": "RECORD_TREATMENT",
+    "entityId": "72820bcb-653e-41a2-baef-c722f599fe87",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T15:26:42.710Z",
+    "details": {
+      "batchCode": "MED-583545",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "05999d10-5bef-4b03-ae64-6b8716654ec2",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "ad9bd3ee-da85-44f5-8515-636a11748b3d",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T15:26:42.715Z",
+    "details": {
+      "batchCode": "MED-583545",
+      "treatmentId": "TRT-C6AF4B",
+      "certificateCode": "CERT-B82F67"
+    }
+  },
+  {
+    "id": "7147a459-878a-4a63-b9fc-1c47954681c6",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "94cf67d5-e6a7-4f1a-8879-8bf03077eb8f",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T15:26:42.718Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "ca763a0b-4a64-43f0-a8d6-ba688586a0d7",
+    "action": "CREATE_MANIFEST",
+    "entityId": "33d804e6-c858-4d09-8441-20b1be5a420e",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T17:07:27.287Z",
+    "details": {
+      "batchCode": "MED-D680B2",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "73cb143e-36f5-400a-86a0-a14490884ee9",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "ced6c3dd-2fe9-49cf-809e-a4533e196ed1",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T17:07:27.292Z",
+    "details": {
+      "batchCode": "MED-D680B2",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "26d0a8ef-ce11-43be-ab44-4cf09daf7cb8",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-83A3D7",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:07:27.298Z",
+    "details": {
+      "batchCode": "MED-D680B2",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "6d855621-7382-48ba-843b-f4dcbd8db486",
+    "action": "RECORD_TREATMENT",
+    "entityId": "f3768055-c4e8-4079-8027-8ea12eff776f",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:07:27.302Z",
+    "details": {
+      "batchCode": "MED-D680B2",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "e33ab3d1-f67c-484f-96ee-0a988b981e5f",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "d3ff1ba0-2cc8-4dab-b826-4b8cf6324c51",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T17:07:27.307Z",
+    "details": {
+      "batchCode": "MED-D680B2",
+      "treatmentId": "TRT-9316D9",
+      "certificateCode": "CERT-02FF4F"
+    }
+  },
+  {
+    "id": "54f5e60e-df06-49a8-9fda-52ee47c1bba7",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "f6eaf813-a8b5-4798-9dc4-d019d3cdf93c",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T17:07:27.310Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "724278c5-b7f3-4361-b103-d3a6e3caaeb9",
+    "action": "CREATE_MANIFEST",
+    "entityId": "b1660268-58a1-4db8-ae7e-151703d71612",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T17:07:33.725Z",
+    "details": {
+      "batchCode": "MED-7539EB",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "5c4eb385-94a7-45fe-99e8-fe75b6237427",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "09ce510f-5473-45c7-9184-a4bd79cfce00",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T17:07:33.729Z",
+    "details": {
+      "batchCode": "MED-7539EB",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "91b81b29-0be2-4677-adf0-375f69377dbc",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-30A168",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:07:33.734Z",
+    "details": {
+      "batchCode": "MED-7539EB",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "d890d999-1884-46a0-b009-f0c1702b873a",
+    "action": "RECORD_TREATMENT",
+    "entityId": "d244fd25-ace1-4e17-bc60-c45aaa91c12e",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:07:33.737Z",
+    "details": {
+      "batchCode": "MED-7539EB",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "ffad7e1a-034b-46c9-a251-8344ca0b6754",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "bbdaa180-0067-4845-96ba-199b79ee8df0",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T17:07:33.741Z",
+    "details": {
+      "batchCode": "MED-7539EB",
+      "treatmentId": "TRT-2FD1D1",
+      "certificateCode": "CERT-566B53"
+    }
+  },
+  {
+    "id": "e100bb8e-a0dd-4b0e-92a8-12d7f38ccd80",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "042cbb73-96db-493d-a239-6cebbe80f2eb",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T17:07:33.743Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "2e6457f8-e189-483f-bc97-ffbaa16b7594",
+    "action": "CREATE_MANIFEST",
+    "entityId": "5701ccfa-dc66-4424-9a73-1130f39209ec",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T17:50:20.787Z",
+    "details": {
+      "batchCode": "MED-1792FC",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "a3f115b3-3dbf-487c-a5e9-e068ad2e76b9",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "fa484f85-8c4f-4cef-86d2-83105e096a81",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T17:50:20.791Z",
+    "details": {
+      "batchCode": "MED-1792FC",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "533e0db2-bc2c-4307-bc6c-92c01e8967a0",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-0B0CE0",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:50:20.796Z",
+    "details": {
+      "batchCode": "MED-1792FC",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "a5da99ec-613e-4914-b108-e9e2d6391f73",
+    "action": "RECORD_TREATMENT",
+    "entityId": "71865c3d-9f8f-4980-bbc0-6a5a4e8976d5",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:50:20.801Z",
+    "details": {
+      "batchCode": "MED-1792FC",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "b83fef37-ecb9-4490-bb47-d4cc02b5e920",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "89ec8e9b-d50d-4107-b9fe-0bd160d11f34",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T17:50:20.808Z",
+    "details": {
+      "batchCode": "MED-1792FC",
+      "treatmentId": "TRT-92776E",
+      "certificateCode": "CERT-BF774C"
+    }
+  },
+  {
+    "id": "a8215e5c-0b9e-472e-aa31-8be5dfbd11d0",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "9f729290-d479-4834-ab7f-30f7d6416670",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T17:50:20.811Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "668adcaa-f822-4201-a151-519f1d474b00",
+    "action": "CREATE_MANIFEST",
+    "entityId": "d7086bdb-f480-4323-8faf-360d5033b63d",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T17:50:37.017Z",
+    "details": {
+      "batchCode": "MED-B417C5",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "82e6e421-b685-44ba-9258-84dc2a3a8b0e",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "4d1f3a73-5063-496c-8545-30247b17548d",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T17:50:37.024Z",
+    "details": {
+      "batchCode": "MED-B417C5",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "89860d36-c977-4f10-9c03-ec95f9109d2c",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-E615FC",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:50:37.029Z",
+    "details": {
+      "batchCode": "MED-B417C5",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "d6a42b55-283d-4f03-bd92-2da2bd75949a",
+    "action": "RECORD_TREATMENT",
+    "entityId": "cf922d8f-017f-43ff-91a7-7cdf039f799b",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T17:50:37.033Z",
+    "details": {
+      "batchCode": "MED-B417C5",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "0961faa6-2204-4e60-9e80-8508b6d09cb9",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "2e07f1db-3b61-4e45-adc6-eda5abfbe0c1",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T17:50:37.039Z",
+    "details": {
+      "batchCode": "MED-B417C5",
+      "treatmentId": "TRT-47EBDE",
+      "certificateCode": "CERT-02F9CC"
+    }
+  },
+  {
+    "id": "a6554d1f-02f1-444b-ba74-abc04e554ef6",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "3863560f-92d9-4f0f-bc5d-7b3f4f350c4a",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T17:50:37.042Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "fbbbb558-9c14-4259-bc92-6de8e92f4917",
+    "action": "CREATE_MANIFEST",
+    "entityId": "e7164374-f420-407c-9cec-c0c31287084b",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T19:57:14.988Z",
+    "details": {
+      "batchCode": "MED-DC4155",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "186cf9ce-efd1-4fcd-bb2d-340e0e65e53d",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "1ec9ae31-ba08-4b57-a7a1-95d23811337e",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T19:57:14.993Z",
+    "details": {
+      "batchCode": "MED-DC4155",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "73dfce06-49c5-45a6-9564-f6a24185a161",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-970E53",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T19:57:14.997Z",
+    "details": {
+      "batchCode": "MED-DC4155",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "45175f55-9751-49cc-bc85-e6c0677bc4e1",
+    "action": "RECORD_TREATMENT",
+    "entityId": "6a400d44-a5a2-4461-9729-e1d402a35860",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T19:57:15.000Z",
+    "details": {
+      "batchCode": "MED-DC4155",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "de65e91a-b6b4-43f5-a38e-78f403515f66",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "00058e98-5e01-427b-ac34-8843ece96379",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T19:57:15.004Z",
+    "details": {
+      "batchCode": "MED-DC4155",
+      "treatmentId": "TRT-F8CA2F",
+      "certificateCode": "CERT-213078"
+    }
+  },
+  {
+    "id": "f2acf03e-8334-419d-a75a-56107574284f",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "c258d640-eaea-4fab-98f9-f65513827b3f",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T19:57:15.007Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "f666edf6-aace-48c3-9844-85ce32db8db1",
+    "action": "CREATE_MANIFEST",
+    "entityId": "186e2970-eb30-460f-af66-612f912d7d49",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T20:10:58.935Z",
+    "details": {
+      "batchCode": "MED-C91793",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "fdd24e8c-1722-443c-b0b8-5267e6b54616",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "8a72e04a-e18e-4816-8e52-5782561a708d",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T20:10:58.939Z",
+    "details": {
+      "batchCode": "MED-C91793",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "e8071408-fe09-4d5e-a9f9-9f6a1874788f",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-75A7DC",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:10:58.943Z",
+    "details": {
+      "batchCode": "MED-C91793",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "0cc1b602-36e3-410a-b15c-27b07e2dddab",
+    "action": "RECORD_TREATMENT",
+    "entityId": "1d01adf5-3dc6-48eb-a644-b53d1ca24a18",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:10:58.948Z",
+    "details": {
+      "batchCode": "MED-C91793",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "a4d5c38b-36b3-4a36-ba7d-9b749d94a12a",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "d0a61aa9-6136-4b9a-9740-c95255f4baba",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T20:10:58.953Z",
+    "details": {
+      "batchCode": "MED-C91793",
+      "treatmentId": "TRT-112E34",
+      "certificateCode": "CERT-E8FED0"
+    }
+  },
+  {
+    "id": "a85be62d-baee-4d92-a494-04087577e3bf",
+    "action": "CREATE_MANIFEST",
+    "entityId": "28b7a7ba-253a-4a84-8560-adbb0258c7e5",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T20:11:06.524Z",
+    "details": {
+      "batchCode": "MED-7F6AA1",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "b361a219-54a5-4c1f-80d0-e6714e4f34c9",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "0106a162-5dc3-4939-a361-b3ff3fdf4a48",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T20:11:06.528Z",
+    "details": {
+      "batchCode": "MED-7F6AA1",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "95f14b88-74c6-479c-8d4c-8ac575e6ef5e",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-6747B7",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:11:06.531Z",
+    "details": {
+      "batchCode": "MED-7F6AA1",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "df6b9aa3-af75-461f-9b2e-0f2075c6e798",
+    "action": "RECORD_TREATMENT",
+    "entityId": "be7ca840-a7a3-45ba-ba68-dd311083fd44",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:11:06.534Z",
+    "details": {
+      "batchCode": "MED-7F6AA1",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "faec90a3-be55-4370-9796-1982830793a7",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "258a610c-106b-40ea-9a32-4b54197dacca",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T20:11:06.538Z",
+    "details": {
+      "batchCode": "MED-7F6AA1",
+      "treatmentId": "TRT-85D768",
+      "certificateCode": "CERT-4E27C5"
+    }
+  },
+  {
+    "id": "e0c6608d-b5c8-48f7-9acd-7f0f3e03db9f",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "c57fde7f-f767-4911-a302-d44719cc9bc2",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T20:11:06.540Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  },
+  {
+    "id": "9c487133-e74d-4e14-b123-a69e4e0a6580",
+    "action": "CREATE_MANIFEST",
+    "entityId": "ec686fd1-5fe4-49ea-894e-150ce43fb5a7",
+    "actorId": "HOSP-TEST-01",
+    "timestamp": "2026-09-28T20:11:34.899Z",
+    "details": {
+      "batchCode": "MED-9C7CC4",
+      "wasteType": "RED",
+      "weightKg": 25
+    }
+  },
+  {
+    "id": "8a20281c-d48e-4bae-933f-7d2b39e62b05",
+    "action": "ASSIGN_TRANSPORT",
+    "entityId": "9b7275fb-4335-4b76-8793-de3db33682a7",
+    "actorId": "DRV-BMW-TEST",
+    "timestamp": "2026-09-28T20:11:34.902Z",
+    "details": {
+      "batchCode": "MED-9C7CC4",
+      "vehicleId": "MP-BMW-TEST-99"
+    }
+  },
+  {
+    "id": "fc179001-763c-4978-9fe8-8ebd025eb58a",
+    "action": "FACILITY_ARRIVAL",
+    "entityId": "RCP-E47413",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:11:34.905Z",
+    "details": {
+      "batchCode": "MED-9C7CC4",
+      "grossWeightKg": 2025,
+      "tareWeightKg": 2000,
+      "netWeightKg": 25
+    }
+  },
+  {
+    "id": "c173a177-71fc-4938-96a8-0499c0d902cc",
+    "action": "RECORD_TREATMENT",
+    "entityId": "b72a5bc8-92c8-4d20-abba-0d3f9e463cb9",
+    "actorId": "CBWTF-TEST",
+    "timestamp": "2026-09-28T20:11:34.909Z",
+    "details": {
+      "batchCode": "MED-9C7CC4",
+      "method": "AUTOCLAVE",
+      "weightProcessedKg": 25
+    }
+  },
+  {
+    "id": "f06c8240-c147-45df-832b-41a23951ce7e",
+    "action": "ISSUE_CERTIFICATE",
+    "entityId": "79da1329-f3e1-47bf-9ae4-e8f9f7235662",
+    "actorId": "SYSTEM",
+    "timestamp": "2026-09-28T20:11:34.912Z",
+    "details": {
+      "batchCode": "MED-9C7CC4",
+      "treatmentId": "TRT-049711",
+      "certificateCode": "CERT-F72358"
+    }
+  },
+  {
+    "id": "bf5ed5d5-58fb-4af8-8b8c-c9e34ad94247",
+    "action": "LOG_STAFF_TRAINING",
+    "entityId": "82b35341-93ad-4079-8968-b3b6f9e91590",
+    "actorId": "STF-TEST-01",
+    "timestamp": "2026-09-28T20:11:34.915Z",
+    "details": {
+      "hospitalId": "HOSP-TEST-01",
+      "trainingType": "Hepatitis B Vaccination"
+    }
+  }
+]

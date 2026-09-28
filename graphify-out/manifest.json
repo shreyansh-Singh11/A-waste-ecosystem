@@ -1,0 +1,1364 @@
+{
+  "data/activityFeed.json": {
+    "mtime": 1790534626.0740159,
+    "seen": 1790534644.9478238,
+    "ast_hash": "6f428edc7600ef3e57cb96419dfa6cad",
+    "semantic_hash": ""
+  },
+  "data/alerts.json": {
+    "mtime": 1790534626.0701962,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/auctionAuditLogs.json": {
+    "mtime": 1790534613.5160701,
+    "seen": 1790534644.9478238,
+    "ast_hash": "bfdc0900cd45005240d2b2268a75c585",
+    "semantic_hash": ""
+  },
+  "data/auctionBids.json": {
+    "mtime": 1790534613.4977708,
+    "seen": 1790534644.9478238,
+    "ast_hash": "706d7d62503dd10ea726ff8c116bc9fd",
+    "semantic_hash": ""
+  },
+  "data/auctionLots.json": {
+    "mtime": 1790534613.512069,
+    "seen": 1790534644.9478238,
+    "ast_hash": "2e1f982cb0fee460c8a173960d9a0733",
+    "semantic_hash": ""
+  },
+  "data/auctionSettlements.json": {
+    "mtime": 1790534613.512069,
+    "seen": 1790534644.9478238,
+    "ast_hash": "f91abb55a3d504af99089dba07320684",
+    "semantic_hash": ""
+  },
+  "data/collectionRequests.json": {
+    "mtime": 1790534626.0691962,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/collectors.json": {
+    "mtime": 1790534626.0725954,
+    "seen": 1790534644.9478238,
+    "ast_hash": "ef5212260bb9e26b461d852ccff0371d",
+    "semantic_hash": ""
+  },
+  "data/deviceGrades.json": {
+    "mtime": 1790534613.4711814,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d79ecaa57cdf51b773fc6fbaef83f54f",
+    "semantic_hash": ""
+  },
+  "data/eprCertificates.json": {
+    "mtime": 1790534625.6659033,
+    "seen": 1790534644.9478238,
+    "ast_hash": "5ed60c34a81cfd53aacc988bb02abd1e",
+    "semantic_hash": ""
+  },
+  "data/items.json": {
+    "mtime": 1790534626.0725954,
+    "seen": 1790534644.9478238,
+    "ast_hash": "0f3c475ed4f963aee370df2712f73ea7",
+    "semantic_hash": ""
+  },
+  "data/medicalAuditLogs.json": {
+    "mtime": 1790534626.2495277,
+    "seen": 1790534644.9478238,
+    "ast_hash": "df53b46d59625cfb9ca80490d0898d30",
+    "semantic_hash": ""
+  },
+  "data/medicalCertificates.json": {
+    "mtime": 1790534626.2451756,
+    "seen": 1790534644.9478238,
+    "ast_hash": "5139686fd90d3b6163345846a4c7f6fc",
+    "semantic_hash": ""
+  },
+  "data/medicalManifests.json": {
+    "mtime": 1790534626.2441778,
+    "seen": 1790534644.9478238,
+    "ast_hash": "0130996f09fa35072be851966247680f",
+    "semantic_hash": ""
+  },
+  "data/medicalStaffTraining.json": {
+    "mtime": 1790534626.2482612,
+    "seen": 1790534644.9478238,
+    "ast_hash": "613e9f0350795af8a51bff9597f1ee27",
+    "semantic_hash": ""
+  },
+  "data/medicalTransport.json": {
+    "mtime": 1790534626.2380085,
+    "seen": 1790534644.9478238,
+    "ast_hash": "dd11973f039cfb53c70b96f520f75472",
+    "semantic_hash": ""
+  },
+  "data/medicalTreatments.json": {
+    "mtime": 1790534626.2407575,
+    "seen": 1790534644.9478238,
+    "ast_hash": "ceecdad0cbac21dfc9eb948acc4a7ebc",
+    "semantic_hash": ""
+  },
+  "data/medicalWhistleblower.json": {
+    "mtime": 1790272573.291715,
+    "seen": 1790311122.2370296,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/municipalAuditLogs.json": {
+    "mtime": 1790534626.2206342,
+    "seen": 1790534644.9478238,
+    "ast_hash": "cd08417b68e7f00e5571bd9107482541",
+    "semantic_hash": ""
+  },
+  "data/municipalMrfInventory.json": {
+    "mtime": 1790534626.2106924,
+    "seen": 1790534644.9478238,
+    "ast_hash": "b5597172a712179e1fd5476361068abc",
+    "semantic_hash": ""
+  },
+  "data/municipalRecyclerOrders.json": {
+    "mtime": 1790534626.2173393,
+    "seen": 1790534644.9478238,
+    "ast_hash": "ca712cf0567ec89992b23925d772f050",
+    "semantic_hash": ""
+  },
+  "data/municipalRoutes.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790311122.2370296,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/municipalShifts.json": {
+    "mtime": 1790534626.1964924,
+    "seen": 1790534644.9478238,
+    "ast_hash": "223c742ba7747f733d757beca0add14b",
+    "semantic_hash": ""
+  },
+  "data/municipalTrips.json": {
+    "mtime": 1790534626.2074196,
+    "seen": 1790534644.9478238,
+    "ast_hash": "6cc61deda069e7828c766657721e2089",
+    "semantic_hash": ""
+  },
+  "data/municipalWhistleblower.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790311122.2370296,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/notifications.json": {
+    "mtime": 1790534626.0740159,
+    "seen": 1790534644.9478238,
+    "ast_hash": "57c925bb63911574bbefdabf9540bbf4",
+    "semantic_hash": ""
+  },
+  "data/statusHistory.json": {
+    "mtime": 1790534626.0701962,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/transactions.json": {
+    "mtime": 1790534626.0701962,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/wallets.json": {
+    "mtime": 1790534626.0691962,
+    "seen": 1790534644.949161,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": ""
+  },
+  "data_backup/activityFeed.json": {
+    "mtime": 1790367458.3529427,
+    "seen": 1790534644.949161,
+    "ast_hash": "95350ec3310602895abd4a4df2cdcfce",
+    "semantic_hash": ""
+  },
+  "data_backup/alerts.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/collectionRequests.json": {
+    "mtime": 1790367458.34787,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/collectors.json": {
+    "mtime": 1790367458.3509414,
+    "seen": 1790534644.949161,
+    "ast_hash": "ef5212260bb9e26b461d852ccff0371d",
+    "semantic_hash": ""
+  },
+  "data_backup/educationalContent.json": {
+    "mtime": 1790367081.8714325,
+    "seen": 1790534644.949161,
+    "ast_hash": "ee65ba9f90d4cbcdb04121fb29095074",
+    "semantic_hash": ""
+  },
+  "data_backup/eprCertificates.json": {
+    "mtime": 1790367457.9861398,
+    "seen": 1790534644.949161,
+    "ast_hash": "d11497e1c5f9938436128366f0d962ca",
+    "semantic_hash": ""
+  },
+  "data_backup/eprObligations.json": {
+    "mtime": 1790367457.9874074,
+    "seen": 1790534644.949161,
+    "ast_hash": "428e0c0dce9cf2fc8a14a955587fdd77",
+    "semantic_hash": ""
+  },
+  "data_backup/eprTransactions.json": {
+    "mtime": 1790367457.9874074,
+    "seen": 1790534644.949161,
+    "ast_hash": "1114378c01b697a3e232c3b3b3a1a7a1",
+    "semantic_hash": ""
+  },
+  "data_backup/items.json": {
+    "mtime": 1790367458.3529427,
+    "seen": 1790534644.949161,
+    "ast_hash": "a97971dcc8c81c3aed6b994eadc7196b",
+    "semantic_hash": ""
+  },
+  "data_backup/notifications.json": {
+    "mtime": 1790367458.3539603,
+    "seen": 1790534644.949161,
+    "ast_hash": "e66a21f79daea09038b44aee7b3ac4ba",
+    "semantic_hash": ""
+  },
+  "data_backup/preciousMetalsByModel.json": {
+    "mtime": 1790366695.7688055,
+    "seen": 1790534644.949161,
+    "ast_hash": "d0e0ae0e732e159bd363cc1bfd11b0b2",
+    "semantic_hash": ""
+  },
+  "data_backup/producers.json": {
+    "mtime": 1790367457.9295993,
+    "seen": 1790534644.949161,
+    "ast_hash": "c394c82a343470b0d781e38fe0711521",
+    "semantic_hash": ""
+  },
+  "data_backup/rewardClaims.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/rewards.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/statusHistory.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/suspiciousActivity.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/transactions.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/users.json": {
+    "mtime": 1790492304.8959897,
+    "seen": 1790534644.949161,
+    "ast_hash": "6f1d1ae97a0b21b894d6ff83e1ce8fac",
+    "semantic_hash": ""
+  },
+  "data_backup/wallets.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": ""
+  },
+  "db.js": {
+    "mtime": 1790103125.0171454,
+    "seen": 1790311122.2370296,
+    "ast_hash": "9d2cbd8bfbf714603c2b8a091dbdcfe8",
+    "semantic_hash": ""
+  },
+  "ewasteVision.mjs": {
+    "mtime": 1789810207.376245,
+    "seen": 1790311122.2370296,
+    "ast_hash": "718eb0be61ace5e0458df3880edf3134",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1790419659.8883648,
+    "seen": 1790534644.949161,
+    "ast_hash": "4619236981c73a526e35db2486e22423",
+    "semantic_hash": ""
+  },
+  "prisma.config.ts": {
+    "mtime": 1790102209.643313,
+    "seen": 1790311122.2370296,
+    "ast_hash": "123af06397b84f545074d11ef8c9f2cd",
+    "semantic_hash": ""
+  },
+  "public-shared/leaflet/leaflet.js": {
+    "mtime": 1789808863.685614,
+    "seen": 1790311122.2370296,
+    "ast_hash": "35b48eb991f383702f153452506e07b2",
+    "semantic_hash": ""
+  },
+  "public-shared/shared.js": {
+    "mtime": 1790420669.3728588,
+    "seen": 1790534644.949161,
+    "ast_hash": "d7c60005d22689eee40f9f961c72ee89",
+    "semantic_hash": ""
+  },
+  "scripts/seed-from-json.mjs": {
+    "mtime": 1790102973.6031363,
+    "seen": 1790311122.2370296,
+    "ast_hash": "a9e7439a5ed8602a5b07bc25a69ac328",
+    "semantic_hash": ""
+  },
+  "server.js": {
+    "mtime": 1790499612.327737,
+    "seen": 1790534644.949161,
+    "ast_hash": "3f340d23e6bb367065b9169e7cecca71",
+    "semantic_hash": ""
+  },
+  "smartAutomation/auctionEngine.mjs": {
+    "mtime": 1790310809.3247824,
+    "seen": 1790311122.2370296,
+    "ast_hash": "c7f564649a72fdf9454c069c71bc7ad0",
+    "semantic_hash": ""
+  },
+  "smartAutomation/creditEngine.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "05866e48ff9c194262d1f534328972cb",
+    "semantic_hash": ""
+  },
+  "smartAutomation/db.mjs": {
+    "mtime": 1790103135.4882343,
+    "seen": 1790311122.2370296,
+    "ast_hash": "1a9cecb7148cf242676805434226638f",
+    "semantic_hash": ""
+  },
+  "smartAutomation/decisionEngine.mjs": {
+    "mtime": 1790494450.60435,
+    "seen": 1790534644.949161,
+    "ast_hash": "077ac9ea47eddffc0860a22d8bbda772",
+    "semantic_hash": ""
+  },
+  "smartAutomation/environmentalImpact.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "4d840117f169f1b2276e861e61135714",
+    "semantic_hash": ""
+  },
+  "smartAutomation/eprEngine.mjs": {
+    "mtime": 1789806946.4869685,
+    "seen": 1790311122.2370296,
+    "ast_hash": "48c3324cc47cc530e1e0a58fb92843bc",
+    "semantic_hash": ""
+  },
+  "smartAutomation/eventTypes.mjs": {
+    "mtime": 1789806561.4261417,
+    "seen": 1790311122.2370296,
+    "ast_hash": "1cadf183fa013a943b1998418b4a5e75",
+    "semantic_hash": ""
+  },
+  "smartAutomation/governmentAnalytics.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "dddedb4dcf849b9ee4e0addaceb91779",
+    "semantic_hash": ""
+  },
+  "smartAutomation/matchingEngine.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "da21749b014859c94708a8cd2199db24",
+    "semantic_hash": ""
+  },
+  "smartAutomation/medicalEngine.mjs": {
+    "mtime": 1790273194.8242123,
+    "seen": 1790311122.2370296,
+    "ast_hash": "ca569e765c59cf4832abcd5d50f16fe6",
+    "semantic_hash": ""
+  },
+  "smartAutomation/municipalEngine.mjs": {
+    "mtime": 1790498893.994656,
+    "seen": 1790534644.949161,
+    "ast_hash": "64dc7c0a19a30c0bf3ac0f45f5a2327c",
+    "semantic_hash": ""
+  },
+  "smartAutomation/routeEngine.mjs": {
+    "mtime": 1789808876.7977412,
+    "seen": 1790311122.2370296,
+    "ast_hash": "4cf702f0a4a495b2ef06b1c149aff01c",
+    "semantic_hash": ""
+  },
+  "smartAutomation/rules.mjs": {
+    "mtime": 1789806578.3397274,
+    "seen": 1790311122.2370296,
+    "ast_hash": "bdaa5d7ff7d6d6b147c992f83af7eaa1",
+    "semantic_hash": ""
+  },
+  "tests/auctionPhase2.test.mjs": {
+    "mtime": 1790310800.8794959,
+    "seen": 1790311122.2370296,
+    "ast_hash": "0af1e179c2ab4efcc123b84cafea8e9a",
+    "semantic_hash": ""
+  },
+  "tests/system1.test.mjs": {
+    "mtime": 1789807773.8436584,
+    "seen": 1790311122.2370296,
+    "ast_hash": "1e9365f013003831f5b9a99cbb28c3d1",
+    "semantic_hash": ""
+  },
+  "tests/system2.test.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "0fdb1c48ad8dbc42eecfcbeeefa2f649",
+    "semantic_hash": ""
+  },
+  "tests/system3.test.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "df2a7fba2bdd9ce856e7182d05061f16",
+    "semantic_hash": ""
+  },
+  "tests/system4.test.mjs": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "bb1eea8cec2f7aa89619a1306d5a4519",
+    "semantic_hash": ""
+  },
+  "tests/system5.test.mjs": {
+    "mtime": 1789807719.4178104,
+    "seen": 1790311122.2370296,
+    "ast_hash": "1e7865ecf4d2f738cf2e01b427722f30",
+    "semantic_hash": ""
+  },
+  "tests/system6.test.mjs": {
+    "mtime": 1789809167.1606855,
+    "seen": 1790311122.2370296,
+    "ast_hash": "549b64e579077fa11c28489b400edde2",
+    "semantic_hash": ""
+  },
+  "tests/system7.test.mjs": {
+    "mtime": 1789810221.1776001,
+    "seen": 1790311122.2370296,
+    "ast_hash": "2400a30f8e400e0412c48ea3700362d8",
+    "semantic_hash": ""
+  },
+  "tests/triTrackPhase1.test.mjs": {
+    "mtime": 1790499634.750616,
+    "seen": 1790534644.949161,
+    "ast_hash": "b1b8149dbcfc2127bf332245236c997d",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prisma-composer-core-concepts/SKILL.md": {
+    "mtime": 1790102209.720712,
+    "seen": 1790311122.2370296,
+    "ast_hash": "f50ce050190c5e4de3ea6265c8c34a83",
+    "semantic_hash": ""
+  },
+  ".agents/skills/prisma-platform-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7432246,
+    "seen": 1790311122.2370296,
+    "ast_hash": "c99623572eb499fc1a954c29a2054750",
+    "semantic_hash": ""
+  },
+  ".claude/skills/prisma-composer-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7055924,
+    "seen": 1790311122.2370296,
+    "ast_hash": "f50ce050190c5e4de3ea6265c8c34a83",
+    "semantic_hash": ""
+  },
+  ".claude/skills/prisma-platform-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7325234,
+    "seen": 1790311122.2370296,
+    "ast_hash": "c99623572eb499fc1a954c29a2054750",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/prisma-composer-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7153087,
+    "seen": 1790311122.2370296,
+    "ast_hash": "f50ce050190c5e4de3ea6265c8c34a83",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/prisma-platform-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7374158,
+    "seen": 1790311122.2370296,
+    "ast_hash": "c99623572eb499fc1a954c29a2054750",
+    "semantic_hash": ""
+  },
+  ".devin/skills/prisma-composer-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7280052,
+    "seen": 1790311122.2370296,
+    "ast_hash": "f50ce050190c5e4de3ea6265c8c34a83",
+    "semantic_hash": ""
+  },
+  ".devin/skills/prisma-platform-core-concepts/SKILL.md": {
+    "mtime": 1790102209.7472408,
+    "seen": 1790311122.2370296,
+    "ast_hash": "c99623572eb499fc1a954c29a2054750",
+    "semantic_hash": ""
+  },
+  "AGENTS.md": {
+    "mtime": 1790098207.686397,
+    "seen": 1790311122.2370296,
+    "ast_hash": "fa1d46d5a2f236ff4b03257f33a6afe4",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1790420118.7446198,
+    "seen": 1790534644.949161,
+    "ast_hash": "29864b897fe8beea94e49c4ee4ffdf22",
+    "semantic_hash": ""
+  },
+  "public-collector/index.html": {
+    "mtime": 1790493279.7391908,
+    "seen": 1790534644.949161,
+    "ast_hash": "78f5dcf1631a95ad50af5b9db45e56a3",
+    "semantic_hash": ""
+  },
+  "public-collector/scan.html": {
+    "mtime": 1789810087.2064517,
+    "seen": 1790311122.2370296,
+    "ast_hash": "6b02eb28b3dff046a7633752eada838f",
+    "semantic_hash": ""
+  },
+  "public-government/index.html": {
+    "mtime": 1790533768.1480532,
+    "seen": 1790534644.949161,
+    "ast_hash": "8072baa70af1db4ea957b95349fba435",
+    "semantic_hash": ""
+  },
+  "public-landing/index.html": {
+    "mtime": 1790417455.060469,
+    "seen": 1790534644.949161,
+    "ast_hash": "480d3fa34e9c96736f8d57f9810929a0",
+    "semantic_hash": ""
+  },
+  "public-medical/index.html": {
+    "mtime": 1790534515.0039477,
+    "seen": 1790534644.949161,
+    "ast_hash": "2c71e65ca22150310a0ae6a53365143d",
+    "semantic_hash": ""
+  },
+  "public-municipal/index.html": {
+    "mtime": 1790534608.4000058,
+    "seen": 1790534644.949161,
+    "ast_hash": "fb1b3a8e177751a9792dac76641123d2",
+    "semantic_hash": ""
+  },
+  "public-producer/index.html": {
+    "mtime": 1790492671.603869,
+    "seen": 1790534644.949161,
+    "ast_hash": "cfb27a2e2e1dcf29f1cae65791a3b3c9",
+    "semantic_hash": ""
+  },
+  "public-shared/preview-option-c.html": {
+    "mtime": 1790274999.4829922,
+    "seen": 1790311122.2370296,
+    "ast_hash": "979950da4d76c97ecb19eb0d1f64b810",
+    "semantic_hash": ""
+  },
+  "public-track/track.html": {
+    "mtime": 1788530470.0,
+    "seen": 1790311122.2370296,
+    "ast_hash": "7fbe52581915bf267fe4e7f554bb28e7",
+    "semantic_hash": ""
+  },
+  "public-user/index.html": {
+    "mtime": 1790421305.757896,
+    "seen": 1790534644.949161,
+    "ast_hash": "1d191761f594bd828709050809799b2b",
+    "semantic_hash": ""
+  },
+  "data/anomalyFlags.json": {
+    "mtime": 1790534614.0498269,
+    "seen": 1790534644.9478238,
+    "ast_hash": "c983fbceea23207f312813b8814144d7",
+    "semantic_hash": ""
+  },
+  "data/compostOfftake.json": {
+    "mtime": 1790534614.0184321,
+    "seen": 1790534644.9478238,
+    "ast_hash": "85c8d019ca61eb085b9be49d7424ad5b",
+    "semantic_hash": ""
+  },
+  "data/eprObligations.json": {
+    "mtime": 1790534625.6669137,
+    "seen": 1790534644.9478238,
+    "ast_hash": "428e0c0dce9cf2fc8a14a955587fdd77",
+    "semantic_hash": ""
+  },
+  "data/eprTransactions.json": {
+    "mtime": 1790534625.6664083,
+    "seen": 1790534644.9478238,
+    "ast_hash": "67f54f58d6753b520082941017fba9b4",
+    "semantic_hash": ""
+  },
+  "data/producers.json": {
+    "mtime": 1790534625.6187909,
+    "seen": 1790534644.9478238,
+    "ast_hash": "c394c82a343470b0d781e38fe0711521",
+    "semantic_hash": ""
+  },
+  "data/rewardClaims.json": {
+    "mtime": 1790534626.0711956,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/rewards.json": {
+    "mtime": 1790534626.0711956,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/suspiciousActivity.json": {
+    "mtime": 1790534626.0711956,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data/userFeeLedger.json": {
+    "mtime": 1790534614.0204327,
+    "seen": 1790534644.9478238,
+    "ast_hash": "6f1574f7997393468335fb0ee939bdb2",
+    "semantic_hash": ""
+  },
+  "smartAutomation/complianceEngine.mjs": {
+    "mtime": 1790332893.4372466,
+    "seen": 1790534644.949161,
+    "ast_hash": "a9e352862d066c6a436fe744ea6e6420",
+    "semantic_hash": ""
+  },
+  "tests/compliancePhase3.test.mjs": {
+    "mtime": 1790332929.057442,
+    "seen": 1790534644.949161,
+    "ast_hash": "2bcee08cf676bb59e35cf5ab9ec6f13e",
+    "semantic_hash": ""
+  },
+  "data/carbonCredits.json": {
+    "mtime": 1790534614.4017682,
+    "seen": 1790534644.9478238,
+    "ast_hash": "16279b99acf0a271f23b2a2a6a026174",
+    "semantic_hash": ""
+  },
+  "data/carbonTransactions.json": {
+    "mtime": 1790534614.4027658,
+    "seen": 1790534644.9478238,
+    "ast_hash": "ebf4e735bcb01c4c4b099e281e2fedbd",
+    "semantic_hash": ""
+  },
+  "data/contractorSettlements.json": {
+    "mtime": 1790534614.4167655,
+    "seen": 1790534644.9478238,
+    "ast_hash": "11342bfa2faca03fea45a555713c40a0",
+    "semantic_hash": ""
+  },
+  "smartAutomation/esgEngine.mjs": {
+    "mtime": 1790330776.2569087,
+    "seen": 1790332668.83313,
+    "ast_hash": "e142ff0284b3e6881a21441be5f0fffa",
+    "semantic_hash": ""
+  },
+  "tests/esgPhase4.test.mjs": {
+    "mtime": 1790330793.1393597,
+    "seen": 1790332668.83313,
+    "ast_hash": "1d3f1a31a7558b9d51593b782ee38854",
+    "semantic_hash": ""
+  },
+  "data/citizenRewards.json": {
+    "mtime": 1790534613.754318,
+    "seen": 1790534644.9478238,
+    "ast_hash": "07270e7511fdc418b190f0b01c3d8dc4",
+    "semantic_hash": ""
+  },
+  "data/commodityMarketplace.json": {
+    "mtime": 1790534613.8802598,
+    "seen": 1790534644.9478238,
+    "ast_hash": "fc5a1e427342da9e11c1a9c3c2c46de4",
+    "semantic_hash": ""
+  },
+  "data/commodityOrders.json": {
+    "mtime": 1790534613.8812597,
+    "seen": 1790534644.9478238,
+    "ast_hash": "84952d2af0faf390b4b5f0b91a550536",
+    "semantic_hash": ""
+  },
+  "data/educationalContent.json": {
+    "mtime": 1790367081.8714325,
+    "seen": 1790534644.9478238,
+    "ast_hash": "ee65ba9f90d4cbcdb04121fb29095074",
+    "semantic_hash": ""
+  },
+  "data/hazmatIncidents.json": {
+    "mtime": 1790534614.2060802,
+    "seen": 1790534644.9478238,
+    "ast_hash": "386bd24bad1882a535d65e7d12f85110",
+    "semantic_hash": ""
+  },
+  "data/offlineSyncQueue.json": {
+    "mtime": 1790534614.2181141,
+    "seen": 1790534644.9478238,
+    "ast_hash": "181af8a65ba04fd76dc9a1a3c38ce588",
+    "semantic_hash": ""
+  },
+  "data/preciousMetalsByModel.json": {
+    "mtime": 1790366695.7688055,
+    "seen": 1790534644.9478238,
+    "ast_hash": "d0e0ae0e732e159bd363cc1bfd11b0b2",
+    "semantic_hash": ""
+  },
+  "data/snakeRoutes.json": {
+    "mtime": 1790534614.1939962,
+    "seen": 1790534644.9478238,
+    "ast_hash": "b92fdf469d8e9e77bdc6bb57402ee657",
+    "semantic_hash": ""
+  },
+  "data/users.json": {
+    "mtime": 1790492292.844694,
+    "seen": 1790534644.9478238,
+    "ast_hash": "3129623e2421a5147ab7dd25cc3bb1ed",
+    "semantic_hash": ""
+  },
+  "data/visionScans.json": {
+    "mtime": 1790534614.185652,
+    "seen": 1790534644.949161,
+    "ast_hash": "ba15fbbdcae3187496a2a895b0026bfc",
+    "semantic_hash": ""
+  },
+  "data/whistleblowerReports.json": {
+    "mtime": 1790534613.7361124,
+    "seen": 1790534644.949161,
+    "ast_hash": "bd89ed344481eaabdee43ef79b53cc0a",
+    "semantic_hash": ""
+  },
+  "data/workerCertifications.json": {
+    "mtime": 1790534613.8902144,
+    "seen": 1790534644.949161,
+    "ast_hash": "055b05f00f24ccb50e0c30377c536eb6",
+    "semantic_hash": ""
+  },
+  "data_backup/anomalyFlags.json": {
+    "mtime": 1790367446.9926255,
+    "seen": 1790534644.949161,
+    "ast_hash": "7edb417dfb0a1aa1942aebed645b06b6",
+    "semantic_hash": ""
+  },
+  "data_backup/auctionAuditLogs.json": {
+    "mtime": 1790367446.772709,
+    "seen": 1790534644.949161,
+    "ast_hash": "ef93d0693415c36c9e8ec655186bf623",
+    "semantic_hash": ""
+  },
+  "data_backup/auctionBids.json": {
+    "mtime": 1790367446.7637136,
+    "seen": 1790534644.949161,
+    "ast_hash": "f4763083c6c71a3be4b7fd61208b9511",
+    "semantic_hash": ""
+  },
+  "data_backup/auctionLots.json": {
+    "mtime": 1790367446.7715497,
+    "seen": 1790534644.949161,
+    "ast_hash": "231e724f6c44bd4f2005cdd99cf8f4ea",
+    "semantic_hash": ""
+  },
+  "data_backup/auctionSettlements.json": {
+    "mtime": 1790367446.7715497,
+    "seen": 1790534644.949161,
+    "ast_hash": "c0bd6c1096cc2798360a081163306ce5",
+    "semantic_hash": ""
+  },
+  "data_backup/backup_manifest.json": {
+    "mtime": 1790367699.4496543,
+    "seen": 1790534644.949161,
+    "ast_hash": "aa8bc222728d4341f81975f845d6bf2a",
+    "semantic_hash": ""
+  },
+  "data_backup/carbonCredits.json": {
+    "mtime": 1790367447.244584,
+    "seen": 1790534644.949161,
+    "ast_hash": "a503598211d61cdc3c7586f0625f1926",
+    "semantic_hash": ""
+  },
+  "data_backup/carbonTransactions.json": {
+    "mtime": 1790367447.244584,
+    "seen": 1790534644.949161,
+    "ast_hash": "e5132b5c04069fcc50c9bf585d93551f",
+    "semantic_hash": ""
+  },
+  "data_backup/citizenRewards.json": {
+    "mtime": 1790367446.8727834,
+    "seen": 1790534644.949161,
+    "ast_hash": "76e7ce4f10d4ceea711664c186754ee7",
+    "semantic_hash": ""
+  },
+  "data_backup/commodityMarketplace.json": {
+    "mtime": 1790367446.8948443,
+    "seen": 1790534644.949161,
+    "ast_hash": "d600f64ee12054ef6ae27b385a999fb4",
+    "semantic_hash": ""
+  },
+  "data_backup/commodityOrders.json": {
+    "mtime": 1790367446.8948443,
+    "seen": 1790534644.949161,
+    "ast_hash": "275159337d4995e4905761d00b9ef88f",
+    "semantic_hash": ""
+  },
+  "data_backup/compostOfftake.json": {
+    "mtime": 1790367446.9785354,
+    "seen": 1790534644.949161,
+    "ast_hash": "fb61b798a44e5073ae0ad5e136228e7c",
+    "semantic_hash": ""
+  },
+  "data_backup/contractorSettlements.json": {
+    "mtime": 1790367447.2492325,
+    "seen": 1790534644.949161,
+    "ast_hash": "9e68e2ba988bd1af014852963760ad66",
+    "semantic_hash": ""
+  },
+  "data_backup/deviceGrades.json": {
+    "mtime": 1790367446.7559898,
+    "seen": 1790534644.949161,
+    "ast_hash": "7e3a673e9b572c4dc0a22b3ed07d31a4",
+    "semantic_hash": ""
+  },
+  "data_backup/hazmatIncidents.json": {
+    "mtime": 1790367447.152726,
+    "seen": 1790534644.949161,
+    "ast_hash": "67babd6be117c5984188254b8c1f0eb9",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalAuditLogs.json": {
+    "mtime": 1790367458.5083952,
+    "seen": 1790534644.949161,
+    "ast_hash": "75de484f829075c9006c8424bec741e5",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalCertificates.json": {
+    "mtime": 1790367458.5052469,
+    "seen": 1790534644.949161,
+    "ast_hash": "a186aaf6d7bbfc8597e0fb5dc1d8aefc",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalManifests.json": {
+    "mtime": 1790367458.5042465,
+    "seen": 1790534644.949161,
+    "ast_hash": "264f42383597c7423703f76b490d2b0f",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalStaffTraining.json": {
+    "mtime": 1790367458.5073974,
+    "seen": 1790534644.949161,
+    "ast_hash": "0446915a395f5d672e448d377aeeb15a",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalTransport.json": {
+    "mtime": 1790367458.4968143,
+    "seen": 1790534644.949161,
+    "ast_hash": "1e22737c3f366d1657d8f57c6d6f0138",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalTreatments.json": {
+    "mtime": 1790367458.500248,
+    "seen": 1790534644.949161,
+    "ast_hash": "b23d8a0dddc447ffc975c2e5da6d1635",
+    "semantic_hash": ""
+  },
+  "data_backup/medicalWhistleblower.json": {
+    "mtime": 1790272573.291715,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalAuditLogs.json": {
+    "mtime": 1790367458.4823534,
+    "seen": 1790534644.949161,
+    "ast_hash": "04d1247bc1678d366ea597bfc1ba2b2d",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalMrfInventory.json": {
+    "mtime": 1790367458.4782615,
+    "seen": 1790534644.949161,
+    "ast_hash": "1f2eda8f9aba1e13fb2c333f682f2f8a",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalRecyclerOrders.json": {
+    "mtime": 1790367458.4812632,
+    "seen": 1790534644.949161,
+    "ast_hash": "3e2f6bca23abff8b18a2c2f29e001972",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalRoutes.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalShifts.json": {
+    "mtime": 1790367458.4650795,
+    "seen": 1790534644.949161,
+    "ast_hash": "6667a3b7d6309687cf8116e7e4db5015",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalTrips.json": {
+    "mtime": 1790367458.4750147,
+    "seen": 1790534644.949161,
+    "ast_hash": "70cae28f4eb95431e9d515b9945c4bf6",
+    "semantic_hash": ""
+  },
+  "data_backup/municipalWhistleblower.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/offlineSyncQueue.json": {
+    "mtime": 1790367447.1570344,
+    "seen": 1790534644.949161,
+    "ast_hash": "ec33efe79be41e4ca8e042b2682ff460",
+    "semantic_hash": ""
+  },
+  "data_backup/snakeRoutes.json": {
+    "mtime": 1790367447.1454215,
+    "seen": 1790534644.949161,
+    "ast_hash": "9d8b0157067416efc08d7bc033f88a5a",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/activityFeed.json": {
+    "mtime": 1790367458.3529427,
+    "seen": 1790534644.949161,
+    "ast_hash": "95350ec3310602895abd4a4df2cdcfce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/alerts.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/anomalyFlags.json": {
+    "mtime": 1790367446.9926255,
+    "seen": 1790534644.949161,
+    "ast_hash": "7edb417dfb0a1aa1942aebed645b06b6",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/auctionAuditLogs.json": {
+    "mtime": 1790367446.772709,
+    "seen": 1790534644.949161,
+    "ast_hash": "ef93d0693415c36c9e8ec655186bf623",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/auctionBids.json": {
+    "mtime": 1790367446.7637136,
+    "seen": 1790534644.949161,
+    "ast_hash": "f4763083c6c71a3be4b7fd61208b9511",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/auctionLots.json": {
+    "mtime": 1790367446.7715497,
+    "seen": 1790534644.949161,
+    "ast_hash": "231e724f6c44bd4f2005cdd99cf8f4ea",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/auctionSettlements.json": {
+    "mtime": 1790367446.7715497,
+    "seen": 1790534644.949161,
+    "ast_hash": "c0bd6c1096cc2798360a081163306ce5",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/carbonCredits.json": {
+    "mtime": 1790367447.244584,
+    "seen": 1790534644.949161,
+    "ast_hash": "a503598211d61cdc3c7586f0625f1926",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/carbonTransactions.json": {
+    "mtime": 1790367447.244584,
+    "seen": 1790534644.949161,
+    "ast_hash": "e5132b5c04069fcc50c9bf585d93551f",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/citizenRewards.json": {
+    "mtime": 1790367446.8727834,
+    "seen": 1790534644.949161,
+    "ast_hash": "76e7ce4f10d4ceea711664c186754ee7",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/collectionRequests.json": {
+    "mtime": 1790367458.34787,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/collectors.json": {
+    "mtime": 1790367458.3509414,
+    "seen": 1790534644.949161,
+    "ast_hash": "ef5212260bb9e26b461d852ccff0371d",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/commodityMarketplace.json": {
+    "mtime": 1790367446.8948443,
+    "seen": 1790534644.949161,
+    "ast_hash": "d600f64ee12054ef6ae27b385a999fb4",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/commodityOrders.json": {
+    "mtime": 1790367446.8948443,
+    "seen": 1790534644.949161,
+    "ast_hash": "275159337d4995e4905761d00b9ef88f",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/compostOfftake.json": {
+    "mtime": 1790367446.9785354,
+    "seen": 1790534644.949161,
+    "ast_hash": "fb61b798a44e5073ae0ad5e136228e7c",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/contractorSettlements.json": {
+    "mtime": 1790367447.2492325,
+    "seen": 1790534644.949161,
+    "ast_hash": "9e68e2ba988bd1af014852963760ad66",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/deviceGrades.json": {
+    "mtime": 1790367446.7559898,
+    "seen": 1790534644.949161,
+    "ast_hash": "7e3a673e9b572c4dc0a22b3ed07d31a4",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/educationalContent.json": {
+    "mtime": 1790367081.8714325,
+    "seen": 1790534644.949161,
+    "ast_hash": "ee65ba9f90d4cbcdb04121fb29095074",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/eprCertificates.json": {
+    "mtime": 1790367457.9861398,
+    "seen": 1790534644.949161,
+    "ast_hash": "d11497e1c5f9938436128366f0d962ca",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/eprObligations.json": {
+    "mtime": 1790367457.9874074,
+    "seen": 1790534644.949161,
+    "ast_hash": "428e0c0dce9cf2fc8a14a955587fdd77",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/eprTransactions.json": {
+    "mtime": 1790367457.9874074,
+    "seen": 1790534644.949161,
+    "ast_hash": "1114378c01b697a3e232c3b3b3a1a7a1",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/hazmatIncidents.json": {
+    "mtime": 1790367447.152726,
+    "seen": 1790534644.949161,
+    "ast_hash": "67babd6be117c5984188254b8c1f0eb9",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/items.json": {
+    "mtime": 1790367458.3529427,
+    "seen": 1790534644.949161,
+    "ast_hash": "a97971dcc8c81c3aed6b994eadc7196b",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/manifest.json": {
+    "mtime": 1790367699.4502003,
+    "seen": 1790534644.949161,
+    "ast_hash": "aa8bc222728d4341f81975f845d6bf2a",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalAuditLogs.json": {
+    "mtime": 1790367458.5083952,
+    "seen": 1790534644.949161,
+    "ast_hash": "75de484f829075c9006c8424bec741e5",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalCertificates.json": {
+    "mtime": 1790367458.5052469,
+    "seen": 1790534644.949161,
+    "ast_hash": "a186aaf6d7bbfc8597e0fb5dc1d8aefc",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalManifests.json": {
+    "mtime": 1790367458.5042465,
+    "seen": 1790534644.949161,
+    "ast_hash": "264f42383597c7423703f76b490d2b0f",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalStaffTraining.json": {
+    "mtime": 1790367458.5073974,
+    "seen": 1790534644.949161,
+    "ast_hash": "0446915a395f5d672e448d377aeeb15a",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalTransport.json": {
+    "mtime": 1790367458.4968143,
+    "seen": 1790534644.949161,
+    "ast_hash": "1e22737c3f366d1657d8f57c6d6f0138",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalTreatments.json": {
+    "mtime": 1790367458.500248,
+    "seen": 1790534644.949161,
+    "ast_hash": "b23d8a0dddc447ffc975c2e5da6d1635",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/medicalWhistleblower.json": {
+    "mtime": 1790272573.291715,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalAuditLogs.json": {
+    "mtime": 1790367458.4823534,
+    "seen": 1790534644.949161,
+    "ast_hash": "04d1247bc1678d366ea597bfc1ba2b2d",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalMrfInventory.json": {
+    "mtime": 1790367458.4782615,
+    "seen": 1790534644.949161,
+    "ast_hash": "1f2eda8f9aba1e13fb2c333f682f2f8a",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalRecyclerOrders.json": {
+    "mtime": 1790367458.4812632,
+    "seen": 1790534644.949161,
+    "ast_hash": "3e2f6bca23abff8b18a2c2f29e001972",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalRoutes.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalShifts.json": {
+    "mtime": 1790367458.4650795,
+    "seen": 1790534644.949161,
+    "ast_hash": "6667a3b7d6309687cf8116e7e4db5015",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalTrips.json": {
+    "mtime": 1790367458.4750147,
+    "seen": 1790534644.949161,
+    "ast_hash": "70cae28f4eb95431e9d515b9945c4bf6",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/municipalWhistleblower.json": {
+    "mtime": 1790272529.8145652,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/notifications.json": {
+    "mtime": 1790367458.3539603,
+    "seen": 1790534644.949161,
+    "ast_hash": "e66a21f79daea09038b44aee7b3ac4ba",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/offlineSyncQueue.json": {
+    "mtime": 1790367447.1570344,
+    "seen": 1790534644.949161,
+    "ast_hash": "ec33efe79be41e4ca8e042b2682ff460",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/preciousMetalsByModel.json": {
+    "mtime": 1790366695.7688055,
+    "seen": 1790534644.949161,
+    "ast_hash": "d0e0ae0e732e159bd363cc1bfd11b0b2",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/producers.json": {
+    "mtime": 1790367457.9295993,
+    "seen": 1790534644.949161,
+    "ast_hash": "c394c82a343470b0d781e38fe0711521",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/rewardClaims.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/rewards.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/snakeRoutes.json": {
+    "mtime": 1790367447.1454215,
+    "seen": 1790534644.949161,
+    "ast_hash": "9d8b0157067416efc08d7bc033f88a5a",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/statusHistory.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/suspiciousActivity.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/transactions.json": {
+    "mtime": 1790367458.349868,
+    "seen": 1790534644.949161,
+    "ast_hash": "d751713988987e9331980363e24189ce",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/userFeeLedger.json": {
+    "mtime": 1790367446.982733,
+    "seen": 1790534644.949161,
+    "ast_hash": "504054d3966e1f41beafeb9d7c3abcd8",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/users.json": {
+    "mtime": 1790367058.146887,
+    "seen": 1790534644.949161,
+    "ast_hash": "6f26c858a8860abf563471558a7e46b8",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/visionScans.json": {
+    "mtime": 1790367447.141817,
+    "seen": 1790534644.949161,
+    "ast_hash": "91f0e9934e49ded6639ade175c92801b",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/wallets.json": {
+    "mtime": 1790367458.3488698,
+    "seen": 1790534644.949161,
+    "ast_hash": "99914b932bd37a50b983c5e7c90ae93b",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/whistleblowerReports.json": {
+    "mtime": 1790367446.8674135,
+    "seen": 1790534644.949161,
+    "ast_hash": "19775b7780db158d73b2eeff9d36e0a6",
+    "semantic_hash": ""
+  },
+  "data_backup/snapshots/2026-09-25T20-21-17-058Z/workerCertifications.json": {
+    "mtime": 1790367446.9008584,
+    "seen": 1790534644.949161,
+    "ast_hash": "689c4b9f4f9b00584650820f9cd3b224",
+    "semantic_hash": ""
+  },
+  "data_backup/userFeeLedger.json": {
+    "mtime": 1790367446.982733,
+    "seen": 1790534644.949161,
+    "ast_hash": "504054d3966e1f41beafeb9d7c3abcd8",
+    "semantic_hash": ""
+  },
+  "data_backup/visionScans.json": {
+    "mtime": 1790367447.141817,
+    "seen": 1790534644.949161,
+    "ast_hash": "91f0e9934e49ded6639ade175c92801b",
+    "semantic_hash": ""
+  },
+  "data_backup/whistleblowerReports.json": {
+    "mtime": 1790367446.8674135,
+    "seen": 1790534644.949161,
+    "ast_hash": "19775b7780db158d73b2eeff9d36e0a6",
+    "semantic_hash": ""
+  },
+  "data_backup/workerCertifications.json": {
+    "mtime": 1790367446.9008584,
+    "seen": 1790534644.949161,
+    "ast_hash": "689c4b9f4f9b00584650820f9cd3b224",
+    "semantic_hash": ""
+  },
+  "public-shared/sw.js": {
+    "mtime": 1790427467.4255087,
+    "seen": 1790534644.949161,
+    "ast_hash": "0fd3dd88db0abc4016619ea0b96739c5",
+    "semantic_hash": ""
+  },
+  "scripts/backupToDatabase.mjs": {
+    "mtime": 1790367661.5219734,
+    "seen": 1790534644.949161,
+    "ast_hash": "bef92eb378995d150e01ce1e518c6e77",
+    "semantic_hash": ""
+  },
+  "scripts/migrateToPostgres.mjs": {
+    "mtime": 1790367221.7941482,
+    "seen": 1790534644.949161,
+    "ast_hash": "cfaf0a21aa54c5c0354e28615af40b7a",
+    "semantic_hash": ""
+  },
+  "scripts/seedDemoData.mjs": {
+    "mtime": 1790492316.8709345,
+    "seen": 1790534644.949161,
+    "ast_hash": "90b49dadc354a3861f272f69943ce6f9",
+    "semantic_hash": ""
+  },
+  "smartAutomation/communityEngine.mjs": {
+    "mtime": 1790333944.6639876,
+    "seen": 1790534644.949161,
+    "ast_hash": "74f814bbd356c0a10fb2a993029fdf55",
+    "semantic_hash": ""
+  },
+  "smartAutomation/edgeOperationsEngine.mjs": {
+    "mtime": 1790366470.6929483,
+    "seen": 1790534644.949161,
+    "ast_hash": "2474fbd3258b239f23384724ed101a8b",
+    "semantic_hash": ""
+  },
+  "smartAutomation/regulatoryEngine.mjs": {
+    "mtime": 1790367387.442833,
+    "seen": 1790534644.949161,
+    "ast_hash": "773ef4e39db5eed7fa03f0e083eb217d",
+    "semantic_hash": ""
+  },
+  "tests/communityPhase5.test.mjs": {
+    "mtime": 1790334168.507482,
+    "seen": 1790534644.949161,
+    "ast_hash": "67171aa311c4991a32187743c54a32be",
+    "semantic_hash": ""
+  },
+  "tests/edgePhase7.test.mjs": {
+    "mtime": 1790364842.4105835,
+    "seen": 1790534644.949161,
+    "ast_hash": "500fa4e86b922d4c03d017f1a8187294",
+    "semantic_hash": ""
+  },
+  "tests/regulatoryPhase6.test.mjs": {
+    "mtime": 1790363434.433519,
+    "seen": 1790534644.949161,
+    "ast_hash": "0996fdd7df1eb9cba9cc952d0b56158e",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1790419671.815563,
+    "seen": 1790534644.949161,
+    "ast_hash": "25b6bdf81c1ccc02be81638c91c80cdf",
+    "semantic_hash": ""
+  },
+  "docs/ARCHITECTURE.md": {
+    "mtime": 1790419766.7756042,
+    "seen": 1790534644.949161,
+    "ast_hash": "bd5ce80bdec9ec6a8b991c44cc9510f2",
+    "semantic_hash": ""
+  }
+}

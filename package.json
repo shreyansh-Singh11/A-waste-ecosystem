@@ -1,0 +1,30 @@
+{
+  "name": "ewaste-platform",
+  "version": "1.0.0",
+  "description": "SIH E-Waste project - one backend serving three separate frontends (user, collector, government)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/seedDemoData.mjs",
+    "migrate": "node scripts/migrateToPostgres.mjs",
+    "backup": "node scripts/backupToDatabase.mjs",
+    "db:push": "prisma db push",
+    "test": "node --test --test-concurrency=1 tests/*.test.mjs",
+    "build:netlify": "node scripts/build-netlify.mjs",
+    "build:cloudflare": "node scripts/build-cloudflare.mjs",
+    "deploy:cloudflare": "npx wrangler pages deploy dist",
+    "postinstall": "prisma generate || exit 0"
+  },
+  "dependencies": {
+    "@google/genai": "^0.9.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "qrcode": "^1.5.3",
+    "serverless-http": "^4.0.0"
+  },
+  "devDependencies": {
+    "@prisma/client": "5.22.0",
+    "prisma": "5.22.0"
+  }
+}

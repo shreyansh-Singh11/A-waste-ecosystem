@@ -1,5 +1,5 @@
-// Build script for Cloudflare Pages Deployment
-// Assembles all 8 role portals, shared assets, _redirects, and _headers into dist/
+// Build script for Cloudflare Deployment (Supports Pages AND Workers)
+// Assembles all 8 role portals, shared assets, _redirects, _headers, and .assetsignore into dist/
 
 import fs from 'fs';
 import path from 'path';
@@ -7,7 +7,7 @@ import path from 'path';
 const ROOT_DIR = process.cwd();
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
 
-console.log('⚡ Preparing Cloudflare Pages production build...');
+console.log('⚡ Preparing Cloudflare production distribution...');
 
 // Remove and recreate dist/
 if (fs.existsSync(DIST_DIR)) {
@@ -102,9 +102,13 @@ const headersContent = `/*
 `;
 fs.writeFileSync(path.join(DIST_DIR, '_headers'), headersContent.trim() + '\n', 'utf-8');
 
+// 7. Add .assetsignore to dist
+fs.writeFileSync(path.join(DIST_DIR, '.assetsignore'), '_worker.js\n.assetsignore\n', 'utf-8');
+
 // Summary check
 console.log('🔍 [6/6] Verifying output directory structure...');
 const distFiles = fs.readdirSync(DIST_DIR);
 console.log(`✅ Build artifacts ready in ./dist/ (${distFiles.length} root items)`);
-console.log('🚀 Ready to upload to Cloudflare Pages via Git or Wrangler CLI:');
-console.log('   npx wrangler pages deploy dist');
+console.log('🚀 Ready to deploy via:');
+console.log('   - npx wrangler deploy');
+console.log('   - npx wrangler pages deploy dist');
